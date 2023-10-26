@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;Calculator/src/test/java/calc&apos;&#x0D;&#x0A;- Original project: &apos;Calculator&apos;&#x0D;&#x0A;- Destination element: &apos;Calculator/src/test/java/calc&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Calculator_ESTest_scaffolding.java&#x0D;&#x0A;     Calculator_ESTest.java" description="Copy files" destination="/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/&lt;calc" element1="evosuite-tests/calc/Calculator_ESTest_scaffolding.java" element2="evosuite-tests/calc/Calculator_ESTest.java" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1698072129989" units="0" version="1.0"/>
+</session>

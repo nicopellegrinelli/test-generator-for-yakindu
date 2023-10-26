@@ -1,0 +1,26 @@
+GeneratorModel for create::java {
+
+	const PROJECT : string = "CallHandling"
+
+	const FOLDER : string = "src-gen"
+
+	statechart CallHandling {
+		
+		feature Naming {
+		    basePackage = "callhandling"
+		    typeName = "CallHandlingMachine"
+		}
+		
+		feature GeneralFeatures {
+    		TimerService = true
+		}
+
+		feature Outlet {
+			targetProject = PROJECT
+			targetFolder = FOLDER
+			libraryTargetFolder = "src"
+		}
+		
+
+	}
+}

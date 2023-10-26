@@ -1,0 +1,9 @@
+testclass light_switch for statechart LightSwitch {
+	
+	@Test
+	operation test() {
+		enter
+		
+		exit
+	}
+}

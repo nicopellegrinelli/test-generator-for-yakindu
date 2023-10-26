@@ -1,0 +1,9 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:Calculator_ESTest,org.eclipse.launchbar.core.descriptorType.default\:CallHandling.ysc,org.eclipse.launchbar.core.descriptorType.default\:CallHandlingClient,org.eclipse.launchbar.core.descriptorType.default\:CallHandlingMachine_ESTest (1),org.eclipse.launchbar.core.descriptorType.default\:CallHandlingMachine_ESTest,org.eclipse.launchbar.core.descriptorType.default\:SimpleLoop.ysc,org.eclipse.launchbar.core.descriptorType.default\:temp.ysc,org.eclipse.launchbar.core.descriptorType.default\:LightSwitch.ysc,org.eclipse.launchbar.core.descriptorType.default\:LightSwitchTest.sctunit
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:Calculator_ESTest/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Calculator_ESTest/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:CallHandling.ysc/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:CallHandling.ysc/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

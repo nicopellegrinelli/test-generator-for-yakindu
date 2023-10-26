@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;LightSwitch/test/light_switch.sctunit&apos; to &apos;LightSwitchTest.sctunit&apos;" description="Rename resource &apos;light_switch.sctunit&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="test/light_switch.sctunit" name="LightSwitchTest.sctunit" stamp="1698334029872" updateReferences="true"/>
+</session>
