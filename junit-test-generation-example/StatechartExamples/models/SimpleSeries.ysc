@@ -7,11 +7,12 @@
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_eua6oHcEEe6lLvNLAvR4ZQ" name="StateA" incomingTransitions="_euaTnXcEEe6lLvNLAvR4ZQ">
         <outgoingTransitions xmi:id="_eua6o3cEEe6lLvNLAvR4ZQ" specification="event1" target="_eua6qncEEe6lLvNLAvR4ZQ"/>
+        <outgoingTransitions xmi:id="_4l78UHcyEe6H1PbHNy4B9g" specification="event2" target="_rFUl4HcEEe6lLvNLAvR4ZQ"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_eua6qncEEe6lLvNLAvR4ZQ" name="StateB" incomingTransitions="_eua6o3cEEe6lLvNLAvR4ZQ">
         <outgoingTransitions xmi:id="_uLwLUHcEEe6lLvNLAvR4ZQ" specification="event2" target="_rFUl4HcEEe6lLvNLAvR4ZQ"/>
       </vertices>
-      <vertices xsi:type="sgraph:State" xmi:id="_rFUl4HcEEe6lLvNLAvR4ZQ" name="StateC" incomingTransitions="_uLwLUHcEEe6lLvNLAvR4ZQ">
+      <vertices xsi:type="sgraph:State" xmi:id="_rFUl4HcEEe6lLvNLAvR4ZQ" name="StateC" incomingTransitions="_uLwLUHcEEe6lLvNLAvR4ZQ _4l78UHcyEe6H1PbHNy4B9g">
         <outgoingTransitions xmi:id="_umrz0HcEEe6lLvNLAvR4ZQ" specification="event3" target="_sJsM8HcEEe6lLvNLAvR4ZQ"/>
       </vertices>
       <vertices xsi:type="sgraph:FinalState" xmi:id="_sJsM8HcEEe6lLvNLAvR4ZQ" incomingTransitions="_umrz0HcEEe6lLvNLAvR4ZQ"/>
@@ -145,6 +146,16 @@
       <styles xsi:type="notation:FontStyle" xmi:id="_umtpA3cEEe6lLvNLAvR4ZQ" fontName="Verdana"/>
       <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_umtpAncEEe6lLvNLAvR4ZQ" points="[29, 0, -75, 2]$[102, 0, -2, 2]"/>
       <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_umveMHcEEe6lLvNLAvR4ZQ" id="(0.13333333333333333,0.3333333333333333)"/>
+    </edges>
+    <edges xmi:id="_4l-_oHcyEe6H1PbHNy4B9g" type="Transition" element="_4l78UHcyEe6H1PbHNy4B9g" source="_eubhy3cEEe6lLvNLAvR4ZQ" target="_rFXCIHcEEe6lLvNLAvR4ZQ">
+      <children xsi:type="notation:DecorationNode" xmi:id="_4l-_pHcyEe6H1PbHNy4B9g" type="TransitionExpression">
+        <styles xsi:type="notation:ShapeStyle" xmi:id="_4l-_pXcyEe6H1PbHNy4B9g"/>
+        <layoutConstraint xsi:type="notation:Location" xmi:id="_4l_msHcyEe6H1PbHNy4B9g" x="-10" y="6"/>
+      </children>
+      <styles xsi:type="notation:ConnectorStyle" xmi:id="_4l-_oXcyEe6H1PbHNy4B9g" routing="Rectilinear" lineColor="4210752"/>
+      <styles xsi:type="notation:FontStyle" xmi:id="_4l-_o3cyEe6H1PbHNy4B9g" fontName="Verdana"/>
+      <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_4l-_oncyEe6H1PbHNy4B9g" points="[0, 27, -267, 10]$[0, 62, -267, 45]$[262, 62, -5, 45]$[262, 27, -5, 10]"/>
+      <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_4mBb4HcyEe6H1PbHNy4B9g" id="(0.5789473684210527,0.8113207547169812)"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>

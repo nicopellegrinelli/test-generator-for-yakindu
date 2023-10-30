@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sgraph="http://www.yakindu.org/sct/sgraph/2.0.0">
-  <sgraph:Statechart xmi:id="_Loi18HcEEe6lLvNLAvR4ZQ" specification="@EventDriven&#xA;@SuperSteps(no)&#xD;&#xA;&#xD;&#xA;interface:&#xA;&#x9;in event toggle" name="SimpleLoop">
+  <sgraph:Statechart xmi:id="_Loi18HcEEe6lLvNLAvR4ZQ" specification="@EventDriven&#xA;@SuperSteps(no)&#xD;&#xA;&#xD;&#xA;interface Light:&#xA;&#x9;in event toggle" name="SimpleLoop">
     <regions xmi:id="_Loqxw3cEEe6lLvNLAvR4ZQ" name="main region">
       <vertices xsi:type="sgraph:Entry" xmi:id="_LoqxxHcEEe6lLvNLAvR4ZQ">
         <outgoingTransitions xmi:id="_LoqxxXcEEe6lLvNLAvR4ZQ" target="_LorY0HcEEe6lLvNLAvR4ZQ"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_LorY0HcEEe6lLvNLAvR4ZQ" name="Off" incomingTransitions="_LoqxxXcEEe6lLvNLAvR4ZQ _Lor_5ncEEe6lLvNLAvR4ZQ">
-        <outgoingTransitions xmi:id="_LorY03cEEe6lLvNLAvR4ZQ" specification="toggle" target="_Lor_43cEEe6lLvNLAvR4ZQ"/>
+        <outgoingTransitions xmi:id="_LorY03cEEe6lLvNLAvR4ZQ" specification="Light.toggle" target="_Lor_43cEEe6lLvNLAvR4ZQ"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_Lor_43cEEe6lLvNLAvR4ZQ" name="On" incomingTransitions="_LorY03cEEe6lLvNLAvR4ZQ">
-        <outgoingTransitions xmi:id="_Lor_5ncEEe6lLvNLAvR4ZQ" specification="toggle" target="_LorY0HcEEe6lLvNLAvR4ZQ"/>
+        <outgoingTransitions xmi:id="_Lor_5ncEEe6lLvNLAvR4ZQ" specification="Light.toggle" target="_LorY0HcEEe6lLvNLAvR4ZQ"/>
       </vertices>
     </regions>
   </sgraph:Statechart>

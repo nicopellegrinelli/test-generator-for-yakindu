@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//models/SimpleChoice.ysc=UTF-8
+encoding//models/SimpleCompositeState.ysc=UTF-8
+encoding//models/SimpleLoop.ysc=UTF-8
+encoding//models/SimpleParallel.ysc=UTF-8
+encoding//models/SimpleSeries.ysc=UTF-8
+encoding//models/SimpleSeriesCycleBased.ysc=UTF-8
+encoding/<project>=UTF-8
