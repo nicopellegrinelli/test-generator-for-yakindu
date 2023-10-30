@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\lenovo\Desktop\ProgettiGit\test-generator-for-yakindu\junit-test-generation-example\.metadata\.plugins\org.eclipse.jdt.core
+3317729439.index
+1865797976.index
+2862769801.index
