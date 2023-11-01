@@ -1,0 +1,125 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>StatechartExample</groupId>
+	<artifactId>StatechartExample</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.sun</groupId>
+			<artifactId>tools</artifactId>
+			<version>1.8</version>
+			<scope>system</scope>
+			<systemPath>C:\Program Files\Java\jdk1.8.0_202\lib\tools.jar</systemPath>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.evosuite/evosuite-runtime -->
+		<dependency>
+			<groupId>org.evosuite</groupId>
+			<artifactId>evosuite-runtime</artifactId>
+			<version>1.0.6</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.18</version>
+				<executions>
+					<execution>
+						<id>default-test</id>
+						<phase>test</phase>
+						<goals>
+							<goal>test</goal>
+						</goals>
+						<configuration>
+							<systemPropertyVariables>
+								<jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile>
+							</systemPropertyVariables>
+							<forkMode>once</forkMode>
+							<argLine>-Xms1024m -Xmx2048m -XX:MaxPermSize=1024m</argLine>
+
+							<excludes>
+								<exclude>META-INF/*.SF</exclude>
+								<exclude>**/StratusAuthTemplateProviderTest.class</exclude>
+								<exclude>**/StratusBalanceInquiryTemplateProviderTest.class</exclude>
+								<exclude>**/PersistCardAuthDetailsForRefundProcessorTest.class</exclude>
+								<exclude>**/PersistCardTxnDetailsProcessorTest.class</exclude>
+								<exclude>**/StratusAuthProcessorTest.class</exclude>
+								<exclude>**/UpdateTxnStatusTest.class</exclude>
+								<exclude>**/RulesTest.class</exclude>
+								<exclude>**/SampleRulesTest.class</exclude>
+								<exclude>**/RefundUpdatePmtTxnConfirmationProcessorTest.class</exclude>
+								<exclude>**/vo/*.class</exclude>
+								<exclude>**/outbound/*.class</exclude>
+								<exclude>**/notification/*.class</exclude>
+							</excludes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.7.4.201502262128</version>
+				<configuration>
+					<excludes>
+						<exclude>com/wdpr/payment/data/mapper/*.class</exclude>
+						<exclude>**/*AjcClosure?.class</exclude>
+					</excludes>
+				</configuration>
+				<executions>
+					<execution>
+						<id>default-instrument</id>
+						<goals>
+							<goal>instrument</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>default-restore-instrumented-classes</id>
+						<goals>
+							<goal>restore-instrumented-classes</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>default-report</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>default-check</id>
+						<goals>
+							<goal>check</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<rule>
+									<element>METHOD</element>
+								</rule>
+							</rules>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
