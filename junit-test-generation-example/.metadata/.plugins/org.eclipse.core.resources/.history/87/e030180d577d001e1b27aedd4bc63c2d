@@ -1,0 +1,3 @@
+GeneratorModel for create::java {
+
+	const PROJECT : string = "C:\Users\lenovo\Desktop\ProgettiGit\test-generator-for-yakindu\junit-test-generation-example\Temp"

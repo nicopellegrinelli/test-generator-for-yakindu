@@ -7,7 +7,7 @@ GeneratorModel for create::java {
 	statechart Statechart {
 		
 		feature Naming {
-		    basePackage = "temp"
+			basePackage = "temp"
 		}
 
 		feature Outlet {
