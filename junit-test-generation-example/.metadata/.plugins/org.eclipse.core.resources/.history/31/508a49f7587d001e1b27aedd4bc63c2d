@@ -1,6 +1,0 @@
-GeneratorModel for create::sctunit::java {
-
-	const PROJECT : string = ""
-
-	const FOLDER : string = ""
-}
