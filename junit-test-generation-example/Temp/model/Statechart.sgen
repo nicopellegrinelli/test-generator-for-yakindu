@@ -7,7 +7,7 @@ GeneratorModel for create::java {
 	statechart Statechart {
 
 		feature GeneralFeatures {
-    		TimerService = true
+			TimerService = true
 		}
 
 		feature Naming {
