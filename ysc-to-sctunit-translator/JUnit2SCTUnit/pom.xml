@@ -5,13 +5,19 @@
 	<groupId>JUnit2SCTUnit</groupId>
 	<artifactId>JUnit2SCTUnit</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>org.antlr</groupId>
 			<artifactId>ST4</artifactId>
 			<version>4.3.4</version>
 			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.javaparser</groupId>
+			<artifactId>javaparser-core</artifactId>
+			<version>3.25.6</version>
 		</dependency>
 	</dependencies>
 
