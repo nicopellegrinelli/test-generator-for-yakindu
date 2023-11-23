@@ -8,8 +8,12 @@ import java.util.Queue;
 
 public class Statechart implements IStatemachine, IEventDriven {
 	public enum State {
-		MAIN_REGION_STATEA,
-		MAIN_REGION_STATEB,
+		MAINREGION_OFF,
+		MAINREGION_IDLE,
+		MAINREGION_ON,
+		MAINREGION_ON_R1_WORKING,
+		MAINREGION_ON_R1_ANALYZING,
+		MAINREGION__FINAL_,
 		$NULLSTATE$
 	};
 	
@@ -45,7 +49,7 @@ public class Statechart implements IStatemachine, IEventDriven {
 		}
 		isExecuting = true;
 		/* Default enter sequence for statechart Statechart */
-		enterSequence_main_region_default();
+		enterSequence_mainregion_default();
 		isExecuting = false;
 	}
 	
@@ -57,7 +61,7 @@ public class Statechart implements IStatemachine, IEventDriven {
 		}
 		isExecuting = true;
 		/* Default exit sequence for statechart Statechart */
-		exitSequence_main_region();
+		exitSequence_mainregion();
 		isExecuting = false;
 	}
 	
@@ -69,24 +73,34 @@ public class Statechart implements IStatemachine, IEventDriven {
 	}
 	
 	/** 
-	* Always returns 'false' since this state machine can never become final.
-	*
 	* @see IStatemachine#isFinal()
 	*/
 	public boolean isFinal() {
-		return false;
+		return (stateVector[0] == State.MAINREGION__FINAL_);
 	}
 	private void clearInEvents() {
-		myEvent = false;
+		power_on = false;
+		work = false;
+		analize = false;
+		end = false;
 	}
 	
 	private void microStep() {
 		switch (stateVector[0]) {
-		case MAIN_REGION_STATEA:
-			main_region_StateA_react(-1l);
+		case MAINREGION_OFF:
+			mainregion_off_react(-1l);
 			break;
-		case MAIN_REGION_STATEB:
-			main_region_StateB_react(-1l);
+		case MAINREGION_IDLE:
+			mainregion_idle_react(-1l);
+			break;
+		case MAINREGION_ON_R1_WORKING:
+			mainregion_on_r1_working_react(-1l);
+			break;
+		case MAINREGION_ON_R1_ANALYZING:
+			mainregion_on_r1_analyzing_react(-1l);
+			break;
+		case MAINREGION__FINAL_:
+			mainregion__final__react(-1l);
 			break;
 		default:
 			break;
@@ -122,65 +136,170 @@ public class Statechart implements IStatemachine, IEventDriven {
 	public boolean isStateActive(State state) {
 	
 		switch (state) {
-		case MAIN_REGION_STATEA:
-			return stateVector[0] == State.MAIN_REGION_STATEA;
-		case MAIN_REGION_STATEB:
-			return stateVector[0] == State.MAIN_REGION_STATEB;
+		case MAINREGION_OFF:
+			return stateVector[0] == State.MAINREGION_OFF;
+		case MAINREGION_IDLE:
+			return stateVector[0] == State.MAINREGION_IDLE;
+		case MAINREGION_ON:
+			return stateVector[0].ordinal() >= State.
+					MAINREGION_ON.ordinal()&& stateVector[0].ordinal() <= State.MAINREGION_ON_R1_ANALYZING.ordinal();
+		case MAINREGION_ON_R1_WORKING:
+			return stateVector[0] == State.MAINREGION_ON_R1_WORKING;
+		case MAINREGION_ON_R1_ANALYZING:
+			return stateVector[0] == State.MAINREGION_ON_R1_ANALYZING;
+		case MAINREGION__FINAL_:
+			return stateVector[0] == State.MAINREGION__FINAL_;
 		default:
 			return false;
 		}
 	}
 	
 	
-	private boolean myEvent;
+	private boolean power_on;
 	
 	
-	public void raiseMyEvent() {
+	public void raisePower_on() {
 		inEventQueue.add(() -> {
-			myEvent = true;
+			power_on = true;
 		});
 		runCycle();
 	}
 	
-	/* 'default' enter sequence for state StateA */
-	private void enterSequence_main_region_StateA_default() {
-		/* 'default' enter sequence for state StateA */
-		stateVector[0] = State.MAIN_REGION_STATEA;
+	private boolean work;
+	
+	
+	public void raiseWork() {
+		inEventQueue.add(() -> {
+			work = true;
+		});
+		runCycle();
 	}
 	
-	/* 'default' enter sequence for state StateB */
-	private void enterSequence_main_region_StateB_default() {
-		/* 'default' enter sequence for state StateB */
-		stateVector[0] = State.MAIN_REGION_STATEB;
+	private boolean analize;
+	
+	
+	public void raiseAnalize() {
+		inEventQueue.add(() -> {
+			analize = true;
+		});
+		runCycle();
 	}
 	
-	/* 'default' enter sequence for region main region */
-	private void enterSequence_main_region_default() {
-		/* 'default' enter sequence for region main region */
-		react_main_region__entry_Default();
+	private boolean end;
+	
+	
+	public void raiseEnd() {
+		inEventQueue.add(() -> {
+			end = true;
+		});
+		runCycle();
 	}
 	
-	/* Default exit sequence for state StateA */
-	private void exitSequence_main_region_StateA() {
-		/* Default exit sequence for state StateA */
+	/* 'default' enter sequence for state off */
+	private void enterSequence_mainregion_off_default() {
+		/* 'default' enter sequence for state off */
+		stateVector[0] = State.MAINREGION_OFF;
+	}
+	
+	/* 'default' enter sequence for state idle */
+	private void enterSequence_mainregion_idle_default() {
+		/* 'default' enter sequence for state idle */
+		stateVector[0] = State.MAINREGION_IDLE;
+	}
+	
+	/* 'default' enter sequence for state working */
+	private void enterSequence_mainregion_on_r1_working_default() {
+		/* 'default' enter sequence for state working */
+		stateVector[0] = State.MAINREGION_ON_R1_WORKING;
+	}
+	
+	/* 'default' enter sequence for state analyzing */
+	private void enterSequence_mainregion_on_r1_analyzing_default() {
+		/* 'default' enter sequence for state analyzing */
+		stateVector[0] = State.MAINREGION_ON_R1_ANALYZING;
+	}
+	
+	/* Default enter sequence for final state */
+	private void enterSequence_mainregion__final__default() {
+		/* Default enter sequence for final state */
+		stateVector[0] = State.MAINREGION__FINAL_;
+	}
+	
+	/* 'default' enter sequence for region mainregion */
+	private void enterSequence_mainregion_default() {
+		/* 'default' enter sequence for region mainregion */
+		react_mainregion__entry_Default();
+	}
+	
+	/* Default exit sequence for state off */
+	private void exitSequence_mainregion_off() {
+		/* Default exit sequence for state off */
 		stateVector[0] = State.$NULLSTATE$;
 	}
 	
-	/* Default exit sequence for state StateB */
-	private void exitSequence_main_region_StateB() {
-		/* Default exit sequence for state StateB */
+	/* Default exit sequence for state idle */
+	private void exitSequence_mainregion_idle() {
+		/* Default exit sequence for state idle */
 		stateVector[0] = State.$NULLSTATE$;
 	}
 	
-	/* Default exit sequence for region main region */
-	private void exitSequence_main_region() {
-		/* Default exit sequence for region main region */
+	/* Default exit sequence for state on */
+	private void exitSequence_mainregion_on() {
+		/* Default exit sequence for state on */
+		exitSequence_mainregion_on_r1();
+	}
+	
+	/* Default exit sequence for state working */
+	private void exitSequence_mainregion_on_r1_working() {
+		/* Default exit sequence for state working */
+		stateVector[0] = State.$NULLSTATE$;
+	}
+	
+	/* Default exit sequence for state analyzing */
+	private void exitSequence_mainregion_on_r1_analyzing() {
+		/* Default exit sequence for state analyzing */
+		stateVector[0] = State.$NULLSTATE$;
+	}
+	
+	/* Default exit sequence for final state. */
+	private void exitSequence_mainregion__final_() {
+		/* Default exit sequence for final state. */
+		stateVector[0] = State.$NULLSTATE$;
+	}
+	
+	/* Default exit sequence for region mainregion */
+	private void exitSequence_mainregion() {
+		/* Default exit sequence for region mainregion */
 		switch (stateVector[0]) {
-		case MAIN_REGION_STATEA:
-			exitSequence_main_region_StateA();
+		case MAINREGION_OFF:
+			exitSequence_mainregion_off();
 			break;
-		case MAIN_REGION_STATEB:
-			exitSequence_main_region_StateB();
+		case MAINREGION_IDLE:
+			exitSequence_mainregion_idle();
+			break;
+		case MAINREGION_ON_R1_WORKING:
+			exitSequence_mainregion_on_r1_working();
+			break;
+		case MAINREGION_ON_R1_ANALYZING:
+			exitSequence_mainregion_on_r1_analyzing();
+			break;
+		case MAINREGION__FINAL_:
+			exitSequence_mainregion__final_();
+			break;
+		default:
+			break;
+		}
+	}
+	
+	/* Default exit sequence for region r1 */
+	private void exitSequence_mainregion_on_r1() {
+		/* Default exit sequence for region r1 */
+		switch (stateVector[0]) {
+		case MAINREGION_ON_R1_WORKING:
+			exitSequence_mainregion_on_r1_working();
+			break;
+		case MAINREGION_ON_R1_ANALYZING:
+			exitSequence_mainregion_on_r1_analyzing();
 			break;
 		default:
 			break;
@@ -188,9 +307,9 @@ public class Statechart implements IStatemachine, IEventDriven {
 	}
 	
 	/* Default react sequence for initial entry  */
-	private void react_main_region__entry_Default() {
+	private void react_mainregion__entry_Default() {
 		/* Default react sequence for initial entry  */
-		enterSequence_main_region_StateA_default();
+		enterSequence_mainregion_off_default();
 	}
 	
 	private long react(long transitioned_before) {
@@ -199,13 +318,13 @@ public class Statechart implements IStatemachine, IEventDriven {
 		;
 	}
 	
-	private long main_region_StateA_react(long transitioned_before) {
-		/* The reactions of state StateA. */
+	private long mainregion_off_react(long transitioned_before) {
+		/* The reactions of state off. */
 		long transitioned_after = transitioned_before;
 		if (transitioned_after<0l) {
-			if (myEvent) {
-				exitSequence_main_region_StateA();
-				enterSequence_main_region_StateB_default();
+			if (power_on) {
+				exitSequence_mainregion_off();
+				enterSequence_mainregion_idle_default();
 				react(0l);
 				transitioned_after = 0l;
 			}
@@ -218,14 +337,39 @@ public class Statechart implements IStatemachine, IEventDriven {
 		;
 	}
 	
-	private long main_region_StateB_react(long transitioned_before) {
-		/* The reactions of state StateB. */
+	private long mainregion_idle_react(long transitioned_before) {
+		/* The reactions of state idle. */
 		long transitioned_after = transitioned_before;
 		if (transitioned_after<0l) {
-			if (myEvent) {
-				exitSequence_main_region_StateB();
-				enterSequence_main_region_StateA_default();
+			if (work) {
+				exitSequence_mainregion_idle();
+				enterSequence_mainregion_on_r1_working_default();
 				react(0l);
+				transitioned_after = 0l;
+			} else {
+				if (analize) {
+					exitSequence_mainregion_idle();
+					enterSequence_mainregion_on_r1_analyzing_default();
+					react(0l);
+					transitioned_after = 0l;
+				}
+			}
+		}
+		if (transitioned_after==transitioned_before) {
+			/* If no transition was taken then execute local reactions */
+			transitioned_after = react(transitioned_before);
+		}
+		return transitioned_after
+		;
+	}
+	
+	private long mainregion_on_react(long transitioned_before) {
+		/* The reactions of state on. */
+		long transitioned_after = transitioned_before;
+		if (transitioned_after<0l) {
+			if (end) {
+				exitSequence_mainregion_on();
+				enterSequence_mainregion__final__default();
 				transitioned_after = 0l;
 			}
 		}
@@ -234,6 +378,30 @@ public class Statechart implements IStatemachine, IEventDriven {
 			transitioned_after = react(transitioned_before);
 		}
 		return transitioned_after
+		;
+	}
+	
+	private long mainregion_on_r1_working_react(long transitioned_before) {
+		/* The reactions of state working. */
+		long transitioned_after = transitioned_before;
+		/* If no transition was taken then execute local reactions */
+		transitioned_after = mainregion_on_react(transitioned_before);
+		return transitioned_after
+		;
+	}
+	
+	private long mainregion_on_r1_analyzing_react(long transitioned_before) {
+		/* The reactions of state analyzing. */
+		long transitioned_after = transitioned_before;
+		/* If no transition was taken then execute local reactions */
+		transitioned_after = mainregion_on_react(transitioned_before);
+		return transitioned_after
+		;
+	}
+	
+	private long mainregion__final__react(long transitioned_before) {
+		/* The reactions of state null. */
+		return react(transitioned_before)
 		;
 	}
 	

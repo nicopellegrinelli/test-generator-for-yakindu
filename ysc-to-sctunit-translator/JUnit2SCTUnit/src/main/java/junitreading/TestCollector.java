@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.github.javaparser.ast.body.MethodDeclaration;
+import com.github.javaparser.ast.expr.FieldAccessExpr;
 import com.github.javaparser.ast.expr.MethodCallExpr;
-import com.github.javaparser.ast.expr.VariableDeclarationExpr;
 import com.github.javaparser.ast.visitor.VoidVisitor;
 import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 
@@ -17,39 +17,51 @@ public class TestCollector extends VoidVisitorAdapter<List<TestCase>> {
 		super.visit(md, collector);
 		
 		if (md.getBody().toString().contains(".enter")) {
-			
-			List<VariableDeclarationExpr> variableDeclarationList = new ArrayList<VariableDeclarationExpr>();
-			VoidVisitor<List<VariableDeclarationExpr>> fieldDeclarationCollector = 
-					new VariableDeclarationExprCollection();
-			fieldDeclarationCollector.visit(md, variableDeclarationList);
-			
-			List<MethodCallExpr> methodCallList = new ArrayList<MethodCallExpr>();
-			VoidVisitor<List<MethodCallExpr>> methodCallExprCollector = 
-					new MethodCallExprCollector();
-			methodCallExprCollector.visit(md, methodCallList);
-			
-			System.out.println(md.getNameAsString());
-			
-			for(VariableDeclarationExpr variableDeclaration : variableDeclarationList){
-				variableDeclaration.getChildNodes()
-									.forEach(n->n.getChildNodes()
-									.forEach(n1->System.out.println(n1.toString() + "-->" + n1.getClass().toString())));
+
+			List<FieldAccessExpr> fieldAccessList = new ArrayList<FieldAccessExpr>();
+			VoidVisitor<List<FieldAccessExpr>> fieldAccessExprCollector = new FieldAccessExprCollector();
+			fieldAccessExprCollector.visit(md, fieldAccessList);
+
+			String state = "";
+			boolean finalState = false;
+			for (FieldAccessExpr fieldAccess : fieldAccessList) {
+				if (!fieldAccess.getChildNodes().get(0).toString().contains(".State"))
+					state += fieldAccess.getChildNodes().get(0).toString();
+				else
+					state += "." + fieldAccess.getChildNodes().get(1).toString().toLowerCase().replace("_", ".");
 			}
-			
-			
-			TestCase testcase = new TestCase(md.getNameAsString());
-			for(MethodCallExpr methodCall : methodCallList){
+			finalState = state.contains("final");
+
+			List<MethodCallExpr> methodCallList = new ArrayList<MethodCallExpr>();
+			VoidVisitor<List<MethodCallExpr>> methodCallExprCollector = new MethodCallExprCollector();
+			methodCallExprCollector.visit(md, methodCallList);
+
+			TestCase testCase = new TestCase(md.getNameAsString());
+			for (MethodCallExpr methodCall : methodCallList) {
 				String methodName = methodCall.getNameAsString();
 				if (methodName.equals("enter"))
 					continue;
-				if (methodName.equals("exit"))
-					testcase.addExit();
+				if (methodName.equals("exit")) {
+					testCase.addExit();
+					continue;
+				}
 				if (methodName.startsWith("raise")) {
-					testcase.addEvent(methodName.replace("raise", "").toLowerCase());
+					testCase.addEvent(methodName.replace("raise", "").toLowerCase());
+					continue;
+				}
+				if (!state.isEmpty() && !finalState) {
+					if (methodName.equals("assertTrue")) {
+						testCase.addAssertState(state, true);
+						continue;
+					}
+					if (methodName.equals("assertFalse")) {
+						testCase.addAssertState(state, false);
+						continue;
+					}
 				}
 			}
 
-			collector.add(testcase);
+			collector.add(testCase);
 		}
 	}
 }

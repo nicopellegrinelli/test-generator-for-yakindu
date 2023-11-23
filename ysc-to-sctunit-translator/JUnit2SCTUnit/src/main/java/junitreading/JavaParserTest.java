@@ -19,15 +19,20 @@ public class JavaParserTest {
 	public static void main(String[] args) throws FileNotFoundException {
 		CompilationUnit cu = StaticJavaParser.parse(new FileInputStream(".\\resources\\junit_class_example.txt"));
 		
+		List<String> classNameList = new ArrayList<String>();
+		VoidVisitor<List<String>> classCollector = new ClassDeclarationCollector();
+		classCollector.visit(cu, classNameList);
+		String statechartName = classNameList.get(0).replace("_ESTest", "");
+		
 		List<TestCase> testList = new ArrayList<TestCase>();
-		VoidVisitor<List<TestCase>> methodVisitor = new TestCollector();
-		methodVisitor.visit(cu, testList);
+		VoidVisitor<List<TestCase>> methodCollector = new TestCollector();
+		methodCollector.visit(cu, testList);
 		
 		STGroupFile group = new STGroupFile(".\\template\\sct_template.stg");
 		ST st = group.getInstanceOf("test_class");
-		st.add("statechart_name", "LightSwitch");
+		st.add("statechart_name", statechartName);
 		st.add("test_list", testList);
-//		System.out.println(st.render());
+		System.out.println(st.render());
 	}
 
 }

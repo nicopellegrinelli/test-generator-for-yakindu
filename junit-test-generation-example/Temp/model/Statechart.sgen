@@ -6,10 +6,6 @@ GeneratorModel for create::java {
 
 	statechart Statechart {
 
-		feature GeneralFeatures {
-			TimerService = true
-		}
-
 		feature Naming {
 		    basePackage = "temp"
 		}

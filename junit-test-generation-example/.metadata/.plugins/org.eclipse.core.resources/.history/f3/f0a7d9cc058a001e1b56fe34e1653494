@@ -1,0 +1,9 @@
+testclass StatechartTest for statechart Statechart {
+	
+	@Test
+	operation test() {
+		enter
+			assert active (Statechart.main.region_state_a.inner_region_state.b)
+		exit
+	}
+}

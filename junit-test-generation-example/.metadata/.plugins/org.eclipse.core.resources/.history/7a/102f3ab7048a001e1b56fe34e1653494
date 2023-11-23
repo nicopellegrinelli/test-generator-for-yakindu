@@ -1,0 +1,11 @@
+testclass StatechartTest for statechart Statechart {
+	
+	@Test
+	operation test() {
+		enter
+			raise evento1
+			raise Evento1
+			assert active (Statechart.main_region.statea)
+		exit
+	}
+}
