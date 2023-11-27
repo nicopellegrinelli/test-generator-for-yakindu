@@ -150,9 +150,15 @@ testclass StatechartTest for statechart Statechart {
 
 	@Test
 	operation test32 () {
-	    assert !is_active
 	    enter
-	    assert is_active
+	    assert !is_active
+	    assert active ()
+	}
+
+	@Test
+	operation test35 () {
+	    enter
+	    assert !is_active
 	}
 
 	@Test
@@ -170,7 +176,7 @@ testclass StatechartTest for statechart Statechart {
 	    raise power_on
 	    raise analize
 	    raise end
-	    assert is_final
+	    assert active ()
 	}
 
 	@Test
@@ -185,3 +191,4 @@ testclass StatechartTest for statechart Statechart {
 	}
 
 }
+
