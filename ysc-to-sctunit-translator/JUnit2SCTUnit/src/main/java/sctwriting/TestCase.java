@@ -12,20 +12,32 @@ public class TestCase {
 		actions = new ArrayList<Action>();
 	}
 	
+	public void addEnter() {
+		actions.add(new Action(true, null, null, false, false, false, false));
+	}
+	
 	public void addEvent(String event) {
-		actions.add(new Action(event, null, false, false));
+		actions.add(new Action(false, event, null, false, false, false, false));
 	}
 	
 	public void addAssertState(String state, boolean assertTrue) {
-		actions.add(new Action(null, state, assertTrue, false));
+		actions.add(new Action(false, null, state, false, false, assertTrue, false));
+	}
+	
+	public void addIsActive(boolean assertTrue) {
+		actions.add(new Action(false, null, null, true, false, assertTrue, false));
+	}
+	
+	public void addIsFinal(boolean assertTrue) {
+		actions.add(new Action(false, null, null, false, true, assertTrue, false));
 	}
 	
 	public void addProceedCycle() {
-		actions.add(new Action(null, null, false, true));
+		actions.add(new Action(false, null, null, false, false, false, true));
 	}
 	
 	public void addExit() {
-		actions.add(new Action(null, null, false, false));
+		actions.add(new Action(false, null, null, false, false, false, false));
 	}
 	
 	public String toString() {
