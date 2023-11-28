@@ -161,6 +161,7 @@ testclass StatechartTest for statechart Statechart {
 	    raise power_on
 	    raise work
 	    raise end
+	    triggerWithoutEvent
 	    assert is_final
 	}
 

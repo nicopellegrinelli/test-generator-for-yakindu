@@ -51,6 +51,14 @@ public class TestCollector extends VoidVisitorAdapter<List<TestCase>> {
 					testCase.addEvent(methodName.replace("raise", "").toLowerCase());
 					continue;
 				}
+				if (methodName.equals("runCycle")) {
+					testCase.addProceedCycle();
+					continue;
+				}
+				if (methodName.equals("triggerWithoutEvent")) {
+					testCase.addTryggerWithoutEvent();
+					continue;
+				}
 				if (methodName.equals("assertTrue") || methodName.equals("assertFalse")) {
 					boolean assertTrue = methodName.equals("assertTrue");
 					String parameterName = methodCall.getArgument(0).toString();

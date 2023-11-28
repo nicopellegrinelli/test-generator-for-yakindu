@@ -13,31 +13,35 @@ public class TestCase {
 	}
 	
 	public void addEnter() {
-		actions.add(new Action(true, null, null, false, false, false, false));
+		actions.add(new Action(true, null, null, false, false, false, false, false));
 	}
 	
 	public void addEvent(String event) {
-		actions.add(new Action(false, event, null, false, false, false, false));
+		actions.add(new Action(false, event, null, false, false, false, false, false));
 	}
 	
 	public void addAssertState(String state, boolean assertTrue) {
-		actions.add(new Action(false, null, state, false, false, assertTrue, false));
+		actions.add(new Action(false, null, state, false, false, assertTrue, false, false));
 	}
 	
 	public void addIsActive(boolean assertTrue) {
-		actions.add(new Action(false, null, null, true, false, assertTrue, false));
+		actions.add(new Action(false, null, null, true, false, assertTrue, false, false));
 	}
 	
 	public void addIsFinal(boolean assertTrue) {
-		actions.add(new Action(false, null, null, false, true, assertTrue, false));
+		actions.add(new Action(false, null, null, false, true, assertTrue, false, false));
 	}
 	
 	public void addProceedCycle() {
-		actions.add(new Action(false, null, null, false, false, false, true));
+		actions.add(new Action(false, null, null, false, false, false, true, false));
+	}
+	
+	public void addTryggerWithoutEvent() {
+		actions.add(new Action(false, null, null, false, false, false, false, true));
 	}
 	
 	public void addExit() {
-		actions.add(new Action(false, null, null, false, false, false, false));
+		actions.add(new Action(false, null, null, false, false, false, false, false));
 	}
 	
 	public String toString() {

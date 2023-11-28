@@ -4,12 +4,14 @@ public class Action {
 	String enter;
 	String event;
 	String state;
-	String not;
-	String proceed;
 	String isActive;
 	String isFinal;
+	String not;
+	String proceed;
+	String triggerWithoutEvent;
 
-	public Action(boolean enter, String event, String state, boolean isActive, boolean isFinal, boolean assertTrue, boolean proceed) {
+
+	public Action(boolean enter, String event, String state, boolean isActive, boolean isFinal, boolean assertTrue, boolean proceed, boolean triggerWithoutEvent) {
 		this.enter = enter ? "" : null;
 		this.event = event;
 		this.state = state;
@@ -17,6 +19,7 @@ public class Action {
 		this.isFinal = isFinal ? "" : null;
 		this.not = assertTrue ? null : "";
 		this.proceed = proceed ? "" : null;
+		this.triggerWithoutEvent = triggerWithoutEvent? "" : null;
 	}
 	
 	public String getEnter() {
@@ -45,6 +48,10 @@ public class Action {
 
 	public String getProceed() {
 		return proceed;
+	}
+	
+	public String getTriggerWithoutEvent() {
+		return triggerWithoutEvent;
 	}
 
 }
