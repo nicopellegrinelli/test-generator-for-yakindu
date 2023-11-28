@@ -7,8 +7,8 @@ import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 
 public class ClassDeclarationCollector extends VoidVisitorAdapter<List<String>>{
 	@Override
-	public void visit(ClassOrInterfaceDeclaration md, List<String> collector) {
-		super.visit(md, collector);
-		collector.add(md.getNameAsString());
+	public void visit(ClassOrInterfaceDeclaration node, List<String> collector) {
+		super.visit(node, collector);
+		collector.add(node.getNameAsString());
 	}
 }

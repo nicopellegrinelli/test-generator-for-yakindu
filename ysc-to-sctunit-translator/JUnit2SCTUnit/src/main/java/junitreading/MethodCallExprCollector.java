@@ -7,8 +7,8 @@ import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 
 public class MethodCallExprCollector extends VoidVisitorAdapter<List<MethodCallExpr>>  {
 	@Override
-	public void visit(MethodCallExpr md, List<MethodCallExpr> collector) {
-		super.visit(md, collector);
-		collector.add(md);
+	public void visit(MethodCallExpr node, List<MethodCallExpr> collector) {
+		super.visit(node, collector);
+		collector.add(node);
 	}
 }

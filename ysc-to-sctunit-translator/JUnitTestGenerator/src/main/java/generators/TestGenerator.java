@@ -17,13 +17,13 @@ import javax.tools.ToolProvider;
 public class TestGenerator {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
-		//Needed Strings
+		// Collects all needed Strings 
 		String workspacePath = args[0];
 		String projectName = args[1];
 		String packageName = args[2];
 		String statechartName = args[3];
 		String projectPath = workspacePath + "\\" + projectName;
-		String scc = "C:\\Program Files (x86)\\itemis_CREATE\\scc.bat";
+		String itemisScc = "C:\\Program Files (x86)\\itemis_CREATE\\scc.bat";
 		String compilerD = "-d " + projectPath + "\\bin";
 		String compilerClasspath = "-classpath " + projectPath + "\\src\\";
 		String compilerImplicit = "-implicit:class";
@@ -31,15 +31,15 @@ public class TestGenerator {
 		String evoOptions = "-projectCP " + projectPath + "\\bin";
 		String evoBase_dir = "-base_dir " + projectPath;
 		
-		//Itemis sgen file generation
+		// Generates the .sgen file needed by Itemis Create
 		boolean timeBased = args.length == 5 && args[4].equals("time");
 		CodeGeneratorGenerator.genarate(projectPath, statechartName, packageName, projectName, timeBased);
 		
-		//Itemis code generation
+		// Calls the Itemis Create Java code generator
 		ProcessBuilder pb = new ProcessBuilder();
 		pb.redirectErrorStream(true);
 		pb.directory(new File(projectPath));
-		pb.command(scc);
+		pb.command(itemisScc);
 		Process p = pb.start();
 
 		BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
@@ -50,7 +50,7 @@ public class TestGenerator {
 		reader.close();
 		System.out.println("");
 		
-		//Compile the new class
+		// Compiles the generated classes
 		JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
 		List<String> compilationArgs = new ArrayList<String>();
 		compilationArgs.addAll(Arrays.asList(compilerD.split(" ")));
@@ -61,7 +61,7 @@ public class TestGenerator {
         Iterable<? extends JavaFileObject> compilationUnits = stdFileManager.getJavaFileObjectsFromFiles(Arrays.asList(f));
 		compiler.getTask(null, null, null, compilationArgs, null, compilationUnits).call();
 		
-		//Evosuite tests generation
+		// Calls the Evosuite test generator
 		List<String> evoArgs = new ArrayList<>();
 		evoArgs.addAll(Arrays.asList(evoTarget.split(" ")));
 		evoArgs.addAll(Arrays.asList(evoOptions.split(" ")));

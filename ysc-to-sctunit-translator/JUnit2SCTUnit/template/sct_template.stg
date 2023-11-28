@@ -1,6 +1,6 @@
-test_class(statechart_name, test_list) ::= 
+test_class(statechart_name, test_suite) ::= 
 <<testclass <statechart_name>Test for statechart <statechart_name> {
-	<test_list:{test | <test_method(test, test.actions)>}>
+	<test_suite:{test_case | <test_method(test_case, test_case.actions)>}>
 }>>
 
 test_method(test_name, actions_list) ::= 

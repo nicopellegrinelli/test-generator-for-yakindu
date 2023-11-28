@@ -7,8 +7,8 @@ import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 
 public class VariableDeclarationExprCollector extends VoidVisitorAdapter<List<VariableDeclarationExpr>>{
 	@Override
-	public void visit(VariableDeclarationExpr md, List<VariableDeclarationExpr> collector) {
-		super.visit(md, collector);
-		collector.add(md);
+	public void visit(VariableDeclarationExpr node, List<VariableDeclarationExpr> collector) {
+		super.visit(node, collector);
+		collector.add(node);
 	}
 }

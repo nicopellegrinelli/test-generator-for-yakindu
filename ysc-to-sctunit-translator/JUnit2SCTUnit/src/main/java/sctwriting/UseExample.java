@@ -8,7 +8,7 @@ import org.stringtemplate.v4.STGroupFile;
 
 public class UseExample {
 	public static void main(String[] args) {
-		List<TestCase> test_suite = new ArrayList<TestCase>();
+		List<TestCase> testSuite = new ArrayList<TestCase>();
 		
 		TestCase test1 = new TestCase("test1");
 		test1.addEnter();
@@ -27,13 +27,13 @@ public class UseExample {
 		test2.addIsFinal(false);
 		test2.addExit();
 		
-		test_suite.add(test1);
-		test_suite.add(test2);
+		testSuite.add(test1);
+		testSuite.add(test2);
 		
 		STGroupFile group = new STGroupFile(".\\template\\sct_template.stg");
 		ST st = group.getInstanceOf("test_class");
 		st.add("statechart_name", "LightSwitch");
-		st.add("test_list", test_suite);
+		st.add("test_suite", testSuite);
 		System.out.println(st.render());
 	}
 

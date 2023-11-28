@@ -36,7 +36,7 @@ public class TestCase {
 		actions.add(new Action(false, null, null, false, false, false, true, false));
 	}
 	
-	public void addTryggerWithoutEvent() {
+	public void addTriggerWithoutEvent() {
 		actions.add(new Action(false, null, null, false, false, false, false, true));
 	}
 	
