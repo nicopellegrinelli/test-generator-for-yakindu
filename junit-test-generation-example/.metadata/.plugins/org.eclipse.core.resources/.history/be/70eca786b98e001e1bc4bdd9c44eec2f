@@ -1,48 +1,47 @@
 testclass StatechartTest for statechart Statechart {
 
 	@Test
-	operation test10 () {
-	    enter
-	    raise start
-	    raise power_on
-	    raise analize
-	    raise start
-	    assert is_active
-	}
-
-	@Test
-	operation test11 () {
-	    enter
-	    raise start
-	    raise power_on
-	    raise analize
-	    raise end_all
-	    raise start
-	    assert is_active
-	}
-
-	@Test
-	operation test12 () {
+	operation test00 () {
 	    enter
 	    raise power_on
 	    raise analize
 	    raise start
 	    raise b
 	    raise a
-	    raise end
+	    assert is_active
+	    assert active (Statechart.mainregion.on)
+	}
+
+	@Test
+	operation test09 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise start
 	    raise b
 	    assert is_active
+	    assert active (Statechart.mainregion.on.r1.analyses.r2.an2b)
+	}
+
+	@Test
+	operation test10 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise start
+	    assert is_active
+	    assert active (Statechart.mainregion.on.r1.analyses.r1.an1)
 	}
 
 	@Test
 	operation test13 () {
 	    enter
 	    raise power_on
+	    raise start
 	    raise analize
 	    raise start
 	    raise b
-	    raise a
-	    raise b
+	    raise start
 	    assert is_active
 	}
 
@@ -51,10 +50,7 @@ testclass StatechartTest for statechart Statechart {
 	    enter
 	    raise power_on
 	    raise analize
-	    raise start
-	    raise b
-	    enter
-	    raise end_all
+	    raise analize
 	    assert is_active
 	}
 
@@ -62,7 +58,9 @@ testclass StatechartTest for statechart Statechart {
 	operation test15 () {
 	    enter
 	    raise power_on
-	    raise b
+	    raise analize
+	    raise start
+	    raise analize
 	    assert is_active
 	}
 
@@ -70,10 +68,8 @@ testclass StatechartTest for statechart Statechart {
 	operation test16 () {
 	    enter
 	    raise power_on
+	    raise work
 	    raise analize
-	    raise start
-	    raise b
-	    raise end_all
 	    assert is_active
 	}
 
@@ -83,21 +79,29 @@ testclass StatechartTest for statechart Statechart {
 	    raise power_on
 	    raise analize
 	    raise start
+	    raise b
+	    raise a
+	    raise analize
+	    assert !is_final
+	}
+
+	@Test
+	operation test18 () {
 	    enter
+	    raise power_on
+	    raise start
+	    raise analize
 	    raise end_all
-	    assert is_active
+	    raise start
+	    assert is_final
 	}
 
 	@Test
 	operation test19 () {
 	    enter
 	    raise power_on
-	    raise analize
-	    raise start
 	    raise b
-	    raise a
-	    exit
-	    assert !is_active
+	    assert is_active
 	}
 
 	@Test
@@ -106,9 +110,9 @@ testclass StatechartTest for statechart Statechart {
 	    raise power_on
 	    raise analize
 	    raise start
+	    enter
+	    raise end_all
 	    assert is_active
-	    exit
-	    assert !is_active
 	}
 
 	@Test
@@ -116,17 +120,8 @@ testclass StatechartTest for statechart Statechart {
 	    enter
 	    raise power_on
 	    raise analize
-	    assert is_active
-	    exit
-	    assert !is_active
-	}
-
-	@Test
-	operation test22 () {
-	    enter
-	    raise power_on
-	    raise work
-	    assert is_active
+	    raise start
+	    raise b
 	    exit
 	    assert !is_active
 	}
@@ -135,6 +130,10 @@ testclass StatechartTest for statechart Statechart {
 	operation test23 () {
 	    enter
 	    raise power_on
+	    raise analize
+	    raise start
+	    raise b
+	    raise a
 	    assert is_active
 	    exit
 	    assert !is_active
@@ -143,7 +142,9 @@ testclass StatechartTest for statechart Statechart {
 	@Test
 	operation test24 () {
 	    enter
-	    assert is_active
+	    raise power_on
+	    raise analize
+	    raise start
 	    exit
 	    assert !is_active
 	}
@@ -153,30 +154,110 @@ testclass StatechartTest for statechart Statechart {
 	    enter
 	    raise power_on
 	    raise analize
-	    raise end_all
 	    assert is_active
-	    assert active (Statechart.mainregion._final_)
+	    exit
+	    assert !is_active
 	}
 
 	@Test
 	operation test26 () {
 	    enter
 	    raise power_on
-	    raise analize
-	    raise start
-	    raise a
+	    raise work
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test27 () {
+	    enter
+	    raise power_on
 	    assert is_active
+	    exit
+	    assert !is_active
 	}
 
 	@Test
 	operation test28 () {
 	    enter
 	    assert is_active
-	    assert !active (Statechart.mainregion.on.r1.analyses)
+	    exit
+	    assert !is_active
 	}
 
 	@Test
 	operation test29 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise end_all
+	    assert is_active
+	    assert active (Statechart.mainregion._final_)
+	}
+
+	@Test
+	operation test30 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise start
+	    raise b
+	    raise a
+	    assert is_active
+	    assert active (Statechart.mainregion.on.r1.endanalyses)
+	}
+
+	@Test
+	operation test31 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise start
+	    raise a
+	    assert !is_final
+	}
+
+	@Test
+	operation test32 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise start
+	    assert is_active
+	    assert active (Statechart.mainregion.on.r1.analyses.r2.an2a)
+	}
+
+	@Test
+	operation test33 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise start
+	    enter
+	    raise b
+	    raise a
+	    assert is_active
+	}
+
+	@Test
+	operation test34 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise start
+	    assert is_active
+	    assert active (Statechart.mainregion.on.r1.analyses)
+	}
+
+	@Test
+	operation test35 () {
+	    enter
+	    assert is_active
+	    assert !active (Statechart.mainregion.on.r1.analyses)
+	}
+
+	@Test
+	operation test36 () {
 	    enter
 	    raise power_on
 	    raise analize
@@ -185,7 +266,7 @@ testclass StatechartTest for statechart Statechart {
 	}
 
 	@Test
-	operation test30 () {
+	operation test37 () {
 	    enter
 	    raise power_on
 	    raise work
@@ -194,7 +275,7 @@ testclass StatechartTest for statechart Statechart {
 	}
 
 	@Test
-	operation test31 () {
+	operation test38 () {
 	    enter
 	    raise power_on
 	    raise analize
@@ -203,14 +284,14 @@ testclass StatechartTest for statechart Statechart {
 	}
 
 	@Test
-	operation test32 () {
+	operation test39 () {
 	    enter
 	    assert is_active
 	    assert !active (Statechart.mainregion.on)
 	}
 
 	@Test
-	operation test33 () {
+	operation test40 () {
 	    enter
 	    raise power_on
 	    assert is_active
@@ -218,37 +299,21 @@ testclass StatechartTest for statechart Statechart {
 	}
 
 	@Test
-	operation test34 () {
+	operation test41 () {
 	    enter
 	    assert is_active
 	    assert active (Statechart.mainregion.off)
 	}
 
 	@Test
-	operation test47 () {
-	    enter
-	    raise power_on
-	    raise analize
-	    raise end_all
-	    assert is_active
-	    assert is_final
-	}
-
-	@Test
-	operation test50 () {
-	    enter
-	    assert is_active
-	}
-
-	@Test
 	operation test54 () {
 	    enter
 	    raise power_on
-	    raise work
+	    raise analize
+	    raise start
+	    raise b
 	    raise end_all
-	    assert is_final
-	    exit
-	    assert !is_active
+	    assert is_active
 	}
 
 	@Test
@@ -256,13 +321,50 @@ testclass StatechartTest for statechart Statechart {
 	    enter
 	    raise power_on
 	    raise analize
+	    raise end_all
+	    assert is_active
+	    assert is_final
+	}
+
+	@Test
+	operation test58 () {
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test61 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise end_all
+	    assert is_active
+	    exit
+	    assert !is_final
+	}
+
+	@Test
+	operation test62 () {
+	    enter
+	    raise power_on
+	    raise work
+	    raise end_all
+	    raise end_all
+	    assert is_active
+	}
+
+	@Test
+	operation test65 () {
+	    enter
+	    raise power_on
+	    raise analize
 	    raise start
 	    raise b
 	    raise a
-	    raise end
-	    raise end
-	    raise b
+	    raise end_all
 	    assert is_final
 	}
 
 }
+
+

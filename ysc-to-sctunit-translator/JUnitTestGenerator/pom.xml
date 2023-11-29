@@ -36,6 +36,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/eu.stamp-project/evosuite -->
 
 		<!-- https://mvnrepository.com/artifact/org.antlr/stringtemplate -->
 		<dependency>

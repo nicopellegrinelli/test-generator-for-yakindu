@@ -67,6 +67,7 @@ public class TestGenerator {
 		evoArgs.addAll(Arrays.asList(evoOptions.split(" ")));
 		evoArgs.addAll(Arrays.asList(evoBase_dir.split(" ")));
 		org.evosuite.EvoSuite.main(evoArgs.toArray(new String[evoArgs.size()]));
+		
 	}
 
 }

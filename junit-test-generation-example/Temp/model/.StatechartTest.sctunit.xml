@@ -1,15 +1,7 @@
 <testsuite name="StatechartTest" time="">
-  <testcase name="test00" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test00" time="">
-  </testcase>
-  <testcase name="test06" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test06" time="">
-  </testcase>
-  <testcase name="test07" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test07" time="">
-  </testcase>
-  <testcase name="test08" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test08" time="">
-  </testcase>
-  <testcase name="test09" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test09" time="">
-  </testcase>
   <testcase name="test10" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test10" time="">
+  </testcase>
+  <testcase name="test11" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test11" time="">
   </testcase>
   <testcase name="test12" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test12" time="">
   </testcase>
@@ -23,8 +15,6 @@
   </testcase>
   <testcase name="test17" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test17" time="">
   </testcase>
-  <testcase name="test18" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test18" time="">
-  </testcase>
   <testcase name="test19" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test19" time="">
   </testcase>
   <testcase name="test20" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test20" time="">
@@ -33,12 +23,34 @@
   </testcase>
   <testcase name="test22" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test22" time="">
   </testcase>
+  <testcase name="test23" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test23" time="">
+  </testcase>
+  <testcase name="test24" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test24" time="">
+  </testcase>
+  <testcase name="test25" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test25" time="">
+  </testcase>
+  <testcase name="test26" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test26" time="">
+  </testcase>
+  <testcase name="test28" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test28" time="">
+  </testcase>
+  <testcase name="test29" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test29" time="">
+  </testcase>
+  <testcase name="test30" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test30" time="">
+  </testcase>
+  <testcase name="test31" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test31" time="">
+  </testcase>
   <testcase name="test32" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test32" time="">
   </testcase>
-  <testcase name="test36" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test36" time="">
+  <testcase name="test33" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test33" time="">
   </testcase>
-  <testcase name="test37" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test37" time="">
+  <testcase name="test34" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test34" time="">
   </testcase>
-  <testcase name="test38" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test38" time="">
+  <testcase name="test47" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test47" time="">
+  </testcase>
+  <testcase name="test50" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test50" time="">
+  </testcase>
+  <testcase name="test54" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test54" time="">
+  </testcase>
+  <testcase name="test55" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test55" time="">
   </testcase>
 </testsuite>

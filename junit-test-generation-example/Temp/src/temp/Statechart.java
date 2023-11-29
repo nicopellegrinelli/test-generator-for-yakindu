@@ -12,12 +12,18 @@ public class Statechart implements IStatemachine, IEventDriven {
 		MAINREGION_IDLE,
 		MAINREGION_ON,
 		MAINREGION_ON_R1_WORKING,
-		MAINREGION_ON_R1_ANALYZING,
+		MAINREGION_ON_R1_INITANALYSES,
+		MAINREGION_ON_R1_ANALYSES,
+		MAINREGION_ON_R1_ANALYSES_R1_AN1,
+		MAINREGION_ON_R1_ANALYSES_R2_AN2A,
+		MAINREGION_ON_R1_ANALYSES_R2_AN2B,
+		MAINREGION_ON_R1_ENDANALYSES,
 		MAINREGION__FINAL_,
+		MAINREGION_CHILL,
 		$NULLSTATE$
 	};
 	
-	private final State[] stateVector = new State[1];
+	private final State[] stateVector = new State[2];
 	
 	private Queue<Runnable> inEventQueue = new LinkedList<Runnable>();
 	private boolean isExecuting;
@@ -29,8 +35,17 @@ public class Statechart implements IStatemachine, IEventDriven {
 	protected void setIsExecuting(boolean value) {
 		this.isExecuting = value;
 	}
+	private long stateConfVectorPosition;
+	
+	protected long getStateConfVectorPosition() {
+		return stateConfVectorPosition;
+	}
+	
+	protected void setStateConfVectorPosition(long value) {
+		this.stateConfVectorPosition = value;
+	}
 	public Statechart() {
-		for (int i = 0; i < 1; i++) {
+		for (int i = 0; i < 2; i++) {
 			stateVector[i] = State.$NULLSTATE$;
 		}
 		
@@ -69,41 +84,68 @@ public class Statechart implements IStatemachine, IEventDriven {
 	 * @see IStatemachine#isActive()
 	 */
 	public boolean isActive() {
-		return stateVector[0] != State.$NULLSTATE$;
+		return stateVector[0] != State.$NULLSTATE$||stateVector[1] != State.$NULLSTATE$;
 	}
 	
 	/** 
 	* @see IStatemachine#isFinal()
 	*/
 	public boolean isFinal() {
-		return (stateVector[0] == State.MAINREGION__FINAL_);
+		return (stateVector[0] == State.MAINREGION__FINAL_) && (stateVector[1] == State.$NULLSTATE$);
 	}
 	private void clearInEvents() {
 		power_on = false;
 		work = false;
 		analize = false;
+		start = false;
+		a = false;
+		b = false;
 		end = false;
+		end_all = false;
 	}
 	
 	private void microStep() {
+		long transitioned = -1l;
+		stateConfVectorPosition = 0l;
 		switch (stateVector[0]) {
 		case MAINREGION_OFF:
-			mainregion_off_react(-1l);
+			transitioned = mainregion_off_react(transitioned);
 			break;
 		case MAINREGION_IDLE:
-			mainregion_idle_react(-1l);
+			transitioned = mainregion_idle_react(transitioned);
 			break;
 		case MAINREGION_ON_R1_WORKING:
-			mainregion_on_r1_working_react(-1l);
+			transitioned = mainregion_on_r1_working_react(transitioned);
 			break;
-		case MAINREGION_ON_R1_ANALYZING:
-			mainregion_on_r1_analyzing_react(-1l);
+		case MAINREGION_ON_R1_INITANALYSES:
+			transitioned = mainregion_on_r1_initanalyses_react(transitioned);
+			break;
+		case MAINREGION_ON_R1_ANALYSES_R1_AN1:
+			transitioned = mainregion_on_r1_analyses_r1_an1_react(transitioned);
+			break;
+		case MAINREGION_ON_R1_ENDANALYSES:
+			transitioned = mainregion_on_r1_endanalyses_react(transitioned);
 			break;
 		case MAINREGION__FINAL_:
-			mainregion__final__react(-1l);
+			transitioned = mainregion__final__react(transitioned);
+			break;
+		case MAINREGION_CHILL:
+			transitioned = mainregion_chill_react(transitioned);
 			break;
 		default:
 			break;
+		}
+		if (getStateConfVectorPosition()<1l) {
+			switch (stateVector[1]) {
+			case MAINREGION_ON_R1_ANALYSES_R2_AN2A:
+				mainregion_on_r1_analyses_r2_an2a_react(transitioned);
+				break;
+			case MAINREGION_ON_R1_ANALYSES_R2_AN2B:
+				mainregion_on_r1_analyses_r2_an2b_react(transitioned);
+				break;
+			default:
+				break;
+			}
 		}
 	}
 	
@@ -142,13 +184,26 @@ public class Statechart implements IStatemachine, IEventDriven {
 			return stateVector[0] == State.MAINREGION_IDLE;
 		case MAINREGION_ON:
 			return stateVector[0].ordinal() >= State.
-					MAINREGION_ON.ordinal()&& stateVector[0].ordinal() <= State.MAINREGION_ON_R1_ANALYZING.ordinal();
+					MAINREGION_ON.ordinal()&& stateVector[0].ordinal() <= State.MAINREGION_ON_R1_ENDANALYSES.ordinal();
 		case MAINREGION_ON_R1_WORKING:
 			return stateVector[0] == State.MAINREGION_ON_R1_WORKING;
-		case MAINREGION_ON_R1_ANALYZING:
-			return stateVector[0] == State.MAINREGION_ON_R1_ANALYZING;
+		case MAINREGION_ON_R1_INITANALYSES:
+			return stateVector[0] == State.MAINREGION_ON_R1_INITANALYSES;
+		case MAINREGION_ON_R1_ANALYSES:
+			return stateVector[0].ordinal() >= State.
+					MAINREGION_ON_R1_ANALYSES.ordinal()&& stateVector[0].ordinal() <= State.MAINREGION_ON_R1_ANALYSES_R2_AN2B.ordinal();
+		case MAINREGION_ON_R1_ANALYSES_R1_AN1:
+			return stateVector[0] == State.MAINREGION_ON_R1_ANALYSES_R1_AN1;
+		case MAINREGION_ON_R1_ANALYSES_R2_AN2A:
+			return stateVector[1] == State.MAINREGION_ON_R1_ANALYSES_R2_AN2A;
+		case MAINREGION_ON_R1_ANALYSES_R2_AN2B:
+			return stateVector[1] == State.MAINREGION_ON_R1_ANALYSES_R2_AN2B;
+		case MAINREGION_ON_R1_ENDANALYSES:
+			return stateVector[0] == State.MAINREGION_ON_R1_ENDANALYSES;
 		case MAINREGION__FINAL_:
 			return stateVector[0] == State.MAINREGION__FINAL_;
+		case MAINREGION_CHILL:
+			return stateVector[0] == State.MAINREGION_CHILL;
 		default:
 			return false;
 		}
@@ -185,6 +240,36 @@ public class Statechart implements IStatemachine, IEventDriven {
 		runCycle();
 	}
 	
+	private boolean start;
+	
+	
+	public void raiseStart() {
+		inEventQueue.add(() -> {
+			start = true;
+		});
+		runCycle();
+	}
+	
+	private boolean a;
+	
+	
+	public void raiseA() {
+		inEventQueue.add(() -> {
+			a = true;
+		});
+		runCycle();
+	}
+	
+	private boolean b;
+	
+	
+	public void raiseB() {
+		inEventQueue.add(() -> {
+			b = true;
+		});
+		runCycle();
+	}
+	
 	private boolean end;
 	
 	
@@ -195,34 +280,84 @@ public class Statechart implements IStatemachine, IEventDriven {
 		runCycle();
 	}
 	
+	private boolean end_all;
+	
+	
+	public void raiseEnd_all() {
+		inEventQueue.add(() -> {
+			end_all = true;
+		});
+		runCycle();
+	}
+	
 	/* 'default' enter sequence for state off */
 	private void enterSequence_mainregion_off_default() {
 		/* 'default' enter sequence for state off */
 		stateVector[0] = State.MAINREGION_OFF;
+		stateConfVectorPosition = 0;
 	}
 	
 	/* 'default' enter sequence for state idle */
 	private void enterSequence_mainregion_idle_default() {
 		/* 'default' enter sequence for state idle */
 		stateVector[0] = State.MAINREGION_IDLE;
+		stateConfVectorPosition = 0;
 	}
 	
 	/* 'default' enter sequence for state working */
 	private void enterSequence_mainregion_on_r1_working_default() {
 		/* 'default' enter sequence for state working */
 		stateVector[0] = State.MAINREGION_ON_R1_WORKING;
+		stateConfVectorPosition = 0;
 	}
 	
-	/* 'default' enter sequence for state analyzing */
-	private void enterSequence_mainregion_on_r1_analyzing_default() {
-		/* 'default' enter sequence for state analyzing */
-		stateVector[0] = State.MAINREGION_ON_R1_ANALYZING;
+	/* 'default' enter sequence for state initanalyses */
+	private void enterSequence_mainregion_on_r1_initanalyses_default() {
+		/* 'default' enter sequence for state initanalyses */
+		stateVector[0] = State.MAINREGION_ON_R1_INITANALYSES;
+		stateConfVectorPosition = 0;
+	}
+	
+	/* 'default' enter sequence for state an1 */
+	private void enterSequence_mainregion_on_r1_analyses_r1_an1_default() {
+		/* 'default' enter sequence for state an1 */
+		stateVector[0] = State.MAINREGION_ON_R1_ANALYSES_R1_AN1;
+		stateConfVectorPosition = 0;
+	}
+	
+	/* 'default' enter sequence for state an2a */
+	private void enterSequence_mainregion_on_r1_analyses_r2_an2a_default() {
+		/* 'default' enter sequence for state an2a */
+		stateVector[1] = State.MAINREGION_ON_R1_ANALYSES_R2_AN2A;
+		stateConfVectorPosition = 1;
+	}
+	
+	/* 'default' enter sequence for state an2b */
+	private void enterSequence_mainregion_on_r1_analyses_r2_an2b_default() {
+		/* 'default' enter sequence for state an2b */
+		stateVector[1] = State.MAINREGION_ON_R1_ANALYSES_R2_AN2B;
+		stateConfVectorPosition = 1;
+	}
+	
+	/* 'default' enter sequence for state endanalyses */
+	private void enterSequence_mainregion_on_r1_endanalyses_default() {
+		/* 'default' enter sequence for state endanalyses */
+		stateVector[0] = State.MAINREGION_ON_R1_ENDANALYSES;
+		stateConfVectorPosition = 0;
 	}
 	
 	/* Default enter sequence for final state */
 	private void enterSequence_mainregion__final__default() {
 		/* Default enter sequence for final state */
 		stateVector[0] = State.MAINREGION__FINAL_;
+		stateConfVectorPosition = 0;
+	}
+	
+	/* 'default' enter sequence for state chill */
+	private void enterSequence_mainregion_chill_default() {
+		/* 'default' enter sequence for state chill */
+		stateVector[0] = State.MAINREGION_CHILL;
+		stateConfVectorPosition = 0;
 	}
 	
 	/* 'default' enter sequence for region mainregion */
@@ -235,12 +370,14 @@ public class Statechart implements IStatemachine, IEventDriven {
 	private void exitSequence_mainregion_off() {
 		/* Default exit sequence for state off */
 		stateVector[0] = State.$NULLSTATE$;
+		stateConfVectorPosition = 0;
 	}
 	
 	/* Default exit sequence for state idle */
 	private void exitSequence_mainregion_idle() {
 		/* Default exit sequence for state idle */
 		stateVector[0] = State.$NULLSTATE$;
+		stateConfVectorPosition = 0;
 	}
 	
 	/* Default exit sequence for state on */
@@ -253,18 +390,63 @@ public class Statechart implements IStatemachine, IEventDriven {
 	private void exitSequence_mainregion_on_r1_working() {
 		/* Default exit sequence for state working */
 		stateVector[0] = State.$NULLSTATE$;
+		stateConfVectorPosition = 0;
 	}
 	
-	/* Default exit sequence for state analyzing */
-	private void exitSequence_mainregion_on_r1_analyzing() {
-		/* Default exit sequence for state analyzing */
+	/* Default exit sequence for state initanalyses */
+	private void exitSequence_mainregion_on_r1_initanalyses() {
+		/* Default exit sequence for state initanalyses */
 		stateVector[0] = State.$NULLSTATE$;
+		stateConfVectorPosition = 0;
+	}
+	
+	/* Default exit sequence for state analyses */
+	private void exitSequence_mainregion_on_r1_analyses() {
+		/* Default exit sequence for state analyses */
+		exitSequence_mainregion_on_r1_analyses_r1();
+		exitSequence_mainregion_on_r1_analyses_r2();
+	}
+	
+	/* Default exit sequence for state an1 */
+	private void exitSequence_mainregion_on_r1_analyses_r1_an1() {
+		/* Default exit sequence for state an1 */
+		stateVector[0] = State.$NULLSTATE$;
+		stateConfVectorPosition = 0;
+	}
+	
+	/* Default exit sequence for state an2a */
+	private void exitSequence_mainregion_on_r1_analyses_r2_an2a() {
+		/* Default exit sequence for state an2a */
+		stateVector[1] = State.$NULLSTATE$;
+		stateConfVectorPosition = 1;
+	}
+	
+	/* Default exit sequence for state an2b */
+	private void exitSequence_mainregion_on_r1_analyses_r2_an2b() {
+		/* Default exit sequence for state an2b */
+		stateVector[1] = State.$NULLSTATE$;
+		stateConfVectorPosition = 1;
+	}
+	
+	/* Default exit sequence for state endanalyses */
+	private void exitSequence_mainregion_on_r1_endanalyses() {
+		/* Default exit sequence for state endanalyses */
+		stateVector[0] = State.$NULLSTATE$;
+		stateConfVectorPosition = 0;
 	}
 	
 	/* Default exit sequence for final state. */
 	private void exitSequence_mainregion__final_() {
 		/* Default exit sequence for final state. */
 		stateVector[0] = State.$NULLSTATE$;
+		stateConfVectorPosition = 0;
+	}
+	
+	/* Default exit sequence for state chill */
+	private void exitSequence_mainregion_chill() {
+		/* Default exit sequence for state chill */
+		stateVector[0] = State.$NULLSTATE$;
+		stateConfVectorPosition = 0;
 	}
 	
 	/* Default exit sequence for region mainregion */
@@ -280,11 +462,30 @@ public class Statechart implements IStatemachine, IEventDriven {
 		case MAINREGION_ON_R1_WORKING:
 			exitSequence_mainregion_on_r1_working();
 			break;
-		case MAINREGION_ON_R1_ANALYZING:
-			exitSequence_mainregion_on_r1_analyzing();
+		case MAINREGION_ON_R1_INITANALYSES:
+			exitSequence_mainregion_on_r1_initanalyses();
+			break;
+		case MAINREGION_ON_R1_ANALYSES_R1_AN1:
+			exitSequence_mainregion_on_r1_analyses_r1_an1();
+			break;
+		case MAINREGION_ON_R1_ENDANALYSES:
+			exitSequence_mainregion_on_r1_endanalyses();
 			break;
 		case MAINREGION__FINAL_:
 			exitSequence_mainregion__final_();
+			break;
+		case MAINREGION_CHILL:
+			exitSequence_mainregion_chill();
+			break;
+		default:
+			break;
+		}
+		switch (stateVector[1]) {
+		case MAINREGION_ON_R1_ANALYSES_R2_AN2A:
+			exitSequence_mainregion_on_r1_analyses_r2_an2a();
+			break;
+		case MAINREGION_ON_R1_ANALYSES_R2_AN2B:
+			exitSequence_mainregion_on_r1_analyses_r2_an2b();
 			break;
 		default:
 			break;
@@ -298,8 +499,51 @@ public class Statechart implements IStatemachine, IEventDriven {
 		case MAINREGION_ON_R1_WORKING:
 			exitSequence_mainregion_on_r1_working();
 			break;
-		case MAINREGION_ON_R1_ANALYZING:
-			exitSequence_mainregion_on_r1_analyzing();
+		case MAINREGION_ON_R1_INITANALYSES:
+			exitSequence_mainregion_on_r1_initanalyses();
+			break;
+		case MAINREGION_ON_R1_ANALYSES_R1_AN1:
+			exitSequence_mainregion_on_r1_analyses_r1_an1();
+			break;
+		case MAINREGION_ON_R1_ENDANALYSES:
+			exitSequence_mainregion_on_r1_endanalyses();
+			break;
+		default:
+			break;
+		}
+		switch (stateVector[1]) {
+		case MAINREGION_ON_R1_ANALYSES_R2_AN2A:
+			exitSequence_mainregion_on_r1_analyses_r2_an2a();
+			break;
+		case MAINREGION_ON_R1_ANALYSES_R2_AN2B:
+			exitSequence_mainregion_on_r1_analyses_r2_an2b();
+			break;
+		default:
+			break;
+		}
+	}
+	
+	/* Default exit sequence for region r1 */
+	private void exitSequence_mainregion_on_r1_analyses_r1() {
+		/* Default exit sequence for region r1 */
+		switch (stateVector[0]) {
+		case MAINREGION_ON_R1_ANALYSES_R1_AN1:
+			exitSequence_mainregion_on_r1_analyses_r1_an1();
+			break;
+		default:
+			break;
+		}
+	}
+	
+	/* Default exit sequence for region r2 */
+	private void exitSequence_mainregion_on_r1_analyses_r2() {
+		/* Default exit sequence for region r2 */
+		switch (stateVector[1]) {
+		case MAINREGION_ON_R1_ANALYSES_R2_AN2A:
+			exitSequence_mainregion_on_r1_analyses_r2_an2a();
+			break;
+		case MAINREGION_ON_R1_ANALYSES_R2_AN2B:
+			exitSequence_mainregion_on_r1_analyses_r2_an2b();
 			break;
 		default:
 			break;
@@ -310,6 +554,19 @@ public class Statechart implements IStatemachine, IEventDriven {
 	private void react_mainregion__entry_Default() {
 		/* Default react sequence for initial entry  */
 		enterSequence_mainregion_off_default();
+	}
+	
+	/* The reactions of state null. */
+	private void react_mainregion_on_r1__sync0() {
+		/* The reactions of state null. */
+		enterSequence_mainregion_on_r1_analyses_r1_an1_default();
+		enterSequence_mainregion_on_r1_analyses_r2_an2a_default();
+	}
+	
+	/* The reactions of state null. */
+	private void react_mainregion_on_r1__sync1() {
+		/* The reactions of state null. */
+		enterSequence_mainregion_on_r1_endanalyses_default();
 	}
 	
 	private long react(long transitioned_before) {
@@ -349,7 +606,7 @@ public class Statechart implements IStatemachine, IEventDriven {
 			} else {
 				if (analize) {
 					exitSequence_mainregion_idle();
-					enterSequence_mainregion_on_r1_analyzing_default();
+					enterSequence_mainregion_on_r1_initanalyses_default();
 					react(0l);
 					transitioned_after = 0l;
 				}
@@ -367,10 +624,10 @@ public class Statechart implements IStatemachine, IEventDriven {
 		/* The reactions of state on. */
 		long transitioned_after = transitioned_before;
 		if (transitioned_after<0l) {
-			if (end) {
+			if (end_all) {
 				exitSequence_mainregion_on();
 				enterSequence_mainregion__final__default();
-				transitioned_after = 0l;
+				transitioned_after = 1l;
 			}
 		}
 		if (transitioned_after==transitioned_before) {
@@ -390,8 +647,26 @@ public class Statechart implements IStatemachine, IEventDriven {
 		;
 	}
 	
-	private long mainregion_on_r1_analyzing_react(long transitioned_before) {
-		/* The reactions of state analyzing. */
+	private long mainregion_on_r1_initanalyses_react(long transitioned_before) {
+		/* The reactions of state initanalyses. */
+		long transitioned_after = transitioned_before;
+		if (transitioned_after<0l) {
+			if (start) {
+				exitSequence_mainregion_on_r1_initanalyses();
+				react_mainregion_on_r1__sync0();
+				transitioned_after = 0l;
+			}
+		}
+		if (transitioned_after==transitioned_before) {
+			/* If no transition was taken then execute local reactions */
+			transitioned_after = mainregion_on_react(transitioned_before);
+		}
+		return transitioned_after
+		;
+	}
+	
+	private long mainregion_on_r1_analyses_react(long transitioned_before) {
+		/* The reactions of state analyses. */
 		long transitioned_after = transitioned_before;
 		/* If no transition was taken then execute local reactions */
 		transitioned_after = mainregion_on_react(transitioned_before);
@@ -399,9 +674,97 @@ public class Statechart implements IStatemachine, IEventDriven {
 		;
 	}
 	
+	private long mainregion_on_r1_analyses_r1_an1_react(long transitioned_before) {
+		/* The reactions of state an1. */
+		long transitioned_after = transitioned_before;
+		if (transitioned_after<0l) {
+			if ((a && isStateActive(State.MAINREGION_ON_R1_ANALYSES_R2_AN2B))) {
+				exitSequence_mainregion_on_r1_analyses();
+				react_mainregion_on_r1__sync1();
+				transitioned_after = 0l;
+			}
+		}
+		return transitioned_after
+		;
+	}
+	
+	private long mainregion_on_r1_analyses_r2_an2a_react(long transitioned_before) {
+		/* The reactions of state an2a. */
+		long transitioned_after = transitioned_before;
+		if (transitioned_after<1l) {
+			if (b) {
+				exitSequence_mainregion_on_r1_analyses_r2_an2a();
+				enterSequence_mainregion_on_r1_analyses_r2_an2b_default();
+				mainregion_on_r1_analyses_react(0l);
+				transitioned_after = 1l;
+			}
+		}
+		if (transitioned_after==transitioned_before) {
+			/* If no transition was taken then execute local reactions */
+			transitioned_after = mainregion_on_r1_analyses_react(transitioned_before);
+		}
+		return transitioned_after
+		;
+	}
+	
+	private long mainregion_on_r1_analyses_r2_an2b_react(long transitioned_before) {
+		/* The reactions of state an2b. */
+		long transitioned_after = transitioned_before;
+		if (transitioned_after<1l) {
+			if ((isStateActive(State.MAINREGION_ON_R1_ANALYSES_R1_AN1) && a)) {
+				exitSequence_mainregion_on_r1_analyses();
+				react_mainregion_on_r1__sync1();
+				transitioned_after = 1l;
+			}
+		}
+		if (transitioned_after==transitioned_before) {
+			/* If no transition was taken then execute local reactions */
+			transitioned_after = mainregion_on_r1_analyses_react(transitioned_before);
+		}
+		return transitioned_after
+		;
+	}
+	
+	private long mainregion_on_r1_endanalyses_react(long transitioned_before) {
+		/* The reactions of state endanalyses. */
+		long transitioned_after = transitioned_before;
+		if (transitioned_after<0l) {
+			if (end) {
+				exitSequence_mainregion_on();
+				enterSequence_mainregion_chill_default();
+				react(0l);
+				transitioned_after = 0l;
+			}
+		}
+		if (transitioned_after==transitioned_before) {
+			/* If no transition was taken then execute local reactions */
+			transitioned_after = mainregion_on_react(transitioned_before);
+		}
+		return transitioned_after
+		;
+	}
+	
 	private long mainregion__final__react(long transitioned_before) {
 		/* The reactions of state null. */
 		return react(transitioned_before)
+		;
+	}
+	
+	private long mainregion_chill_react(long transitioned_before) {
+		/* The reactions of state chill. */
+		long transitioned_after = transitioned_before;
+		if (transitioned_after<0l) {
+			if (end) {
+				exitSequence_mainregion_chill();
+				enterSequence_mainregion__final__default();
+				transitioned_after = 0l;
+			}
+		}
+		if (transitioned_after==transitioned_before) {
+			/* If no transition was taken then execute local reactions */
+			transitioned_after = react(transitioned_before);
+		}
+		return transitioned_after
 		;
 	}
 	
