@@ -1,0 +1,36 @@
+<testsuite name="StatechartSimplifiedTest" time="">
+  <testcase name="test01" classname="platform:/resource/Temp/model/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test01" time="">
+  </testcase>
+  <testcase name="test02" classname="platform:/resource/Temp/model/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test02" time="">
+  </testcase>
+  <testcase name="test03" classname="platform:/resource/Temp/model/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test03" time="">
+  </testcase>
+  <testcase name="test05" classname="platform:/resource/Temp/model/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test05" time="">
+  </testcase>
+  <testcase name="test06" classname="platform:/resource/Temp/model/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test06" time="">
+  </testcase>
+  <testcase name="test07" classname="platform:/resource/Temp/model/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test07" time="">
+  </testcase>
+  <testcase name="test08" classname="platform:/resource/Temp/model/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test08" time="">
+  </testcase>
+  <testcase name="test09" classname="platform:/resource/Temp/model/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test09" time="">
+  </testcase>
+  <testcase name="test10" classname="platform:/resource/Temp/model/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test10" time="">
+  </testcase>
+  <testcase name="test11" classname="platform:/resource/Temp/model/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test11" time="">
+  </testcase>
+  <testcase name="test12" classname="platform:/resource/Temp/model/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test12" time="">
+  </testcase>
+  <testcase name="test28" classname="platform:/resource/Temp/model/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test28" time="">
+  </testcase>
+  <testcase name="test29" classname="platform:/resource/Temp/model/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test29" time="">
+  </testcase>
+  <testcase name="test31" classname="platform:/resource/Temp/model/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test31" time="">
+  </testcase>
+  <testcase name="test32" classname="platform:/resource/Temp/model/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test32" time="">
+  </testcase>
+  <testcase name="test33" classname="platform:/resource/Temp/model/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test33" time="">
+  </testcase>
+  <testcase name="test35" classname="platform:/resource/Temp/model/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test35" time="">
+  </testcase>
+</testsuite>

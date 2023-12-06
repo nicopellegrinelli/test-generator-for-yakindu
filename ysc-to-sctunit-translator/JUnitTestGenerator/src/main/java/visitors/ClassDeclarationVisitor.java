@@ -8,7 +8,8 @@ public class ClassDeclarationVisitor extends VoidVisitorAdapter<Void> {
 	public void visit(ClassOrInterfaceDeclaration node, Void arg) {
 		// To ensure child nodes of the current node are also visited
 		super.visit(node, arg);
-		// Changes class name
-		node.setName(node.getNameAsString()+"Simplified");
+		// Changes class name only of the public class
+		if (node.isPublic())
+			node.setName(node.getNameAsString()+"Simplified");
 	}
 }

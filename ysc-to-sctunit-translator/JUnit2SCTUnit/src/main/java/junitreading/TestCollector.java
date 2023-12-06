@@ -93,7 +93,7 @@ public class TestCollector extends VoidVisitorAdapter<List<TestCase>> {
 					stateName = stateName.substring(0, separator) + stateName.substring(separator).toLowerCase().replace("_", ".");
 					if (stateName.contains("final"))
 						stateName = stateName.replace(".final.", "_final_");
-					testCase.addAssertState(stateName, assertTrue);
+					testCase.addAssertState(stateName.replace("Simplified", ""), assertTrue);
 				}
 			}
 		}

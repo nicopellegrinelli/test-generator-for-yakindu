@@ -20,6 +20,7 @@ import com.github.javaparser.StaticJavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.visitor.VoidVisitor;
 
+import support.MySecurityManager;
 import visitors.ClassDeclarationVisitor;
 import visitors.ConstructorDeclarationVisitor;
 import visitors.MethodDeclarationVisitor;
@@ -44,7 +45,8 @@ public class TestGenerator {
 		String compilerClasspath = "-classpath " + projectPath + "\\src\\";
 		String compilerImplicit = "-implicit:class";
 		
-		String evoTarget = "-class " + packageName + "." + statechartName + "Simplified";
+		String evoTarget = "-class " + packageName + "." + statechartName;
+		String evoSimplifiedTarget = "-class " + packageName + "." + statechartName + "Simplified";
 		String evoOptions = "-projectCP " + projectPath + "\\bin";
 		String evoBaseDir = "-base_dir " + projectPath;
 		String evoGenerateSuite = "-generateSuite ";
@@ -93,14 +95,31 @@ public class TestGenerator {
 		writer.write(cu.toString());
 		writer.close();
 		
-		// Calls the Evosuite test generator on the simplified version
+		// Compiles the new simplified class
+		f = new File(simplifiedClassPath);
+        compilationUnits = stdFileManager.getJavaFileObjectsFromFiles(Arrays.asList(f));
+		compiler.getTask(null, null, null, compilationArgs, null, compilationUnits).call();
+		
+		
+		// Calls the Evosuite test generator both on the original and the simplified versions
+		// Changes the security manager to avoid JVM stop running after Evosuite calls System.exit(0);
+		MySecurityManager sm = new MySecurityManager();
+	    System.setSecurityManager(sm);
+	    try {
+		    List<String> evoArgs = new ArrayList<>();
+			evoArgs.addAll(Arrays.asList(evoTarget.split(" ")));
+			evoArgs.addAll(Arrays.asList(evoOptions.split(" ")));
+			evoArgs.addAll(Arrays.asList(evoBaseDir.split(" ")));
+			evoArgs.addAll(Arrays.asList(evoGenerateSuite.split(" ")));
+			org.evosuite.EvoSuite.main(evoArgs.toArray(new String[evoArgs.size()]));
+	    } catch (SecurityException e) { }
+
 		List<String> evoArgs = new ArrayList<>();
-		evoArgs.addAll(Arrays.asList(evoTarget.split(" ")));
+		evoArgs.addAll(Arrays.asList(evoSimplifiedTarget.split(" ")));
 		evoArgs.addAll(Arrays.asList(evoOptions.split(" ")));
 		evoArgs.addAll(Arrays.asList(evoBaseDir.split(" ")));
 		evoArgs.addAll(Arrays.asList(evoGenerateSuite.split(" ")));
 		org.evosuite.EvoSuite.main(evoArgs.toArray(new String[evoArgs.size()]));
-		
 	}
 
 }
