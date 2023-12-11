@@ -5,12 +5,12 @@ import java.security.Permission;
 public class MySecurityManager extends SecurityManager {
 	@Override
 	public void checkPermission(Permission perm) {
-		// allow anything.
+		// Allow anything.
 	}
 
 	@Override
 	public void checkPermission(Permission perm, Object context) {
-		// allow anything.
+		// Allow anything.
 	}
 
 	@Override

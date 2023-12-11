@@ -18,9 +18,12 @@ import com.github.javaparser.StaticJavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.visitor.VoidVisitor;
 
-import visitors.ClassDeclarationVisitor;
-import visitors.ConstructorDeclarationVisitor;
-import visitors.MethodDeclarationVisitor;
+import javareading.ClassDeclarationVisitor;
+import javareading.ConstructorDeclarationVisitor;
+import javareading.MethodDeclarationVisitor;
+import junitreading.ClassNameCollector;
+import junitreading.TestCaseCollector;
+import sctunitwriting.TestCase;
 
 public final class Generators {
 	public static void genarateSgen(String projectPath, String statechartName, String packageName, String projectName, boolean time)
@@ -28,13 +31,13 @@ public final class Generators {
 		System.out.println("*******************************************");
 		System.out.println("Generating .sgen file...");
 		System.out.println("*******************************************");
-		File genFile = new File(projectPath + "\\model\\" + statechartName + ".sgen");
-		STGroupFile group = new STGroupFile(".\\template\\generator.stg");
+		STGroupFile group = new STGroupFile(".\\template\\sgen_template.stg");
 		ST st = group.getInstanceOf("generator");
 		st.add("project_name", projectName);
 		st.add("package_name", packageName);
 		st.add("statechart_name", statechartName);
 		if(time) st.add("time", "");
+		File genFile = new File(projectPath + "\\model\\" + statechartName + ".sgen");
 		st.write(genFile, null);
 	}
 	
@@ -61,7 +64,7 @@ public final class Generators {
 	public static void genarateSimplifiedJava(String classPath, String simplifiedClassPath)
 			throws IOException {
 		System.out.println("*******************************************");
-		System.out.println("Generating a simplified java class...");
+		System.out.println("Generating simplified java class...");
 		System.out.println("*******************************************");
 		CompilationUnit cu = StaticJavaParser.parse(new FileInputStream(classPath));
 		VoidVisitor<Void> classVisitor = new ClassDeclarationVisitor();
@@ -87,6 +90,35 @@ public final class Generators {
 		evoArgs.add("-Dsearch_budget=1");
 		evoArgs.add("-generateSuite");
 		org.evosuite.EvoSuite.main(evoArgs.toArray(new String[evoArgs.size()]));
+	}
+	
+	public static void genarateSctunit(String junitTestPath, String sctunitTestPath)
+			throws IOException {
+		System.out.println("*******************************************");
+		System.out.println("Generating .sctunit file...");
+		System.out.println("*******************************************");
+		// Gets the compilation unit of the (test) class
+		CompilationUnit cu = StaticJavaParser.parse(new FileInputStream(junitTestPath));
+		
+		// Obtains the statechart name starting from the name of the test class
+		List<String> classNameList = new ArrayList<String>();
+		VoidVisitor<List<String>> classNameCollector = new ClassNameCollector();
+		classNameCollector.visit(cu, classNameList);
+		String statechartName = classNameList.get(0).replace("_ESTest", "");
+		
+		// Visits all the (test) methods contained in the compilation unit.
+		// Each visit of a method produces a TestCase object 
+		List<TestCase> testCaseList = new ArrayList<TestCase>();
+		VoidVisitor<List<TestCase>> testCaseCollector = new TestCaseCollector();
+		testCaseCollector.visit(cu, testCaseList);
+		
+		// Prints to video the SCTUnit file
+		STGroupFile group = new STGroupFile(".\\template\\sctunit_template.stg");
+		ST st = group.getInstanceOf("test_class");
+		st.add("statechart_name", statechartName);
+		st.add("test_suite", testCaseList);
+		File genFile = new File(sctunitTestPath);
+		st.write(genFile, null);
 	}
 	
 

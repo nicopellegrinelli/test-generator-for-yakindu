@@ -1,176 +1,86 @@
-testclass StatechartSimplifiedTest for statechart Statechart {
-
+testclass StatechartSimplifiedTest for statechart StatechartSimplified {
 	@Test
-	operation test01 () {
+	operation test00 () {
 	    raise power_on
 	    enter
 	    proceed 1 cycle
-	    raise analize
-	    proceed 1 cycle
-	    raise start
-	    proceed 1 cycle
-	    raise a
 	    proceed 1 cycle
 	    assert is_active
 	}
 
 	@Test
-	operation test02 () {
-	    raise power_on
+	operation test01 () {
 	    enter
-	    proceed 1 cycle
 	    proceed 1 cycle
 	    assert is_active
 	}
 
 	@Test
 	operation test03 () {
+	    raise power_on
 	    enter
 	    proceed 1 cycle
 	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test04 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
 	}
 
 	@Test
 	operation test05 () {
-	    raise power_on
-	    enter
-	    proceed 1 cycle
-	    raise analize
-	    proceed 1 cycle
-	    assert is_active
-	    exit
-	    assert !is_active
-	}
-
-	@Test
-	operation test06 () {
-	    raise power_on
-	    enter
-	    proceed 1 cycle
-	    raise work
-	    proceed 1 cycle
-	    assert is_active
-	    exit
-	    assert !is_active
-	}
-
-	@Test
-	operation test07 () {
-	    raise power_on
-	    enter
-	    proceed 1 cycle
-	    assert is_active
-	    exit
-	    assert !is_active
-	}
-
-	@Test
-	operation test08 () {
-	    enter
-	    assert is_active
-	    exit
-	    assert !is_active
-	}
-
-	@Test
-	operation test09 () {
 	    enter
 	    assert is_active
 	    assert !active (Statechart.mainregion.on.r1.analyses)
 	}
 
 	@Test
-	operation test10 () {
+	operation test06 () {
 	    enter
 	    assert is_active
 	    assert !active (Statechart.mainregion.on)
 	}
 
 	@Test
-	operation test11 () {
-	    enter
-	    raise power_on
-	    proceed 1 cycle
-	    assert is_active
-	    assert active (Statechart.mainregion.idle)
-	}
-
-	@Test
-	operation test12 () {
+	operation test07 () {
 	    enter
 	    assert is_active
 	    assert active (Statechart.mainregion.off)
 	}
 
 	@Test
-	operation test28 () {
+	operation test23 () {
 	    enter
 	    assert is_active
 	}
 
 	@Test
-	operation test29 () {
-	    raise power_on
-	    enter
-	    proceed 1 cycle
-	    raise analize
-	    proceed 1 cycle
-	    raise end_all
-	    proceed 1 cycle
-	    proceed 1 cycle
-	    assert is_active
-	}
-
-	@Test
-	operation test31 () {
-	    raise power_on
-	    enter
-	    proceed 1 cycle
-	    raise analize
-	    proceed 1 cycle
-	    raise start
-	    proceed 1 cycle
-	    assert is_active
-	    exit
-	    assert !is_active
-	}
-
-	@Test
-	operation test32 () {
+	operation test25 () {
 	    raise power_on
 	    enter
 	    proceed 1 cycle
 	    raise work
 	    proceed 1 cycle
-	    raise end_all
 	    proceed 1 cycle
 	    assert is_active
 	}
 
 	@Test
-	operation test33 () {
+	operation test30 () {
 	    raise power_on
 	    enter
 	    proceed 1 cycle
 	    raise analize
 	    proceed 1 cycle
-	    raise end_all
-	    proceed 1 cycle
+	    assert is_active
 	    exit
 	    assert !is_active
-	}
-
-	@Test
-	operation test35 () {
-	    raise power_on
-	    enter
-	    proceed 1 cycle
-	    raise analize
-	    proceed 1 cycle
-	    raise start
-	    proceed 1 cycle
-	    proceed 1 cycle
-	    assert !is_final
 	}
 
 }

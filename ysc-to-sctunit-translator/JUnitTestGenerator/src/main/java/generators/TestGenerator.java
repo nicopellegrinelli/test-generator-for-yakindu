@@ -28,6 +28,12 @@ public class TestGenerator {
 		String evoOptions = "-projectCP " + projectPath + "\\bin";
 		String evoBaseDir = "-base_dir " + projectPath;
 		
+		String junitTestPath = projectPath + "\\evosuite-tests\\" + packageName + "\\" + statechartName + "_ESTest.java" ;
+		String sctunitTestPath = projectPath + "\\model\\" + statechartName + "Test.sctunit" ;
+		
+		String simplifiedJunitTestPath = projectPath + "\\evosuite-tests\\" + packageName + "\\" + statechartName + "Simplified_ESTest.java" ;
+		String simplifiedSctunitTestPath = projectPath + "\\model\\" + statechartName + "SimplifiedTest.sctunit" ;
+		
 		// Generates the .sgen file needed by Itemis Create
 		boolean timeBased = args.length == 5 && args[4].equals("time");
 		Generators.genarateSgen(projectPath, statechartName, packageName, projectName, timeBased);
@@ -52,18 +58,20 @@ public class TestGenerator {
 	    try {
 	    	Generators.genarateJunit(evoTarget, evoOptions, evoBaseDir);
 	    } catch (SecurityException e) {
-	    	//Generazione sctunit
+	    	Generators.genarateSctunit(junitTestPath, sctunitTestPath);
 	    }
 
 	    try {
 	    	Generators.genarateJunit(evoSimplifiedTarget, evoOptions, evoBaseDir);
 	    } catch (SecurityException e) { 
-	    	//Generazione sctunit
+	    	Generators.genarateSctunit(simplifiedJunitTestPath, simplifiedSctunitTestPath);
 	    }
 	    
 	    // Changes the security manager back to the default one to let the execution ends
 	    System.setSecurityManager(default_sm);
-	    System.out.println("Closing...");
+		System.out.println("*******************************************");
+		System.out.println("Closing...");
+		System.out.println("*******************************************");
 	    System.exit(0);
 	}
 
