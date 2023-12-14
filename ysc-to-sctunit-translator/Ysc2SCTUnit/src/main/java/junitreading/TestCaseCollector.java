@@ -31,9 +31,9 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 		super.visit(node, collector);
 		
 		// Discards methods in which the method .enter IS NOT called or the method .setIsExecuting IS called
-		if (!node.getBody().toString().contains(".enter") || node.getBody().toString().contains(".setIsExecuting")) {
-			return;
-		}
+//		if (!node.getBody().toString().contains(".enter") || node.getBody().toString().contains(".setIsExecuting")) {
+//			return;
+//		}
 		
 		// Gets all variable declarations expressions contained in the method
 		List<VariableDeclarationExpr> variableDeclarationList = new ArrayList<VariableDeclarationExpr>();
@@ -101,9 +101,12 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 					stateName = stateName.replace("State.", "");
 					int separator = stateName.lastIndexOf('.');
 					stateName = stateName.substring(0, separator) + stateName.substring(separator).toLowerCase().replace("_", ".");
-					if (stateName.contains("final"))
+					if (stateName.contains("$nullstate$"))
+						continue;
+					if (stateName.contains(".final."))
 						stateName = stateName.replace(".final.", "_final_");
 					testCase.addAssertState(stateName.replace("Simplified", ""), assertTrue);
+					continue;
 				}
 			}
 		}

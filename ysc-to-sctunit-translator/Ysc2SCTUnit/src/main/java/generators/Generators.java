@@ -124,7 +124,6 @@ public final class Generators {
 		evoArgs.addAll(Arrays.asList(evoTarget.split(" ")));
 		evoArgs.addAll(Arrays.asList(evoOptions.split(" ")));
 		evoArgs.addAll(Arrays.asList(evoBaseDir.split(" ")));
-		//evoArgs.add("-Dsearch_budget=1");
 		evoArgs.add("-generateSuite");
 		org.evosuite.EvoSuite.main(evoArgs.toArray(new String[evoArgs.size()]));
 	}

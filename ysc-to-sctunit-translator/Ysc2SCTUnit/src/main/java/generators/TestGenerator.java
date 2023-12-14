@@ -85,7 +85,7 @@ public class TestGenerator {
 	    // Change the security manager back to the default one to let the execution ends
 	    System.setSecurityManager(default_sm);
 		System.out.println("*******************************************");
-		System.out.println("Closing...");
+		System.out.println("Finished.");
 		System.out.println("*******************************************");
 	    System.exit(0);
 	}
