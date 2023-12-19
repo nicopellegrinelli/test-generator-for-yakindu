@@ -70,22 +70,31 @@ public class TestGenerator {
 		SecurityManager default_sm = System.getSecurityManager();
 		MySecurityManager my_sm = new MySecurityManager();
 	    System.setSecurityManager(my_sm);
+	    long startTimeStandard = System.nanoTime();
+	    long endTimeStandard = 0;
 	    try {
 	    	Generators.genarateJunit(evoTarget, evoOptions, evoBaseDir);
 	    } catch (SecurityException e) {
+	    	endTimeStandard = System.nanoTime();
 	    	Generators.genarateSctunit(junitTestPath, sctunitTestPath);
 	    }
-
-	    try {
-	    	Generators.genarateJunit(evoSimplifiedTarget, evoOptions, evoBaseDir);
-	    } catch (SecurityException e) { 
-	    	Generators.genarateSctunit(simplifiedJunitTestPath, simplifiedSctunitTestPath);
-	    }
 	    
+//	    long startTimeSimplified = System.nanoTime();
+//	    long endTimeSimplified = 0;
+//	    try {
+//	    	Generators.genarateJunit(evoSimplifiedTarget, evoOptions, evoBaseDir);
+//	    } catch (SecurityException e) { 
+//	    	endTimeSimplified = System.nanoTime();
+//	    	Generators.genarateSctunit(simplifiedJunitTestPath, simplifiedSctunitTestPath);
+//	    }
+	    double totalTimeStandard = ((double)(endTimeStandard - startTimeStandard)) / Math.pow(10, 9);
+//	    double totalTimeSimplified = ((double)(endTimeSimplified - startTimeSimplified)) / Math.pow(10, 9);
 	    // Change the security manager back to the default one to let the execution ends
 	    System.setSecurityManager(default_sm);
 		System.out.println("*******************************************");
 		System.out.println("Finished.");
+		System.out.println("Evosuite execution time (standard): " + totalTimeStandard);
+//		System.out.println("Evosuite execution time (simplified): " + totalTimeSimplified);
 		System.out.println("*******************************************");
 	    System.exit(0);
 	}

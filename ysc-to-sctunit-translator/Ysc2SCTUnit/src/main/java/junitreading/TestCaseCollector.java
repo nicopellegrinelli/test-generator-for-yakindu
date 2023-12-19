@@ -31,9 +31,9 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 		super.visit(node, collector);
 		
 		// Discards methods in which the method .enter IS NOT called or the method .setIsExecuting IS called
-//		if (!node.getBody().toString().contains(".enter") || node.getBody().toString().contains(".setIsExecuting")) {
-//			return;
-//		}
+		if (!node.getBody().toString().contains(".enter") || node.getBody().toString().contains(".setIsExecuting")) {
+			return;
+		}
 		
 		// Gets all variable declarations expressions contained in the method
 		List<VariableDeclarationExpr> variableDeclarationList = new ArrayList<VariableDeclarationExpr>();

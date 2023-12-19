@@ -3,34 +3,12 @@
  */
 package temp;
 
-import com.yakindu.core.ICycleBased;
+import com.yakindu.core.IEventDriven;
 import com.yakindu.core.IStatemachine;
+import java.util.LinkedList;
+import java.util.Queue;
 
-public class StatechartSimplified implements IStatemachine, ICycleBased {
-
-    private static class EvBuf {
-
-        private boolean power_on;
-
-        private boolean work;
-
-        private boolean analize;
-
-        private boolean start;
-
-        private boolean a;
-
-        private boolean b;
-
-        private boolean end;
-
-        private boolean end_all;
-    }
-
-    private static class StatechartEvBuf {
-
-        private EvBuf iface = new EvBuf();
-    }
+public class StatechartSimplified implements IStatemachine, IEventDriven {
 
     public enum State {
 
@@ -51,7 +29,7 @@ public class StatechartSimplified implements IStatemachine, ICycleBased {
 
     private final State[] stateVector = new State[2];
 
-    private StatechartEvBuf current = new StatechartEvBuf();
+    private Queue<Runnable> inEventQueue = new LinkedList<Runnable>();
 
     private boolean isExecuting;
 
@@ -78,17 +56,6 @@ public class StatechartSimplified implements IStatemachine, ICycleBased {
             stateVector[i] = State.$NULLSTATE$;
         }
         clearInEvents();
-        isExecuting = false;
-    }
-
-    public void runCycle() {
-        /* Performs a 'run to completion' step. */
-        if (getIsExecuting()) {
-            return;
-        }
-        isExecuting = true;
-        swapInEvents();
-        microStep();
         isExecuting = false;
     }
 
@@ -126,25 +93,6 @@ public class StatechartSimplified implements IStatemachine, ICycleBased {
      */
     public boolean isFinal() {
         return (stateVector[0] == State.MAINREGION__FINAL_) && (stateVector[1] == State.$NULLSTATE$);
-    }
-
-    private void swapInEvents() {
-        current.iface.power_on = power_on;
-        power_on = false;
-        current.iface.work = work;
-        work = false;
-        current.iface.analize = analize;
-        analize = false;
-        current.iface.start = start;
-        start = false;
-        current.iface.a = a;
-        a = false;
-        current.iface.b = b;
-        b = false;
-        current.iface.end = end;
-        end = false;
-        current.iface.end_all = end_all;
-        end_all = false;
     }
 
     private void clearInEvents() {
@@ -203,6 +151,28 @@ public class StatechartSimplified implements IStatemachine, ICycleBased {
         }
     }
 
+    private void runCycle() {
+        /* Performs a 'run to completion' step. */
+        if (getIsExecuting()) {
+            return;
+        }
+        isExecuting = true;
+        nextEvent();
+        do {
+            microStep();
+            clearInEvents();
+        } while (nextEvent());
+        isExecuting = false;
+    }
+
+    private boolean nextEvent() {
+        if (!inEventQueue.isEmpty()) {
+            inEventQueue.poll().run();
+            return true;
+        }
+        return false;
+    }
+
     /**
      * Returns true if the given state is currently active otherwise false.
      */
@@ -240,49 +210,73 @@ public class StatechartSimplified implements IStatemachine, ICycleBased {
     private boolean power_on;
 
     public void raisePower_on() {
-        power_on = true;
+        inEventQueue.add(() -> {
+            power_on = true;
+        });
+        runCycle();
     }
 
     private boolean work;
 
     public void raiseWork() {
-        work = true;
+        inEventQueue.add(() -> {
+            work = true;
+        });
+        runCycle();
     }
 
     private boolean analize;
 
     public void raiseAnalize() {
-        analize = true;
+        inEventQueue.add(() -> {
+            analize = true;
+        });
+        runCycle();
     }
 
     private boolean start;
 
     public void raiseStart() {
-        start = true;
+        inEventQueue.add(() -> {
+            start = true;
+        });
+        runCycle();
     }
 
     private boolean a;
 
     public void raiseA() {
-        a = true;
+        inEventQueue.add(() -> {
+            a = true;
+        });
+        runCycle();
     }
 
     private boolean b;
 
     public void raiseB() {
-        b = true;
+        inEventQueue.add(() -> {
+            b = true;
+        });
+        runCycle();
     }
 
     private boolean end;
 
     public void raiseEnd() {
-        end = true;
+        inEventQueue.add(() -> {
+            end = true;
+        });
+        runCycle();
     }
 
     private boolean end_all;
 
     public void raiseEnd_all() {
-        end_all = true;
+        inEventQueue.add(() -> {
+            end_all = true;
+        });
+        runCycle();
     }
 
     /* 'default' enter sequence for state off */
@@ -573,7 +567,7 @@ public class StatechartSimplified implements IStatemachine, ICycleBased {
         /* The reactions of state off. */
         long transitioned_after = transitioned_before;
         if (transitioned_after < 0l) {
-            if (current.iface.power_on) {
+            if (power_on) {
                 exitSequence_mainregion_off();
                 enterSequence_mainregion_idle_default();
                 react(0l);
@@ -591,13 +585,13 @@ public class StatechartSimplified implements IStatemachine, ICycleBased {
         /* The reactions of state idle. */
         long transitioned_after = transitioned_before;
         if (transitioned_after < 0l) {
-            if (current.iface.work) {
+            if (work) {
                 exitSequence_mainregion_idle();
                 enterSequence_mainregion_on_r1_working_default();
                 react(0l);
                 transitioned_after = 0l;
             } else {
-                if (current.iface.analize) {
+                if (analize) {
                     exitSequence_mainregion_idle();
                     enterSequence_mainregion_on_r1_initanalyses_default();
                     react(0l);
@@ -616,7 +610,7 @@ public class StatechartSimplified implements IStatemachine, ICycleBased {
         /* The reactions of state on. */
         long transitioned_after = transitioned_before;
         if (transitioned_after < 0l) {
-            if (current.iface.end_all) {
+            if (end_all) {
                 exitSequence_mainregion_on();
                 enterSequence_mainregion__final__default();
                 transitioned_after = 1l;
@@ -641,7 +635,7 @@ public class StatechartSimplified implements IStatemachine, ICycleBased {
         /* The reactions of state initanalyses. */
         long transitioned_after = transitioned_before;
         if (transitioned_after < 0l) {
-            if (current.iface.start) {
+            if (start) {
                 exitSequence_mainregion_on_r1_initanalyses();
                 react_mainregion_on_r1__sync0();
                 transitioned_after = 0l;
@@ -666,7 +660,7 @@ public class StatechartSimplified implements IStatemachine, ICycleBased {
         /* The reactions of state an1. */
         long transitioned_after = transitioned_before;
         if (transitioned_after < 0l) {
-            if ((current.iface.a && isStateActive(State.MAINREGION_ON_R1_ANALYSES_R2_AN2B))) {
+            if ((a && isStateActive(State.MAINREGION_ON_R1_ANALYSES_R2_AN2B))) {
                 exitSequence_mainregion_on_r1_analyses();
                 react_mainregion_on_r1__sync1();
                 transitioned_after = 0l;
@@ -679,7 +673,7 @@ public class StatechartSimplified implements IStatemachine, ICycleBased {
         /* The reactions of state an2a. */
         long transitioned_after = transitioned_before;
         if (transitioned_after < 1l) {
-            if (current.iface.b) {
+            if (b) {
                 exitSequence_mainregion_on_r1_analyses_r2_an2a();
                 enterSequence_mainregion_on_r1_analyses_r2_an2b_default();
                 mainregion_on_r1_analyses_react(0l);
@@ -697,7 +691,7 @@ public class StatechartSimplified implements IStatemachine, ICycleBased {
         /* The reactions of state an2b. */
         long transitioned_after = transitioned_before;
         if (transitioned_after < 1l) {
-            if ((isStateActive(State.MAINREGION_ON_R1_ANALYSES_R1_AN1) && current.iface.a)) {
+            if ((isStateActive(State.MAINREGION_ON_R1_ANALYSES_R1_AN1) && a)) {
                 exitSequence_mainregion_on_r1_analyses();
                 react_mainregion_on_r1__sync1();
                 transitioned_after = 1l;
@@ -714,7 +708,7 @@ public class StatechartSimplified implements IStatemachine, ICycleBased {
         /* The reactions of state endanalyses. */
         long transitioned_after = transitioned_before;
         if (transitioned_after < 0l) {
-            if (current.iface.end) {
+            if (end) {
                 exitSequence_mainregion_on();
                 enterSequence_mainregion_chill_default();
                 react(0l);
@@ -737,7 +731,7 @@ public class StatechartSimplified implements IStatemachine, ICycleBased {
         /* The reactions of state chill. */
         long transitioned_after = transitioned_before;
         if (transitioned_after < 0l) {
-            if (current.iface.end) {
+            if (end) {
                 exitSequence_mainregion_chill();
                 enterSequence_mainregion__final__default();
                 transitioned_after = 0l;
@@ -748,5 +742,10 @@ public class StatechartSimplified implements IStatemachine, ICycleBased {
             transitioned_after = react(transitioned_before);
         }
         return transitioned_after;
+    }
+
+    /* Can be used by the client code to trigger a run to completion step without raising an event. */
+    public void triggerWithoutEvent() {
+        runCycle();
     }
 }
