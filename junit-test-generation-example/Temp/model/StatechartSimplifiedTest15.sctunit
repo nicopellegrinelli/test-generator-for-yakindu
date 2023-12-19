@@ -1,0 +1,118 @@
+testclass StatechartTest for statechart Statechart {
+	@Test
+	operation test01 () {
+	    enter
+	    raise power_on
+	    proceed 1 cycle
+	    proceed 1 cycle
+	    assert is_active
+	}
+
+	@Test
+	operation test02 () {
+	    enter
+	    proceed 1 cycle
+	    assert is_active
+	}
+
+	@Test
+	operation test04 () {
+	    raise power_on
+	    enter
+	    proceed 1 cycle
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test05 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test06 () {
+	    enter
+	    assert is_active
+	    assert !active (Statechart.mainregion.on.r1.analyses)
+	}
+
+	@Test
+	operation test07 () {
+	    enter
+	    assert is_active
+	    assert !active (Statechart.mainregion.on)
+	}
+
+	@Test
+	operation test08 () {
+	    raise power_on
+	    enter
+	    proceed 1 cycle
+	    assert is_active
+	    assert active (Statechart.mainregion.idle)
+	}
+
+	@Test
+	operation test09 () {
+	    enter
+	    assert is_active
+	    assert active (Statechart.mainregion.off)
+	}
+
+	@Test
+	operation test23 () {
+	    raise power_on
+	    enter
+	    proceed 1 cycle
+	    raise analize
+	    proceed 1 cycle
+	    proceed 1 cycle
+	    assert is_active
+	}
+
+	@Test
+	operation test26 () {
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test28 () {
+	    enter
+	    raise power_on
+	    proceed 1 cycle
+	    raise work
+	    proceed 1 cycle
+	    proceed 1 cycle
+	    assert is_active
+	}
+
+	@Test
+	operation test32 () {
+	    raise power_on
+	    enter
+	    proceed 1 cycle
+	    raise work
+	    proceed 1 cycle
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test34 () {
+	    raise power_on
+	    enter
+	    proceed 1 cycle
+	    raise analize
+	    proceed 1 cycle
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+}

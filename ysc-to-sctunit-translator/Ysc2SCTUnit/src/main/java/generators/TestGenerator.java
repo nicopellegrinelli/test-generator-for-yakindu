@@ -68,33 +68,27 @@ public class TestGenerator {
 		// Call the Evosuite test generator both on the original and the simplified versions
 		// Change the security manager to avoid JVM stop running after Evosuite calls System.exit(0);
 		SecurityManager default_sm = System.getSecurityManager();
-		MySecurityManager my_sm = new MySecurityManager();
-	    System.setSecurityManager(my_sm);
-	    long startTimeStandard = System.nanoTime();
-	    long endTimeStandard = 0;
-	    try {
-	    	Generators.genarateJunit(evoTarget, evoOptions, evoBaseDir);
-	    } catch (SecurityException e) {
-	    	endTimeStandard = System.nanoTime();
-	    	Generators.genarateSctunit(junitTestPath, sctunitTestPath);
-	    }
-	    
-//	    long startTimeSimplified = System.nanoTime();
-//	    long endTimeSimplified = 0;
-//	    try {
-//	    	Generators.genarateJunit(evoSimplifiedTarget, evoOptions, evoBaseDir);
-//	    } catch (SecurityException e) { 
-//	    	endTimeSimplified = System.nanoTime();
-//	    	Generators.genarateSctunit(simplifiedJunitTestPath, simplifiedSctunitTestPath);
-//	    }
-	    double totalTimeStandard = ((double)(endTimeStandard - startTimeStandard)) / Math.pow(10, 9);
-//	    double totalTimeSimplified = ((double)(endTimeSimplified - startTimeSimplified)) / Math.pow(10, 9);
+		for (int i = 0; i < 20; i++) {
+			sctunitTestPath = projectPath + "\\model\\" + statechartName + "Test" + Integer.toString(i) + ".sctunit" ;
+			simplifiedSctunitTestPath = projectPath + "\\model\\" + statechartName + "SimplifiedTest" + Integer.toString(i) + ".sctunit" ;
+			MySecurityManager my_sm = new MySecurityManager();
+		    System.setSecurityManager(my_sm);
+		    try {
+		    	Generators.genarateJunit(evoTarget, evoOptions, evoBaseDir);
+		    } catch (SecurityException e) {
+		    	Generators.genarateSctunit(junitTestPath, sctunitTestPath);
+		    }
+	
+		    try {
+		    	Generators.genarateJunit(evoSimplifiedTarget, evoOptions, evoBaseDir);
+		    } catch (SecurityException e) { 
+		    	Generators.genarateSctunit(simplifiedJunitTestPath, simplifiedSctunitTestPath);
+		    }
+		}
 	    // Change the security manager back to the default one to let the execution ends
 	    System.setSecurityManager(default_sm);
 		System.out.println("*******************************************");
 		System.out.println("Finished.");
-		System.out.println("Evosuite execution time (standard): " + totalTimeStandard);
-//		System.out.println("Evosuite execution time (simplified): " + totalTimeSimplified);
 		System.out.println("*******************************************");
 	    System.exit(0);
 	}

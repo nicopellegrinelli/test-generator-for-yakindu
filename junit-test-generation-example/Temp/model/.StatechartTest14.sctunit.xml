@@ -1,0 +1,22 @@
+<testsuite name="StatechartTest" time="">
+  <testcase name="test06" classname="platform:/resource/Temp/model/StatechartTest14.sctunit#StatechartTest.test06" time="">
+  </testcase>
+  <testcase name="test07" classname="platform:/resource/Temp/model/StatechartTest14.sctunit#StatechartTest.test07" time="">
+  </testcase>
+  <testcase name="test09" classname="platform:/resource/Temp/model/StatechartTest14.sctunit#StatechartTest.test09" time="">
+  </testcase>
+  <testcase name="test10" classname="platform:/resource/Temp/model/StatechartTest14.sctunit#StatechartTest.test10" time="">
+  </testcase>
+  <testcase name="test11" classname="platform:/resource/Temp/model/StatechartTest14.sctunit#StatechartTest.test11" time="">
+  </testcase>
+  <testcase name="test12" classname="platform:/resource/Temp/model/StatechartTest14.sctunit#StatechartTest.test12" time="">
+  </testcase>
+  <testcase name="test13" classname="platform:/resource/Temp/model/StatechartTest14.sctunit#StatechartTest.test13" time="">
+  </testcase>
+  <testcase name="test30" classname="platform:/resource/Temp/model/StatechartTest14.sctunit#StatechartTest.test30" time="">
+  </testcase>
+  <testcase name="test38" classname="platform:/resource/Temp/model/StatechartTest14.sctunit#StatechartTest.test38" time="">
+  </testcase>
+  <testcase name="test40" classname="platform:/resource/Temp/model/StatechartTest14.sctunit#StatechartTest.test40" time="">
+  </testcase>
+</testsuite>
