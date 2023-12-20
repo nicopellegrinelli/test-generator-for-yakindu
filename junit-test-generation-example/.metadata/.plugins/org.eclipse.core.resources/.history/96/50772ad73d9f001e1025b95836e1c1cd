@@ -1,0 +1,262 @@
+testclass StatechartTest for statechart Statechart {
+	@Test
+	operation test08 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise start
+	    raise b
+	    assert is_active
+	    assert active (Statechart.mainregion.on.r1.analyses.r2.an2b)
+	}
+
+	@Test
+	operation test10 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise start
+	    raise analize
+	    assert !is_final
+	}
+
+	@Test
+	operation test11 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise start
+	    enter
+	    raise b
+	    raise analize
+	    assert !is_final
+	}
+
+	@Test
+	operation test12 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise start
+	    raise a
+	    assert is_active
+	}
+
+	@Test
+	operation test13 () {
+	    enter
+	    raise power_on
+	    triggerWithoutEvent
+	    assert is_active
+	}
+
+	@Test
+	operation test14 () {
+	    enter
+	    raise end
+	    assert is_active
+	}
+
+	@Test
+	operation test15 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise start
+	    raise end_all
+	    assert is_active
+	}
+
+	@Test
+	operation test16 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise start
+	    raise b
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test18 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise start
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test19 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test20 () {
+	    enter
+	    raise power_on
+	    raise work
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test21 () {
+	    enter
+	    raise power_on
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test22 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test23 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise end_all
+	    assert is_active
+	    assert active (Statechart.mainregion._final_)
+	}
+
+	@Test
+	operation test25 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise start
+	    assert is_active
+	    assert active (Statechart.mainregion.on.r1.analyses.r2.an2a)
+	}
+
+	@Test
+	operation test27 () {
+	    enter
+	    assert is_active
+	    assert !active (Statechart.mainregion.on.r1.analyses)
+	}
+
+	@Test
+	operation test28 () {
+	    enter
+	    assert is_active
+	    assert !active (Statechart.mainregion.on)
+	}
+
+	@Test
+	operation test29 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    assert is_active
+	    assert active (Statechart.mainregion.on)
+	}
+
+	@Test
+	operation test30 () {
+	    enter
+	    raise power_on
+	    assert is_active
+	    assert active (Statechart.mainregion.idle)
+	}
+
+	@Test
+	operation test31 () {
+	    enter
+	    assert is_active
+	    assert active (Statechart.mainregion.off)
+	}
+
+	@Test
+	operation test44 () {
+	    assert !is_active
+	    enter
+	    raise power_on
+	    raise analize
+	    raise start
+	    raise b
+	    raise start
+	    assert !is_final
+	}
+
+	@Test
+	operation test45 () {
+	    assert !is_active
+	    enter
+	    raise power_on
+	    raise analize
+	    raise start
+	    raise b
+	    raise a
+	    raise b
+	    assert is_active
+	}
+
+	@Test
+	operation test46 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise end_all
+	    assert is_final
+	}
+
+	@Test
+	operation test49 () {
+	    assert !is_active
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test52 () {
+	    enter
+	    raise power_on
+	    raise work
+	    raise end_all
+	    raise b
+	    assert is_final
+	}
+
+	@Test
+	operation test53 () {
+	    enter
+	    raise power_on
+	    raise work
+	    raise end_all
+	    assert is_final
+	    exit
+	    assert !is_final
+	}
+
+	@Test
+	operation test54 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise start
+	    raise b
+	    raise a
+	    exit
+	    assert !is_active
+	}
+
+}

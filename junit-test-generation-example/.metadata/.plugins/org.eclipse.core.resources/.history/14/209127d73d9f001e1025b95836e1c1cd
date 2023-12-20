@@ -1,0 +1,187 @@
+testclass StatechartTest for statechart Statechart {
+	@Test
+	operation test08 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise analize
+	    assert is_active
+	}
+
+	@Test
+	operation test09 () {
+	    enter
+	    raise power_on
+	    raise work
+	    raise work
+	    assert is_active
+	}
+
+	@Test
+	operation test11 () {
+	    enter
+	    raise power_on
+	    raise end_all
+	    assert is_active
+	}
+
+	@Test
+	operation test12 () {
+	    enter
+	    raise b
+	    assert is_active
+	}
+
+	@Test
+	operation test13 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise end_all
+	    assert is_active
+	}
+
+	@Test
+	operation test15 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test16 () {
+	    enter
+	    raise power_on
+	    raise work
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test17 () {
+	    enter
+	    raise power_on
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test18 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test19 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise start
+	    assert is_active
+	    assert active (Statechart.mainregion.on.r1.analyses.r2.an2a)
+	}
+
+	@Test
+	operation test20 () {
+	    enter
+	    assert is_active
+	    assert !active (Statechart.mainregion.on.r1.analyses)
+	}
+
+	@Test
+	operation test21 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    assert is_active
+	    assert active (Statechart.mainregion.on)
+	}
+
+	@Test
+	operation test22 () {
+	    enter
+	    assert is_active
+	    assert !active (Statechart.mainregion.on)
+	}
+
+	@Test
+	operation test23 () {
+	    enter
+	    raise power_on
+	    assert is_active
+	    assert active (Statechart.mainregion.idle)
+	}
+
+	@Test
+	operation test24 () {
+	    enter
+	    assert is_active
+	    assert active (Statechart.mainregion.off)
+	}
+
+	@Test
+	operation test39 () {
+	    enter
+	    raise power_on
+	    raise work
+	    raise end_all
+	    assert is_active
+	    assert is_final
+	}
+
+	@Test
+	operation test42 () {
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test44 () {
+	    enter
+	    raise power_on
+	    raise work
+	    raise end_all
+	    raise b
+	    assert is_active
+	}
+
+	@Test
+	operation test47 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise start
+	    raise end
+	    assert !is_final
+	}
+
+	@Test
+	operation test48 () {
+	    enter
+	    raise power_on
+	    raise work
+	    raise end_all
+	    assert is_final
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test50 () {
+	    enter
+	    raise power_on
+	    raise analize
+	    raise start
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+}
