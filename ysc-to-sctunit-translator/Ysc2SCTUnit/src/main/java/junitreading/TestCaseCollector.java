@@ -20,7 +20,7 @@ import testcase.TestCase;
 public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 	
 	/**
-	 * Visit the method declaration and add a new TestCase instance representing the cisited method declaration to the collector.
+	 * Visit the method declaration and add a new TestCase instance representing the visited method declaration to the collector.
 	 *
 	 * @param node the method declaration
 	 * @param collector the collector
@@ -59,6 +59,7 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 		TestCase testCase = new TestCase(node.getNameAsString());
 		for (MethodCallExpr methodCall : methodCallList) {
 			String methodName = methodCall.getNameAsString();
+			//System.out.println(methodName);
 			if (methodName.equals("enter")) {
 				testCase.addEnter();
 				continue;
@@ -80,24 +81,44 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 				continue;
 			}
 			if (methodName.equals("assertTrue") || methodName.equals("assertFalse")) {
-				boolean assertTrue = methodName.equals("assertTrue");
+				boolean assertTrue = methodName.equals("assertTrue");		
 				// The method has an argument, that is retrieved.
-				// If the argument is a variable, its assigned expression (right-hand-side of the assignment) is retrieved.
-				String argument = methodCall.getArgument(0).toString();
-				String variableAssignedExpr = variableAssignments.get(argument); // null if the argument is not a variable
-				if (argument.contains(".isActive()")  
-						|| (variableAssignedExpr != null && variableAssignedExpr.contains(".isActive()"))) {
+				String assertArgument = methodCall.getArgument(0).toString();
+				// The statement that must be checked if it is true (or false) is retrieved.
+				// If the argument is a known variable, its assigned expression (right-hand-side of the assignment) is used,
+				// else, dircetly the argument is used.
+				String statementToCheck;
+				if(variableAssignments.containsKey(assertArgument)) {
+					statementToCheck = variableAssignments.get(assertArgument);
+				} else {
+					statementToCheck = assertArgument;
+				}
+				if (statementToCheck.contains(".isActive()")) {
 					testCase.addIsActive(assertTrue);
 					continue;
 				}
-				if (argument.contains(".isFinal()")
-						|| (variableAssignedExpr != null && variableAssignedExpr.contains(".isFinal()"))) {
+				if (statementToCheck.contains(".isFinal()")) {
 					testCase.addIsFinal(assertTrue);
 					continue;
 				}
-				if(variableAssignedExpr != null && variableAssignedExpr.contains(".isStateActive")) {
-					String stateName = variableAssignments.get(
-							variableAssignedExpr.substring(variableAssignedExpr.indexOf('(')+1, variableAssignedExpr.indexOf(')')));
+				if(statementToCheck.contains(".isStateActive")) {
+					// The method has an argument, that is retrieved.
+					String isStateActiveArgument = 
+							statementToCheck.substring(statementToCheck.indexOf('(')+1, statementToCheck.lastIndexOf(')'));
+					// The name of the state is retrieved.
+					// If the argument is a known variable, its assigned expression (right-hand-side of the assignment) is used,
+					// else, dircetly the argument is used.
+					String stateName;
+					if(variableAssignments.containsKey(isStateActiveArgument)) {
+						stateName = variableAssignments.get(isStateActiveArgument);
+					} else {
+						stateName = isStateActiveArgument;
+					}
+					// If the stateName is obtained using valueof, only the argument of valueof must be used as state name
+					if (stateName.contains("valueof")) {
+						stateName = stateName.substring(stateName.indexOf('(')+1, stateName.indexOf(')'));
+					}
+					// The state name is modified to be complient with SCTUnit environment.
 					stateName = stateName.replace("State.", "");
 					int separator = stateName.lastIndexOf('.');
 					stateName = stateName.substring(0, separator) + stateName.substring(separator).toLowerCase().replace("_", ".");

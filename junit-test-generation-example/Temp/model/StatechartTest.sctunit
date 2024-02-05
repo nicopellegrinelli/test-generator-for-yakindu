@@ -1,8 +1,8 @@
 testclass StatechartTest for statechart Statechart {
 	@Test
 	operation test06 () {
-	    raise power_on
 	    enter
+	    raise power_on
 	    proceed 1 cycle
 	    proceed 1 cycle
 	    assert is_active
@@ -16,18 +16,10 @@ testclass StatechartTest for statechart Statechart {
 	}
 
 	@Test
-	operation test08 () {
-	    enter
-	    raise power_on
-	    proceed 1 cycle
-	    assert is_active
-	    exit
-	    assert !is_active
-	}
-
-	@Test
 	operation test09 () {
+	    raise power_on
 	    enter
+	    proceed 1 cycle
 	    assert is_active
 	    exit
 	    assert !is_active
@@ -37,18 +29,37 @@ testclass StatechartTest for statechart Statechart {
 	operation test10 () {
 	    enter
 	    assert is_active
-	    assert !active (Statechart.mainregion.on.r1.analyses)
+	    exit
+	    assert !is_active
 	}
 
 	@Test
 	operation test11 () {
 	    enter
 	    assert is_active
-	    assert !active (Statechart.mainregion.on)
+	    assert !active (Statechart.mainregion.on.r1.analyses)
 	}
 
 	@Test
 	operation test12 () {
+	    raise power_on
+	    enter
+	    proceed 1 cycle
+	    raise work
+	    proceed 1 cycle
+	    assert is_active
+	    assert active (Statechart.mainregion.on)
+	}
+
+	@Test
+	operation test13 () {
+	    enter
+	    assert is_active
+	    assert !active (Statechart.mainregion.on)
+	}
+
+	@Test
+	operation test14 () {
 	    raise power_on
 	    enter
 	    proceed 1 cycle
@@ -57,19 +68,20 @@ testclass StatechartTest for statechart Statechart {
 	}
 
 	@Test
-	operation test13 () {
+	operation test15 () {
 	    enter
 	    assert is_active
 	    assert active (Statechart.mainregion.off)
 	}
 
 	@Test
-	operation test34 () {
+	operation test30 () {
 	    raise power_on
 	    assert !is_active
 	    enter
 	    proceed 1 cycle
-	    raise work
+	    raise analize
+	    proceed 1 cycle
 	    proceed 1 cycle
 	    assert is_active
 	}
@@ -77,16 +89,29 @@ testclass StatechartTest for statechart Statechart {
 	@Test
 	operation test38 () {
 	    raise power_on
-	    assert !is_active
 	    enter
 	    proceed 1 cycle
 	    raise analize
 	    proceed 1 cycle
 	    assert is_active
+	    exit
+	    assert !is_active
 	}
 
 	@Test
 	operation test40 () {
+	    raise power_on
+	    enter
+	    proceed 1 cycle
+	    raise work
+	    proceed 1 cycle
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test42 () {
 	    assert !is_active
 	    enter
 	    assert is_active

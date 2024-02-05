@@ -9,7 +9,7 @@ import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 public class ClassDeclarationVisitor extends VoidVisitorAdapter<Void> {
 	
 	/**
-	 * Visit a class decalrations, adding "Simplified" at the end of the name.
+	 * Visit a class decalration, adding "Simplified" at the end of the name.
 	 *
 	 * @param the class declaration
 	 * @param arg none

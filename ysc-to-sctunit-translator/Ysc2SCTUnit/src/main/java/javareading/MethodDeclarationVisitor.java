@@ -9,7 +9,7 @@ import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 public class MethodDeclarationVisitor extends VoidVisitorAdapter<Void> {
 	
 	/**
-	 * Visit a method decalrations, set the visibility to private if it is protected.
+	 * Visit a method decalration, set the visibility to private if it is protected.
 	 *
 	 * @param the method declaration
 	 * @param arg none
