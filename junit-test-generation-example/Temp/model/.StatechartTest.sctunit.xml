@@ -10,6 +10,9 @@
   <testcase name="test11" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test11" time="">
   </testcase>
   <testcase name="test12" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test12" time="">
+    <failure>Assertion failed: "assert active (Statechart.main_region.main_region)" (Line 51)
+    	Expected: main_region, actual: [working, on]
+    </failure>
   </testcase>
   <testcase name="test13" classname="platform:/resource/Temp/model/StatechartTest.sctunit#StatechartTest.test13" time="">
   </testcase>

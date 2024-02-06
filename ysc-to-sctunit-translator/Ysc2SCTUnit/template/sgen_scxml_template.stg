@@ -1,0 +1,16 @@
+generator(project_name, statechart_name) ::= 
+<<GeneratorModel for create::scxml {
+
+	const PROJECT : string = "<project_name>"
+
+	const FOLDER : string = "model"
+
+	statechart <statechart_name> {
+	
+		feature Outlet {
+			targetProject = PROJECT
+			targetFolder = FOLDER
+			libraryTargetFolder = "src"
+		}
+	}
+}>>

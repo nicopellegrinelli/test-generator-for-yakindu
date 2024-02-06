@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sgraph="http://www.yakindu.org/sct/sgraph/2.0.0">
   <sgraph:Statechart xmi:id="_Vk8wcHyxEe6O9ryXsR_u0g" specification="// Use the event driven execution model.&#xA;// Switch to cycle based behavior&#xA;// by specifying '@CycleBased(200)'.&#xA;@CycleBased(200)&#xD;&#xA;&#xD;&#xA;// Use @SuperSteps(yes) to enable&#xA;// super step semantics.&#xA;@SuperSteps(no)&#xD;&#xA;&#xD;&#xA;interface:&#xD;&#xA;&#x9;// Define events and variables here. &#xA;&#x9;// Use CTRL + Space for content assist.&#xA;&#x9;in event power_on&#xA;&#x9;in event work&#xA;&#x9;in event analize&#xA;&#x9;in event start&#xA;&#x9;in event a&#xA;&#x9;in event b&#xA;&#x9;in event end&#xA;&#x9;in event end_all" name="Statechart">
-    <regions xmi:id="_VlCQA3yxEe6O9ryXsR_u0g" name="mainregion">
+    <regions xmi:id="_VlCQA3yxEe6O9ryXsR_u0g" name="mainr egion">
       <vertices xsi:type="sgraph:Entry" xmi:id="_VlCQBHyxEe6O9ryXsR_u0g">
         <outgoingTransitions xmi:id="_VlCQBXyxEe6O9ryXsR_u0g" target="_LvAzIIoEEe6OU61qte_UVg"/>
       </vertices>
-      <vertices xsi:type="sgraph:State" xmi:id="_LvAzIIoEEe6OU61qte_UVg" specification="" name="off" incomingTransitions="_VlCQBXyxEe6O9ryXsR_u0g">
+      <vertices xsi:type="sgraph:State" xmi:id="_LvAzIIoEEe6OU61qte_UVg" specification="" name="Esempio_stato" incomingTransitions="_VlCQBXyxEe6O9ryXsR_u0g">
         <outgoingTransitions xmi:id="_oaGMoIoGEe6OU61qte_UVg" specification="power_on" target="_lx8eoIoGEe6OU61qte_UVg"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_lx8eoIoGEe6OU61qte_UVg" specification="" name="idle" incomingTransitions="_oaGMoIoGEe6OU61qte_UVg">
@@ -86,7 +86,7 @@
           <styles xsi:type="notation:ShapeStyle" xmi:id="_LvMZUYoEEe6OU61qte_UVg" fontName="Verdana" fillColor="15720400" lineColor="12632256"/>
           <styles xsi:type="notation:FontStyle" xmi:id="_LvMZUooEEe6OU61qte_UVg"/>
           <styles xsi:type="notation:BooleanValueStyle" xmi:id="_LvO1kYoEEe6OU61qte_UVg" name="isHorizontal" booleanValue="true"/>
-          <layoutConstraint xsi:type="notation:Bounds" xmi:id="_LvMZU4oEEe6OU61qte_UVg" x="45" y="13" width="58" height="53"/>
+          <layoutConstraint xsi:type="notation:Bounds" xmi:id="_LvMZU4oEEe6OU61qte_UVg" x="45" y="13" width="203" height="53"/>
         </children>
         <children xmi:id="_lx9FsIoGEe6OU61qte_UVg" type="State" element="_lx8eoIoGEe6OU61qte_UVg">
           <children xsi:type="notation:DecorationNode" xmi:id="_lx9FtIoGEe6OU61qte_UVg" type="StateName">
@@ -316,7 +316,7 @@
       </children>
       <styles xsi:type="notation:ConnectorStyle" xmi:id="_VlEFcHyxEe6O9ryXsR_u0g" routing="Rectilinear" lineColor="4210752"/>
       <styles xsi:type="notation:FontStyle" xmi:id="_VlEFcXyxEe6O9ryXsR_u0g" fontName="Verdana"/>
-      <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_VlEFcnyxEe6O9ryXsR_u0g" points="[7, 0, -65, 24]$[43, 0, -29, 24]"/>
+      <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_VlEFcnyxEe6O9ryXsR_u0g" points="[7, 0, -132, 24]$[38, 0, -101, 24]"/>
       <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_OUavIIoEEe6OU61qte_UVg" id="(0.5023041474654378,0.04205607476635514)"/>
     </edges>
     <edges xmi:id="_oaGzsIoGEe6OU61qte_UVg" type="Transition" element="_oaGMoIoGEe6OU61qte_UVg" source="_LvMZUIoEEe6OU61qte_UVg" target="_lx9FsIoGEe6OU61qte_UVg">
@@ -326,7 +326,7 @@
       </children>
       <styles xsi:type="notation:ConnectorStyle" xmi:id="_oaGzsYoGEe6OU61qte_UVg" routing="Rectilinear" lineColor="4210752"/>
       <styles xsi:type="notation:FontStyle" xmi:id="_oaGzs4oGEe6OU61qte_UVg" fontName="Verdana"/>
-      <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_oaGzsooGEe6OU61qte_UVg" points="[-1, 27, -4, -174]$[-1, 159, -4, -42]"/>
+      <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_oaGzsooGEe6OU61qte_UVg" points="[-64, 27, 0, -174]$[-64, 159, 0, -42]"/>
       <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_oaIB0IoGEe6OU61qte_UVg" id="(0.3620689655172414,0.7924528301886793)"/>
     </edges>
     <edges xmi:id="_P6rBoIoMEe6OU61qte_UVg" type="Transition" element="_P6qakIoMEe6OU61qte_UVg" source="_lx9FsIoGEe6OU61qte_UVg" target="_KQcpwIoMEe6OU61qte_UVg">

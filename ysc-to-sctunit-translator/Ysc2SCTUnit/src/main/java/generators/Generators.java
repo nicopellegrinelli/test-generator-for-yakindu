@@ -32,7 +32,55 @@ import testcase.TestCase;
 public final class Generators {
 	
 	/**
-	 * Genarate the .sgen file needed by Itemis Create to generate java code from a .ysc file (a statechart).
+	 * Generate the .sgen file needed by Itemis Create to generate a scxml from a .ysc file (a statechart).
+	 *
+	 * @param projectPath the path of the project
+	 * @param statechartName the name of the statechart, it must be in a folder named model
+	 * @param projectName the name of the project
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
+	public static void generateSgenScxml(String projectPath, String statechartName, String projectName)
+			throws IOException {
+		System.out.println("*******************************************");
+		System.out.println("Generating .sgen file for scxml...");
+		System.out.println("*******************************************");
+		STGroupFile group = new STGroupFile(".\\template\\sgen_scxml_template.stg");
+		ST st = group.getInstanceOf("generator");
+		st.add("project_name", projectName);
+		st.add("statechart_name", statechartName);
+		File genFile = new File(projectPath + "\\model\\temp.sgen");
+		st.write(genFile, null);
+	}
+	
+	/**
+	 * Call Itemis Create code generator to generate a .scxml file.
+	 *
+	 * @param projectPath the path of the project
+	 * @param itemisScc the path of the scc.bat file
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
+	public static void generateScxml(String projectPath, String itemisScc)
+			throws IOException {
+		System.out.println("*******************************************");
+		System.out.println("Calling Itemis Create scxml generator...");
+		System.out.println("*******************************************");
+		ProcessBuilder pb = new ProcessBuilder();
+		pb.redirectErrorStream(true);
+		pb.directory(new File(projectPath));
+		pb.command(itemisScc);
+		Process p = pb.start();
+
+		BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
+		String line = null;
+		while ((line = reader.readLine()) != null) {
+			System.out.println(line);
+		}
+		System.out.println("");
+		reader.close();
+	}	
+	
+	/**
+	 * Generate the .sgen file needed by Itemis Create to generate java code from a .ysc file (a statechart).
 	 *
 	 * @param projectPath the path of the project
 	 * @param statechartName the name of the statechart, it must be in a folder named model
@@ -41,12 +89,12 @@ public final class Generators {
 	 * @param time true if the statechart deals with time events, false otherwise
 	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
-	public static void genarateSgen(String projectPath, String statechartName, String packageName, String projectName, boolean time)
+	public static void generateSgenJava(String projectPath, String statechartName, String packageName, String projectName, boolean time)
 			throws IOException {
 		System.out.println("*******************************************");
-		System.out.println("Generating .sgen file...");
+		System.out.println("Generating .sgen file for java...");
 		System.out.println("*******************************************");
-		STGroupFile group = new STGroupFile(".\\template\\sgen_template.stg");
+		STGroupFile group = new STGroupFile(".\\template\\sgen_java_template.stg");
 		ST st = group.getInstanceOf("generator");
 		st.add("project_name", projectName);
 		st.add("package_name", packageName);
@@ -63,10 +111,10 @@ public final class Generators {
 	 * @param itemisScc the path of the scc.bat file
 	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
-	public static void genarateJava(String projectPath, String itemisScc)
+	public static void generateJava(String projectPath, String itemisScc)
 			throws IOException {
 		System.out.println("*******************************************");
-		System.out.println("Calling Itemis Create code generator...");
+		System.out.println("Calling Itemis Create java code generator...");
 		System.out.println("*******************************************");
 		ProcessBuilder pb = new ProcessBuilder();
 		pb.redirectErrorStream(true);
@@ -84,13 +132,13 @@ public final class Generators {
 	}
 	
 	/**
-	 * Genarate a simplified version of the java class present in the path passed as parameter.
+	 * Generate a simplified version of the java class present in the path passed as parameter.
 	 *
 	 * @param classPath the class path of the starting .java file
 	 * @param simplifiedClassPath the class path of the .java file containing the simplified version
 	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
-	public static void genarateSimplifiedJava(String classPath, String simplifiedClassPath)
+	public static void generateSimplifiedJava(String classPath, String simplifiedClassPath)
 			throws IOException {
 		System.out.println("*******************************************");
 		System.out.println("Generating simplified java class...");
@@ -108,14 +156,14 @@ public final class Generators {
 	}
 	
 	/**
-	 * Call Evosuite to genarate a .junit file.
+	 * Call Evosuite to generate a .junit file.
 	 *
 	 * @param evoTarget the string "-class ClassName", where ClassName is the fully qualified class name
 	 * @param evoOptions the string "-projectCP ClassPath", where ClassPath is the class path for the test generation
 	 * @param evoBaseDir the string "-base_dir Directory", where directory is the directory in which tests will be placed
 	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
-	public static void genarateJunit(String evoTarget, String evoOptions, String evoBaseDir)
+	public static void generateJunit(String evoTarget, String evoOptions, String evoBaseDir)
 			throws IOException {
 		System.out.println("*******************************************");
 		System.out.println("Calling Evosuite test generator...");
@@ -129,13 +177,13 @@ public final class Generators {
 	}
 	
 	/**
-	 * Genarate a .sctunit file obtained translating a .java file containing junit tests.
+	 * Generate a .sctunit file obtained translating a .java file containing junit tests.
 	 *
 	 * @param junitTestPath the path of the .java file containing the junit test cases
 	 * @param sctunitTestPath the path of the generated .sctunit file
 	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
-	public static void genarateSctunit(String junitTestPath, String sctunitTestPath)
+	public static void generateSctunit(String junitTestPath, String sctunitTestPath)
 			throws IOException {
 		System.out.println("*******************************************");
 		System.out.println("Generating .sctunit file...");
@@ -163,6 +211,5 @@ public final class Generators {
 		File genFile = new File(sctunitTestPath);
 		st.write(genFile, null);
 	}
-	
 
 }

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="Statechart">
+	<state id="mainr_egion">
+		<initial>
+			<transition target="Esempio_stato" type="internal">
+			</transition>
+		</initial>
+		<state id="Esempio_stato">
+			<transition event="power_on"  target="idle">
+			</transition>
+		</state>
+		<state id="idle">
+			<transition event="work"  target="working">
+			</transition>
+			<transition event="analize"  target="initanalyses">
+			</transition>
+		</state>
+		<state id="on">
+			<initial>
+				<transition target="working" type="internal">
+				</transition>
+			</initial>
+			<state id="working">
+			</state>
+			<state id="initanalyses">
+				<transition event="start"  target="an1 an2a">
+				</transition>
+			</state>
+			<parallel id="analyses">
+				<state id="r1">
+					<initial>
+						<transition target="an1" type="internal">
+						</transition>
+					</initial>
+					<state id="an1">
+					</state>
+				</state>
+				<state id="r2">
+					<initial>
+						<transition target="an2a" type="internal">
+						</transition>
+					</initial>
+					<state id="an2a">
+						<transition event="b"  target="an2b">
+						</transition>
+					</state>
+					<state id="an2b">
+					</state>
+				</state>
+				<transition event="a" cond="In('an2b') &amp;&amp; In('an1')" target="endanalyses">
+				</transition>
+			</parallel>
+			<state id="endanalyses">
+				<transition event="end"  target="chill">
+				</transition>
+			</state>
+			<transition event="end_all"  target="final_0">
+			</transition>
+		</state>
+		<final id="final_0"/>	
+		<state id="chill">
+			<transition event="end"  target="final_0">
+			</transition>
+		</state>
+	</state>
+</scxml>

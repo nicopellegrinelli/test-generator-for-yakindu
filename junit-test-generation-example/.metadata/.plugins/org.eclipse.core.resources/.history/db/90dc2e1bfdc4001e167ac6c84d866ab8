@@ -1,0 +1,15 @@
+GeneratorModel for create::scxml {
+
+	const PROJECT : string = "Temp"
+
+	const FOLDER : string = "model"
+
+	statechart Statechart {
+
+		feature Outlet {
+			targetProject = PROJECT
+			targetFolder = FOLDER
+			libraryTargetFolder = "src"
+		}
+	}
+}

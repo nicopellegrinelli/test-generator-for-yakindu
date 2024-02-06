@@ -19,18 +19,18 @@ public class Statechart implements IStatemachine, ICycleBased {
 		private EvBuf iface = new EvBuf();
 	}
 	public enum State {
-		MAINREGION_OFF,
-		MAINREGION_IDLE,
-		MAINREGION_ON,
-		MAINREGION_ON_R1_WORKING,
-		MAINREGION_ON_R1_INITANALYSES,
-		MAINREGION_ON_R1_ANALYSES,
-		MAINREGION_ON_R1_ANALYSES_R1_AN1,
-		MAINREGION_ON_R1_ANALYSES_R2_AN2A,
-		MAINREGION_ON_R1_ANALYSES_R2_AN2B,
-		MAINREGION_ON_R1_ENDANALYSES,
-		MAINREGION__FINAL_,
-		MAINREGION_CHILL,
+		MAINR_EGION_ESEMPIO_STATO,
+		MAINR_EGION_IDLE,
+		MAINR_EGION_ON,
+		MAINR_EGION_ON_R1_WORKING,
+		MAINR_EGION_ON_R1_INITANALYSES,
+		MAINR_EGION_ON_R1_ANALYSES,
+		MAINR_EGION_ON_R1_ANALYSES_R1_AN1,
+		MAINR_EGION_ON_R1_ANALYSES_R2_AN2A,
+		MAINR_EGION_ON_R1_ANALYSES_R2_AN2B,
+		MAINR_EGION_ON_R1_ENDANALYSES,
+		MAINR_EGION__FINAL_,
+		MAINR_EGION_CHILL,
 		$NULLSTATE$
 	};
 	
@@ -89,7 +89,7 @@ public class Statechart implements IStatemachine, ICycleBased {
 		}
 		isExecuting = true;
 		/* Default enter sequence for statechart Statechart */
-		enterSequence_mainregion_default();
+		enterSequence_mainr_egion_default();
 		isExecuting = false;
 	}
 	
@@ -101,7 +101,7 @@ public class Statechart implements IStatemachine, ICycleBased {
 		}
 		isExecuting = true;
 		/* Default exit sequence for statechart Statechart */
-		exitSequence_mainregion();
+		exitSequence_mainr_egion();
 		isExecuting = false;
 	}
 	
@@ -116,7 +116,7 @@ public class Statechart implements IStatemachine, ICycleBased {
 	* @see IStatemachine#isFinal()
 	*/
 	public boolean isFinal() {
-		return (stateVector[0] == State.MAINREGION__FINAL_) && (stateVector[1] == State.$NULLSTATE$);
+		return (stateVector[0] == State.MAINR_EGION__FINAL_) && (stateVector[1] == State.$NULLSTATE$);
 	}
 	private void swapInEvents() {
 		current.iface.power_on = power_on;
@@ -152,40 +152,40 @@ public class Statechart implements IStatemachine, ICycleBased {
 		long transitioned = -1l;
 		stateConfVectorPosition = 0l;
 		switch (stateVector[0]) {
-		case MAINREGION_OFF:
-			transitioned = mainregion_off_react(transitioned);
+		case MAINR_EGION_ESEMPIO_STATO:
+			transitioned = mainr_egion_Esempio_stato_react(transitioned);
 			break;
-		case MAINREGION_IDLE:
-			transitioned = mainregion_idle_react(transitioned);
+		case MAINR_EGION_IDLE:
+			transitioned = mainr_egion_idle_react(transitioned);
 			break;
-		case MAINREGION_ON_R1_WORKING:
-			transitioned = mainregion_on_r1_working_react(transitioned);
+		case MAINR_EGION_ON_R1_WORKING:
+			transitioned = mainr_egion_on_r1_working_react(transitioned);
 			break;
-		case MAINREGION_ON_R1_INITANALYSES:
-			transitioned = mainregion_on_r1_initanalyses_react(transitioned);
+		case MAINR_EGION_ON_R1_INITANALYSES:
+			transitioned = mainr_egion_on_r1_initanalyses_react(transitioned);
 			break;
-		case MAINREGION_ON_R1_ANALYSES_R1_AN1:
-			transitioned = mainregion_on_r1_analyses_r1_an1_react(transitioned);
+		case MAINR_EGION_ON_R1_ANALYSES_R1_AN1:
+			transitioned = mainr_egion_on_r1_analyses_r1_an1_react(transitioned);
 			break;
-		case MAINREGION_ON_R1_ENDANALYSES:
-			transitioned = mainregion_on_r1_endanalyses_react(transitioned);
+		case MAINR_EGION_ON_R1_ENDANALYSES:
+			transitioned = mainr_egion_on_r1_endanalyses_react(transitioned);
 			break;
-		case MAINREGION__FINAL_:
-			transitioned = mainregion__final__react(transitioned);
+		case MAINR_EGION__FINAL_:
+			transitioned = mainr_egion__final__react(transitioned);
 			break;
-		case MAINREGION_CHILL:
-			transitioned = mainregion_chill_react(transitioned);
+		case MAINR_EGION_CHILL:
+			transitioned = mainr_egion_chill_react(transitioned);
 			break;
 		default:
 			break;
 		}
 		if (getStateConfVectorPosition()<1l) {
 			switch (stateVector[1]) {
-			case MAINREGION_ON_R1_ANALYSES_R2_AN2A:
-				mainregion_on_r1_analyses_r2_an2a_react(transitioned);
+			case MAINR_EGION_ON_R1_ANALYSES_R2_AN2A:
+				mainr_egion_on_r1_analyses_r2_an2a_react(transitioned);
 				break;
-			case MAINREGION_ON_R1_ANALYSES_R2_AN2B:
-				mainregion_on_r1_analyses_r2_an2b_react(transitioned);
+			case MAINR_EGION_ON_R1_ANALYSES_R2_AN2B:
+				mainr_egion_on_r1_analyses_r2_an2b_react(transitioned);
 				break;
 			default:
 				break;
@@ -199,32 +199,32 @@ public class Statechart implements IStatemachine, ICycleBased {
 	public boolean isStateActive(State state) {
 	
 		switch (state) {
-		case MAINREGION_OFF:
-			return stateVector[0] == State.MAINREGION_OFF;
-		case MAINREGION_IDLE:
-			return stateVector[0] == State.MAINREGION_IDLE;
-		case MAINREGION_ON:
+		case MAINR_EGION_ESEMPIO_STATO:
+			return stateVector[0] == State.MAINR_EGION_ESEMPIO_STATO;
+		case MAINR_EGION_IDLE:
+			return stateVector[0] == State.MAINR_EGION_IDLE;
+		case MAINR_EGION_ON:
 			return stateVector[0].ordinal() >= State.
-					MAINREGION_ON.ordinal()&& stateVector[0].ordinal() <= State.MAINREGION_ON_R1_ENDANALYSES.ordinal();
-		case MAINREGION_ON_R1_WORKING:
-			return stateVector[0] == State.MAINREGION_ON_R1_WORKING;
-		case MAINREGION_ON_R1_INITANALYSES:
-			return stateVector[0] == State.MAINREGION_ON_R1_INITANALYSES;
-		case MAINREGION_ON_R1_ANALYSES:
+					MAINR_EGION_ON.ordinal()&& stateVector[0].ordinal() <= State.MAINR_EGION_ON_R1_ENDANALYSES.ordinal();
+		case MAINR_EGION_ON_R1_WORKING:
+			return stateVector[0] == State.MAINR_EGION_ON_R1_WORKING;
+		case MAINR_EGION_ON_R1_INITANALYSES:
+			return stateVector[0] == State.MAINR_EGION_ON_R1_INITANALYSES;
+		case MAINR_EGION_ON_R1_ANALYSES:
 			return stateVector[0].ordinal() >= State.
-					MAINREGION_ON_R1_ANALYSES.ordinal()&& stateVector[0].ordinal() <= State.MAINREGION_ON_R1_ANALYSES_R2_AN2B.ordinal();
-		case MAINREGION_ON_R1_ANALYSES_R1_AN1:
-			return stateVector[0] == State.MAINREGION_ON_R1_ANALYSES_R1_AN1;
-		case MAINREGION_ON_R1_ANALYSES_R2_AN2A:
-			return stateVector[1] == State.MAINREGION_ON_R1_ANALYSES_R2_AN2A;
-		case MAINREGION_ON_R1_ANALYSES_R2_AN2B:
-			return stateVector[1] == State.MAINREGION_ON_R1_ANALYSES_R2_AN2B;
-		case MAINREGION_ON_R1_ENDANALYSES:
-			return stateVector[0] == State.MAINREGION_ON_R1_ENDANALYSES;
-		case MAINREGION__FINAL_:
-			return stateVector[0] == State.MAINREGION__FINAL_;
-		case MAINREGION_CHILL:
-			return stateVector[0] == State.MAINREGION_CHILL;
+					MAINR_EGION_ON_R1_ANALYSES.ordinal()&& stateVector[0].ordinal() <= State.MAINR_EGION_ON_R1_ANALYSES_R2_AN2B.ordinal();
+		case MAINR_EGION_ON_R1_ANALYSES_R1_AN1:
+			return stateVector[0] == State.MAINR_EGION_ON_R1_ANALYSES_R1_AN1;
+		case MAINR_EGION_ON_R1_ANALYSES_R2_AN2A:
+			return stateVector[1] == State.MAINR_EGION_ON_R1_ANALYSES_R2_AN2A;
+		case MAINR_EGION_ON_R1_ANALYSES_R2_AN2B:
+			return stateVector[1] == State.MAINR_EGION_ON_R1_ANALYSES_R2_AN2B;
+		case MAINR_EGION_ON_R1_ENDANALYSES:
+			return stateVector[0] == State.MAINR_EGION_ON_R1_ENDANALYSES;
+		case MAINR_EGION__FINAL_:
+			return stateVector[0] == State.MAINR_EGION__FINAL_;
+		case MAINR_EGION_CHILL:
+			return stateVector[0] == State.MAINR_EGION_CHILL;
 		default:
 			return false;
 		}
@@ -287,202 +287,202 @@ public class Statechart implements IStatemachine, ICycleBased {
 		end_all = true;
 	}
 	
-	/* 'default' enter sequence for state off */
-	private void enterSequence_mainregion_off_default() {
-		/* 'default' enter sequence for state off */
-		stateVector[0] = State.MAINREGION_OFF;
+	/* 'default' enter sequence for state Esempio_stato */
+	private void enterSequence_mainr_egion_Esempio_stato_default() {
+		/* 'default' enter sequence for state Esempio_stato */
+		stateVector[0] = State.MAINR_EGION_ESEMPIO_STATO;
 		stateConfVectorPosition = 0;
 	}
 	
 	/* 'default' enter sequence for state idle */
-	private void enterSequence_mainregion_idle_default() {
+	private void enterSequence_mainr_egion_idle_default() {
 		/* 'default' enter sequence for state idle */
-		stateVector[0] = State.MAINREGION_IDLE;
+		stateVector[0] = State.MAINR_EGION_IDLE;
 		stateConfVectorPosition = 0;
 	}
 	
 	/* 'default' enter sequence for state working */
-	private void enterSequence_mainregion_on_r1_working_default() {
+	private void enterSequence_mainr_egion_on_r1_working_default() {
 		/* 'default' enter sequence for state working */
-		stateVector[0] = State.MAINREGION_ON_R1_WORKING;
+		stateVector[0] = State.MAINR_EGION_ON_R1_WORKING;
 		stateConfVectorPosition = 0;
 	}
 	
 	/* 'default' enter sequence for state initanalyses */
-	private void enterSequence_mainregion_on_r1_initanalyses_default() {
+	private void enterSequence_mainr_egion_on_r1_initanalyses_default() {
 		/* 'default' enter sequence for state initanalyses */
-		stateVector[0] = State.MAINREGION_ON_R1_INITANALYSES;
+		stateVector[0] = State.MAINR_EGION_ON_R1_INITANALYSES;
 		stateConfVectorPosition = 0;
 	}
 	
 	/* 'default' enter sequence for state an1 */
-	private void enterSequence_mainregion_on_r1_analyses_r1_an1_default() {
+	private void enterSequence_mainr_egion_on_r1_analyses_r1_an1_default() {
 		/* 'default' enter sequence for state an1 */
-		stateVector[0] = State.MAINREGION_ON_R1_ANALYSES_R1_AN1;
+		stateVector[0] = State.MAINR_EGION_ON_R1_ANALYSES_R1_AN1;
 		stateConfVectorPosition = 0;
 	}
 	
 	/* 'default' enter sequence for state an2a */
-	private void enterSequence_mainregion_on_r1_analyses_r2_an2a_default() {
+	private void enterSequence_mainr_egion_on_r1_analyses_r2_an2a_default() {
 		/* 'default' enter sequence for state an2a */
-		stateVector[1] = State.MAINREGION_ON_R1_ANALYSES_R2_AN2A;
+		stateVector[1] = State.MAINR_EGION_ON_R1_ANALYSES_R2_AN2A;
 		stateConfVectorPosition = 1;
 	}
 	
 	/* 'default' enter sequence for state an2b */
-	private void enterSequence_mainregion_on_r1_analyses_r2_an2b_default() {
+	private void enterSequence_mainr_egion_on_r1_analyses_r2_an2b_default() {
 		/* 'default' enter sequence for state an2b */
-		stateVector[1] = State.MAINREGION_ON_R1_ANALYSES_R2_AN2B;
+		stateVector[1] = State.MAINR_EGION_ON_R1_ANALYSES_R2_AN2B;
 		stateConfVectorPosition = 1;
 	}
 	
 	/* 'default' enter sequence for state endanalyses */
-	private void enterSequence_mainregion_on_r1_endanalyses_default() {
+	private void enterSequence_mainr_egion_on_r1_endanalyses_default() {
 		/* 'default' enter sequence for state endanalyses */
-		stateVector[0] = State.MAINREGION_ON_R1_ENDANALYSES;
+		stateVector[0] = State.MAINR_EGION_ON_R1_ENDANALYSES;
 		stateConfVectorPosition = 0;
 	}
 	
 	/* Default enter sequence for final state */
-	private void enterSequence_mainregion__final__default() {
+	private void enterSequence_mainr_egion__final__default() {
 		/* Default enter sequence for final state */
-		stateVector[0] = State.MAINREGION__FINAL_;
+		stateVector[0] = State.MAINR_EGION__FINAL_;
 		stateConfVectorPosition = 0;
 	}
 	
 	/* 'default' enter sequence for state chill */
-	private void enterSequence_mainregion_chill_default() {
+	private void enterSequence_mainr_egion_chill_default() {
 		/* 'default' enter sequence for state chill */
-		stateVector[0] = State.MAINREGION_CHILL;
+		stateVector[0] = State.MAINR_EGION_CHILL;
 		stateConfVectorPosition = 0;
 	}
 	
-	/* 'default' enter sequence for region mainregion */
-	private void enterSequence_mainregion_default() {
-		/* 'default' enter sequence for region mainregion */
-		react_mainregion__entry_Default();
+	/* 'default' enter sequence for region mainr egion */
+	private void enterSequence_mainr_egion_default() {
+		/* 'default' enter sequence for region mainr egion */
+		react_mainr_egion__entry_Default();
 	}
 	
-	/* Default exit sequence for state off */
-	private void exitSequence_mainregion_off() {
-		/* Default exit sequence for state off */
+	/* Default exit sequence for state Esempio_stato */
+	private void exitSequence_mainr_egion_Esempio_stato() {
+		/* Default exit sequence for state Esempio_stato */
 		stateVector[0] = State.$NULLSTATE$;
 		stateConfVectorPosition = 0;
 	}
 	
 	/* Default exit sequence for state idle */
-	private void exitSequence_mainregion_idle() {
+	private void exitSequence_mainr_egion_idle() {
 		/* Default exit sequence for state idle */
 		stateVector[0] = State.$NULLSTATE$;
 		stateConfVectorPosition = 0;
 	}
 	
 	/* Default exit sequence for state on */
-	private void exitSequence_mainregion_on() {
+	private void exitSequence_mainr_egion_on() {
 		/* Default exit sequence for state on */
-		exitSequence_mainregion_on_r1();
+		exitSequence_mainr_egion_on_r1();
 	}
 	
 	/* Default exit sequence for state working */
-	private void exitSequence_mainregion_on_r1_working() {
+	private void exitSequence_mainr_egion_on_r1_working() {
 		/* Default exit sequence for state working */
 		stateVector[0] = State.$NULLSTATE$;
 		stateConfVectorPosition = 0;
 	}
 	
 	/* Default exit sequence for state initanalyses */
-	private void exitSequence_mainregion_on_r1_initanalyses() {
+	private void exitSequence_mainr_egion_on_r1_initanalyses() {
 		/* Default exit sequence for state initanalyses */
 		stateVector[0] = State.$NULLSTATE$;
 		stateConfVectorPosition = 0;
 	}
 	
 	/* Default exit sequence for state analyses */
-	private void exitSequence_mainregion_on_r1_analyses() {
+	private void exitSequence_mainr_egion_on_r1_analyses() {
 		/* Default exit sequence for state analyses */
-		exitSequence_mainregion_on_r1_analyses_r1();
-		exitSequence_mainregion_on_r1_analyses_r2();
+		exitSequence_mainr_egion_on_r1_analyses_r1();
+		exitSequence_mainr_egion_on_r1_analyses_r2();
 	}
 	
 	/* Default exit sequence for state an1 */
-	private void exitSequence_mainregion_on_r1_analyses_r1_an1() {
+	private void exitSequence_mainr_egion_on_r1_analyses_r1_an1() {
 		/* Default exit sequence for state an1 */
 		stateVector[0] = State.$NULLSTATE$;
 		stateConfVectorPosition = 0;
 	}
 	
 	/* Default exit sequence for state an2a */
-	private void exitSequence_mainregion_on_r1_analyses_r2_an2a() {
+	private void exitSequence_mainr_egion_on_r1_analyses_r2_an2a() {
 		/* Default exit sequence for state an2a */
 		stateVector[1] = State.$NULLSTATE$;
 		stateConfVectorPosition = 1;
 	}
 	
 	/* Default exit sequence for state an2b */
-	private void exitSequence_mainregion_on_r1_analyses_r2_an2b() {
+	private void exitSequence_mainr_egion_on_r1_analyses_r2_an2b() {
 		/* Default exit sequence for state an2b */
 		stateVector[1] = State.$NULLSTATE$;
 		stateConfVectorPosition = 1;
 	}
 	
 	/* Default exit sequence for state endanalyses */
-	private void exitSequence_mainregion_on_r1_endanalyses() {
+	private void exitSequence_mainr_egion_on_r1_endanalyses() {
 		/* Default exit sequence for state endanalyses */
 		stateVector[0] = State.$NULLSTATE$;
 		stateConfVectorPosition = 0;
 	}
 	
 	/* Default exit sequence for final state. */
-	private void exitSequence_mainregion__final_() {
+	private void exitSequence_mainr_egion__final_() {
 		/* Default exit sequence for final state. */
 		stateVector[0] = State.$NULLSTATE$;
 		stateConfVectorPosition = 0;
 	}
 	
 	/* Default exit sequence for state chill */
-	private void exitSequence_mainregion_chill() {
+	private void exitSequence_mainr_egion_chill() {
 		/* Default exit sequence for state chill */
 		stateVector[0] = State.$NULLSTATE$;
 		stateConfVectorPosition = 0;
 	}
 	
-	/* Default exit sequence for region mainregion */
-	private void exitSequence_mainregion() {
-		/* Default exit sequence for region mainregion */
+	/* Default exit sequence for region mainr egion */
+	private void exitSequence_mainr_egion() {
+		/* Default exit sequence for region mainr egion */
 		switch (stateVector[0]) {
-		case MAINREGION_OFF:
-			exitSequence_mainregion_off();
+		case MAINR_EGION_ESEMPIO_STATO:
+			exitSequence_mainr_egion_Esempio_stato();
 			break;
-		case MAINREGION_IDLE:
-			exitSequence_mainregion_idle();
+		case MAINR_EGION_IDLE:
+			exitSequence_mainr_egion_idle();
 			break;
-		case MAINREGION_ON_R1_WORKING:
-			exitSequence_mainregion_on_r1_working();
+		case MAINR_EGION_ON_R1_WORKING:
+			exitSequence_mainr_egion_on_r1_working();
 			break;
-		case MAINREGION_ON_R1_INITANALYSES:
-			exitSequence_mainregion_on_r1_initanalyses();
+		case MAINR_EGION_ON_R1_INITANALYSES:
+			exitSequence_mainr_egion_on_r1_initanalyses();
 			break;
-		case MAINREGION_ON_R1_ANALYSES_R1_AN1:
-			exitSequence_mainregion_on_r1_analyses_r1_an1();
+		case MAINR_EGION_ON_R1_ANALYSES_R1_AN1:
+			exitSequence_mainr_egion_on_r1_analyses_r1_an1();
 			break;
-		case MAINREGION_ON_R1_ENDANALYSES:
-			exitSequence_mainregion_on_r1_endanalyses();
+		case MAINR_EGION_ON_R1_ENDANALYSES:
+			exitSequence_mainr_egion_on_r1_endanalyses();
 			break;
-		case MAINREGION__FINAL_:
-			exitSequence_mainregion__final_();
+		case MAINR_EGION__FINAL_:
+			exitSequence_mainr_egion__final_();
 			break;
-		case MAINREGION_CHILL:
-			exitSequence_mainregion_chill();
+		case MAINR_EGION_CHILL:
+			exitSequence_mainr_egion_chill();
 			break;
 		default:
 			break;
 		}
 		switch (stateVector[1]) {
-		case MAINREGION_ON_R1_ANALYSES_R2_AN2A:
-			exitSequence_mainregion_on_r1_analyses_r2_an2a();
+		case MAINR_EGION_ON_R1_ANALYSES_R2_AN2A:
+			exitSequence_mainr_egion_on_r1_analyses_r2_an2a();
 			break;
-		case MAINREGION_ON_R1_ANALYSES_R2_AN2B:
-			exitSequence_mainregion_on_r1_analyses_r2_an2b();
+		case MAINR_EGION_ON_R1_ANALYSES_R2_AN2B:
+			exitSequence_mainr_egion_on_r1_analyses_r2_an2b();
 			break;
 		default:
 			break;
@@ -490,30 +490,30 @@ public class Statechart implements IStatemachine, ICycleBased {
 	}
 	
 	/* Default exit sequence for region r1 */
-	private void exitSequence_mainregion_on_r1() {
+	private void exitSequence_mainr_egion_on_r1() {
 		/* Default exit sequence for region r1 */
 		switch (stateVector[0]) {
-		case MAINREGION_ON_R1_WORKING:
-			exitSequence_mainregion_on_r1_working();
+		case MAINR_EGION_ON_R1_WORKING:
+			exitSequence_mainr_egion_on_r1_working();
 			break;
-		case MAINREGION_ON_R1_INITANALYSES:
-			exitSequence_mainregion_on_r1_initanalyses();
+		case MAINR_EGION_ON_R1_INITANALYSES:
+			exitSequence_mainr_egion_on_r1_initanalyses();
 			break;
-		case MAINREGION_ON_R1_ANALYSES_R1_AN1:
-			exitSequence_mainregion_on_r1_analyses_r1_an1();
+		case MAINR_EGION_ON_R1_ANALYSES_R1_AN1:
+			exitSequence_mainr_egion_on_r1_analyses_r1_an1();
 			break;
-		case MAINREGION_ON_R1_ENDANALYSES:
-			exitSequence_mainregion_on_r1_endanalyses();
+		case MAINR_EGION_ON_R1_ENDANALYSES:
+			exitSequence_mainr_egion_on_r1_endanalyses();
 			break;
 		default:
 			break;
 		}
 		switch (stateVector[1]) {
-		case MAINREGION_ON_R1_ANALYSES_R2_AN2A:
-			exitSequence_mainregion_on_r1_analyses_r2_an2a();
+		case MAINR_EGION_ON_R1_ANALYSES_R2_AN2A:
+			exitSequence_mainr_egion_on_r1_analyses_r2_an2a();
 			break;
-		case MAINREGION_ON_R1_ANALYSES_R2_AN2B:
-			exitSequence_mainregion_on_r1_analyses_r2_an2b();
+		case MAINR_EGION_ON_R1_ANALYSES_R2_AN2B:
+			exitSequence_mainr_egion_on_r1_analyses_r2_an2b();
 			break;
 		default:
 			break;
@@ -521,11 +521,11 @@ public class Statechart implements IStatemachine, ICycleBased {
 	}
 	
 	/* Default exit sequence for region r1 */
-	private void exitSequence_mainregion_on_r1_analyses_r1() {
+	private void exitSequence_mainr_egion_on_r1_analyses_r1() {
 		/* Default exit sequence for region r1 */
 		switch (stateVector[0]) {
-		case MAINREGION_ON_R1_ANALYSES_R1_AN1:
-			exitSequence_mainregion_on_r1_analyses_r1_an1();
+		case MAINR_EGION_ON_R1_ANALYSES_R1_AN1:
+			exitSequence_mainr_egion_on_r1_analyses_r1_an1();
 			break;
 		default:
 			break;
@@ -533,14 +533,14 @@ public class Statechart implements IStatemachine, ICycleBased {
 	}
 	
 	/* Default exit sequence for region r2 */
-	private void exitSequence_mainregion_on_r1_analyses_r2() {
+	private void exitSequence_mainr_egion_on_r1_analyses_r2() {
 		/* Default exit sequence for region r2 */
 		switch (stateVector[1]) {
-		case MAINREGION_ON_R1_ANALYSES_R2_AN2A:
-			exitSequence_mainregion_on_r1_analyses_r2_an2a();
+		case MAINR_EGION_ON_R1_ANALYSES_R2_AN2A:
+			exitSequence_mainr_egion_on_r1_analyses_r2_an2a();
 			break;
-		case MAINREGION_ON_R1_ANALYSES_R2_AN2B:
-			exitSequence_mainregion_on_r1_analyses_r2_an2b();
+		case MAINR_EGION_ON_R1_ANALYSES_R2_AN2B:
+			exitSequence_mainr_egion_on_r1_analyses_r2_an2b();
 			break;
 		default:
 			break;
@@ -548,22 +548,22 @@ public class Statechart implements IStatemachine, ICycleBased {
 	}
 	
 	/* Default react sequence for initial entry  */
-	private void react_mainregion__entry_Default() {
+	private void react_mainr_egion__entry_Default() {
 		/* Default react sequence for initial entry  */
-		enterSequence_mainregion_off_default();
+		enterSequence_mainr_egion_Esempio_stato_default();
 	}
 	
 	/* The reactions of state null. */
-	private void react_mainregion_on_r1__sync0() {
+	private void react_mainr_egion_on_r1__sync0() {
 		/* The reactions of state null. */
-		enterSequence_mainregion_on_r1_analyses_r1_an1_default();
-		enterSequence_mainregion_on_r1_analyses_r2_an2a_default();
+		enterSequence_mainr_egion_on_r1_analyses_r1_an1_default();
+		enterSequence_mainr_egion_on_r1_analyses_r2_an2a_default();
 	}
 	
 	/* The reactions of state null. */
-	private void react_mainregion_on_r1__sync1() {
+	private void react_mainr_egion_on_r1__sync1() {
 		/* The reactions of state null. */
-		enterSequence_mainregion_on_r1_endanalyses_default();
+		enterSequence_mainr_egion_on_r1_endanalyses_default();
 	}
 	
 	private long react(long transitioned_before) {
@@ -572,13 +572,13 @@ public class Statechart implements IStatemachine, ICycleBased {
 		;
 	}
 	
-	private long mainregion_off_react(long transitioned_before) {
-		/* The reactions of state off. */
+	private long mainr_egion_Esempio_stato_react(long transitioned_before) {
+		/* The reactions of state Esempio_stato. */
 		long transitioned_after = transitioned_before;
 		if (transitioned_after<0l) {
 			if (current.iface.power_on) {
-				exitSequence_mainregion_off();
-				enterSequence_mainregion_idle_default();
+				exitSequence_mainr_egion_Esempio_stato();
+				enterSequence_mainr_egion_idle_default();
 				react(0l);
 				transitioned_after = 0l;
 			}
@@ -591,19 +591,19 @@ public class Statechart implements IStatemachine, ICycleBased {
 		;
 	}
 	
-	private long mainregion_idle_react(long transitioned_before) {
+	private long mainr_egion_idle_react(long transitioned_before) {
 		/* The reactions of state idle. */
 		long transitioned_after = transitioned_before;
 		if (transitioned_after<0l) {
 			if (current.iface.work) {
-				exitSequence_mainregion_idle();
-				enterSequence_mainregion_on_r1_working_default();
+				exitSequence_mainr_egion_idle();
+				enterSequence_mainr_egion_on_r1_working_default();
 				react(0l);
 				transitioned_after = 0l;
 			} else {
 				if (current.iface.analize) {
-					exitSequence_mainregion_idle();
-					enterSequence_mainregion_on_r1_initanalyses_default();
+					exitSequence_mainr_egion_idle();
+					enterSequence_mainr_egion_on_r1_initanalyses_default();
 					react(0l);
 					transitioned_after = 0l;
 				}
@@ -617,13 +617,13 @@ public class Statechart implements IStatemachine, ICycleBased {
 		;
 	}
 	
-	private long mainregion_on_react(long transitioned_before) {
+	private long mainr_egion_on_react(long transitioned_before) {
 		/* The reactions of state on. */
 		long transitioned_after = transitioned_before;
 		if (transitioned_after<0l) {
 			if (current.iface.end_all) {
-				exitSequence_mainregion_on();
-				enterSequence_mainregion__final__default();
+				exitSequence_mainr_egion_on();
+				enterSequence_mainr_egion__final__default();
 				transitioned_after = 1l;
 			}
 		}
@@ -635,49 +635,49 @@ public class Statechart implements IStatemachine, ICycleBased {
 		;
 	}
 	
-	private long mainregion_on_r1_working_react(long transitioned_before) {
+	private long mainr_egion_on_r1_working_react(long transitioned_before) {
 		/* The reactions of state working. */
 		long transitioned_after = transitioned_before;
 		/* If no transition was taken then execute local reactions */
-		transitioned_after = mainregion_on_react(transitioned_before);
+		transitioned_after = mainr_egion_on_react(transitioned_before);
 		return transitioned_after
 		;
 	}
 	
-	private long mainregion_on_r1_initanalyses_react(long transitioned_before) {
+	private long mainr_egion_on_r1_initanalyses_react(long transitioned_before) {
 		/* The reactions of state initanalyses. */
 		long transitioned_after = transitioned_before;
 		if (transitioned_after<0l) {
 			if (current.iface.start) {
-				exitSequence_mainregion_on_r1_initanalyses();
-				react_mainregion_on_r1__sync0();
+				exitSequence_mainr_egion_on_r1_initanalyses();
+				react_mainr_egion_on_r1__sync0();
 				transitioned_after = 0l;
 			}
 		}
 		if (transitioned_after==transitioned_before) {
 			/* If no transition was taken then execute local reactions */
-			transitioned_after = mainregion_on_react(transitioned_before);
+			transitioned_after = mainr_egion_on_react(transitioned_before);
 		}
 		return transitioned_after
 		;
 	}
 	
-	private long mainregion_on_r1_analyses_react(long transitioned_before) {
+	private long mainr_egion_on_r1_analyses_react(long transitioned_before) {
 		/* The reactions of state analyses. */
 		long transitioned_after = transitioned_before;
 		/* If no transition was taken then execute local reactions */
-		transitioned_after = mainregion_on_react(transitioned_before);
+		transitioned_after = mainr_egion_on_react(transitioned_before);
 		return transitioned_after
 		;
 	}
 	
-	private long mainregion_on_r1_analyses_r1_an1_react(long transitioned_before) {
+	private long mainr_egion_on_r1_analyses_r1_an1_react(long transitioned_before) {
 		/* The reactions of state an1. */
 		long transitioned_after = transitioned_before;
 		if (transitioned_after<0l) {
-			if ((current.iface.a && isStateActive(State.MAINREGION_ON_R1_ANALYSES_R2_AN2B))) {
-				exitSequence_mainregion_on_r1_analyses();
-				react_mainregion_on_r1__sync1();
+			if ((current.iface.a && isStateActive(State.MAINR_EGION_ON_R1_ANALYSES_R2_AN2B))) {
+				exitSequence_mainr_egion_on_r1_analyses();
+				react_mainr_egion_on_r1__sync1();
 				transitioned_after = 0l;
 			}
 		}
@@ -685,75 +685,75 @@ public class Statechart implements IStatemachine, ICycleBased {
 		;
 	}
 	
-	private long mainregion_on_r1_analyses_r2_an2a_react(long transitioned_before) {
+	private long mainr_egion_on_r1_analyses_r2_an2a_react(long transitioned_before) {
 		/* The reactions of state an2a. */
 		long transitioned_after = transitioned_before;
 		if (transitioned_after<1l) {
 			if (current.iface.b) {
-				exitSequence_mainregion_on_r1_analyses_r2_an2a();
-				enterSequence_mainregion_on_r1_analyses_r2_an2b_default();
-				mainregion_on_r1_analyses_react(0l);
+				exitSequence_mainr_egion_on_r1_analyses_r2_an2a();
+				enterSequence_mainr_egion_on_r1_analyses_r2_an2b_default();
+				mainr_egion_on_r1_analyses_react(0l);
 				transitioned_after = 1l;
 			}
 		}
 		if (transitioned_after==transitioned_before) {
 			/* If no transition was taken then execute local reactions */
-			transitioned_after = mainregion_on_r1_analyses_react(transitioned_before);
+			transitioned_after = mainr_egion_on_r1_analyses_react(transitioned_before);
 		}
 		return transitioned_after
 		;
 	}
 	
-	private long mainregion_on_r1_analyses_r2_an2b_react(long transitioned_before) {
+	private long mainr_egion_on_r1_analyses_r2_an2b_react(long transitioned_before) {
 		/* The reactions of state an2b. */
 		long transitioned_after = transitioned_before;
 		if (transitioned_after<1l) {
-			if ((isStateActive(State.MAINREGION_ON_R1_ANALYSES_R1_AN1) && current.iface.a)) {
-				exitSequence_mainregion_on_r1_analyses();
-				react_mainregion_on_r1__sync1();
+			if ((isStateActive(State.MAINR_EGION_ON_R1_ANALYSES_R1_AN1) && current.iface.a)) {
+				exitSequence_mainr_egion_on_r1_analyses();
+				react_mainr_egion_on_r1__sync1();
 				transitioned_after = 1l;
 			}
 		}
 		if (transitioned_after==transitioned_before) {
 			/* If no transition was taken then execute local reactions */
-			transitioned_after = mainregion_on_r1_analyses_react(transitioned_before);
+			transitioned_after = mainr_egion_on_r1_analyses_react(transitioned_before);
 		}
 		return transitioned_after
 		;
 	}
 	
-	private long mainregion_on_r1_endanalyses_react(long transitioned_before) {
+	private long mainr_egion_on_r1_endanalyses_react(long transitioned_before) {
 		/* The reactions of state endanalyses. */
 		long transitioned_after = transitioned_before;
 		if (transitioned_after<0l) {
 			if (current.iface.end) {
-				exitSequence_mainregion_on();
-				enterSequence_mainregion_chill_default();
+				exitSequence_mainr_egion_on();
+				enterSequence_mainr_egion_chill_default();
 				react(0l);
 				transitioned_after = 0l;
 			}
 		}
 		if (transitioned_after==transitioned_before) {
 			/* If no transition was taken then execute local reactions */
-			transitioned_after = mainregion_on_react(transitioned_before);
+			transitioned_after = mainr_egion_on_react(transitioned_before);
 		}
 		return transitioned_after
 		;
 	}
 	
-	private long mainregion__final__react(long transitioned_before) {
+	private long mainr_egion__final__react(long transitioned_before) {
 		/* The reactions of state null. */
 		return react(transitioned_before)
 		;
 	}
 	
-	private long mainregion_chill_react(long transitioned_before) {
+	private long mainr_egion_chill_react(long transitioned_before) {
 		/* The reactions of state chill. */
 		long transitioned_after = transitioned_before;
 		if (transitioned_after<0l) {
 			if (current.iface.end) {
-				exitSequence_mainregion_chill();
-				enterSequence_mainregion__final__default();
+				exitSequence_mainr_egion_chill();
+				enterSequence_mainr_egion__final__default();
 				transitioned_after = 0l;
 			}
 		}

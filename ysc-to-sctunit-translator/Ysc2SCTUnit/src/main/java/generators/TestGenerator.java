@@ -1,7 +1,10 @@
 package generators;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.Map;
 
+import scxmlreading.ScxmlReader;
 import support.CompilerManager;
 import support.MySecurityManager;
 
@@ -35,6 +38,8 @@ public class TestGenerator {
 		
 		String itemisScc = "C:\\Program Files (x86)\\itemis_CREATE\\scc.bat";
 		
+		String scxmlPath = projectPath + "\\model\\" + statechartName + ".scxml";
+		
 		String compilerD = "-d " + projectPath + "\\bin";
 		String compilerClasspath = "-classpath " + projectPath + "\\src\\";
 		
@@ -49,38 +54,56 @@ public class TestGenerator {
 		String simplifiedJunitTestPath = projectPath + "\\evosuite-tests\\" + packageName + "\\" + statechartName + "Simplified_ESTest.java" ;
 		String simplifiedSctunitTestPath = projectPath + "\\model\\" + statechartName + "SimplifiedTest.sctunit" ;
 		
-		// Generate the .sgen file needed by Itemis Create
+		
+		// Generate the .sgen file needed by Itemis Create to generate the scxml
+		Generators.generateSgenScxml(projectPath, statechartName, projectName);
+		// Call the Itemis Create scxml code generator
+		Generators.generateScxml(projectPath, itemisScc);
+		// Obtain the state name and create a dictionary with the corresponding enum as key
+		Map<String, String> stateNames = 
+				ScxmlReader.getStateName(scxmlPath);
+		System.out.println(stateNames);
+		// Delete the generated files
+		System.out.println("*******************************************");
+		System.out.println("Deleting temporary files...");
+		System.out.println("*******************************************");
+		File sgen = new File(projectPath + "\\model\\temp.sgen");
+		sgen.delete();
+		File scxml = new File(scxmlPath);
+		scxml.delete();
+		
+		// Generate the .sgen file needed by Itemis Create to generate the java code
 		boolean timeBased = args.length == 5 && args[4].equals("time");
-		Generators.genarateSgen(projectPath, statechartName, packageName, projectName, timeBased);
+		Generators.generateSgenJava(projectPath, statechartName, packageName, projectName, timeBased);
 		
 		// Call the Itemis Create Java code generator
-		Generators.genarateJava(projectPath, itemisScc);
+		Generators.generateJava(projectPath, itemisScc);
 		
 		// Compile the generated classes
 		CompilerManager.compile(compilerD, compilerClasspath, classPath);		
 		
 		// Modify the generated Java code to create a simplified version
-		Generators.genarateSimplifiedJava(classPath, simplifiedClassPath);
+		Generators.generateSimplifiedJava(classPath, simplifiedClassPath);
 		
 		// Compile the new simplified class
-		CompilerManager.compile(compilerD, compilerClasspath, simplifiedClassPath);	
+		CompilerManager.compile(compilerD, compilerClasspath, simplifiedClassPath);
 		
 		// Call the Evosuite test generator both on the original and the simplified versions
 		// Change the security manager to avoid JVM stop running after Evosuite calls System.exit(0);
 		SecurityManager default_sm = System.getSecurityManager();
 		MySecurityManager my_sm = new MySecurityManager();
 	    System.setSecurityManager(my_sm);
-	    try {
-	    	Generators.genarateJunit(evoTarget, evoOptions, evoBaseDir);
-	    } catch (SecurityException e) {
-	    	Generators.genarateSctunit(junitTestPath, sctunitTestPath);
-	    }
-
-	    try {
-	    	Generators.genarateJunit(evoSimplifiedTarget, evoOptions, evoBaseDir);
-	    } catch (SecurityException e) { 
-	    	Generators.genarateSctunit(simplifiedJunitTestPath, simplifiedSctunitTestPath);
-	    }
+//	    try {
+//	    	Generators.generateJunit(evoTarget, evoOptions, evoBaseDir);
+//	    } catch (SecurityException e) {
+//	    	Generators.generateSctunit(junitTestPath, sctunitTestPath);
+//	    }
+//
+//	    try {
+//	    	Generators.generateJunit(evoSimplifiedTarget, evoOptions, evoBaseDir);
+//	    } catch (SecurityException e) { 
+//	    	Generators.generateSctunit(simplifiedJunitTestPath, simplifiedSctunitTestPath);
+//	    }
 	    // Change the security manager back to the default one to let the execution ends
 	    System.setSecurityManager(default_sm);
 		System.out.println("*******************************************");
