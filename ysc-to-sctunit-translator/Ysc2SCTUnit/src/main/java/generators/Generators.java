@@ -10,6 +10,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 import org.stringtemplate.v4.ST;
 import org.stringtemplate.v4.STGroupFile;
@@ -21,7 +22,6 @@ import com.github.javaparser.ast.visitor.VoidVisitor;
 import javareading.ClassDeclarationVisitor;
 import javareading.ConstructorDeclarationVisitor;
 import javareading.MethodDeclarationVisitor;
-import junitreading.ClassNameCollector;
 import junitreading.TestCaseCollector;
 import testcase.TestCase;
 
@@ -30,54 +30,6 @@ import testcase.TestCase;
  * All toghether, the methods can generate a .sctunit file starting from a .ysc file. 
  */
 public final class Generators {
-	
-	/**
-	 * Generate the .sgen file needed by Itemis Create to generate a scxml from a .ysc file (a statechart).
-	 *
-	 * @param projectPath the path of the project
-	 * @param statechartName the name of the statechart, it must be in a folder named model
-	 * @param projectName the name of the project
-	 * @throws IOException Signals that an I/O exception has occurred.
-	 */
-	public static void generateSgenScxml(String projectPath, String statechartName, String projectName)
-			throws IOException {
-		System.out.println("*******************************************");
-		System.out.println("Generating .sgen file for scxml...");
-		System.out.println("*******************************************");
-		STGroupFile group = new STGroupFile(".\\template\\sgen_scxml_template.stg");
-		ST st = group.getInstanceOf("generator");
-		st.add("project_name", projectName);
-		st.add("statechart_name", statechartName);
-		File genFile = new File(projectPath + "\\model\\temp.sgen");
-		st.write(genFile, null);
-	}
-	
-	/**
-	 * Call Itemis Create code generator to generate a .scxml file.
-	 *
-	 * @param projectPath the path of the project
-	 * @param itemisScc the path of the scc.bat file
-	 * @throws IOException Signals that an I/O exception has occurred.
-	 */
-	public static void generateScxml(String projectPath, String itemisScc)
-			throws IOException {
-		System.out.println("*******************************************");
-		System.out.println("Calling Itemis Create scxml generator...");
-		System.out.println("*******************************************");
-		ProcessBuilder pb = new ProcessBuilder();
-		pb.redirectErrorStream(true);
-		pb.directory(new File(projectPath));
-		pb.command(itemisScc);
-		Process p = pb.start();
-
-		BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
-		String line = null;
-		while ((line = reader.readLine()) != null) {
-			System.out.println(line);
-		}
-		System.out.println("");
-		reader.close();
-	}	
 	
 	/**
 	 * Generate the .sgen file needed by Itemis Create to generate java code from a .ysc file (a statechart).
@@ -105,16 +57,16 @@ public final class Generators {
 	}
 	
 	/**
-	 * Call Itemis Create code generator to generate a .java file.
+	 * Call Itemis Create code generators for each .sgen file in the specified project.
 	 *
 	 * @param projectPath the path of the project
 	 * @param itemisScc the path of the scc.bat file
 	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
-	public static void generateJava(String projectPath, String itemisScc)
+	public static void callICGenerators(String projectPath, String itemisScc)
 			throws IOException {
 		System.out.println("*******************************************");
-		System.out.println("Calling Itemis Create java code generator...");
+		System.out.println("Calling Itemis Create code generators...");
 		System.out.println("*******************************************");
 		ProcessBuilder pb = new ProcessBuilder();
 		pb.redirectErrorStream(true);
@@ -126,8 +78,8 @@ public final class Generators {
 		String line = null;
 		while ((line = reader.readLine()) != null) {
 			System.out.println(line);
+			if (line.contains("Statechart done."))	break;
 		}
-		System.out.println("");
 		reader.close();
 	}
 	
@@ -183,24 +135,18 @@ public final class Generators {
 	 * @param sctunitTestPath the path of the generated .sctunit file
 	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
-	public static void generateSctunit(String junitTestPath, String sctunitTestPath)
-			throws IOException {
+	public static void generateSctunit(String junitTestPath, String sctunitTestPath, 
+			String statechartName, Map<String,String> statesName) throws IOException {
 		System.out.println("*******************************************");
 		System.out.println("Generating .sctunit file...");
 		System.out.println("*******************************************");
 		// Get the compilation unit of the (test) class
 		CompilationUnit cu = StaticJavaParser.parse(new FileInputStream(junitTestPath));
 		
-		// Obtain the statechart name starting from the name of the test class
-		List<String> classNameList = new ArrayList<String>();
-		VoidVisitor<List<String>> classNameCollector = new ClassNameCollector();
-		classNameCollector.visit(cu, classNameList);
-		String statechartName = classNameList.get(0).replace("_ESTest", "").replace("Simplified", "");
-		
 		// Visit all the (test) methods contained in the compilation unit.
 		// Each visit of a method produces a TestCase object 
 		List<TestCase> testCaseList = new ArrayList<TestCase>();
-		VoidVisitor<List<TestCase>> testCaseCollector = new TestCaseCollector();
+		VoidVisitor<List<TestCase>> testCaseCollector = new TestCaseCollector(statechartName, statesName);
 		testCaseCollector.visit(cu, testCaseList);
 		
 		// Print to video the SCTUnit file

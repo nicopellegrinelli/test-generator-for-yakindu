@@ -44,14 +44,26 @@
 			<artifactId>stringtemplate</artifactId>
 			<version>4.0.2</version>
 		</dependency>
-		
+
+		<!--
+		https://mvnrepository.com/artifact/com.github.javaparser/javaparser-core -->
 		<dependency>
 			<groupId>com.github.javaparser</groupId>
 			<artifactId>javaparser-core</artifactId>
 			<version>3.25.6</version>
 		</dependency>
-	</dependencies>
-	
 
+		<!-- https://mvnrepository.com/artifact/commons-scxml/commons-scxml -->
+		<dependency>
+			<groupId>commons-scxml</groupId>
+			<artifactId>commons-scxml</artifactId>
+			<version>0.9</version>
+		</dependency>
+		<dependency>
+			<groupId>JUnit2SCTUnit</groupId>
+			<artifactId>JUnit2SCTUnit</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
 
 </project>

@@ -19,6 +19,24 @@ import testcase.TestCase;
  */
 public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 	
+	/** The name of the statechart */
+	String statechartName;
+	
+	/** The dictionary containing all the full names of states in the statechart.
+	 *  The key is the string representing corresponding enum */
+	Map<String, String> statesName;
+
+	/**
+	 * Instantiates a new TestCaseCollector regarding to a statechart.
+	 *
+	 * @param statechartName the name of the statechart
+	 * @param statesName the disctionary containnig the full names of the states in the statechart
+	 */
+	public TestCaseCollector(String statechartName, Map<String, String> statesName) {
+		this.statechartName = statechartName;
+		this.statesName = statesName;
+	}
+	
 	/**
 	 * Visit the method declaration and add a new TestCase instance representing the visited method declaration to the collector.
 	 *
@@ -105,28 +123,28 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 					// The method has an argument, that is retrieved.
 					String isStateActiveArgument = 
 							statementToCheck.substring(statementToCheck.indexOf('(')+1, statementToCheck.lastIndexOf(')'));
-					// The name of the state is retrieved.
+					// The string representing the name of the state in Java is retrieved.
 					// If the argument is a known variable, its assigned expression (right-hand-side of the assignment) is used,
 					// else, dircetly the argument is used.
-					String stateName;
+					String javaStateName;
 					if(variableAssignments.containsKey(isStateActiveArgument)) {
-						stateName = variableAssignments.get(isStateActiveArgument);
+						javaStateName = variableAssignments.get(isStateActiveArgument);
 					} else {
-						stateName = isStateActiveArgument;
+						javaStateName = isStateActiveArgument;
 					}
 					// If the stateName is obtained using valueof, only the argument of valueof must be used as state name
-					if (stateName.contains("valueof")) {
-						stateName = stateName.substring(stateName.indexOf('(')+1, stateName.indexOf(')'));
+					if (javaStateName.contains("valueof")) {
+						javaStateName = javaStateName.substring(javaStateName.indexOf('(')+1, javaStateName.indexOf(')'));
 					}
-					// The state name is modified to be complient with SCTUnit environment.
-					stateName = stateName.replace("State.", "");
-					int separator = stateName.lastIndexOf('.');
-					stateName = stateName.substring(0, separator) + stateName.substring(separator).toLowerCase().replace("_", ".");
-					if (stateName.contains("$nullstate$"))
+					// The string representing the enum is obtained
+					javaStateName = javaStateName.substring(javaStateName.lastIndexOf('.')+1);
+					// The nullstate has no equivalent in SCTUnit
+					if (javaStateName.contains("$nullstate$"))
 						continue;
-					if (stateName.contains(".final."))
-						stateName = stateName.replace(".final.", "_final_");
-					testCase.addAssertState(stateName.replace("Simplified", ""), assertTrue);
+					// The string representing the name of the state in SCTUnit is retrieved.
+					String sctunitStateName = statechartName + "." + statesName.get(javaStateName);
+					
+					testCase.addAssertState(sctunitStateName.replace("Simplified", ""), assertTrue);
 					continue;
 				}
 			}
