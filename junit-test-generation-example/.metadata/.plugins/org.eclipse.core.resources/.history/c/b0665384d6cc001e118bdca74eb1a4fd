@@ -1,0 +1,328 @@
+testclass ExampleStcTest for statechart ExampleStc {
+	@Test
+	operation test01 () {
+	    enter
+	    raise power_on
+	    raise simplified
+	    raise start
+	    assert is_active
+	    assert active (ExampleStc.main_region.On.r_0.Simplified_analyses012.r___1.an1)
+	}
+
+	@Test
+	operation test03 () {
+	    enter
+	    raise power_on
+	    raise simplified
+	    raise start
+	    raise b
+	    raise simplified
+	    assert is_active
+	}
+
+	@Test
+	operation test04 () {
+	    enter
+	    raise power_on
+	    raise simplified
+	    raise analyze
+	    assert !is_final
+	}
+
+	@Test
+	operation test05 () {
+	    enter
+	    raise power_on
+	    raise simplified
+	    raise start
+	    raise simplified
+	    assert !is_final
+	}
+
+	@Test
+	operation test06 () {
+	    enter
+	    raise power_on
+	    raise simplified
+	    raise start
+	    raise b
+	    raise a
+	    raise end
+	    raise power_on
+	    assert !is_final
+	}
+
+	@Test
+	operation test07 () {
+	    enter
+	    raise power_on
+	    raise simplified
+	    raise start
+	    raise b
+	    raise a
+	    raise b
+	    assert is_active
+	}
+
+	@Test
+	operation test08 () {
+	    enter
+	    raise power_on
+	    raise end
+	    assert is_active
+	}
+
+	@Test
+	operation test09 () {
+	    enter
+	    raise b
+	    assert is_active
+	}
+
+	@Test
+	operation test10 () {
+	    enter
+	    raise power_on
+	    raise simplified
+	    raise start
+	    raise end_all
+	    assert is_active
+	}
+
+	@Test
+	operation test11 () {
+	    enter
+	    raise power_on
+	    raise simplified
+	    raise start
+	    raise b
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test13 () {
+	    enter
+	    raise power_on
+	    raise simplified
+	    raise start
+	    raise b
+	    raise a
+	    raise end
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test14 () {
+	    enter
+	    raise power_on
+	    raise work
+	    raise end
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test15 () {
+	    enter
+	    raise power_on
+	    raise simplified
+	    raise start
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test16 () {
+	    enter
+	    raise power_on
+	    raise simplified
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test17 () {
+	    enter
+	    raise power_on
+	    raise work
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test18 () {
+	    enter
+	    raise power_on
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test19 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test20 () {
+	    enter
+	    raise power_on
+	    raise simplified
+	    raise start
+	    raise b
+	    raise a
+	    raise end
+	    assert is_active
+	    assert active (ExampleStc.main_region.chill)
+	}
+
+	@Test
+	operation test21 () {
+	    enter
+	    raise power_on
+	    raise simplified
+	    raise end_all
+	    assert is_active
+	    assert active (ExampleStc.main_region._final_)
+	}
+
+	@Test
+	operation test22 () {
+	    enter
+	    raise power_on
+	    raise simplified
+	    raise start
+	    raise a
+	    assert is_active
+	}
+
+	@Test
+	operation test23 () {
+	    enter
+	    raise power_on
+	    raise simplified
+	    raise start
+	    assert is_active
+	    assert active (ExampleStc.main_region.On.r_0.Simplified_analyses012.r_2.an2_a)
+	}
+
+	@Test
+	operation test25 () {
+	    enter
+	    assert is_active
+	    assert !active (ExampleStc.main_region.On.r_0.Simplified_analyses012)
+	}
+
+	@Test
+	operation test26 () {
+	    enter
+	    raise power_on
+	    raise work
+	    assert is_active
+	    assert active (ExampleStc.main_region.On.r_0.working)
+	}
+
+	@Test
+	operation test27 () {
+	    enter
+	    raise power_on
+	    raise simplified
+	    assert is_active
+	    assert active (ExampleStc.main_region.On)
+	}
+
+	@Test
+	operation test28 () {
+	    enter
+	    assert is_active
+	    assert !active (ExampleStc.main_region.On)
+	}
+
+	@Test
+	operation test29 () {
+	    enter
+	    raise power_on
+	    assert is_active
+	    assert active (ExampleStc.main_region.Simplified)
+	}
+
+	@Test
+	operation test30 () {
+	    enter
+	    assert is_active
+	    assert active (ExampleStc.main_region.Off_)
+	}
+
+	@Test
+	operation test43 () {
+	    enter
+	    raise power_on
+	    raise work
+	    raise end_all
+	    assert is_active
+	    assert is_final
+	}
+
+	@Test
+	operation test45 () {
+	    enter
+	    raise power_on
+	    raise work
+	    raise end
+	    assert is_active
+	    assert is_final
+	}
+
+	@Test
+	operation test47 () {
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test48 () {
+	    enter
+	    raise power_on
+	    raise work
+	    raise end
+	    raise end_all
+	    assert is_active
+	}
+
+	@Test
+	operation test49 () {
+	    enter
+	    raise power_on
+	    raise work
+	    raise end_all
+	    raise simplified
+	    assert is_active
+	}
+
+	@Test
+	operation test52 () {
+	    enter
+	    raise power_on
+	    raise simplified
+	    raise start
+	    raise b
+	    raise a
+	    raise end
+	    raise end
+	    assert is_final
+	    exit
+	    assert !is_active
+	}
+
+}

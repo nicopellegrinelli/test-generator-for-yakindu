@@ -133,10 +133,14 @@ public final class Generators {
 	 *
 	 * @param junitTestPath the path of the .java file containing the junit test cases
 	 * @param sctunitTestPath the path of the generated .sctunit file
+	 * @param statechartName the  names of the statechart
+	 * @param statesNames the dictionary of the states names with the corresponding enum as key
+	 * @param eventsNames the dictionary of the events names with the corresponding method as key
 	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	public static void generateSctunit(String junitTestPath, String sctunitTestPath, 
-			String statechartName, Map<String,String> statesName) throws IOException {
+			String statechartName, Map<String,String> statesNames, Map<String,String> eventsNames)
+			throws IOException {
 		System.out.println("*******************************************");
 		System.out.println("Generating .sctunit file...");
 		System.out.println("*******************************************");
@@ -146,7 +150,7 @@ public final class Generators {
 		// Visit all the (test) methods contained in the compilation unit.
 		// Each visit of a method produces a TestCase object 
 		List<TestCase> testCaseList = new ArrayList<TestCase>();
-		VoidVisitor<List<TestCase>> testCaseCollector = new TestCaseCollector(statechartName, statesName);
+		VoidVisitor<List<TestCase>> testCaseCollector = new TestCaseCollector(statechartName, statesNames, eventsNames);
 		testCaseCollector.visit(cu, testCaseList);
 		
 		// Print to video the SCTUnit file

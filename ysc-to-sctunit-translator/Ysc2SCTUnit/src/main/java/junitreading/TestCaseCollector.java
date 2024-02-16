@@ -23,18 +23,24 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 	String statechartName;
 	
 	/** The dictionary containing all the full names of states in the statechart.
-	 *  The key is the string representing corresponding enum */
-	Map<String, String> statesName;
+	 *  The key is the string representing the corresponding enum */
+	Map<String, String> statesNames;
+	
+	/** The dictionary containing all the names of events in the statechart.
+	 *  The key is the string representing the corresponding method */
+	Map<String, String> eventsNames;
 
 	/**
 	 * Instantiates a new TestCaseCollector regarding to a statechart.
 	 *
 	 * @param statechartName the name of the statechart
-	 * @param statesName the disctionary containnig the full names of the states in the statechart
+	 * @param statesName the disctionary of the states names with the corresponding enum as key
+	 * @param eventsNames the dictionary of the events names with the corresponding method as key
 	 */
-	public TestCaseCollector(String statechartName, Map<String, String> statesName) {
+	public TestCaseCollector(String statechartName, Map<String, String> statesNames, Map<String,String> eventsNames) {
 		this.statechartName = statechartName;
-		this.statesName = statesName;
+		this.statesNames = statesNames;
+		this.eventsNames = eventsNames;
 	}
 	
 	/**
@@ -87,7 +93,7 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 				continue;
 			}
 			if (methodName.startsWith("raise")) {
-				testCase.addEvent(methodName.replace("raise", "").toLowerCase());
+				testCase.addEvent(eventsNames.get(methodName));
 				continue;
 			}
 			if (methodName.equals("runCycle")) {
@@ -142,9 +148,9 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 					if (javaStateName.contains("$nullstate$"))
 						continue;
 					// The string representing the name of the state in SCTUnit is retrieved.
-					String sctunitStateName = statechartName + "." + statesName.get(javaStateName);
+					String sctunitStateName = statechartName + "." + statesNames.get(javaStateName);
 					
-					testCase.addAssertState(sctunitStateName.replace("Simplified", ""), assertTrue);
+					testCase.addAssertState(sctunitStateName, assertTrue);
 					continue;
 				}
 			}

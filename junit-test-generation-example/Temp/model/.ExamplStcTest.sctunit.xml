@@ -1,0 +1,54 @@
+<testsuite name="ExamplStcTest" time="">
+  <testcase name="test09" classname="platform:/resource/Temp/model/ExamplStcTest.sctunit#ExamplStcTest.test09" time="">
+  </testcase>
+  <testcase name="test10" classname="platform:/resource/Temp/model/ExamplStcTest.sctunit#ExamplStcTest.test10" time="">
+  </testcase>
+  <testcase name="test11" classname="platform:/resource/Temp/model/ExamplStcTest.sctunit#ExamplStcTest.test11" time="">
+    <failure>Assertion failed: "assert is_active" (Line 27)
+    </failure>
+  </testcase>
+  <testcase name="test12" classname="platform:/resource/Temp/model/ExamplStcTest.sctunit#ExamplStcTest.test12" time="">
+    <failure>Assertion failed: "assert is_active" (Line 36)
+    </failure>
+  </testcase>
+  <testcase name="test13" classname="platform:/resource/Temp/model/ExamplStcTest.sctunit#ExamplStcTest.test13" time="">
+  </testcase>
+  <testcase name="test14" classname="platform:/resource/Temp/model/ExamplStcTest.sctunit#ExamplStcTest.test14" time="">
+  </testcase>
+  <testcase name="test16" classname="platform:/resource/Temp/model/ExamplStcTest.sctunit#ExamplStcTest.test16" time="">
+  </testcase>
+  <testcase name="test17" classname="platform:/resource/Temp/model/ExamplStcTest.sctunit#ExamplStcTest.test17" time="">
+  </testcase>
+  <testcase name="test18" classname="platform:/resource/Temp/model/ExamplStcTest.sctunit#ExamplStcTest.test18" time="">
+  </testcase>
+  <testcase name="test19" classname="platform:/resource/Temp/model/ExamplStcTest.sctunit#ExamplStcTest.test19" time="">
+  </testcase>
+  <testcase name="test20" classname="platform:/resource/Temp/model/ExamplStcTest.sctunit#ExamplStcTest.test20" time="">
+  </testcase>
+  <testcase name="test21" classname="platform:/resource/Temp/model/ExamplStcTest.sctunit#ExamplStcTest.test21" time="">
+  </testcase>
+  <testcase name="test22" classname="platform:/resource/Temp/model/ExamplStcTest.sctunit#ExamplStcTest.test22" time="">
+  </testcase>
+  <testcase name="test23" classname="platform:/resource/Temp/model/ExamplStcTest.sctunit#ExamplStcTest.test23" time="">
+  </testcase>
+  <testcase name="test24" classname="platform:/resource/Temp/model/ExamplStcTest.sctunit#ExamplStcTest.test24" time="">
+  </testcase>
+  <testcase name="test25" classname="platform:/resource/Temp/model/ExamplStcTest.sctunit#ExamplStcTest.test25" time="">
+  </testcase>
+  <testcase name="test26" classname="platform:/resource/Temp/model/ExamplStcTest.sctunit#ExamplStcTest.test26" time="">
+  </testcase>
+  <testcase name="test42" classname="platform:/resource/Temp/model/ExamplStcTest.sctunit#ExamplStcTest.test42" time="">
+  </testcase>
+  <testcase name="test44" classname="platform:/resource/Temp/model/ExamplStcTest.sctunit#ExamplStcTest.test44" time="">
+  </testcase>
+  <testcase name="test46" classname="platform:/resource/Temp/model/ExamplStcTest.sctunit#ExamplStcTest.test46" time="">
+  </testcase>
+  <testcase name="test49" classname="platform:/resource/Temp/model/ExamplStcTest.sctunit#ExamplStcTest.test49" time="">
+  </testcase>
+  <testcase name="test50" classname="platform:/resource/Temp/model/ExamplStcTest.sctunit#ExamplStcTest.test50" time="">
+  </testcase>
+  <testcase name="test51" classname="platform:/resource/Temp/model/ExamplStcTest.sctunit#ExamplStcTest.test51" time="">
+  </testcase>
+  <testcase name="test52" classname="platform:/resource/Temp/model/ExamplStcTest.sctunit#ExamplStcTest.test52" time="">
+  </testcase>
+</testsuite>

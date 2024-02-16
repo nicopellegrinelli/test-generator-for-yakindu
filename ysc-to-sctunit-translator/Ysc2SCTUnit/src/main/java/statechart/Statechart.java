@@ -26,7 +26,10 @@ public class Statechart {
 	private String statechartName;
 	
 	/** The list containing all the full names of states in the statechart. */
-	private List<String> statesName;
+	private List<String> statesNames;
+	
+	/** The list containing all the full names of events in the statechart. */
+	private List<String> eventsNames;
 	
 	/**
 	 * Instantiates a new statechart.
@@ -43,8 +46,7 @@ public class Statechart {
 		
 		this.statechartNode = document.getElementsByTagName("sgraph:Statechart").item(0);
 		
-		this.initStatechartName();
-		this.initStatesName();
+		this.initStatechart();
 	}
 	
 	/**
@@ -57,26 +59,31 @@ public class Statechart {
 	}
 	
 	/**
-	 * Gets the full states name.
+	 * Gets all states names.
 	 *
-	 * @return the list containing all states name
+	 * @return the list containing all states names
 	 */
-	public List<String> getStatesName() {
-		return this.statesName;
+	public List<String> getStatesNames() {
+		return this.statesNames;
 	}
 	
 	/**
-	 * Inits the statechart name.
+	 * Gets all events names.
+	 *
+	 * @return the list containing all events names
 	 */
-	private void initStatechartName() {
+	public List<String> getEventsNames() {
+		return this.eventsNames;
+	}
+	
+	/**
+	 * Inits the statechart obtaining statechart name, states names end events names.
+	 */
+	private void initStatechart() {
+		// Obtain the name of the statechart
 		Node attribute = this.statechartNode.getAttributes().getNamedItem("name");
 		this.statechartName = attribute.getNodeValue();
-	}
-	
-	/**
-	 * Inits the states name.
-	 */
-	private void initStatesName() {
+		
 		// Search the node representing the starting region of the statechart
 		NodeList nodeList = this.statechartNode.getChildNodes();
 		Node firstNode = null;
@@ -88,55 +95,88 @@ public class Statechart {
 			}
 		}
 		// Start the visit of the subtree starting from the one representign the first region
-		this.statesName = new ArrayList<String>();
-		this.visitNode(firstNode, this.statesName);
+		this.statesNames = new ArrayList<String>();
+		this.eventsNames = new ArrayList<String>();
+		this.visitNode(firstNode, this.statesNames, this.eventsNames);
 	}
 	
 	/**
 	 * Visit a node, recursively visit all its element child nodes.
 	 *
 	 * @param node the node to visit
-	 * @param names the list of all the names of the states visited so far
+	 * @param statesNames the list of all the names of the states visited so far
+	 * @param eventsNames the list of all the names of the events of the tranistions visited so far
 	 */
-	private void visitNode(Node node, List<String> names) {
-		// If the node is a region, it may contatin a final state
-		// else, its full name is added to the states name list
-		if (node.getNodeName().equals("regions"))
-			this.checkForFinalState(node, names);
-		else
-			names.add(this.getFullName(node, ""));
-		// All child element nodes with the "name" attribute are visited
+	private void visitNode(Node node, List<String> statesNames, List<String> eventsNames) {
+		// If the node is a region, it may contain a final state
+		// else, it is a vertex and it may have outgoing transitions
+		if (node.getNodeName().equals("regions")) {
+			this.checkForFinalState(node, statesNames);
+		}else {
+			this.checkForTransitions(node, eventsNames);
+			// A "normal" state is a node with name "vertices" and the attribute "xsi:type" equals to "sgraph:State",
+			// for that kind of node, the name is of interest
+			Node attribute = node.getAttributes().getNamedItem("xsi:type");
+			if (attribute.getNodeValue().equals("sgraph:State")) {
+				statesNames.add(this.getFullName(node, ""));
+			}
+		}
+		// All child element nodes that are regions or vertices are visited
 		NodeList nodeList = node.getChildNodes();
 		for (int i = 0; i < nodeList.getLength(); i++) {
 			Node child = nodeList.item(i);
-			if (child.getNodeType() == Node.ELEMENT_NODE && child.getAttributes().getNamedItem("name") != null)
-				visitNode(child, this.statesName);
+			if (child.getNodeType() == Node.ELEMENT_NODE && 
+					(child.getNodeName().equals("regions") || child.getNodeName().equals("vertices")))
+				visitNode(child, this.statesNames, this.eventsNames);
 		}
 	}
-	
+
 	/**
 	 * Check if the node (region) contatins a final state.
 	 *
 	 * @param node the node representing the region
-	 * @param names the list of all the names of the states visited so far
+	 * @param statesNames the list of all the names of the states visited so far
 	 */
-	private void checkForFinalState(Node node, List<String> names) {
+	private void checkForFinalState(Node node, List<String> statesNames) {
 		NodeList nodeList = node.getChildNodes();
 		for (int i = 0; i < nodeList.getLength(); i++) {
 			Node child = nodeList.item(i);
-			// A final state is represented by a node with name "vertices" and the attribute "xsi:type" equals to "sgraph:FinalState"
+			// A final state is a node with name "vertices" and the attribute "xsi:type" equals to "sgraph:FinalState"
 			if (child.getNodeName().equals("vertices")) {
 				Node attribute = child.getAttributes().getNamedItem("xsi:type");
 				if (attribute.getNodeValue().equals("sgraph:FinalState")) {
-					names.add(this.getFullName(node, "._final_"));
+					statesNames.add(this.getFullName(node, "._final_"));
 					return;
+				}
+			}
+		}
+	}
+	
+	/**
+	 * Check if the node (state) contatins outgoing transitions.
+	 *
+	 * @param node the node representing the state
+	 * @param eventsNames the list of all the names of the events of the transitions visited so far
+	 */
+	private void checkForTransitions(Node node, List<String> eventsNames) {
+		NodeList nodeList = node.getChildNodes();
+		for (int i = 0; i < nodeList.getLength(); i++) {
+			Node child = nodeList.item(i);
+			// The nodes of interest are outgoingTransitions with a non empty name
+			if (child.getNodeName().equals("outgoingTransitions")) {
+				Node attribute = child.getAttributes().getNamedItem("specification");
+				if (attribute != null) {
+					String name = attribute.getNodeValue();
+					if (!(name.equals("") || eventsNames.contains(name))) {
+						eventsNames.add(name);
+					}					
 				}
 			}
 		}
 	}
 
 	/**
-	 * Gets the full name of the mode recursively, going up in the DOM tree.
+	 * Gets the full name of the node recursively, going up in the DOM tree.
 	 *
 	 * @param node the node for which it must be obtained the full name
 	 * @param name the full name obtained before the call of this method, it must contain a dot at the start if it is not the first call
