@@ -55,9 +55,9 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 		super.visit(node, collector);
 		
 		// Discards methods in which the method .enter IS NOT called or the method .setIsExecuting IS called
-		if (!node.getBody().toString().contains(".enter") || node.getBody().toString().contains(".setIsExecuting")) {
-			return;
-		}
+//		if (!node.getBody().toString().contains(".enter") || node.getBody().toString().contains(".setIsExecuting")) {
+//			return;
+//		}
 		
 		// Gets all variable declarations expressions contained in the method
 		List<VariableDeclarationExpr> variableDeclarationList = new ArrayList<VariableDeclarationExpr>();
@@ -83,7 +83,6 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 		TestCase testCase = new TestCase(node.getNameAsString());
 		for (MethodCallExpr methodCall : methodCallList) {
 			String methodName = methodCall.getNameAsString();
-			//System.out.println(methodName);
 			if (methodName.equals("enter")) {
 				testCase.addEnter();
 				continue;
@@ -93,7 +92,12 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 				continue;
 			}
 			if (methodName.startsWith("raise")) {
-				testCase.addEvent(eventsNames.get(methodName));
+				// Ignores events not in the dictionary
+				if (eventsNames.containsKey(methodName)) {
+					testCase.addEvent(eventsNames.get(methodName));
+				}else {
+					System.out.println(node.getNameAsString() + ": problems encountered in the translation, the test may fail.");
+				}
 				continue;
 			}
 			if (methodName.equals("runCycle")) {
@@ -147,10 +151,14 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 					// The nullstate has no equivalent in SCTUnit
 					if (javaStateName.contains("$nullstate$"))
 						continue;
-					// The string representing the name of the state in SCTUnit is retrieved.
-					String sctunitStateName = statechartName + "." + statesNames.get(javaStateName);
-					
-					testCase.addAssertState(sctunitStateName, assertTrue);
+					// Ignores states not in the dictionary
+					if (statesNames.containsKey(javaStateName)) {
+						// The string representing the name of the state in SCTUnit is retrieved.
+						String sctunitStateName = statechartName + "." + statesNames.get(javaStateName);
+						testCase.addAssertState(sctunitStateName, assertTrue);
+					}else {
+						System.out.println(node.getNameAsString() + ": problems encountered in the translation, the test may fail.");
+					}
 					continue;
 				}
 			}

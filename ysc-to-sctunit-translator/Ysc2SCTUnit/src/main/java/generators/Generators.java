@@ -78,7 +78,7 @@ public final class Generators {
 		String line = null;
 		while ((line = reader.readLine()) != null) {
 			System.out.println(line);
-			if (line.contains("Statechart done."))	break;
+			if (line.contains("done."))	break;
 		}
 		reader.close();
 	}

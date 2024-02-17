@@ -9,7 +9,7 @@ import java.util.Queue;
 public class ExamplStc implements IEventDriven {
 	public enum State {
 		MAIN_REGION_OFF_,
-		MAIN_REGION_SIMPLIFIED,
+		MAIN_REGION_IDLE,
 		MAIN_REGION_ON,
 		MAIN_REGION_ON_R_0_WORKING,
 		MAIN_REGION_ON_R_0_INIT_ANALYSES,
@@ -21,10 +21,12 @@ public class ExamplStc implements IEventDriven {
 		MAIN_REGION_ON_R_0__FINAL_,
 		MAIN_REGION__FINAL_,
 		MAIN_REGION_CHILL,
+		OUT_REGION_OUT1,
+		OUT_REGION_OUT2,
 		$NULLSTATE$
 	};
 	
-	private final State[] stateVector = new State[2];
+	private final State[] stateVector = new State[3];
 	
 	private Queue<Runnable> inEventQueue = new LinkedList<Runnable>();
 	private boolean isExecuting;
@@ -46,7 +48,7 @@ public class ExamplStc implements IEventDriven {
 		this.stateConfVectorPosition = value;
 	}
 	public ExamplStc() {
-		for (int i = 0; i < 2; i++) {
+		for (int i = 0; i < 3; i++) {
 			stateVector[i] = State.$NULLSTATE$;
 		}
 		
@@ -65,6 +67,7 @@ public class ExamplStc implements IEventDriven {
 		isExecuting = true;
 		/* Default enter sequence for statechart ExamplStc */
 		enterSequence_main_region_default();
+		enterSequence_out_region_default();
 		isExecuting = false;
 	}
 	
@@ -76,6 +79,7 @@ public class ExamplStc implements IEventDriven {
 		isExecuting = true;
 		/* Default exit sequence for statechart ExamplStc */
 		exitSequence_main_region();
+		exitSequence_out_region();
 		isExecuting = false;
 	}
 	
@@ -83,14 +87,16 @@ public class ExamplStc implements IEventDriven {
 	 * @see IStatemachine#isActive()
 	 */
 	public boolean isActive() {
-		return stateVector[0] != State.$NULLSTATE$||stateVector[1] != State.$NULLSTATE$;
+		return stateVector[0] != State.$NULLSTATE$||stateVector[1] != State.$NULLSTATE$||stateVector[2] != State.$NULLSTATE$;
 	}
 	
 	/** 
+	* Always returns 'false' since this state machine can never become final.
+	*
 	* @see IStatemachine#isFinal()
 	*/
 	public boolean isFinal() {
-		return (stateVector[0] == State.MAIN_REGION_ON_R_0__FINAL_ || stateVector[0] == State.MAIN_REGION__FINAL_) && (stateVector[1] == State.$NULLSTATE$);
+		return false;
 	}
 	private void clearInEvents() {
 		power_on = false;
@@ -101,7 +107,11 @@ public class ExamplStc implements IEventDriven {
 		b12W = false;
 		end = false;
 		end_all = false;
-		sIMPLIFIED = false;
+		notUsed1 = false;
+		notUsed2 = false;
+		notUsed3 = false;
+		used1 = false;
+		used2 = false;
 	}
 	
 	private void microStep() {
@@ -111,14 +121,14 @@ public class ExamplStc implements IEventDriven {
 		case MAIN_REGION_OFF_:
 			transitioned = main_region_Off__react(transitioned);
 			break;
-		case MAIN_REGION_SIMPLIFIED:
-			transitioned = main_region_Simplified_react(transitioned);
+		case MAIN_REGION_IDLE:
+			transitioned = main_region_idle_react(transitioned);
 			break;
 		case MAIN_REGION_ON_R_0_WORKING:
 			transitioned = main_region_On_r_0_working_react(transitioned);
 			break;
 		case MAIN_REGION_ON_R_0_INIT_ANALYSES:
-			transitioned = main_region_On_r_0_Init_anAlyses_react(transitioned);
+			transitioned = main_region_On_r_0_Init_analyses_react(transitioned);
 			break;
 		case MAIN_REGION_ON_R_0_SIMPLIFIED_ANALYSES012_R___1_AN1:
 			transitioned = main_region_On_r_0_Simplified_analyses012_r___1_an1_react(transitioned);
@@ -141,10 +151,22 @@ public class ExamplStc implements IEventDriven {
 		if (getStateConfVectorPosition()<1l) {
 			switch (stateVector[1]) {
 			case MAIN_REGION_ON_R_0_SIMPLIFIED_ANALYSES012_R_2_AN2_A:
-				main_region_On_r_0_Simplified_analyses012_r_2_an2_a_react(transitioned);
+				transitioned = main_region_On_r_0_Simplified_analyses012_r_2_an2_a_react(transitioned);
 				break;
 			case MAIN_REGION_ON_R_0_SIMPLIFIED_ANALYSES012_R_2_AN2_B:
-				main_region_On_r_0_Simplified_analyses012_r_2_an2_b_react(transitioned);
+				transitioned = main_region_On_r_0_Simplified_analyses012_r_2_an2_b_react(transitioned);
+				break;
+			default:
+				break;
+			}
+		}
+		if (getStateConfVectorPosition()<2l) {
+			switch (stateVector[2]) {
+			case OUT_REGION_OUT1:
+				out_region_OUT1_react(transitioned);
+				break;
+			case OUT_REGION_OUT2:
+				out_region_OUT2_react(transitioned);
 				break;
 			default:
 				break;
@@ -182,8 +204,8 @@ public class ExamplStc implements IEventDriven {
 		switch (state) {
 		case MAIN_REGION_OFF_:
 			return stateVector[0] == State.MAIN_REGION_OFF_;
-		case MAIN_REGION_SIMPLIFIED:
-			return stateVector[0] == State.MAIN_REGION_SIMPLIFIED;
+		case MAIN_REGION_IDLE:
+			return stateVector[0] == State.MAIN_REGION_IDLE;
 		case MAIN_REGION_ON:
 			return stateVector[0].ordinal() >= State.
 					MAIN_REGION_ON.ordinal()&& stateVector[0].ordinal() <= State.MAIN_REGION_ON_R_0__FINAL_.ordinal();
@@ -208,6 +230,10 @@ public class ExamplStc implements IEventDriven {
 			return stateVector[0] == State.MAIN_REGION__FINAL_;
 		case MAIN_REGION_CHILL:
 			return stateVector[0] == State.MAIN_REGION_CHILL;
+		case OUT_REGION_OUT1:
+			return stateVector[2] == State.OUT_REGION_OUT1;
+		case OUT_REGION_OUT2:
+			return stateVector[2] == State.OUT_REGION_OUT2;
 		default:
 			return false;
 		}
@@ -294,12 +320,52 @@ public class ExamplStc implements IEventDriven {
 		runCycle();
 	}
 	
-	private boolean sIMPLIFIED;
+	private boolean notUsed1;
 	
 	
-	public void raiseSIMPLIFIED() {
+	public void raiseNotUsed1() {
 		inEventQueue.add(() -> {
-			sIMPLIFIED = true;
+			notUsed1 = true;
+		});
+		runCycle();
+	}
+	
+	private boolean notUsed2;
+	
+	
+	public void raiseNotUsed2() {
+		inEventQueue.add(() -> {
+			notUsed2 = true;
+		});
+		runCycle();
+	}
+	
+	private boolean notUsed3;
+	
+	
+	public void raiseNotUsed3() {
+		inEventQueue.add(() -> {
+			notUsed3 = true;
+		});
+		runCycle();
+	}
+	
+	private boolean used1;
+	
+	
+	public void raiseUsed1() {
+		inEventQueue.add(() -> {
+			used1 = true;
+		});
+		runCycle();
+	}
+	
+	private boolean used2;
+	
+	
+	public void raiseUsed2() {
+		inEventQueue.add(() -> {
+			used2 = true;
 		});
 		runCycle();
 	}
@@ -311,10 +377,10 @@ public class ExamplStc implements IEventDriven {
 		stateConfVectorPosition = 0;
 	}
 	
-	/* 'default' enter sequence for state Simplified */
-	private void enterSequence_main_region_Simplified_default() {
-		/* 'default' enter sequence for state Simplified */
-		stateVector[0] = State.MAIN_REGION_SIMPLIFIED;
+	/* 'default' enter sequence for state idle */
+	private void enterSequence_main_region_idle_default() {
+		/* 'default' enter sequence for state idle */
+		stateVector[0] = State.MAIN_REGION_IDLE;
 		stateConfVectorPosition = 0;
 	}
 	
@@ -325,9 +391,9 @@ public class ExamplStc implements IEventDriven {
 		stateConfVectorPosition = 0;
 	}
 	
-	/* 'default' enter sequence for state Init anAlyses */
-	private void enterSequence_main_region_On_r_0_Init_anAlyses_default() {
-		/* 'default' enter sequence for state Init anAlyses */
+	/* 'default' enter sequence for state Init analyses */
+	private void enterSequence_main_region_On_r_0_Init_analyses_default() {
+		/* 'default' enter sequence for state Init analyses */
 		stateVector[0] = State.MAIN_REGION_ON_R_0_INIT_ANALYSES;
 		stateConfVectorPosition = 0;
 	}
@@ -381,10 +447,30 @@ public class ExamplStc implements IEventDriven {
 		stateConfVectorPosition = 0;
 	}
 	
+	/* 'default' enter sequence for state OUT1 */
+	private void enterSequence_out_region_OUT1_default() {
+		/* 'default' enter sequence for state OUT1 */
+		stateVector[2] = State.OUT_REGION_OUT1;
+		stateConfVectorPosition = 2;
+	}
+	
+	/* 'default' enter sequence for state OUT2 */
+	private void enterSequence_out_region_OUT2_default() {
+		/* 'default' enter sequence for state OUT2 */
+		stateVector[2] = State.OUT_REGION_OUT2;
+		stateConfVectorPosition = 2;
+	}
+	
 	/* 'default' enter sequence for region main region */
 	private void enterSequence_main_region_default() {
 		/* 'default' enter sequence for region main region */
 		react_main_region__entry_Default();
+	}
+	
+	/* 'default' enter sequence for region out region */
+	private void enterSequence_out_region_default() {
+		/* 'default' enter sequence for region out region */
+		react_out_region__entry_Default();
 	}
 	
 	/* Default exit sequence for state Off# */
@@ -394,9 +480,9 @@ public class ExamplStc implements IEventDriven {
 		stateConfVectorPosition = 0;
 	}
 	
-	/* Default exit sequence for state Simplified */
-	private void exitSequence_main_region_Simplified() {
-		/* Default exit sequence for state Simplified */
+	/* Default exit sequence for state idle */
+	private void exitSequence_main_region_idle() {
+		/* Default exit sequence for state idle */
 		stateVector[0] = State.$NULLSTATE$;
 		stateConfVectorPosition = 0;
 	}
@@ -414,9 +500,9 @@ public class ExamplStc implements IEventDriven {
 		stateConfVectorPosition = 0;
 	}
 	
-	/* Default exit sequence for state Init anAlyses */
-	private void exitSequence_main_region_On_r_0_Init_anAlyses() {
-		/* Default exit sequence for state Init anAlyses */
+	/* Default exit sequence for state Init analyses */
+	private void exitSequence_main_region_On_r_0_Init_analyses() {
+		/* Default exit sequence for state Init analyses */
 		stateVector[0] = State.$NULLSTATE$;
 		stateConfVectorPosition = 0;
 	}
@@ -477,6 +563,20 @@ public class ExamplStc implements IEventDriven {
 		stateConfVectorPosition = 0;
 	}
 	
+	/* Default exit sequence for state OUT1 */
+	private void exitSequence_out_region_OUT1() {
+		/* Default exit sequence for state OUT1 */
+		stateVector[2] = State.$NULLSTATE$;
+		stateConfVectorPosition = 2;
+	}
+	
+	/* Default exit sequence for state OUT2 */
+	private void exitSequence_out_region_OUT2() {
+		/* Default exit sequence for state OUT2 */
+		stateVector[2] = State.$NULLSTATE$;
+		stateConfVectorPosition = 2;
+	}
+	
 	/* Default exit sequence for region main region */
 	private void exitSequence_main_region() {
 		/* Default exit sequence for region main region */
@@ -484,14 +584,14 @@ public class ExamplStc implements IEventDriven {
 		case MAIN_REGION_OFF_:
 			exitSequence_main_region_Off_();
 			break;
-		case MAIN_REGION_SIMPLIFIED:
-			exitSequence_main_region_Simplified();
+		case MAIN_REGION_IDLE:
+			exitSequence_main_region_idle();
 			break;
 		case MAIN_REGION_ON_R_0_WORKING:
 			exitSequence_main_region_On_r_0_working();
 			break;
 		case MAIN_REGION_ON_R_0_INIT_ANALYSES:
-			exitSequence_main_region_On_r_0_Init_anAlyses();
+			exitSequence_main_region_On_r_0_Init_analyses();
 			break;
 		case MAIN_REGION_ON_R_0_SIMPLIFIED_ANALYSES012_R___1_AN1:
 			exitSequence_main_region_On_r_0_Simplified_analyses012_r___1_an1();
@@ -531,7 +631,7 @@ public class ExamplStc implements IEventDriven {
 			exitSequence_main_region_On_r_0_working();
 			break;
 		case MAIN_REGION_ON_R_0_INIT_ANALYSES:
-			exitSequence_main_region_On_r_0_Init_anAlyses();
+			exitSequence_main_region_On_r_0_Init_analyses();
 			break;
 		case MAIN_REGION_ON_R_0_SIMPLIFIED_ANALYSES012_R___1_AN1:
 			exitSequence_main_region_On_r_0_Simplified_analyses012_r___1_an1();
@@ -584,10 +684,31 @@ public class ExamplStc implements IEventDriven {
 		}
 	}
 	
+	/* Default exit sequence for region out region */
+	private void exitSequence_out_region() {
+		/* Default exit sequence for region out region */
+		switch (stateVector[2]) {
+		case OUT_REGION_OUT1:
+			exitSequence_out_region_OUT1();
+			break;
+		case OUT_REGION_OUT2:
+			exitSequence_out_region_OUT2();
+			break;
+		default:
+			break;
+		}
+	}
+	
 	/* Default react sequence for initial entry  */
 	private void react_main_region__entry_Default() {
 		/* Default react sequence for initial entry  */
 		enterSequence_main_region_Off__default();
+	}
+	
+	/* Default react sequence for initial entry  */
+	private void react_out_region__entry_Default() {
+		/* Default react sequence for initial entry  */
+		enterSequence_out_region_OUT1_default();
 	}
 	
 	/* The reactions of state null. */
@@ -614,41 +735,28 @@ public class ExamplStc implements IEventDriven {
 		if (transitioned_after<0l) {
 			if (power_on) {
 				exitSequence_main_region_Off_();
-				enterSequence_main_region_Simplified_default();
-				react(0l);
+				enterSequence_main_region_idle_default();
 				transitioned_after = 0l;
 			}
-		}
-		/* If no transition was taken */
-		if (transitioned_after==transitioned_before) {
-			/* then execute local reactions. */
-			transitioned_after = react(transitioned_before);
 		}
 		return transitioned_after;
 	}
 	
-	private long main_region_Simplified_react(long transitioned_before) {
-		/* The reactions of state Simplified. */
+	private long main_region_idle_react(long transitioned_before) {
+		/* The reactions of state idle. */
 		long transitioned_after = transitioned_before;
 		if (transitioned_after<0l) {
 			if (work) {
-				exitSequence_main_region_Simplified();
+				exitSequence_main_region_idle();
 				enterSequence_main_region_On_r_0_working_default();
-				react(0l);
 				transitioned_after = 0l;
 			} else {
-				if (sIMPLIFIED) {
-					exitSequence_main_region_Simplified();
-					enterSequence_main_region_On_r_0_Init_anAlyses_default();
-					react(0l);
+				if (analyze) {
+					exitSequence_main_region_idle();
+					enterSequence_main_region_On_r_0_Init_analyses_default();
 					transitioned_after = 0l;
 				}
 			}
-		}
-		/* If no transition was taken */
-		if (transitioned_after==transitioned_before) {
-			/* then execute local reactions. */
-			transitioned_after = react(transitioned_before);
 		}
 		return transitioned_after;
 	}
@@ -662,11 +770,6 @@ public class ExamplStc implements IEventDriven {
 				enterSequence_main_region__final__default();
 				transitioned_after = 1l;
 			}
-		}
-		/* If no transition was taken */
-		if (transitioned_after==transitioned_before) {
-			/* then execute local reactions. */
-			transitioned_after = react(transitioned_before);
 		}
 		return transitioned_after;
 	}
@@ -689,12 +792,12 @@ public class ExamplStc implements IEventDriven {
 		return transitioned_after;
 	}
 	
-	private long main_region_On_r_0_Init_anAlyses_react(long transitioned_before) {
-		/* The reactions of state Init anAlyses. */
+	private long main_region_On_r_0_Init_analyses_react(long transitioned_before) {
+		/* The reactions of state Init analyses. */
 		long transitioned_after = transitioned_before;
 		if (transitioned_after<0l) {
 			if (start) {
-				exitSequence_main_region_On_r_0_Init_anAlyses();
+				exitSequence_main_region_On_r_0_Init_analyses();
 				react_main_region_On_r_0__sync0();
 				transitioned_after = 0l;
 			}
@@ -775,7 +878,6 @@ public class ExamplStc implements IEventDriven {
 			if (end) {
 				exitSequence_main_region_On();
 				enterSequence_main_region_chill_default();
-				react(0l);
 				transitioned_after = 0l;
 			}
 		}
@@ -794,7 +896,7 @@ public class ExamplStc implements IEventDriven {
 	
 	private long main_region__final__react(long transitioned_before) {
 		/* The reactions of state null. */
-		return react(transitioned_before);
+		return transitioned_before;
 	}
 	
 	private long main_region_chill_react(long transitioned_before) {
@@ -805,6 +907,39 @@ public class ExamplStc implements IEventDriven {
 				exitSequence_main_region_chill();
 				enterSequence_main_region__final__default();
 				transitioned_after = 0l;
+			}
+		}
+		return transitioned_after;
+	}
+	
+	private long out_region_OUT1_react(long transitioned_before) {
+		/* The reactions of state OUT1. */
+		long transitioned_after = transitioned_before;
+		if (transitioned_after<2l) {
+			if (used1) {
+				exitSequence_out_region_OUT1();
+				enterSequence_out_region_OUT2_default();
+				react(0l);
+				transitioned_after = 2l;
+			}
+		}
+		/* If no transition was taken */
+		if (transitioned_after==transitioned_before) {
+			/* then execute local reactions. */
+			transitioned_after = react(transitioned_before);
+		}
+		return transitioned_after;
+	}
+	
+	private long out_region_OUT2_react(long transitioned_before) {
+		/* The reactions of state OUT2. */
+		long transitioned_after = transitioned_before;
+		if (transitioned_after<2l) {
+			if (used2) {
+				exitSequence_out_region_OUT2();
+				enterSequence_out_region_OUT1_default();
+				react(0l);
+				transitioned_after = 2l;
 			}
 		}
 		/* If no transition was taken */

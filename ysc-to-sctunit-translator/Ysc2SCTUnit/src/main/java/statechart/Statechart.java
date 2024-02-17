@@ -48,34 +48,7 @@ public class Statechart {
 		
 		this.initStatechart();
 	}
-	
-	/**
-	 * Gets the statechart name.
-	 *
-	 * @return the statechart name
-	 */
-	public String getStatechartName() {
-		return this.statechartName;
-	}
-	
-	/**
-	 * Gets all states names.
-	 *
-	 * @return the list containing all states names
-	 */
-	public List<String> getStatesNames() {
-		return this.statesNames;
-	}
-	
-	/**
-	 * Gets all events names.
-	 *
-	 * @return the list containing all events names
-	 */
-	public List<String> getEventsNames() {
-		return this.eventsNames;
-	}
-	
+		
 	/**
 	 * Inits the statechart obtaining statechart name, states names end events names.
 	 */
@@ -84,20 +57,19 @@ public class Statechart {
 		Node attribute = this.statechartNode.getAttributes().getNamedItem("name");
 		this.statechartName = attribute.getNodeValue();
 		
-		// Search the node representing the starting region of the statechart
+		// Initialize data structures
+		this.statesNames = new ArrayList<String>();
+		this.eventsNames = new ArrayList<String>();
+		
+		// Search the nodes representing the starting regions of the statechart
 		NodeList nodeList = this.statechartNode.getChildNodes();
-		Node firstNode = null;
 		for (int i = 0; i < nodeList.getLength(); i++) {
 			Node child = nodeList.item(i);
 			if (child.getNodeType() == Node.ELEMENT_NODE && child.getNodeName().equals("regions")) {
-				firstNode = child;
-				break;
+				// Start the visit of the subtree from the node representing the region
+				this.visitNode(child, this.statesNames, this.eventsNames);
 			}
 		}
-		// Start the visit of the subtree starting from the one representign the first region
-		this.statesNames = new ArrayList<String>();
-		this.eventsNames = new ArrayList<String>();
-		this.visitNode(firstNode, this.statesNames, this.eventsNames);
 	}
 	
 	/**
@@ -193,6 +165,33 @@ public class Statechart {
 		else	
 			// The name of the parent node must be added (recursively) to the full name
 			return this.getFullName(parent, "." + newName);
+	}
+	
+	/**
+	 * Gets the statechart name.
+	 *
+	 * @return the statechart name
+	 */
+	public String getStatechartName() {
+		return this.statechartName;
+	}
+	
+	/**
+	 * Gets all states names.
+	 *
+	 * @return the list containing all states names
+	 */
+	public List<String> getStatesNames() {
+		return this.statesNames;
+	}
+	
+	/**
+	 * Gets all events names.
+	 *
+	 * @return the list containing all events names
+	 */
+	public List<String> getEventsNames() {
+		return this.eventsNames;
 	}
 	
 }
