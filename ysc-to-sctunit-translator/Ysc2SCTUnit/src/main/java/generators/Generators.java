@@ -35,24 +35,27 @@ public final class Generators {
 	 * Generate the .sgen file needed by Itemis Create to generate java code from a .ysc file (a statechart).
 	 *
 	 * @param projectPath the path of the project
-	 * @param statechartName the name of the statechart, it must be in a folder named model
+	 * @param statechartName the name of the statechart
 	 * @param packageName the name of the package were the .java will be placed
 	 * @param projectName the name of the project
-	 * @param time true if the statechart deals with time events, false otherwise
+	 * @param direcory TODO
+	 * @param timeService true if the statechart deals with time events, false otherwise
 	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
-	public static void generateSgenJava(String projectPath, String statechartName, String packageName, String projectName, boolean time)
+	public static void generateSgenJava(String projectPath, String statechartName,
+			String packageName, String projectName, String targetDir, String sourceDir, boolean timeService)
 			throws IOException {
 		System.out.println("*******************************************");
-		System.out.println("Generating .sgen file for java...");
+		System.out.println("Generating .sgen file...");
 		System.out.println("*******************************************");
 		STGroupFile group = new STGroupFile(".\\template\\sgen_java_template.stg");
 		ST st = group.getInstanceOf("generator");
 		st.add("project_name", projectName);
 		st.add("package_name", packageName);
 		st.add("statechart_name", statechartName);
-		if(time) st.add("time", "");
-		File genFile = new File(projectPath + "\\model\\" + statechartName + ".sgen");
+		st.add("directory", targetDir);
+		if(timeService) st.add("time", "");
+		File genFile = new File(projectPath + "\\" + sourceDir +"\\" + statechartName + ".sgen");
 		st.write(genFile, null);
 	}
 	
@@ -66,7 +69,7 @@ public final class Generators {
 	public static void callICGenerators(String projectPath, String itemisScc)
 			throws IOException {
 		System.out.println("*******************************************");
-		System.out.println("Calling Itemis Create code generators...");
+		System.out.println("Calling Itemis Create code generator...");
 		System.out.println("*******************************************");
 		ProcessBuilder pb = new ProcessBuilder();
 		pb.redirectErrorStream(true);

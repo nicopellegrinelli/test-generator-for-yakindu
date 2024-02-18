@@ -35,26 +35,47 @@ public class TestGenerator {
 	 * @throws ParseException 
 	 */
 	public static void main(String[] args) throws InterruptedException, IOException, ParserConfigurationException, SAXException, ParseException {
+		System.out.println("--------------------------------------------------------------");
+		System.out.println("\t\t\tYsc2SCTUnit");
+		System.out.println("--------------------------------------------------------------");
 		
+		// Parse the arguments
 		ParsedArgs parsedArgs = CLIManager.parse(args);
 		
+		if (parsedArgs == null) {
+			System.out.println("*******************************************");
+			System.out.println("Finished with errors.");
+			System.out.println("*******************************************");
+			return;
+		}
 		
 		// Collect all needed Strings 
-		String workspacePath = args[0];
-		String projectName = args[1];
-		String packageName = args[2];
-		String yscFileName = args[3];
+		String workspacePath = parsedArgs.getWorkspacePath();
+		String projectName = parsedArgs.getProjectName();
+		String targetDir = parsedArgs.getTargetDir();
+		String targetPackage = parsedArgs.getTargetPackage();
+		String sourceDir = parsedArgs.getSourceDir();
+		String sourceFile = parsedArgs.getSourceFile();
+		
+		System.out.println("workspacePath: " + workspacePath);
+		System.out.println("projectName: " + projectName);
+		System.out.println("targetDir: " + targetDir);
+		System.out.println("targetPackage: " + targetPackage);
+		System.out.println("sourceDir: " + sourceDir);
+		System.out.println("sourceFile: " + sourceFile);
+		
+		boolean timeService = parsedArgs.hasT();
 		
 		String projectPath = workspacePath + "\\" + projectName;
-		String yscPath = projectPath + "\\model\\" + yscFileName + ".ysc";
+		String sourceFilePath = projectPath + "\\" + sourceDir + "\\" + sourceFile;
 		
 		// Obtain the statechart name and the names of its states,
 		// create a dictionary for the states names with the corresponding enum as key,
 		// create a dictionary for the events names with the corresponding method as key
 		System.out.println("*******************************************");
-		System.out.println("Retrieving informations from the statechart...");
+		System.out.println("Reading statechart file...");
 		System.out.println("*******************************************");
-		Statechart statechart = new Statechart(yscPath);
+		Statechart statechart = new Statechart(sourceFilePath);
 		String statechartName = statechart.getStatechartName();
 		Map<String, String> statesNames = new HashMap<String,String>();
 		for(String name : statechart.getStatesNames()) {
@@ -70,26 +91,25 @@ public class TestGenerator {
 		// Collect all needed Strings
 		String itemisScc = "C:\\Users\\lenovo\\Desktop\\itemis_CREATE\\scc.bat";
 		
-		String classPath = projectPath + "\\src\\" + packageName + "\\" + statechartName + ".java";
-		String simplifiedClassPath = projectPath + "\\src\\" + packageName + "\\" + statechartName + "Simplified.java";		
+		String classPath = projectPath + "\\" + targetDir + "\\" + targetPackage + "\\" + statechartName + ".java";
+		String simplifiedClassPath = projectPath + "\\" + targetDir + "\\" + targetPackage + "\\" + statechartName + "Simplified.java";		
 		
 		String compilerD = "-d " + projectPath + "\\bin";
-		String compilerClasspath = "-classpath " + projectPath + "\\src\\";
+		String compilerClasspath = "-classpath " + projectPath + "\\" + targetDir;
 		
-		String evoTarget = "-class " + packageName + "." + statechartName;
-		String evoSimplifiedTarget = "-class " + packageName + "." + statechartName + "Simplified";
+		String evoTarget = "-class " + targetPackage + "." + statechartName;
+		String evoSimplifiedTarget = "-class " + targetPackage + "." + statechartName + "Simplified";
 		String evoOptions = "-projectCP " + projectPath + "\\bin";
 		String evoBaseDir = "-base_dir " + projectPath;
 		
-		String junitTestPath = projectPath + "\\evosuite-tests\\" + packageName + "\\" + statechartName + "_ESTest.java" ;
-		String sctunitTestPath = projectPath + "\\model\\" + statechartName + "Test.sctunit" ;
+		String junitTestPath = projectPath + "\\evosuite-tests\\" + targetPackage + "\\" + statechartName + "_ESTest.java" ;
+		String sctunitTestPath = projectPath + "\\" + sourceDir + "\\" + statechartName + "Test.sctunit" ;
 		
-		String simplifiedJunitTestPath = projectPath + "\\evosuite-tests\\" + packageName + "\\" + statechartName + "Simplified_ESTest.java" ;
-		String simplifiedSctunitTestPath = projectPath + "\\model\\" + statechartName + "SimplifiedTest.sctunit" ;
+		String simplifiedJunitTestPath = projectPath + "\\evosuite-tests\\" + targetPackage + "\\" + statechartName + "Simplified_ESTest.java" ;
+		String simplifiedSctunitTestPath = projectPath + "\\" + sourceDir + "\\" + statechartName + "SimplifiedTest.sctunit" ;
 		
 		// Generate the .sgen file needed by Itemis Create to generate the java code
-		boolean timeBased = args.length == 5 && args[4].equals("time");
-		Generators.generateSgenJava(projectPath, statechartName, packageName, projectName, timeBased);
+		Generators.generateSgenJava(projectPath, statechartName, targetPackage, projectName, targetDir, sourceDir, timeService);
 		
 		// Call the Itemis Create generators
 		Generators.callICGenerators(projectPath, itemisScc);

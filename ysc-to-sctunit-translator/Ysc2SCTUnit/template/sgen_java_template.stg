@@ -1,9 +1,9 @@
-generator(project_name, package_name, statechart_name, time) ::= 
+generator(project_name, package_name, statechart_name, directory, time) ::= 
 <<GeneratorModel for create::java {
 
 	const PROJECT : string = "<project_name>"
 
-	const FOLDER : string = "src"
+	const FOLDER : string = "<directory>"
 
 	statechart <statechart_name> {
 		<if(time)>
@@ -20,7 +20,7 @@ generator(project_name, package_name, statechart_name, time) ::=
 		feature Outlet {
 			targetProject = PROJECT
 			targetFolder = FOLDER
-			libraryTargetFolder = "src"
+			libraryTargetFolder = FOLDER
 		}
 	}
 }>>
