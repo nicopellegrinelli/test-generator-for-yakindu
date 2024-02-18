@@ -6,8 +6,11 @@ import java.util.Map;
 
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.apache.commons.cli.ParseException;
 import org.xml.sax.SAXException;
 
+import cli.CLIManager;
+import cli.ParsedArgs;
 import statechart.Statechart;
 import support.CompilerManager;
 import support.MySecurityManager;
@@ -29,8 +32,13 @@ public class TestGenerator {
 	 * @throws IOException Signals that an I/O exception has occurred
 	 * @throws SAXException the SAX exception
 	 * @throws ParserConfigurationException the parser configuration exception
+	 * @throws ParseException 
 	 */
-	public static void main(String[] args) throws InterruptedException, IOException, ParserConfigurationException, SAXException {
+	public static void main(String[] args) throws InterruptedException, IOException, ParserConfigurationException, SAXException, ParseException {
+		
+		ParsedArgs parsedArgs = CLIManager.parse(args);
+		
+		
 		// Collect all needed Strings 
 		String workspacePath = args[0];
 		String projectName = args[1];
