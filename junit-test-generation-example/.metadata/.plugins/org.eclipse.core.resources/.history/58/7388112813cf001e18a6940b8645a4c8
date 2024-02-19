@@ -1,0 +1,371 @@
+testclass ExamplStcTest for statechart ExamplStc {
+	@Test
+	operation test00 () {
+	    raise used1
+	}
+
+	@Test
+	operation test01 () {
+	}
+
+	@Test
+	operation test02 () {
+	}
+
+	@Test
+	operation test03 () {
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test04 () {
+	}
+
+	@Test
+	operation test05 () {
+	}
+
+	@Test
+	operation test06 () {
+	}
+
+	@Test
+	operation test07 () {
+	}
+
+	@Test
+	operation test08 () {
+	    enter
+	    raise power_on
+	    raise analyze
+	    raise start
+	    raise end
+	    assert is_active
+	}
+
+	@Test
+	operation test09 () {
+	    enter
+	    raise used1
+	    raise power_on
+	    assert is_active
+	}
+
+	@Test
+	operation test10 () {
+	    enter
+	    raise power_on
+	    raise start
+	    assert is_active
+	}
+
+	@Test
+	operation test11 () {
+	    enter
+	    raise used1
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test12 () {
+	    enter
+	    raise power_on
+	    raise Work
+	    raise end
+	    raise end_all
+	    assert is_active
+	}
+
+	@Test
+	operation test13 () {
+	    enter
+	    raise power_on
+	    raise analyze
+	    raise end_all
+	    raise end
+	    assert is_active
+	}
+
+	@Test
+	operation test14 () {
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test15 () {
+	    enter
+	    raise power_on
+	    raise analyze
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test16 () {
+	    enter
+	    raise power_on
+	    raise Work
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test17 () {
+	    enter
+	    raise power_on
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test18 () {
+	    enter
+	    raise used1
+	    assert active (ExamplStc.out_region.OUT2)
+	}
+
+	@Test
+	operation test19 () {
+	    enter
+	    assert is_active
+	    assert active (ExamplStc.out_region.OUT1)
+	}
+
+	@Test
+	operation test20 () {
+	    enter
+	    raise power_on
+	    raise Work
+	    raise end
+	    assert is_active
+	    assert active (ExamplStc.main_region.On.r_0._final_)
+	}
+
+	@Test
+	operation test21 () {
+	    enter
+	    assert is_active
+	    assert !active (ExamplStc.main_region.On.r_0.Simplified_analyses012)
+	}
+
+	@Test
+	operation test22 () {
+	    enter
+	    assert is_active
+	    assert !active (ExamplStc.main_region.On)
+	}
+
+	@Test
+	operation test23 () {
+	    enter
+	    raise power_on
+	    assert is_active
+	    assert active (ExamplStc.main_region.idle)
+	}
+
+	@Test
+	operation test24 () {
+	    enter
+	    assert is_active
+	    assert active (ExamplStc.main_region.Off_)
+	}
+
+	@Test
+	operation test25 () {
+	}
+
+	@Test
+	operation test26 () {
+	    assert !active (ExamplStc.main_region.On)
+	}
+
+	@Test
+	operation test27 () {
+	    assert !active (ExamplStc.out_region.OUT2)
+	}
+
+	@Test
+	operation test28 () {
+	    assert !active (ExamplStc.out_region.OUT1)
+	}
+
+	@Test
+	operation test29 () {
+	    assert !active (ExamplStc.main_region.On.r_0.Simplified_analyses012.r_2.an2_b)
+	}
+
+	@Test
+	operation test30 () {
+	    assert !active (ExamplStc.main_region.On.r_0.Simplified_analyses012.r_2.an2_a)
+	}
+
+	@Test
+	operation test31 () {
+	    assert !active (ExamplStc.main_region.chill)
+	}
+
+	@Test
+	operation test32 () {
+	    assert !active (ExamplStc.main_region._final_)
+	}
+
+	@Test
+	operation test33 () {
+	    assert !active (ExamplStc.main_region.On.r_0._final_)
+	}
+
+	@Test
+	operation test34 () {
+	    assert !active (ExamplStc.main_region.On.r_0.end_analyses)
+	}
+
+	@Test
+	operation test35 () {
+	    assert !active (ExamplStc.main_region.On.r_0.Simplified_analyses012.r___1.an1)
+	}
+
+	@Test
+	operation test36 () {
+	    assert !active (ExamplStc.main_region.On.r_0.Init_analyses)
+	}
+
+	@Test
+	operation test37 () {
+	    assert !active (ExamplStc.main_region.On.r_0.working)
+	}
+
+	@Test
+	operation test38 () {
+	    assert !active (ExamplStc.main_region.idle)
+	}
+
+	@Test
+	operation test39 () {
+	    assert !active (ExamplStc.main_region.On.r_0.Simplified_analyses012)
+	}
+
+	@Test
+	operation test40 () {
+	    assert !active (ExamplStc.main_region.Off_)
+	}
+
+	@Test
+	operation test41 () {
+	    raise start
+	    assert !is_final
+	}
+
+	@Test
+	operation test42 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test43 () {
+	    assert !is_active
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test44 () {
+	    exit
+	    assert !is_final
+	}
+
+	@Test
+	operation test45 () {
+	    enter
+	    assert !is_active
+	}
+
+	@Test
+	operation test46 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test47 () {
+	    enter
+	    raise power_on
+	    raise Work
+	    raise end_all
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test48 () {
+	    enter
+	    raise power_on
+	    raise Work
+	    raise end
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test49 () {
+	    raise a
+	    assert !is_active
+	}
+
+	@Test
+	operation test50 () {
+	    raise used2
+	    assert !is_final
+	}
+
+	@Test
+	operation test51 () {
+	    raise b12W
+	    assert !is_active
+	}
+
+	@Test
+	operation test52 () {
+	    assert !is_final
+	}
+
+	@Test
+	operation test53 () {
+	    triggerWithoutEvent
+	    assert !is_final
+	}
+
+	@Test
+	operation test54 () {
+	    assert !is_active
+	    enter
+	    raise used1
+	    raise used2
+	    assert is_active
+	}
+
+	@Test
+	operation test55 () {
+	    assert !is_active
+	    enter
+	    raise power_on
+	    raise analyze
+	    raise start
+	    raise end_all
+	    assert is_active
+	}
+
+	@Test
+	operation test56 () {
+	    assert !is_final
+	    assert !is_active
+	}
+
+}

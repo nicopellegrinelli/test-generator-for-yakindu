@@ -23,49 +23,33 @@ public class TestGenerator {
 	 * The main method, generate a .sctunit file (test suite for a statechat)
 	 * starting from a .ysc file (a statechart).
 	 *
-	 * @param args the arguments, the first one is the worksapce path,
-	 * the second one is the name of the workspace where the .ysc file is located, 
-	 * the third one is the name of the workspace were the generated java code will be placed,
-	 * the fourth one is the name of the file containning the statechart (NOT the name of the statechart) without the extension,
-	 * the fifth one is "time" and is present only if the statechart deals with time events
-	 * @throws InterruptedException the interrupted exception
-	 * @throws IOException Signals that an I/O exception has occurred
-	 * @throws SAXException the SAX exception
-	 * @throws ParserConfigurationException the parser configuration exception
-	 * @throws ParseException 
+	 * @param args the command line arguments.
+	 * @throws ParseException if there are any problems encountered while parsing the command line tokens.
+	 * @throws ParserConfigurationException if a DocumentBuildercannot while instantiating a Statechart object.
+	 * @throws SAXException if there are any problems encountered while parsing the xml file representing the statechart.
+	 * @throws IOException if any IO errors occur.
 	 */
-	public static void main(String[] args) throws InterruptedException, IOException, ParserConfigurationException, SAXException, ParseException {
+	public static void main(String[] args) throws ParseException, ParserConfigurationException, SAXException, IOException{
 		System.out.println("--------------------------------------------------------------");
 		System.out.println("\t\t\tYsc2SCTUnit");
 		System.out.println("--------------------------------------------------------------");
-		
+
 		// Parse the arguments
 		ParsedArgs parsedArgs = CLIManager.parse(args);
-		
 		if (parsedArgs == null) {
-			System.out.println("*******************************************");
-			System.out.println("Finished with errors.");
-			System.out.println("*******************************************");
+			System.out.println("--------------------------------------------------------------");
 			return;
 		}
-		
-		// Collect all needed Strings 
 		String workspacePath = parsedArgs.getWorkspacePath();
 		String projectName = parsedArgs.getProjectName();
 		String targetDir = parsedArgs.getTargetDir();
 		String targetPackage = parsedArgs.getTargetPackage();
+		String dottedTargetPackage = targetPackage.replace("\\", ".");
 		String sourceDir = parsedArgs.getSourceDir();
 		String sourceFile = parsedArgs.getSourceFile();
-		
-		System.out.println("workspacePath: " + workspacePath);
-		System.out.println("projectName: " + projectName);
-		System.out.println("targetDir: " + targetDir);
-		System.out.println("targetPackage: " + targetPackage);
-		System.out.println("sourceDir: " + sourceDir);
-		System.out.println("sourceFile: " + sourceFile);
-		
 		boolean timeService = parsedArgs.hasT();
 		
+		// Obtain the Strings needed to retrieve information from the statechart file
 		String projectPath = workspacePath + "\\" + projectName;
 		String sourceFilePath = projectPath + "\\" + sourceDir + "\\" + sourceFile;
 		
@@ -88,7 +72,7 @@ public class TestGenerator {
 			eventsNames.put(methodName, name);
 		}
 		
-		// Collect all needed Strings
+		// Obtain all needed Strings
 		String itemisScc = "C:\\Users\\lenovo\\Desktop\\itemis_CREATE\\scc.bat";
 		
 		String classPath = projectPath + "\\" + targetDir + "\\" + targetPackage + "\\" + statechartName + ".java";
@@ -97,8 +81,8 @@ public class TestGenerator {
 		String compilerD = "-d " + projectPath + "\\bin";
 		String compilerClasspath = "-classpath " + projectPath + "\\" + targetDir;
 		
-		String evoTarget = "-class " + targetPackage + "." + statechartName;
-		String evoSimplifiedTarget = "-class " + targetPackage + "." + statechartName + "Simplified";
+		String evoTarget = "-class " + dottedTargetPackage + "." + statechartName;
+		String evoSimplifiedTarget = "-class " + dottedTargetPackage + "." + statechartName + "Simplified";
 		String evoOptions = "-projectCP " + projectPath + "\\bin";
 		String evoBaseDir = "-base_dir " + projectPath;
 		
@@ -109,7 +93,8 @@ public class TestGenerator {
 		String simplifiedSctunitTestPath = projectPath + "\\" + sourceDir + "\\" + statechartName + "SimplifiedTest.sctunit" ;
 		
 		// Generate the .sgen file needed by Itemis Create to generate the java code
-		Generators.generateSgenJava(projectPath, statechartName, targetPackage, projectName, targetDir, sourceDir, timeService);
+		Generators.generateSgenJava(projectPath, projectName, statechartName, sourceDir,
+				dottedTargetPackage, targetDir, timeService);
 		
 		// Call the Itemis Create generators
 		Generators.callICGenerators(projectPath, itemisScc);
@@ -128,12 +113,12 @@ public class TestGenerator {
 		SecurityManager default_sm = System.getSecurityManager();
 		MySecurityManager my_sm = new MySecurityManager();
 	    System.setSecurityManager(my_sm);
-	    try {
-	    	Generators.generateJunit(evoTarget, evoOptions, evoBaseDir);
-	    } catch (SecurityException e) {
-	    	Generators.generateSctunit(junitTestPath, sctunitTestPath,
-	    			statechartName, statesNames, eventsNames);
-	    }
+//	    try {
+//	    	Generators.generateJunit(evoTarget, evoOptions, evoBaseDir);
+//	    } catch (SecurityException e) {
+//	    	Generators.generateSctunit(junitTestPath, sctunitTestPath,
+//	    			statechartName, statesNames, eventsNames);
+//	    }
 	    try {
 	    	Generators.generateJunit(evoSimplifiedTarget, evoOptions, evoBaseDir);
 	    } catch (SecurityException e) { 
@@ -145,6 +130,7 @@ public class TestGenerator {
 		System.out.println("*******************************************");
 		System.out.println("Finished.");
 		System.out.println("*******************************************");
+		System.out.println("--------------------------------------------------------------");
 	    System.exit(0);
 	}
 

@@ -35,26 +35,30 @@ public final class Generators {
 	 * Generate the .sgen file needed by Itemis Create to generate java code from a .ysc file (a statechart).
 	 *
 	 * @param projectPath the path of the project
-	 * @param statechartName the name of the statechart
-	 * @param packageName the name of the package were the .java will be placed
 	 * @param projectName the name of the project
-	 * @param direcory TODO
+	 * @param statechartName the name of the statechart
+	 * @param sourceDir the directory where the statechart is located
+	 * @param targetPackage the target package
+	 * @param targetDir the directory containing the target package
 	 * @param timeService true if the statechart deals with time events, false otherwise
-	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws IOException if any IO errors occur.
 	 */
-	public static void generateSgenJava(String projectPath, String statechartName,
-			String packageName, String projectName, String targetDir, String sourceDir, boolean timeService)
+	public static void generateSgenJava(String projectPath, String projectName,
+			String statechartName, String sourceDir, String targetPackage, String targetDir, boolean timeService)
 			throws IOException {
 		System.out.println("*******************************************");
 		System.out.println("Generating .sgen file...");
 		System.out.println("*******************************************");
 		STGroupFile group = new STGroupFile(".\\template\\sgen_java_template.stg");
+		// Put the generated file in projectPath\targetDir\targetPackage
 		ST st = group.getInstanceOf("generator");
 		st.add("project_name", projectName);
-		st.add("package_name", packageName);
+		// For the directory, the.sgen file expect "\\" as separator instaed of "\"
+		st.add("directory", targetDir.replace("\\", "\\\\"));
+		st.add("package_name", targetPackage);
 		st.add("statechart_name", statechartName);
-		st.add("directory", targetDir);
 		if(timeService) st.add("time", "");
+		// Create the file in the same diractory of the statechart
 		File genFile = new File(projectPath + "\\" + sourceDir +"\\" + statechartName + ".sgen");
 		st.write(genFile, null);
 	}
@@ -64,7 +68,7 @@ public final class Generators {
 	 *
 	 * @param projectPath the path of the project
 	 * @param itemisScc the path of the scc.bat file
-	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws IOException if any IO errors occur.
 	 */
 	public static void callICGenerators(String projectPath, String itemisScc)
 			throws IOException {
@@ -91,7 +95,7 @@ public final class Generators {
 	 *
 	 * @param classPath the class path of the starting .java file
 	 * @param simplifiedClassPath the class path of the .java file containing the simplified version
-	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws IOException if any IO errors occur.
 	 */
 	public static void generateSimplifiedJava(String classPath, String simplifiedClassPath)
 			throws IOException {
@@ -116,10 +120,8 @@ public final class Generators {
 	 * @param evoTarget the string "-class ClassName", where ClassName is the fully qualified class name
 	 * @param evoOptions the string "-projectCP ClassPath", where ClassPath is the class path for the test generation
 	 * @param evoBaseDir the string "-base_dir Directory", where directory is the directory in which tests will be placed
-	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
-	public static void generateJunit(String evoTarget, String evoOptions, String evoBaseDir)
-			throws IOException {
+	public static void generateJunit(String evoTarget, String evoOptions, String evoBaseDir) {
 		System.out.println("*******************************************");
 		System.out.println("Calling Evosuite test generator...");
 		System.out.println("*******************************************");
@@ -139,7 +141,7 @@ public final class Generators {
 	 * @param statechartName the  names of the statechart
 	 * @param statesNames the dictionary of the states names with the corresponding enum as key
 	 * @param eventsNames the dictionary of the events names with the corresponding method as key
-	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws IOException if any IO errors occur.
 	 */
 	public static void generateSctunit(String junitTestPath, String sctunitTestPath, 
 			String statechartName, Map<String,String> statesNames, Map<String,String> eventsNames)

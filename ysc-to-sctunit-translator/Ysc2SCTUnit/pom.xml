@@ -5,6 +5,52 @@
 	<groupId>SCTUnitTestGenerator</groupId>
 	<artifactId>Ysc2SCTUnit</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	
+	<properties>
+		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.3.0</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<mainClass>generators.TestGenerator</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>3.4.1</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 	<dependencies>
 		<dependency>
@@ -36,7 +82,6 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/eu.stamp-project/evosuite -->
 
 		<!-- https://mvnrepository.com/artifact/org.antlr/stringtemplate -->
 		<dependency>
@@ -51,18 +96,6 @@
 			<groupId>com.github.javaparser</groupId>
 			<artifactId>javaparser-core</artifactId>
 			<version>3.25.6</version>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/commons-scxml/commons-scxml -->
-		<dependency>
-			<groupId>commons-scxml</groupId>
-			<artifactId>commons-scxml</artifactId>
-			<version>0.9</version>
-		</dependency>
-		<dependency>
-			<groupId>JUnit2SCTUnit</groupId>
-			<artifactId>JUnit2SCTUnit</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 

@@ -35,9 +35,9 @@ public class Statechart {
 	 * Instantiates a new statechart.
 	 *
 	 * @param path the path of the .ysc file
-	 * @throws ParserConfigurationException the parser configuration exception
-	 * @throws SAXException the SAX exception
-	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws ParserConfigurationException if a DocumentBuildercannot be created which satisfies the configuration requested.
+	 * @throws SAXException if any parse errors occur.
+	 * @throws IOException if any IO errors occur.
 	 */
 	public Statechart(String path) throws ParserConfigurationException, SAXException, IOException {
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
