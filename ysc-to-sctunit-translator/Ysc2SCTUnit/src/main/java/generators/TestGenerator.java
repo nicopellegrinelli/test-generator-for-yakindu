@@ -6,7 +6,6 @@ import java.util.Map;
 
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.apache.commons.cli.ParseException;
 import org.xml.sax.SAXException;
 
 import cli.CLIManager;
@@ -24,12 +23,11 @@ public class TestGenerator {
 	 * starting from a .ysc file (a statechart).
 	 *
 	 * @param args the command line arguments.
-	 * @throws ParseException if there are any problems encountered while parsing the command line tokens.
 	 * @throws ParserConfigurationException if a DocumentBuildercannot while instantiating a Statechart object.
 	 * @throws SAXException if there are any problems encountered while parsing the xml file representing the statechart.
 	 * @throws IOException if any IO errors occur.
 	 */
-	public static void main(String[] args) throws ParseException, ParserConfigurationException, SAXException, IOException{
+	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException{
 		System.out.println("--------------------------------------------------------------");
 		System.out.println("\t\t\tYsc2SCTUnit");
 		System.out.println("--------------------------------------------------------------");
@@ -47,6 +45,8 @@ public class TestGenerator {
 		String dottedTargetPackage = targetPackage.replace("\\", ".");
 		String sourceDir = parsedArgs.getSourceDir();
 		String sourceFile = parsedArgs.getSourceFile();
+		boolean hasSearchBudget = parsedArgs.hasSearchBudget();
+		int searchBudget = parsedArgs.getSearchBudget();
 		boolean timeService = parsedArgs.hasT();
 		
 		// Obtain the Strings needed to retrieve information from the statechart file
@@ -81,9 +81,9 @@ public class TestGenerator {
 		String compilerD = "-d " + projectPath + "\\bin";
 		String compilerClasspath = "-classpath " + projectPath + "\\" + targetDir;
 		
-		String evoTarget = "-class " + dottedTargetPackage + "." + statechartName;
-		String evoSimplifiedTarget = "-class " + dottedTargetPackage + "." + statechartName + "Simplified";
-		String evoOptions = "-projectCP " + projectPath + "\\bin";
+		String evoClass = "-class " + dottedTargetPackage + "." + statechartName;
+		String evoSimplifiedClass = "-class " + dottedTargetPackage + "." + statechartName + "Simplified";
+		String evoProjectCP = "-projectCP " + projectPath + "\\bin";
 		String evoBaseDir = "-base_dir " + projectPath;
 		
 		String junitTestPath = projectPath + "\\evosuite-tests\\" + targetPackage + "\\" + statechartName + "_ESTest.java" ;
@@ -114,13 +114,13 @@ public class TestGenerator {
 		MySecurityManager my_sm = new MySecurityManager();
 	    System.setSecurityManager(my_sm);
 //	    try {
-//	    	Generators.generateJunit(evoTarget, evoOptions, evoBaseDir);
+//	    	Generators.generateJunit(evoClass, evoProjectCP, evoBaseDir,  hasSearchBudget, searchBudget);
 //	    } catch (SecurityException e) {
 //	    	Generators.generateSctunit(junitTestPath, sctunitTestPath,
 //	    			statechartName, statesNames, eventsNames);
 //	    }
 	    try {
-	    	Generators.generateJunit(evoSimplifiedTarget, evoOptions, evoBaseDir);
+	    	Generators.generateJunit(evoSimplifiedClass, evoProjectCP, evoBaseDir,  hasSearchBudget, searchBudget);
 	    } catch (SecurityException e) { 
 	    	Generators.generateSctunit(simplifiedJunitTestPath, simplifiedSctunitTestPath,
 	    			statechartName, statesNames, eventsNames);

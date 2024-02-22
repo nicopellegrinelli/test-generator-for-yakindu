@@ -23,6 +23,12 @@ public class ParsedArgs {
 	/** The target directory. */
 	private String targetDir;
 	
+	/** The (evosuite) search budget. */
+	private int searchBudget = 0;
+	
+	/** True if the parsed arguments have the option -searchBudget. */
+	private boolean hasSearchBudget = false;
+	
 	/** True if the parsed arguments have the option -t. */
 	private boolean t;
 	
@@ -78,6 +84,24 @@ public class ParsedArgs {
 	 */
 	public String getTargetDir() {
 		return targetDir;
+	}
+	
+	/**
+	 * Gets the (evosuite) target directory.
+	 *
+	 * @return the (evosuite) search budget
+	 */
+	public int getSearchBudget() {
+		return searchBudget;
+	}
+	
+	/**
+	 * Checks for the option -searchBudget.
+	 *
+	 * @return true if the parsed arguments have the option -searchBudget, false otherwise
+	 */
+	public boolean hasSearchBudget() {
+		return hasSearchBudget;
 	}
 	
 	/**
@@ -142,6 +166,17 @@ public class ParsedArgs {
 	public void setTargetDir(String targetDir) {
 		this.targetDir = targetDir;
 	}
+	
+	/**
+	 * Sets the (evosuite) search budget.
+	 *
+	 * @param searchBudget the (evosuite) search budget
+	 */
+	public void setSearchBudget(int searchBudget) {
+		this.hasSearchBudget = true;
+		this.searchBudget = searchBudget;
+	}
+
 
 	/**
 	 * Sets if the parsed arguments have the option t.

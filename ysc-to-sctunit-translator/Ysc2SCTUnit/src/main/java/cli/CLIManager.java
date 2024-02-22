@@ -1,6 +1,7 @@
 package cli;
 
 import java.io.File;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -10,7 +11,6 @@ import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
-import org.apache.commons.cli.ParseException;
 
 /**
  * The Class CLIManager.
@@ -23,9 +23,9 @@ public final class CLIManager {
 	 * @param args the command line arguments.
 	 * @return the parsed command line arguments, null if it is not possible
 	 *  to obtain correctly the required options (also in case of -h option)
-	 * @throws ParseException if there are any problems encountered while parsing the command line tokens.
+	 * @throws IOException if any IO errors occur.
 	 */
-	public static ParsedArgs parse(String[] args) throws ParseException {
+	public static ParsedArgs parse(String[] args) throws IOException {
 		// Initializes the options
 		Options options = new Options();
 		Option projectPathOpt = Option.builder("projectPath")
@@ -59,6 +59,11 @@ public final class CLIManager {
 				.desc("target package where the .java file implementing the statechart will be placed, in dot notation;"
 						+ " required")
 				.build();
+		Option searchBudget = Option.builder("searchBudget")
+				.argName("arg")
+				.hasArg()
+				.desc("the search budget to impose to Evosuite, it must be a positive integer")
+				.build();
 		Option timeService = new Option("t", "timeService", false,
 				"enable the generation of a timer service for statecharts that use timed event triggers");
 		Option help = new Option("h", "help", false, "print this message");
@@ -68,15 +73,24 @@ public final class CLIManager {
 		options.addOption(sourceFileOpt);
 		options.addOption(targetDirOpt);
 		options.addOption(targetPackageOpt);
+		options.addOption(searchBudget);
 		options.addOption(timeService);
 		options.addOption(help);
-
-		// Parse the arguments according to the specified options.
-		CommandLineParser parser = new DefaultParser();
-		CommandLine cmd = parser.parse(options, args);
 		
 		// For printing the help message
 		HelpFormatter formatter = new HelpFormatter();
+
+		// Parse the arguments according to the specified options.
+		CommandLineParser parser = new DefaultParser();
+		CommandLine cmd;
+		try {
+			cmd = parser.parse(options, args);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			formatter.printHelp("ysc2sctunit", options);
+			return null;
+		}
+		
 		
 		if (cmd.hasOption("h")) {
 			formatter.printHelp("ysc2sctunit", options);
@@ -93,7 +107,7 @@ public final class CLIManager {
 			// Obtain the workspace path and project name from the project path
 			String projectPath = cmd.getOptionValue("projectPath");
 			if(Files.exists(Paths.get(projectPath))) {
-				path = new File(projectPath).getAbsolutePath();
+				path = new File(projectPath).getCanonicalPath();
 				parsedArgs.setProjectName(path.substring(path.lastIndexOf("\\")+1));
 				parsedArgs.setWorkspacePath(path.substring(0, path.lastIndexOf("\\")));
 			}else {
@@ -134,7 +148,22 @@ public final class CLIManager {
 
 			// Obtain the targetPackage as a subpath (it is given in dot notation)
 			String targetPackage = cmd.getOptionValue("targetPackage").replace(".", "\\");
-			parsedArgs.setTargetPackage(new File(targetPackage).getPath());		
+			parsedArgs.setTargetPackage(new File(targetPackage).getPath());
+			
+			// Try to obtain a usable value for searchBudget
+			if (cmd.hasOption("searchBudget")) {
+				try {
+					int value = Integer.parseInt(cmd.getOptionValue("searchBudget"));
+					if (value <= 0) {
+						System.out.println("Error with -searchBudget option: the value must be a positive integer");
+						return null;
+					}
+					parsedArgs.setSearchBudget(value);
+				}catch (NumberFormatException e) {
+					System.out.println("Error with -searchBudget option: the value must be a positive integer");
+					return null;
+				}
+			}
 			
 			if (cmd.hasOption("t")) {
 				parsedArgs.setT(true);

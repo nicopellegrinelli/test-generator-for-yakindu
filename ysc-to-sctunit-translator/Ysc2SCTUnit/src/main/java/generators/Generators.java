@@ -49,9 +49,9 @@ public final class Generators {
 		System.out.println("*******************************************");
 		System.out.println("Generating .sgen file...");
 		System.out.println("*******************************************");
-		STGroupFile group = new STGroupFile(".\\template\\sgen_java_template.stg");
-		// Put the generated file in projectPath\targetDir\targetPackage
+		STGroupFile group = new STGroupFile("sgen_java_template.stg");
 		ST st = group.getInstanceOf("generator");
+		// Put the generated file in projectPath\targetDir\targetPackage
 		st.add("project_name", projectName);
 		// For the directory, the.sgen file expect "\\" as separator instaed of "\"
 		st.add("directory", targetDir.replace("\\", "\\\\"));
@@ -117,18 +117,26 @@ public final class Generators {
 	/**
 	 * Call Evosuite to generate a .junit file.
 	 *
-	 * @param evoTarget the string "-class ClassName", where ClassName is the fully qualified class name
-	 * @param evoOptions the string "-projectCP ClassPath", where ClassPath is the class path for the test generation
+	 * @param evoClass the string "-class ClassName", where ClassName is the fully qualified class name
+	 * @param evoProjectCP the string "-projectCP ClassPath", where ClassPath is the class path for the test generation
 	 * @param evoBaseDir the string "-base_dir Directory", where directory is the directory in which tests will be placed
+	 * @param hasSearchBudget true if a search budget must be imposed, false otherwise
+	 * @param searchBudget the search budget, 0 if hasSearchBudget is false 
 	 */
-	public static void generateJunit(String evoTarget, String evoOptions, String evoBaseDir) {
+	public static void generateJunit(String evoClass, String evoProjectCP, String evoBaseDir,
+			boolean hasSearchBudget, int searchBudget) {
 		System.out.println("*******************************************");
 		System.out.println("Calling Evosuite test generator...");
 		System.out.println("*******************************************");
 	    List<String> evoArgs = new ArrayList<>();
-		evoArgs.addAll(Arrays.asList(evoTarget.split(" ")));
-		evoArgs.addAll(Arrays.asList(evoOptions.split(" ")));
+		evoArgs.addAll(Arrays.asList(evoClass.split(" ")));
+		evoArgs.addAll(Arrays.asList(evoProjectCP.split(" ")));
 		evoArgs.addAll(Arrays.asList(evoBaseDir.split(" ")));
+//		String evosuiteCP = "-evosuiteCP C:\\Users\\lenovo\\.m2\\repository\\evosuite\\evosuite\\1.0.6\\evosuite-1.0.6.jar";
+		String evosuiteCP = "-evosuiteCP C:\\Users\\lenovo\\Desktop\\Ysc2SCTUnit-0.0.1.jar";
+		evoArgs.addAll(Arrays.asList(evosuiteCP.split(" ")));
+		if (hasSearchBudget)
+			evoArgs.add("-Dsearch_budget=" + searchBudget);
 		evoArgs.add("-generateSuite");
 		org.evosuite.EvoSuite.main(evoArgs.toArray(new String[evoArgs.size()]));
 	}
@@ -159,7 +167,7 @@ public final class Generators {
 		testCaseCollector.visit(cu, testCaseList);
 		
 		// Print to video the SCTUnit file
-		STGroupFile group = new STGroupFile(".\\template\\sctunit_template.stg");
+		STGroupFile group = new STGroupFile("sctunit_template.stg");
 		ST st = group.getInstanceOf("test_class");
 		st.add("statechart_name", statechartName);
 		st.add("test_suite", testCaseList);
