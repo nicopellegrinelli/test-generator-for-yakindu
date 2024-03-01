@@ -5,13 +5,16 @@ package cli;
  */
 public class ParsedArgs {
 	
+	/** The absolute path of the scc script. */
+	private String sccPath;
+	
 	/** The project name. */
 	private String projectName;
 	
 	/** The workspace path. */
 	private String workspacePath;
 	
-	/** The source directory. */
+	/** The source directory (relative path). */
 	private String sourceDir;
 	
 	/** The name of the source file */
@@ -20,17 +23,32 @@ public class ParsedArgs {
 	/** The target package */
 	private String targetPackage;
 	
-	/** The target directory. */
+	/** The target directory (relative path). */
 	private String targetDir;
+
+	/** The directory containing the binaries of the generated java classes (relative path). */
+	private String binaryDir;
+	
+	/** The directory in wich Evosuite will place JUnit tests (relative path). */
+	private String evoTestDir;
 	
 	/** The (evosuite) search budget. */
-	private int searchBudget = 0;
+	private int evoSearchBudget = 0;
 	
 	/** True if the parsed arguments have the option -searchBudget. */
 	private boolean hasSearchBudget = false;
 	
 	/** True if the parsed arguments have the option -t. */
 	private boolean t;
+	
+	/**
+	 * Gets the absolute path of the scc script.
+	 *
+	 * @return the absolute path of the scc script
+	 */
+	public String getSccPath() {
+		return sccPath;
+	}
 	
 	/**
 	 * Gets the project name.
@@ -87,12 +105,30 @@ public class ParsedArgs {
 	}
 	
 	/**
+	 * Gets the directory containing the binaries.
+	 *
+	 * @return the directory containing the binaries
+	 */
+	public String getBinaryDir() {
+		return binaryDir;
+	}
+	
+	/**
+	 * Gets the directory in wich Evosuite will place JUnit tests.
+	 *
+	 * @return the directory in wich Evosuite will place JUnit tests
+	 */
+	public String getEvoTestDir() {
+		return evoTestDir;
+	}
+	
+	/**
 	 * Gets the (evosuite) target directory.
 	 *
 	 * @return the (evosuite) search budget
 	 */
-	public int getSearchBudget() {
-		return searchBudget;
+	public int getEvoSearchBudget() {
+		return evoSearchBudget;
 	}
 	
 	/**
@@ -111,6 +147,15 @@ public class ParsedArgs {
 	 */
 	public boolean hasT() {
 		return t;
+	}
+	
+	/**
+	 * Sets the absolute path of the scc script.
+	 *
+	 * @param sccPath the absolute path of the scc script
+	 */
+	public void setSccPath(String sccPath) {
+		this.sccPath = sccPath;
 	}
 	
 	/**
@@ -168,15 +213,32 @@ public class ParsedArgs {
 	}
 	
 	/**
+	 * Sets the directory containing the binaries.
+	 *
+	 * @param targetDir the directory containing the binaries
+	 */
+	public void setBinaryDir(String binaryDir) {
+		this.binaryDir = binaryDir;
+	}
+	
+	/**
+	 * Sets the directory in wich Evosuite will place JUnit tests.
+	 *
+	 * @param targetDir the directory in wich Evosuite will place JUnit tests
+	 */
+	public void setEvoTestDir(String evoTestDir) {
+		this.evoTestDir = evoTestDir;
+	}
+	
+	/**
 	 * Sets the (evosuite) search budget.
 	 *
 	 * @param searchBudget the (evosuite) search budget
 	 */
-	public void setSearchBudget(int searchBudget) {
+	public void setEvoSearchBudget(int evoSearchBudget) {
 		this.hasSearchBudget = true;
-		this.searchBudget = searchBudget;
+		this.evoSearchBudget = evoSearchBudget;
 	}
-
 
 	/**
 	 * Sets if the parsed arguments have the option t.

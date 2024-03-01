@@ -68,18 +68,21 @@ public final class Generators {
 	 *
 	 * @param projectPath the path of the project
 	 * @param itemisScc the path of the scc.bat file
+	 * @param sourceDir
+	 * @param sourceFile
+	 * @param statechartName
 	 * @throws IOException if any IO errors occur.
 	 */
-	public static void callICGenerators(String projectPath, String itemisScc)
+	public static void callICGenerators(String projectPath, String itemisScc,
+			String sourceDir, String sourceFile, String statechartName)
 			throws IOException {
 		System.out.println("*******************************************");
 		System.out.println("Calling Itemis Create code generator...");
 		System.out.println("*******************************************");
-		ProcessBuilder pb = new ProcessBuilder();
-		pb.redirectErrorStream(true);
-		pb.directory(new File(projectPath));
-		pb.command(itemisScc);
-		Process p = pb.start();
+		Process p = new ProcessBuilder(itemisScc, "-m", sourceFile + "," + statechartName + ".sgen")
+				.redirectErrorStream(true)
+				.directory(new File(projectPath + "\\" + sourceDir))
+				.start();
 
 		BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
 		String line = null;
@@ -119,25 +122,30 @@ public final class Generators {
 	 *
 	 * @param evoClass the string "-class ClassName", where ClassName is the fully qualified class name
 	 * @param evoProjectCP the string "-projectCP ClassPath", where ClassPath is the class path for the test generation
-	 * @param evoBaseDir the string "-base_dir Directory", where directory is the directory in which tests will be placed
+	 * @param DtestDir the string "Dtest_dir=Directory", where Directory is the directory in which tests will be placed
+	 * @param DreportDir the string "Dreport_dir=Directory", where Directory is the directory in which statistics will be placed
 	 * @param hasSearchBudget true if a search budget must be imposed, false otherwise
-	 * @param searchBudget the search budget, 0 if hasSearchBudget is false 
+	 * @param searchBudget the search budget, not setted if hasSearchBudget is false 
 	 */
-	public static void generateJunit(String evoClass, String evoProjectCP, String evoBaseDir,
-			boolean hasSearchBudget, int searchBudget) {
+	public static void generateJunit(String evoClass, String evoProjectCP,
+			String DtestDir, String DreportDir, boolean hasSearchBudget, int searchBudget) {
 		System.out.println("*******************************************");
 		System.out.println("Calling Evosuite test generator...");
 		System.out.println("*******************************************");
 	    List<String> evoArgs = new ArrayList<>();
 		evoArgs.addAll(Arrays.asList(evoClass.split(" ")));
 		evoArgs.addAll(Arrays.asList(evoProjectCP.split(" ")));
-		evoArgs.addAll(Arrays.asList(evoBaseDir.split(" ")));
-//		String evosuiteCP = "-evosuiteCP C:\\Users\\lenovo\\.m2\\repository\\evosuite\\evosuite\\1.0.6\\evosuite-1.0.6.jar";
-		String evosuiteCP = "-evosuiteCP C:\\Users\\lenovo\\Desktop\\Ysc2SCTUnit-0.0.1.jar";
-		evoArgs.addAll(Arrays.asList(evosuiteCP.split(" ")));
+		evoArgs.add(DtestDir);
+		evoArgs.add(DreportDir);
+		evoArgs.add("-generateSuite");
 		if (hasSearchBudget)
 			evoArgs.add("-Dsearch_budget=" + searchBudget);
-		evoArgs.add("-generateSuite");
+		
+//		evoArgs.add("-Duse_separate_classloader=false");
+//		String evosuiteCP = "-evosuiteCP C:\\Users\\lenovo\\.m2\\repository\\evosuite\\evosuite\\1.0.6\\evosuite-1.0.6.jar";
+//		String evosuiteCP = "-evosuiteCP C:\\Users\\lenovo\\Desktop\\Ysc2SCTUnit-0.0.1.jar";
+//		evoArgs.addAll(Arrays.asList(evosuiteCP.split(" ")));
+
 		org.evosuite.EvoSuite.main(evoArgs.toArray(new String[evoArgs.size()]));
 	}
 	

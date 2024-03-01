@@ -89,18 +89,4 @@
   </testcase>
   <testcase name="test44" classname="platform:/resource/Temp/models/sct/ExamplStcSimplifiedTest.sctunit#ExamplStcTest.test44" time="">
   </testcase>
-  <testcase name="test45" classname="platform:/resource/Temp/models/sct/ExamplStcSimplifiedTest.sctunit#ExamplStcTest.test45" time="">
-  </testcase>
-  <testcase name="test46" classname="platform:/resource/Temp/models/sct/ExamplStcSimplifiedTest.sctunit#ExamplStcTest.test46" time="">
-  </testcase>
-  <testcase name="test47" classname="platform:/resource/Temp/models/sct/ExamplStcSimplifiedTest.sctunit#ExamplStcTest.test47" time="">
-  </testcase>
-  <testcase name="test48" classname="platform:/resource/Temp/models/sct/ExamplStcSimplifiedTest.sctunit#ExamplStcTest.test48" time="">
-  </testcase>
-  <testcase name="test49" classname="platform:/resource/Temp/models/sct/ExamplStcSimplifiedTest.sctunit#ExamplStcTest.test49" time="">
-  </testcase>
-  <testcase name="test50" classname="platform:/resource/Temp/models/sct/ExamplStcSimplifiedTest.sctunit#ExamplStcTest.test50" time="">
-  </testcase>
-  <testcase name="test51" classname="platform:/resource/Temp/models/sct/ExamplStcSimplifiedTest.sctunit#ExamplStcTest.test51" time="">
-  </testcase>
 </testsuite>

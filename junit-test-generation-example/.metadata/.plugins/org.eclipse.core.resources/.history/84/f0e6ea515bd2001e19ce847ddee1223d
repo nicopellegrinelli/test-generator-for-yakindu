@@ -1,0 +1,19 @@
+GeneratorModel for create::java {
+
+	const PROJECT : string = "StatechartExamples"
+
+	const FOLDER : string = "src\\main\\java"
+
+	statechart SimpleCompositeState {
+
+		feature Naming {
+		    basePackage = "machines2"
+		}
+
+		feature Outlet {
+			targetProject = PROJECT
+			targetFolder = FOLDER
+			libraryTargetFolder = FOLDER
+		}
+	}
+}

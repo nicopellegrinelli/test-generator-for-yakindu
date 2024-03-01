@@ -38,6 +38,7 @@ public class TestGenerator {
 			System.out.println("--------------------------------------------------------------");
 			return;
 		}
+		String itemisScc = parsedArgs.getSccPath();
 		String workspacePath = parsedArgs.getWorkspacePath();
 		String projectName = parsedArgs.getProjectName();
 		String targetDir = parsedArgs.getTargetDir();
@@ -45,8 +46,10 @@ public class TestGenerator {
 		String dottedTargetPackage = targetPackage.replace("\\", ".");
 		String sourceDir = parsedArgs.getSourceDir();
 		String sourceFile = parsedArgs.getSourceFile();
+		String binaryDir = parsedArgs.getBinaryDir();
+		String evoTestDir = parsedArgs.getEvoTestDir();
 		boolean hasSearchBudget = parsedArgs.hasSearchBudget();
-		int searchBudget = parsedArgs.getSearchBudget();
+		int evoSearchBudget = parsedArgs.getEvoSearchBudget();
 		boolean timeService = parsedArgs.hasT();
 		
 		// Obtain the Strings needed to retrieve information from the statechart file
@@ -72,24 +75,23 @@ public class TestGenerator {
 			eventsNames.put(methodName, name);
 		}
 		
-		// Obtain all needed Strings
-		String itemisScc = "C:\\Users\\lenovo\\Desktop\\itemis_CREATE\\scc.bat";
-		
+		// Obtain all needed Strings		
 		String classPath = projectPath + "\\" + targetDir + "\\" + targetPackage + "\\" + statechartName + ".java";
 		String simplifiedClassPath = projectPath + "\\" + targetDir + "\\" + targetPackage + "\\" + statechartName + "Simplified.java";		
 		
-		String compilerD = "-d " + projectPath + "\\bin";
+		String compilerD = "-d " + projectPath + "\\" + binaryDir;
 		String compilerClasspath = "-classpath " + projectPath + "\\" + targetDir;
 		
 		String evoClass = "-class " + dottedTargetPackage + "." + statechartName;
 		String evoSimplifiedClass = "-class " + dottedTargetPackage + "." + statechartName + "Simplified";
-		String evoProjectCP = "-projectCP " + projectPath + "\\bin";
-		String evoBaseDir = "-base_dir " + projectPath;
+		String evoProjectCP = "-projectCP " + projectPath + "\\" + binaryDir;
+		String evoDTestDir = "-Dtest_dir=" + projectPath + "\\" + evoTestDir;
+		String evoDReportDir = "-Dreport_dir=" + projectPath + "\\evosuite-report";
 		
-		String junitTestPath = projectPath + "\\evosuite-tests\\" + targetPackage + "\\" + statechartName + "_ESTest.java" ;
+		String junitTestPath = projectPath + "\\" + evoTestDir + "\\" + targetPackage + "\\" + statechartName + "_ESTest.java" ;
 		String sctunitTestPath = projectPath + "\\" + sourceDir + "\\" + statechartName + "Test.sctunit" ;
 		
-		String simplifiedJunitTestPath = projectPath + "\\evosuite-tests\\" + targetPackage + "\\" + statechartName + "Simplified_ESTest.java" ;
+		String simplifiedJunitTestPath = projectPath + "\\" + evoTestDir + "\\" + targetPackage + "\\" + statechartName + "Simplified_ESTest.java" ;
 		String simplifiedSctunitTestPath = projectPath + "\\" + sourceDir + "\\" + statechartName + "SimplifiedTest.sctunit" ;
 		
 		// Generate the .sgen file needed by Itemis Create to generate the java code
@@ -97,7 +99,7 @@ public class TestGenerator {
 				dottedTargetPackage, targetDir, timeService);
 		
 		// Call the Itemis Create generators
-		Generators.callICGenerators(projectPath, itemisScc);
+		Generators.callICGenerators(projectPath, itemisScc, sourceDir, sourceFile, statechartName);
 		
 		// Compile the generated classes
 		CompilerManager.compile(compilerD, compilerClasspath, classPath);		
@@ -114,13 +116,15 @@ public class TestGenerator {
 		MySecurityManager my_sm = new MySecurityManager();
 	    System.setSecurityManager(my_sm);
 //	    try {
-//	    	Generators.generateJunit(evoClass, evoProjectCP, evoBaseDir,  hasSearchBudget, searchBudget);
+//	    	Generators.generateJunit(evoClass, evoProjectCP, evoDTestDir,
+//	    			evoDReportDir, hasSearchBudget, evoSearchBudget);
 //	    } catch (SecurityException e) {
 //	    	Generators.generateSctunit(junitTestPath, sctunitTestPath,
 //	    			statechartName, statesNames, eventsNames);
 //	    }
 	    try {
-	    	Generators.generateJunit(evoSimplifiedClass, evoProjectCP, evoBaseDir,  hasSearchBudget, searchBudget);
+	    	Generators.generateJunit(evoSimplifiedClass, evoProjectCP, evoDTestDir,
+	    			evoDReportDir, hasSearchBudget, evoSearchBudget);
 	    } catch (SecurityException e) { 
 	    	Generators.generateSctunit(simplifiedJunitTestPath, simplifiedSctunitTestPath,
 	    			statechartName, statesNames, eventsNames);

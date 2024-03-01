@@ -1,0 +1,229 @@
+testclass SimpleParallelTest for statechart SimpleParallel {
+	@Test
+	operation test00 () {
+	    enter
+	    raise ev0
+	    raise evb
+	    assert is_active
+	    assert active (SimpleParallel.main_region.OrtogonalState.r2.StateB2)
+	}
+
+	@Test
+	operation test01 () {
+	    assert !active (SimpleParallel.main_region.OrtogonalState.r2.StateB2)
+	}
+
+	@Test
+	operation test02 () {
+	    enter
+	    raise ev0
+	    raise eva
+	    raise ev0
+	    assert is_active
+	}
+
+	@Test
+	operation test03 () {
+	    enter
+	    raise ev0
+	    raise ev0
+	    assert is_active
+	}
+
+	@Test
+	operation test04 () {
+	    enter
+	    raise ev0
+	    raise eva
+	    raise evb
+	    raise evb
+	    raise ev0
+	    assert is_active
+	}
+
+	@Test
+	operation test05 () {
+	    enter
+	    raise ev0
+	    raise evb
+	    raise evb
+	    assert is_active
+	}
+
+	@Test
+	operation test06 () {
+	    enter
+	    raise ev0
+	    raise eva
+	    raise evb
+	    triggerWithoutEvent
+	    assert is_active
+	}
+
+	@Test
+	operation test07 () {
+	    enter
+	    raise eva
+	    assert is_active
+	}
+
+	@Test
+	operation test08 () {
+	    enter
+	    raise ev0
+	    raise evb
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test09 () {
+	    exit
+	    assert !is_final
+	}
+
+	@Test
+	operation test10 () {
+	    enter
+	    raise ev0
+	    raise eva
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test11 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test12 () {
+	    enter
+	    raise ev0
+	    assert is_active
+	    assert active (SimpleParallel.main_region.OrtogonalState.r2.StateB1)
+	}
+
+	@Test
+	operation test13 () {
+	    enter
+	    raise ev0
+	    raise eva
+	    assert is_active
+	    assert active (SimpleParallel.main_region.OrtogonalState.r1.StateA2)
+	}
+
+	@Test
+	operation test14 () {
+	    enter
+	    raise ev0
+	    assert is_active
+	    assert active (SimpleParallel.main_region.OrtogonalState.r1.StateA1)
+	}
+
+	@Test
+	operation test15 () {
+	    enter
+	    raise ev0
+	    assert is_active
+	    assert active (SimpleParallel.main_region.OrtogonalState)
+	}
+
+	@Test
+	operation test16 () {
+	    enter
+	    assert is_active
+	    assert !active (SimpleParallel.main_region.OrtogonalState)
+	}
+
+	@Test
+	operation test17 () {
+	    enter
+	    raise ev0
+	    raise eva
+	    raise evb
+	    raise evb
+	    assert active (SimpleParallel.main_region.End)
+	}
+
+	@Test
+	operation test18 () {
+	    enter
+	    assert is_active
+	    assert active (SimpleParallel.main_region.Begin)
+	}
+
+	@Test
+	operation test19 () {
+	}
+
+	@Test
+	operation test20 () {
+	    assert !active (SimpleParallel.main_region.OrtogonalState)
+	}
+
+	@Test
+	operation test21 () {
+	    assert !active (SimpleParallel.main_region.OrtogonalState.r2.StateB1)
+	}
+
+	@Test
+	operation test22 () {
+	    assert !active (SimpleParallel.main_region.OrtogonalState.r1.StateA2)
+	}
+
+	@Test
+	operation test23 () {
+	    assert !active (SimpleParallel.main_region.OrtogonalState.r1.StateA1)
+	}
+
+	@Test
+	operation test24 () {
+	    assert !active (SimpleParallel.main_region.End)
+	}
+
+	@Test
+	operation test25 () {
+	    assert !active (SimpleParallel.main_region.Begin)
+	}
+
+	@Test
+	operation test26 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test27 () {
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test28 () {
+	    triggerWithoutEvent
+	    assert !is_active
+	}
+
+	@Test
+	operation test29 () {
+	    enter
+	    raise ev0
+	    raise eva
+	    raise evb
+	    raise evb
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test30 () {
+	    assert !is_active
+	    assert !is_final
+	}
+
+}

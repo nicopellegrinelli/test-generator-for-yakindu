@@ -1,0 +1,176 @@
+testclass SimpleSeriesTest for statechart SimpleSeries {
+	@Test
+	operation test00 () {
+	}
+
+	@Test
+	operation test01 () {
+	    enter
+	    raise event2
+	    raise event2
+	    assert is_active
+	}
+
+	@Test
+	operation test02 () {
+	    enter
+	    raise event1
+	    raise event3
+	    assert is_active
+	}
+
+	@Test
+	operation test03 () {
+	    enter
+	    raise event3
+	    assert is_active
+	}
+
+	@Test
+	operation test04 () {
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test05 () {
+	    enter
+	    raise event2
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test06 () {
+	    enter
+	    raise event1
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test07 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test08 () {
+	    enter
+	    raise event2
+	    raise event3
+	    assert is_active
+	    assert active (SimpleSeries.main_region._final_)
+	}
+
+	@Test
+	operation test09 () {
+	    enter
+	    raise event2
+	    assert is_active
+	    assert active (SimpleSeries.main_region.StateC)
+	}
+
+	@Test
+	operation test10 () {
+	    enter
+	    raise event1
+	    assert is_active
+	    assert active (SimpleSeries.main_region.StateB)
+	}
+
+	@Test
+	operation test11 () {
+	    enter
+	    assert is_active
+	    assert active (SimpleSeries.main_region.StateA)
+	}
+
+	@Test
+	operation test12 () {
+	    assert !active (SimpleSeries.main_region._final_)
+	}
+
+	@Test
+	operation test13 () {
+	    assert !active (SimpleSeries.main_region.StateC)
+	}
+
+	@Test
+	operation test14 () {
+	    assert !active (SimpleSeries.main_region.StateB)
+	}
+
+	@Test
+	operation test15 () {
+	}
+
+	@Test
+	operation test16 () {
+	    assert !active (SimpleSeries.main_region.StateA)
+	}
+
+	@Test
+	operation test17 () {
+	    enter
+	    raise event2
+	    raise event3
+	    assert is_active
+	    assert is_final
+	}
+
+	@Test
+	operation test18 () {
+	    assert !is_final
+	}
+
+	@Test
+	operation test19 () {
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test20 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test21 () {
+	    enter
+	    raise event2
+	    raise event3
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test22 () {
+	    triggerWithoutEvent
+	    assert !is_final
+	}
+
+	@Test
+	operation test23 () {
+	    assert !is_active
+	    enter
+	    raise event1
+	    raise event2
+	    assert is_active
+	}
+
+	@Test
+	operation test24 () {
+	    enter
+	    raise event2
+	    raise event3
+	    raise event2
+	    assert is_final
+	}
+
+}
