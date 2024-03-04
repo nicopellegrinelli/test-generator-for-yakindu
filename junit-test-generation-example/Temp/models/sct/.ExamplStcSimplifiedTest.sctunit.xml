@@ -89,4 +89,6 @@
   </testcase>
   <testcase name="test44" classname="platform:/resource/Temp/models/sct/ExamplStcSimplifiedTest.sctunit#ExamplStcTest.test44" time="">
   </testcase>
+  <testcase name="test45" classname="platform:/resource/Temp/models/sct/ExamplStcSimplifiedTest.sctunit#ExamplStcTest.test45" time="">
+  </testcase>
 </testsuite>

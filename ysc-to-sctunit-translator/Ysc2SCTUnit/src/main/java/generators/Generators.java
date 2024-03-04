@@ -7,6 +7,7 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -83,7 +84,6 @@ public final class Generators {
 				.redirectErrorStream(true)
 				.directory(new File(projectPath + "\\" + sourceDir))
 				.start();
-
 		BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
 		String line = null;
 		while ((line = reader.readLine()) != null) {
@@ -140,12 +140,17 @@ public final class Generators {
 		evoArgs.add("-generateSuite");
 		if (hasSearchBudget)
 			evoArgs.add("-Dsearch_budget=" + searchBudget);
-		
-//		evoArgs.add("-Duse_separate_classloader=false");
-//		String evosuiteCP = "-evosuiteCP C:\\Users\\lenovo\\.m2\\repository\\evosuite\\evosuite\\1.0.6\\evosuite-1.0.6.jar";
-//		String evosuiteCP = "-evosuiteCP C:\\Users\\lenovo\\Desktop\\Ysc2SCTUnit-0.0.1.jar";
-//		evoArgs.addAll(Arrays.asList(evosuiteCP.split(" ")));
-
+		try {
+			// This option is necessary for the jar to execute without warnings
+			String jarRunningDir = new File(Generators.class.getProtectionDomain().getCodeSource().getLocation().toURI())
+					.getParentFile()
+					.getPath();
+			String evosuiteCP = "-evosuiteCP " + jarRunningDir	+ "\\libs\\evosuite-1.0.6.jar";
+			evoArgs.addAll(Arrays.asList(evosuiteCP.split(" ")));
+		} catch (URISyntaxException e) {
+			System.out.println("An unexpected error occurred: some warnings may be generated,"
+					+ " but the process should finish succesfully.");
+		}
 		org.evosuite.EvoSuite.main(evoArgs.toArray(new String[evoArgs.size()]));
 	}
 	

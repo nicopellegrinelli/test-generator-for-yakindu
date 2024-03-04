@@ -82,14 +82,14 @@ public class TestGenerator {
 		String compilerD = "-d " + projectPath + "\\" + binaryDir;
 		String compilerClasspath = "-classpath " + projectPath + "\\" + targetDir;
 		
-		String evoClass = "-class " + dottedTargetPackage + "." + statechartName;
+//		String evoClass = "-class " + dottedTargetPackage + "." + statechartName;
 		String evoSimplifiedClass = "-class " + dottedTargetPackage + "." + statechartName + "Simplified";
 		String evoProjectCP = "-projectCP " + projectPath + "\\" + binaryDir;
 		String evoDTestDir = "-Dtest_dir=" + projectPath + "\\" + evoTestDir;
 		String evoDReportDir = "-Dreport_dir=" + projectPath + "\\evosuite-report";
 		
-		String junitTestPath = projectPath + "\\" + evoTestDir + "\\" + targetPackage + "\\" + statechartName + "_ESTest.java" ;
-		String sctunitTestPath = projectPath + "\\" + sourceDir + "\\" + statechartName + "Test.sctunit" ;
+//		String junitTestPath = projectPath + "\\" + evoTestDir + "\\" + targetPackage + "\\" + statechartName + "_ESTest.java" ;
+//		String sctunitTestPath = projectPath + "\\" + sourceDir + "\\" + statechartName + "Test.sctunit" ;
 		
 		String simplifiedJunitTestPath = projectPath + "\\" + evoTestDir + "\\" + targetPackage + "\\" + statechartName + "Simplified_ESTest.java" ;
 		String simplifiedSctunitTestPath = projectPath + "\\" + sourceDir + "\\" + statechartName + "SimplifiedTest.sctunit" ;
