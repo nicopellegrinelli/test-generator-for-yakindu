@@ -1,9 +1,17 @@
 package generators;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
+import javax.tools.JavaCompiler;
+import javax.tools.JavaFileObject;
+import javax.tools.StandardJavaFileManager;
+import javax.tools.ToolProvider;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.xml.sax.SAXException;
@@ -11,8 +19,7 @@ import org.xml.sax.SAXException;
 import cli.CLIManager;
 import cli.ParsedArgs;
 import statechart.Statechart;
-import support.CompilerManager;
-import support.MySecurityManager;
+
 
 /**
  * The Class TestGenerator.
@@ -102,40 +109,55 @@ public class TestGenerator {
 		Generators.callICGenerators(projectPath, itemisScc, sourceDir, sourceFile, statechartName);
 		
 		// Compile the generated classes
-		CompilerManager.compile(compilerD, compilerClasspath, classPath);		
+		compile(compilerD, compilerClasspath, classPath);		
 		
 		// Modify the generated Java code to create a simplified version
 		Generators.generateSimplifiedJava(classPath, simplifiedClassPath);
 		
 		// Compile the new simplified class
-		CompilerManager.compile(compilerD, compilerClasspath, simplifiedClassPath);
+		compile(compilerD, compilerClasspath, simplifiedClassPath);
 		
-		// Call the Evosuite test generator both on the original and the simplified versions
-		// Change the security manager to avoid JVM stop running after Evosuite calls System.exit(0);
-		SecurityManager default_sm = System.getSecurityManager();
-		MySecurityManager my_sm = new MySecurityManager();
-	    System.setSecurityManager(my_sm);
-//	    try {
-//	    	Generators.generateJunit(evoClass, evoProjectCP, evoDTestDir,
-//	    			evoDReportDir, hasSearchBudget, evoSearchBudget);
-//	    } catch (SecurityException e) {
-//	    	Generators.generateSctunit(junitTestPath, sctunitTestPath,
-//	    			statechartName, statesNames, eventsNames);
-//	    }
-	    try {
-	    	Generators.generateJunit(evoSimplifiedClass, evoProjectCP, evoDTestDir,
-	    			evoDReportDir, hasSearchBudget, evoSearchBudget);
-	    } catch (SecurityException e) { 
-	    	Generators.generateSctunit(simplifiedJunitTestPath, simplifiedSctunitTestPath,
-	    			statechartName, statesNames, eventsNames);
-	    }
-	    // Change the security manager back to the default one to let the execution ends
-	    System.setSecurityManager(default_sm);
+//	    Generators.generateJunit(evoClass, evoProjectCP, evoDTestDir,
+//	    		evoDReportDir, hasSearchBudget, evoSearchBudget);
+//	    Generators.generateSctunit(junitTestPath, sctunitTestPath,
+//	    		statechartName, statesNames, eventsNames);
+		
+		// Call the Evosuite test generator
+	    Generators.generateJunit(evoSimplifiedClass, evoProjectCP, evoDTestDir,
+	    		evoDReportDir, hasSearchBudget, evoSearchBudget);
+	    
+	    // Generate the .sctunit file
+	    Generators.generateSctunit(simplifiedJunitTestPath, simplifiedSctunitTestPath,
+	    		statechartName, statesNames, eventsNames);
+
+		// End the execution
 		System.out.println("*******************************************");
 		System.out.println("Finished.");
 		System.out.println("*******************************************");
 		System.out.println("--------------------------------------------------------------");
-	    System.exit(0);
+		System.exit(0);
+	}
+	
+	/**
+	 * Compile.
+	 *
+	 * @param compilerD the string "-d ProjectPath", where ProjectPath is the path of the directory containing the .class files
+	 * @param compilerClasspath the string "-classpath ClassPath", where ClassPath is the path of the directory containing the .java files
+	 * @param classPath the path of the class to compile
+	 */
+	private static void compile(String compilerD, String compilerClasspath, String classPath){
+		System.out.println("*******************************************");
+		System.out.println("Compiling...");
+		System.out.println("*******************************************");
+		JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
+		List<String> compilationArgs = new ArrayList<String>();
+		compilationArgs.addAll(Arrays.asList(compilerD.split(" ")));
+		compilationArgs.addAll(Arrays.asList(compilerClasspath.split(" ")));
+		compilationArgs.add("-implicit:class");
+		StandardJavaFileManager stdFileManager = compiler.getStandardFileManager(null, null, null);
+		File f = new File(classPath);
+        Iterable<? extends JavaFileObject> compilationUnits = stdFileManager.getJavaFileObjectsFromFiles(Arrays.asList(f));
+		compiler.getTask(null, null, null, compilationArgs, null, compilationUnits).call();
 	}
 
 }

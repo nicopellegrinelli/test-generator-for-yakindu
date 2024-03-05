@@ -27,26 +27,28 @@ import junitreading.TestCaseCollector;
 import testcase.TestCase;
 
 /**
- * Contains a set of methods usable to generate various type of files.
- * All toghether, the methods can generate a .sctunit file starting from a .ysc file. 
+ * Contains a set of methods usable to generate various type of files. All
+ * toghether, the methods can generate a .sctunit file starting from a .ysc
+ * file.
  */
 public final class Generators {
-	
+
 	/**
-	 * Generate the .sgen file needed by Itemis Create to generate java code from a .ysc file (a statechart).
+	 * Generate the .sgen file needed by Itemis Create to generate java code from a
+	 * .ysc file (a statechart).
 	 *
-	 * @param projectPath the path of the project
-	 * @param projectName the name of the project
+	 * @param projectPath    the path of the project
+	 * @param projectName    the name of the project
 	 * @param statechartName the name of the statechart
-	 * @param sourceDir the directory where the statechart is located
-	 * @param targetPackage the target package
-	 * @param targetDir the directory containing the target package
-	 * @param timeService true if the statechart deals with time events, false otherwise
+	 * @param sourceDir      the directory where the statechart is located
+	 * @param targetPackage  the target package
+	 * @param targetDir      the directory containing the target package
+	 * @param timeService    true if the statechart deals with time events, false
+	 *                       otherwise
 	 * @throws IOException if any IO errors occur.
 	 */
-	public static void generateSgenJava(String projectPath, String projectName,
-			String statechartName, String sourceDir, String targetPackage, String targetDir, boolean timeService)
-			throws IOException {
+	public static void generateSgenJava(String projectPath, String projectName, String statechartName, String sourceDir,
+			String targetPackage, String targetDir, boolean timeService) throws IOException {
 		System.out.println("*******************************************");
 		System.out.println("Generating .sgen file...");
 		System.out.println("*******************************************");
@@ -58,50 +60,51 @@ public final class Generators {
 		st.add("directory", targetDir.replace("\\", "\\\\"));
 		st.add("package_name", targetPackage);
 		st.add("statechart_name", statechartName);
-		if(timeService) st.add("time", "");
+		if (timeService)
+			st.add("time", "");
 		// Create the file in the same diractory of the statechart
-		File genFile = new File(projectPath + "\\" + sourceDir +"\\" + statechartName + ".sgen");
+		File genFile = new File(projectPath + "\\" + sourceDir + "\\" + statechartName + ".sgen");
 		st.write(genFile, null);
 	}
-	
+
 	/**
-	 * Call Itemis Create code generators for each .sgen file in the specified project.
+	 * Call Itemis Create code generators for each .sgen file in the specified
+	 * project.
 	 *
-	 * @param projectPath the path of the project
-	 * @param itemisScc the path of the scc.bat file
+	 * @param projectPath    the path of the project
+	 * @param itemisScc      the path of the scc.bat file
 	 * @param sourceDir
 	 * @param sourceFile
 	 * @param statechartName
 	 * @throws IOException if any IO errors occur.
 	 */
-	public static void callICGenerators(String projectPath, String itemisScc,
-			String sourceDir, String sourceFile, String statechartName)
-			throws IOException {
+	public static void callICGenerators(String projectPath, String itemisScc, String sourceDir, String sourceFile,
+			String statechartName) throws IOException {
 		System.out.println("*******************************************");
 		System.out.println("Calling Itemis Create code generator...");
 		System.out.println("*******************************************");
 		Process p = new ProcessBuilder(itemisScc, "-m", sourceFile + "," + statechartName + ".sgen")
-				.redirectErrorStream(true)
-				.directory(new File(projectPath + "\\" + sourceDir))
-				.start();
+				.redirectErrorStream(true).directory(new File(projectPath + "\\" + sourceDir)).start();
 		BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
 		String line = null;
 		while ((line = reader.readLine()) != null) {
 			System.out.println(line);
-			if (line.contains("done."))	break;
+			if (line.contains("done."))
+				break;
 		}
 		reader.close();
 	}
-	
+
 	/**
-	 * Generate a simplified version of the java class present in the path passed as parameter.
+	 * Generate a simplified version of the java class present in the path passed as
+	 * parameter.
 	 *
-	 * @param classPath the class path of the starting .java file
-	 * @param simplifiedClassPath the class path of the .java file containing the simplified version
+	 * @param classPath           the class path of the starting .java file
+	 * @param simplifiedClassPath the class path of the .java file containing the
+	 *                            simplified version
 	 * @throws IOException if any IO errors occur.
 	 */
-	public static void generateSimplifiedJava(String classPath, String simplifiedClassPath)
-			throws IOException {
+	public static void generateSimplifiedJava(String classPath, String simplifiedClassPath) throws IOException {
 		System.out.println("*******************************************");
 		System.out.println("Generating simplified java class...");
 		System.out.println("*******************************************");
@@ -116,69 +119,87 @@ public final class Generators {
 		writer.write(cu.toString());
 		writer.close();
 	}
-	
+
 	/**
 	 * Call Evosuite to generate a .junit file.
 	 *
-	 * @param evoClass the string "-class ClassName", where ClassName is the fully qualified class name
-	 * @param evoProjectCP the string "-projectCP ClassPath", where ClassPath is the class path for the test generation
-	 * @param DtestDir the string "Dtest_dir=Directory", where Directory is the directory in which tests will be placed
-	 * @param DreportDir the string "Dreport_dir=Directory", where Directory is the directory in which statistics will be placed
-	 * @param hasSearchBudget true if a search budget must be imposed, false otherwise
-	 * @param searchBudget the search budget, not setted if hasSearchBudget is false 
+	 * @param evoClass        the string "-class ClassName", where ClassName is the
+	 *                        fully qualified class name
+	 * @param evoProjectCP    the string "-projectCP ClassPath", where ClassPath is
+	 *                        the class path for the test generation
+	 * @param DtestDir        the string "Dtest_dir=Directory", where Directory is
+	 *                        the directory in which tests will be placed
+	 * @param DreportDir      the string "Dreport_dir=Directory", where Directory is
+	 *                        the directory in which statistics will be placed
+	 * @param hasSearchBudget true if a search budget must be imposed, false
+	 *                        otherwise
+	 * @param searchBudget    the search budget, not setted if hasSearchBudget is
+	 *                        false
 	 */
-	public static void generateJunit(String evoClass, String evoProjectCP,
-			String DtestDir, String DreportDir, boolean hasSearchBudget, int searchBudget) {
+	public static void generateJunit(String evoClass, String evoProjectCP, String DtestDir, String DreportDir,
+			boolean hasSearchBudget, int searchBudget) {
 		System.out.println("*******************************************");
 		System.out.println("Calling Evosuite test generator...");
 		System.out.println("*******************************************");
-	    List<String> evoArgs = new ArrayList<>();
+		List<String> evoArgs = new ArrayList<>();
+		// Set necessary arguments
 		evoArgs.addAll(Arrays.asList(evoClass.split(" ")));
 		evoArgs.addAll(Arrays.asList(evoProjectCP.split(" ")));
 		evoArgs.add(DtestDir);
 		evoArgs.add(DreportDir);
+		// Default setting, use whole suite generation
 		evoArgs.add("-generateSuite");
+		// Allow minimization task to run without limitations for at most 10min
+		evoArgs.add("-Dassertion_minimization_fallback_time=1.0");
+		evoArgs.add("-Dminimization_timeout=600");
+		// Impose a search budget
 		if (hasSearchBudget)
 			evoArgs.add("-Dsearch_budget=" + searchBudget);
+		// This option is necessary for the jar to execute without warnings, it should
+		// never trow the URISyntaxException
 		try {
-			// This option is necessary for the jar to execute without warnings
-			String jarRunningDir = new File(Generators.class.getProtectionDomain().getCodeSource().getLocation().toURI())
-					.getParentFile()
+			String jarRunningDir = new File(
+					Generators.class.getProtectionDomain().getCodeSource().getLocation().toURI()).getParentFile()
 					.getPath();
-			String evosuiteCP = "-evosuiteCP " + jarRunningDir	+ "\\libs\\evosuite-1.0.6.jar";
+			String evosuiteCP = "-evosuiteCP " + jarRunningDir + "\\libs\\evosuite-1.0.6.jar";
 			evoArgs.addAll(Arrays.asList(evosuiteCP.split(" ")));
 		} catch (URISyntaxException e) {
 			System.out.println("An unexpected error occurred: some warnings may be generated,"
 					+ " but the process should finish succesfully.");
 		}
-		org.evosuite.EvoSuite.main(evoArgs.toArray(new String[evoArgs.size()]));
+		// Run Evosuite
+		org.evosuite.EvoSuite evosuite = new org.evosuite.EvoSuite();
+		evosuite.parseCommandLine(evoArgs.toArray(new String[evoArgs.size()]));
 	}
-	
+
 	/**
-	 * Generate a .sctunit file obtained translating a .java file containing junit tests.
+	 * Generate a .sctunit file obtained translating a .java file containing junit
+	 * tests.
 	 *
-	 * @param junitTestPath the path of the .java file containing the junit test cases
+	 * @param junitTestPath   the path of the .java file containing the junit test
+	 *                        cases
 	 * @param sctunitTestPath the path of the generated .sctunit file
-	 * @param statechartName the  names of the statechart
-	 * @param statesNames the dictionary of the states names with the corresponding enum as key
-	 * @param eventsNames the dictionary of the events names with the corresponding method as key
+	 * @param statechartName  the names of the statechart
+	 * @param statesNames     the dictionary of the states names with the
+	 *                        corresponding enum as key
+	 * @param eventsNames     the dictionary of the events names with the
+	 *                        corresponding method as key
 	 * @throws IOException if any IO errors occur.
 	 */
-	public static void generateSctunit(String junitTestPath, String sctunitTestPath, 
-			String statechartName, Map<String,String> statesNames, Map<String,String> eventsNames)
-			throws IOException {
+	public static void generateSctunit(String junitTestPath, String sctunitTestPath, String statechartName,
+			Map<String, String> statesNames, Map<String, String> eventsNames) throws IOException {
 		System.out.println("*******************************************");
 		System.out.println("Generating .sctunit file...");
 		System.out.println("*******************************************");
 		// Get the compilation unit of the (test) class
 		CompilationUnit cu = StaticJavaParser.parse(new FileInputStream(junitTestPath));
-		
+
 		// Visit all the (test) methods contained in the compilation unit.
-		// Each visit of a method produces a TestCase object 
+		// Each visit of a method produces a TestCase object
 		List<TestCase> testCaseList = new ArrayList<TestCase>();
 		VoidVisitor<List<TestCase>> testCaseCollector = new TestCaseCollector(statechartName, statesNames, eventsNames);
 		testCaseCollector.visit(cu, testCaseList);
-		
+
 		// Print to video the SCTUnit file
 		STGroupFile group = new STGroupFile("sctunit_template.stg");
 		ST st = group.getInstanceOf("test_class");
