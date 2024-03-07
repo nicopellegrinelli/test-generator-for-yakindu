@@ -9,7 +9,7 @@ import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 public class MethodDeclarationVisitor extends VoidVisitorAdapter<Void> {
 	
 	/**
-	 * Visit a method decalration, set the visibility to private if it is protected.
+	 * Visit a method declaration, set the visibility to private if it is protected.
 	 *
 	 * @param the method declaration
 	 * @param arg none
@@ -18,7 +18,7 @@ public class MethodDeclarationVisitor extends VoidVisitorAdapter<Void> {
 	public void visit(MethodDeclaration node, Void arg) {
 		// To ensure child nodes of the current node are also visited
 		super.visit(node, arg);
-		// Changes method visibility from protected to provate
+		// Changes method visibility from protected to private
 		if (node.isProtected()) {
 			node.setProtected(false);
 			node.setPrivate(true);

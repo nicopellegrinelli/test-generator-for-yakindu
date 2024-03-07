@@ -23,6 +23,7 @@ import com.github.javaparser.ast.visitor.VoidVisitor;
 import javareading.ClassDeclarationVisitor;
 import javareading.ConstructorDeclarationVisitor;
 import javareading.MethodDeclarationVisitor;
+import javareading.FieldDeclarationVisitor;
 import junitreading.TestCaseCollector;
 import testcase.TestCase;
 
@@ -110,11 +111,13 @@ public final class Generators {
 		System.out.println("*******************************************");
 		CompilationUnit cu = StaticJavaParser.parse(new FileInputStream(classPath));
 		VoidVisitor<Void> classVisitor = new ClassDeclarationVisitor();
-		VoidVisitor<Void> constructorVisitor = new ConstructorDeclarationVisitor();
-		VoidVisitor<Void> methodVisitor = new MethodDeclarationVisitor();
 		classVisitor.visit(cu, null);
+		VoidVisitor<Void> constructorVisitor = new ConstructorDeclarationVisitor();
 		constructorVisitor.visit(cu, null);
+		VoidVisitor<Void> methodVisitor = new MethodDeclarationVisitor();		
 		methodVisitor.visit(cu, null);
+		VoidVisitor<Void> fieldVisitor = new FieldDeclarationVisitor();		
+		fieldVisitor.visit(cu, null);
 		BufferedWriter writer = new BufferedWriter(new FileWriter(simplifiedClassPath));
 		writer.write(cu.toString());
 		writer.close();
@@ -184,10 +187,13 @@ public final class Generators {
 	 *                        corresponding enum as key
 	 * @param eventsNames     the dictionary of the events names with the
 	 *                        corresponding method as key
+	 * @param interfacesNames the dictionary of the interfaces names with the
+	 *                        corresponding class name as key
 	 * @throws IOException if any IO errors occur.
 	 */
 	public static void generateSctunit(String junitTestPath, String sctunitTestPath, String statechartName,
-			Map<String, String> statesNames, Map<String, String> eventsNames) throws IOException {
+			Map<String, String> statesNames, Map<String, String> eventsNames,
+			Map<String, String> interfacesNames) throws IOException {
 		System.out.println("*******************************************");
 		System.out.println("Generating .sctunit file...");
 		System.out.println("*******************************************");
@@ -197,7 +203,8 @@ public final class Generators {
 		// Visit all the (test) methods contained in the compilation unit.
 		// Each visit of a method produces a TestCase object
 		List<TestCase> testCaseList = new ArrayList<TestCase>();
-		VoidVisitor<List<TestCase>> testCaseCollector = new TestCaseCollector(statechartName, statesNames, eventsNames);
+		VoidVisitor<List<TestCase>> testCaseCollector = 
+				new TestCaseCollector(statechartName, statesNames, eventsNames, interfacesNames);
 		testCaseCollector.visit(cu, testCaseList);
 
 		// Print to video the SCTUnit file

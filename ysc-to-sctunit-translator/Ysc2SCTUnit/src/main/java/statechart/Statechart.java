@@ -28,8 +28,11 @@ public class Statechart {
 	/** The list containing all the full names of states in the statechart. */
 	private List<String> statesNames;
 	
-	/** The list containing all the full names of events in the statechart. */
+	/** The list containing all the names of events in the statechart. */
 	private List<String> eventsNames;
+	
+	/** The list containing all the names of interfaces in the statechart. */
+	private List<String> interfacesNames;
 	
 	/**
 	 * Instantiates a new statechart.
@@ -48,6 +51,42 @@ public class Statechart {
 		
 		this.initStatechart();
 	}
+	
+	/**
+	 * Gets the statechart name.
+	 *
+	 * @return the statechart name
+	 */
+	public String getStatechartName() {
+		return this.statechartName;
+	}
+	
+	/**
+	 * Gets all states names.
+	 *
+	 * @return the list containing all states names
+	 */
+	public List<String> getStatesNames() {
+		return this.statesNames;
+	}
+	
+	/**
+	 * Gets all events names.
+	 *
+	 * @return the list containing all events names
+	 */
+	public List<String> getEventsNames() {
+		return this.eventsNames;
+	}
+	
+	/**
+	 * Gets all interfaces names.
+	 *
+	 * @return the list containing all interfaces names
+	 */
+	public List<String> getInterfacesNames() {
+		return this.interfacesNames;
+	}
 		
 	/**
 	 * Inits the statechart obtaining statechart name, states names end events names.
@@ -60,6 +99,7 @@ public class Statechart {
 		// Initialize data structures
 		this.statesNames = new ArrayList<String>();
 		this.eventsNames = new ArrayList<String>();
+		this.interfacesNames = new ArrayList<String>();
 		
 		// Search the nodes representing the starting regions of the statechart
 		NodeList nodeList = this.statechartNode.getChildNodes();
@@ -67,7 +107,7 @@ public class Statechart {
 			Node child = nodeList.item(i);
 			if (child.getNodeType() == Node.ELEMENT_NODE && child.getNodeName().equals("regions")) {
 				// Start the visit of the subtree from the node representing the region
-				this.visitNode(child, this.statesNames, this.eventsNames);
+				this.visitNode(child, this.statesNames, this.eventsNames, this.interfacesNames);
 			}
 		}
 	}
@@ -77,15 +117,16 @@ public class Statechart {
 	 *
 	 * @param node the node to visit
 	 * @param statesNames the list of all the names of the states visited so far
-	 * @param eventsNames the list of all the names of the events of the tranistions visited so far
+	 * @param eventsNames the list of all the names of the events used in tranistions visited so far
+	 * @param interfacesNames the list of all the names of the interfaces used in tranistions visited so far
 	 */
-	private void visitNode(Node node, List<String> statesNames, List<String> eventsNames) {
+	private void visitNode(Node node, List<String> statesNames, List<String> eventsNames, List<String> interfacesNames) {
 		// If the node is a region, it may contain a final state
 		// else, it is a vertex and it may have outgoing transitions
 		if (node.getNodeName().equals("regions")) {
 			this.checkForFinalState(node, statesNames);
 		}else {
-			this.checkForTransitions(node, eventsNames);
+			this.checkForTransitions(node, eventsNames, interfacesNames);
 			// A "normal" state is a node with name "vertices" and the attribute "xsi:type" equals to "sgraph:State",
 			// for that kind of node, the name is of interest
 			Node attribute = node.getAttributes().getNamedItem("xsi:type");
@@ -99,7 +140,7 @@ public class Statechart {
 			Node child = nodeList.item(i);
 			if (child.getNodeType() == Node.ELEMENT_NODE && 
 					(child.getNodeName().equals("regions") || child.getNodeName().equals("vertices")))
-				visitNode(child, this.statesNames, this.eventsNames);
+				visitNode(child, statesNames, eventsNames, interfacesNames);
 		}
 	}
 
@@ -128,9 +169,10 @@ public class Statechart {
 	 * Check if the node (state) contatins outgoing transitions.
 	 *
 	 * @param node the node representing the state
-	 * @param eventsNames the list of all the names of the events of the transitions visited so far
+	 * @param eventsNames the list of all the names of the events used in tranistions visited so far
+	 * @param interfacesNames the list of all the names of the interfaces used in tranistions visited so far
 	 */
-	private void checkForTransitions(Node node, List<String> eventsNames) {
+	private void checkForTransitions(Node node, List<String> eventsNames, List<String> interfacesNames) {
 		NodeList nodeList = node.getChildNodes();
 		for (int i = 0; i < nodeList.getLength(); i++) {
 			Node child = nodeList.item(i);
@@ -139,8 +181,19 @@ public class Statechart {
 				Node attribute = child.getAttributes().getNamedItem("specification");
 				if (attribute != null) {
 					String name = attribute.getNodeValue();
-					if (!(name.equals("") || eventsNames.contains(name))) {
-						eventsNames.add(name);
+					if (!name.equals("")) {
+						// Transitions containing a point are relative to events from an interface with a name
+						if (name.contains(".")) {
+							String interfaceName = name.substring(0, name.indexOf('.'));
+							if (!interfacesNames.contains(interfaceName))
+								interfacesNames.add(interfaceName);							
+							String eventName = name.substring(name.indexOf('.')+1);
+							if (!eventsNames.contains(eventName))
+								eventsNames.add(eventName);
+						}else {
+							if (!eventsNames.contains(name))
+								eventsNames.add(name);
+						}
 					}					
 				}
 			}
@@ -165,33 +218,6 @@ public class Statechart {
 		else	
 			// The name of the parent node must be added (recursively) to the full name
 			return this.getFullName(parent, "." + newName);
-	}
-	
-	/**
-	 * Gets the statechart name.
-	 *
-	 * @return the statechart name
-	 */
-	public String getStatechartName() {
-		return this.statechartName;
-	}
-	
-	/**
-	 * Gets all states names.
-	 *
-	 * @return the list containing all states names
-	 */
-	public List<String> getStatesNames() {
-		return this.statesNames;
-	}
-	
-	/**
-	 * Gets all events names.
-	 *
-	 * @return the list containing all events names
-	 */
-	public List<String> getEventsNames() {
-		return this.eventsNames;
 	}
 	
 }

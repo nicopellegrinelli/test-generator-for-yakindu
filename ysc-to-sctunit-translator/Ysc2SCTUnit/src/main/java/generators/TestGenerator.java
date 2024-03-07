@@ -65,7 +65,8 @@ public class TestGenerator {
 		
 		// Obtain the statechart name and the names of its states,
 		// create a dictionary for the states names with the corresponding enum as key,
-		// create a dictionary for the events names with the corresponding method as key
+		// create a dictionary for the events names with the corresponding method as key,
+		// create a dictionary for the interfaces names with the corresponding class name as key,
 		System.out.println("*******************************************");
 		System.out.println("Reading statechart file...");
 		System.out.println("*******************************************");
@@ -80,6 +81,11 @@ public class TestGenerator {
 		for(String name : statechart.getEventsNames()) {
 			String methodName = "raise" + name.substring(0,1).toUpperCase() + name.substring(1);
 			eventsNames.put(methodName, name);
+		}
+		Map<String, String> interfacesNames = new HashMap<String,String>();
+		for(String name : statechart.getInterfacesNames()) {
+			String className = name.substring(0,1).toUpperCase() + name.substring(1);
+			interfacesNames.put(className, name);
 		}
 		
 		// Obtain all needed Strings		
@@ -120,7 +126,7 @@ public class TestGenerator {
 //	    Generators.generateJunit(evoClass, evoProjectCP, evoDTestDir,
 //	    		evoDReportDir, hasSearchBudget, evoSearchBudget);
 //	    Generators.generateSctunit(junitTestPath, sctunitTestPath,
-//	    		statechartName, statesNames, eventsNames);
+//	    		statechartName, statesNames, eventsNames, interfacesNames);
 		
 		// Call the Evosuite test generator
 	    Generators.generateJunit(evoSimplifiedClass, evoProjectCP, evoDTestDir,
@@ -128,7 +134,7 @@ public class TestGenerator {
 	    
 	    // Generate the .sctunit file
 	    Generators.generateSctunit(simplifiedJunitTestPath, simplifiedSctunitTestPath,
-	    		statechartName, statesNames, eventsNames);
+	    		statechartName, statesNames, eventsNames, interfacesNames);
 
 		// End the execution
 		System.out.println("*******************************************");
