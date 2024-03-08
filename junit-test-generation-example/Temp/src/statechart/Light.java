@@ -25,60 +25,6 @@ public class Light implements IEventDriven {
 		
 	}
 	
-	public static class A {
-		private Light parent;
-		
-		public A(Light parent) {
-			this.parent = parent;
-		}
-		private boolean a;
-		
-		
-		public void raiseA() {
-			parent.inEventQueue.add(() -> {
-				a = true;
-			});
-			parent.runCycle();
-		}
-		
-	}
-	
-	public static class Prova4 {
-		private Light parent;
-		
-		public Prova4(Light parent) {
-			this.parent = parent;
-		}
-		private boolean strike3;
-		
-		
-		public void raiseStrike3() {
-			parent.inEventQueue.add(() -> {
-				strike3 = true;
-			});
-			parent.runCycle();
-		}
-		
-	}
-	
-	public static class Pr_ova {
-		private Light parent;
-		
-		public Pr_ova(Light parent) {
-			this.parent = parent;
-		}
-		private boolean st_rike;
-		
-		
-		public void raiseSt_rike() {
-			parent.inEventQueue.add(() -> {
-				st_rike = true;
-			});
-			parent.runCycle();
-		}
-		
-	}
-	
 	public static class Switch {
 		private Light parent;
 		
@@ -95,17 +41,61 @@ public class Light implements IEventDriven {
 			parent.runCycle();
 		}
 		
+		private boolean increaseBrightness;
+		
+		
+		public void raiseIncreaseBrightness() {
+			parent.inEventQueue.add(() -> {
+				increaseBrightness = true;
+			});
+			parent.runCycle();
+		}
+		
+		private boolean reduceBrightness;
+		
+		
+		public void raiseReduceBrightness() {
+			parent.inEventQueue.add(() -> {
+				reduceBrightness = true;
+			});
+			parent.runCycle();
+		}
+		
+	}
+	
+	public static class Color {
+		private Light parent;
+		
+		public Color(Light parent) {
+			this.parent = parent;
+		}
+		private boolean change;
+		
+		
+		public void raiseChange() {
+			parent.inEventQueue.add(() -> {
+				change = true;
+			});
+			parent.runCycle();
+		}
+		
+		private String value;
+		
+		public String getValue() {
+			return value;
+		}
+		
+		public void setValue(String value) {
+			this.value = value;
+		}
+		
 	}
 	
 	protected Lightning lightning;
 	
-	protected A a;
-	
-	protected Prova4 prova4;
-	
-	protected Pr_ova pr_ova;
-	
 	protected Switch switch_ID;
+	
+	protected Color color;
 	
 	public enum State {
 		MAIN_REGION_OFF,
@@ -117,6 +107,24 @@ public class Light implements IEventDriven {
 	private final State[] stateVector = new State[1];
 	
 	private Queue<Runnable> inEventQueue = new LinkedList<Runnable>();
+	private double x;
+	
+	protected double getX() {
+		return x;
+	}
+	
+	protected void setX(double value) {
+		this.x = value;
+	}
+	
+	
+	public static final double y = 3.14;
+	
+	protected double getY() {
+		return y;
+	}
+	
+	
 	private boolean isExecuting;
 	
 	protected boolean getIsExecuting() {
@@ -128,16 +136,18 @@ public class Light implements IEventDriven {
 	}
 	public Light() {
 		lightning = new Lightning(this);
-		a = new A(this);
-		prova4 = new Prova4(this);
-		pr_ova = new Pr_ova(this);
 		switch_ID = new Switch(this);
+		color = new Color(this);
 		for (int i = 0; i < 1; i++) {
 			stateVector[i] = State.$NULLSTATE$;
 		}
 		
 		clearInEvents();
 		
+		/* Default init sequence for statechart Light */
+		setX(0.0);
+		setBrigthness(minBrightness);
+		color.setValue("LIGHT");
 		
 		isExecuting = false;
 	}
@@ -183,10 +193,10 @@ public class Light implements IEventDriven {
 	private void clearInEvents() {
 		repair = false;
 		lightning.strike = false;
-		a.a = false;
-		prova4.strike3 = false;
-		pr_ova.st_rike = false;
 		switch_ID.toggle = false;
+		switch_ID.increaseBrightness = false;
+		switch_ID.reduceBrightness = false;
+		color.change = false;
 	}
 	
 	private void microStep() {
@@ -248,20 +258,12 @@ public class Light implements IEventDriven {
 		return lightning;
 	}
 	
-	public A a() {
-		return a;
-	}
-	
-	public Prova4 prova4() {
-		return prova4;
-	}
-	
-	public Pr_ova pr_ova() {
-		return pr_ova;
-	}
-	
 	public Switch switch_ID() {
 		return switch_ID;
+	}
+	
+	public Color color() {
+		return color;
 	}
 	
 	
@@ -275,9 +277,38 @@ public class Light implements IEventDriven {
 		runCycle();
 	}
 	
+	public static final long maxBrightness = 100l;
+	
+	public long getMaxBrightness() {
+		return maxBrightness;
+	}
+	
+	public static final long minBrightness = 0l;
+	
+	public long getMinBrightness() {
+		return minBrightness;
+	}
+	
+	private long brigthness;
+	
+	public long getBrigthness() {
+		return brigthness;
+	}
+	
+	public void setBrigthness(long value) {
+		this.brigthness = value;
+	}
+	
+	/* Entry action for state 'Off'. */
+	private void entryAction_main_region_Off() {
+		/* Entry action for state 'Off'. */
+		setBrigthness(0l);
+	}
+	
 	/* 'default' enter sequence for state Off */
 	private void enterSequence_main_region_Off_default() {
 		/* 'default' enter sequence for state Off */
+		entryAction_main_region_Off();
 		stateVector[0] = State.MAIN_REGION_OFF;
 	}
 	
@@ -352,6 +383,7 @@ public class Light implements IEventDriven {
 		if (transitioned_after<0l) {
 			if (switch_ID.toggle) {
 				exitSequence_main_region_Off();
+				setBrigthness(minBrightness);
 				enterSequence_main_region_On_default();
 				react(0l);
 				transitioned_after = 0l;
@@ -384,9 +416,34 @@ public class Light implements IEventDriven {
 			} else {
 				if (lightning.strike) {
 					exitSequence_main_region_On();
+					setBrigthness(minBrightness);
 					enterSequence_main_region_broken_default();
 					react(0l);
 					transitioned_after = 0l;
+				} else {
+					if (((switch_ID.increaseBrightness) && (getBrigthness()<getMaxBrightness()))) {
+						exitSequence_main_region_On();
+						setBrigthness(getBrigthness() + 10l);
+						enterSequence_main_region_On_default();
+						react(0l);
+						transitioned_after = 0l;
+					} else {
+						if (((switch_ID.reduceBrightness) && (getBrigthness()>getMinBrightness()))) {
+							exitSequence_main_region_On();
+							setBrigthness(getBrigthness() - 10l);
+							enterSequence_main_region_On_default();
+							react(0l);
+							transitioned_after = 0l;
+						} else {
+							if (color.change) {
+								exitSequence_main_region_On();
+								color.setValue("RED");
+								enterSequence_main_region_On_default();
+								react(0l);
+								transitioned_after = 0l;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -407,27 +464,6 @@ public class Light implements IEventDriven {
 				enterSequence_main_region_Off_default();
 				react(0l);
 				transitioned_after = 0l;
-			} else {
-				if (a.a) {
-					exitSequence_main_region_broken();
-					enterSequence_main_region_broken_default();
-					react(0l);
-					transitioned_after = 0l;
-				} else {
-					if (pr_ova.st_rike) {
-						exitSequence_main_region_broken();
-						enterSequence_main_region_broken_default();
-						react(0l);
-						transitioned_after = 0l;
-					} else {
-						if (prova4.strike3) {
-							exitSequence_main_region_broken();
-							enterSequence_main_region_broken_default();
-							react(0l);
-							transitioned_after = 0l;
-						}
-					}
-				}
 			}
 		}
 		/* If no transition was taken */

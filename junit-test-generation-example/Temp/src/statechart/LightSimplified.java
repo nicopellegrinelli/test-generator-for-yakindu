@@ -28,60 +28,6 @@ public class LightSimplified implements IEventDriven {
         }
     }
 
-    public static class A {
-
-        private LightSimplified parent;
-
-        public A(LightSimplified parent) {
-            this.parent = parent;
-        }
-
-        private boolean a;
-
-        public void raiseA() {
-            parent.inEventQueue.add(() -> {
-                a = true;
-            });
-            parent.runCycle();
-        }
-    }
-
-    public static class Prova4 {
-
-        private LightSimplified parent;
-
-        public Prova4(LightSimplified parent) {
-            this.parent = parent;
-        }
-
-        private boolean strike3;
-
-        public void raiseStrike3() {
-            parent.inEventQueue.add(() -> {
-                strike3 = true;
-            });
-            parent.runCycle();
-        }
-    }
-
-    public static class Pr_ova {
-
-        private LightSimplified parent;
-
-        public Pr_ova(LightSimplified parent) {
-            this.parent = parent;
-        }
-
-        private boolean st_rike;
-
-        public void raiseSt_rike() {
-            parent.inEventQueue.add(() -> {
-                st_rike = true;
-            });
-            parent.runCycle();
-        }
-    }
-
     public static class Switch {
 
         private LightSimplified parent;
@@ -98,17 +44,59 @@ public class LightSimplified implements IEventDriven {
             });
             parent.runCycle();
         }
+
+        private boolean increaseBrightness;
+
+        public void raiseIncreaseBrightness() {
+            parent.inEventQueue.add(() -> {
+                increaseBrightness = true;
+            });
+            parent.runCycle();
+        }
+
+        private boolean reduceBrightness;
+
+        public void raiseReduceBrightness() {
+            parent.inEventQueue.add(() -> {
+                reduceBrightness = true;
+            });
+            parent.runCycle();
+        }
+    }
+
+    public static class Color {
+
+        private LightSimplified parent;
+
+        public Color(LightSimplified parent) {
+            this.parent = parent;
+        }
+
+        private boolean change;
+
+        public void raiseChange() {
+            parent.inEventQueue.add(() -> {
+                change = true;
+            });
+            parent.runCycle();
+        }
+
+        private String value;
+
+        public String getValue() {
+            return value;
+        }
+
+        public void setValue(String value) {
+            this.value = value;
+        }
     }
 
     private Lightning lightning;
 
-    private A a;
-
-    private Prova4 prova4;
-
-    private Pr_ova pr_ova;
-
     private Switch switch_ID;
+
+    private Color color;
 
     public enum State {
 
@@ -131,14 +119,15 @@ public class LightSimplified implements IEventDriven {
 
     public LightSimplified() {
         lightning = new Lightning(this);
-        a = new A(this);
-        prova4 = new Prova4(this);
-        pr_ova = new Pr_ova(this);
         switch_ID = new Switch(this);
+        color = new Color(this);
         for (int i = 0; i < 1; i++) {
             stateVector[i] = State.$NULLSTATE$;
         }
         clearInEvents();
+        /* Default init sequence for statechart Light */
+        setBrigthness(minBrightness);
+        color.setValue("LIGHT");
         isExecuting = false;
     }
 
@@ -183,10 +172,10 @@ public class LightSimplified implements IEventDriven {
     private void clearInEvents() {
         repair = false;
         lightning.strike = false;
-        a.a = false;
-        prova4.strike3 = false;
-        pr_ova.st_rike = false;
         switch_ID.toggle = false;
+        switch_ID.increaseBrightness = false;
+        switch_ID.reduceBrightness = false;
+        color.change = false;
     }
 
     private void microStep() {
@@ -247,20 +236,12 @@ public class LightSimplified implements IEventDriven {
         return lightning;
     }
 
-    public A a() {
-        return a;
-    }
-
-    public Prova4 prova4() {
-        return prova4;
-    }
-
-    public Pr_ova pr_ova() {
-        return pr_ova;
-    }
-
     public Switch switch_ID() {
         return switch_ID;
+    }
+
+    public Color color() {
+        return color;
     }
 
     private boolean repair;
@@ -272,9 +253,38 @@ public class LightSimplified implements IEventDriven {
         runCycle();
     }
 
+    public static final long maxBrightness = 100l;
+
+    public long getMaxBrightness() {
+        return maxBrightness;
+    }
+
+    public static final long minBrightness = 0l;
+
+    public long getMinBrightness() {
+        return minBrightness;
+    }
+
+    private long brigthness;
+
+    public long getBrigthness() {
+        return brigthness;
+    }
+
+    public void setBrigthness(long value) {
+        this.brigthness = value;
+    }
+
+    /* Entry action for state 'Off'. */
+    private void entryAction_main_region_Off() {
+        /* Entry action for state 'Off'. */
+        setBrigthness(0l);
+    }
+
     /* 'default' enter sequence for state Off */
     private void enterSequence_main_region_Off_default() {
         /* 'default' enter sequence for state Off */
+        entryAction_main_region_Off();
         stateVector[0] = State.MAIN_REGION_OFF;
     }
 
@@ -349,6 +359,7 @@ public class LightSimplified implements IEventDriven {
         if (transitioned_after < 0l) {
             if (switch_ID.toggle) {
                 exitSequence_main_region_Off();
+                setBrigthness(minBrightness);
                 enterSequence_main_region_On_default();
                 react(0l);
                 transitioned_after = 0l;
@@ -381,9 +392,34 @@ public class LightSimplified implements IEventDriven {
             } else {
                 if (lightning.strike) {
                     exitSequence_main_region_On();
+                    setBrigthness(minBrightness);
                     enterSequence_main_region_broken_default();
                     react(0l);
                     transitioned_after = 0l;
+                } else {
+                    if (((switch_ID.increaseBrightness) && (getBrigthness() < getMaxBrightness()))) {
+                        exitSequence_main_region_On();
+                        setBrigthness(getBrigthness() + 10l);
+                        enterSequence_main_region_On_default();
+                        react(0l);
+                        transitioned_after = 0l;
+                    } else {
+                        if (((switch_ID.reduceBrightness) && (getBrigthness() > getMinBrightness()))) {
+                            exitSequence_main_region_On();
+                            setBrigthness(getBrigthness() - 10l);
+                            enterSequence_main_region_On_default();
+                            react(0l);
+                            transitioned_after = 0l;
+                        } else {
+                            if (color.change) {
+                                exitSequence_main_region_On();
+                                color.setValue("RED");
+                                enterSequence_main_region_On_default();
+                                react(0l);
+                                transitioned_after = 0l;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -404,27 +440,6 @@ public class LightSimplified implements IEventDriven {
                 enterSequence_main_region_Off_default();
                 react(0l);
                 transitioned_after = 0l;
-            } else {
-                if (a.a) {
-                    exitSequence_main_region_broken();
-                    enterSequence_main_region_broken_default();
-                    react(0l);
-                    transitioned_after = 0l;
-                } else {
-                    if (pr_ova.st_rike) {
-                        exitSequence_main_region_broken();
-                        enterSequence_main_region_broken_default();
-                        react(0l);
-                        transitioned_after = 0l;
-                    } else {
-                        if (prova4.strike3) {
-                            exitSequence_main_region_broken();
-                            enterSequence_main_region_broken_default();
-                            react(0l);
-                            transitioned_after = 0l;
-                        }
-                    }
-                }
             }
         }
         /* If no transition was taken */
