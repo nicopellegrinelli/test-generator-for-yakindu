@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -181,6 +183,12 @@ public class Statechart {
 				Node attribute = child.getAttributes().getNamedItem("specification");
 				if (attribute != null) {
 					String name = attribute.getNodeValue();
+					// Obtain the substring from the start to the first characterthat that is not a letter, a number or the dot.
+					// This ensures that the real event name (eventually starting with interface_name.) is retrieved.
+			        Matcher matcher = Pattern.compile("[^a-zA-Z0-9.]").matcher(name);
+			        if (matcher.find()) {
+			            name = name.substring(0, matcher.start());
+			        }
 					if (!name.equals("")) {
 						// Transitions containing a point are relative to events from an interface with a name
 						if (name.contains(".")) {

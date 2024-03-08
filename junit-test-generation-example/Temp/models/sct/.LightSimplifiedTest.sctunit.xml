@@ -67,4 +67,8 @@
   </testcase>
   <testcase name="test33" classname="platform:/resource/Temp/models/sct/LightSimplifiedTest.sctunit#LightTest.test33" time="">
   </testcase>
+  <testcase name="test34" classname="platform:/resource/Temp/models/sct/LightSimplifiedTest.sctunit#LightTest.test34" time="">
+  </testcase>
+  <testcase name="test35" classname="platform:/resource/Temp/models/sct/LightSimplifiedTest.sctunit#LightTest.test35" time="">
+  </testcase>
 </testsuite>

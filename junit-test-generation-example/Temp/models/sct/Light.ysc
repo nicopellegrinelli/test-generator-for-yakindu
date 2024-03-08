@@ -6,11 +6,11 @@
         <outgoingTransitions xmi:id="_SQ0EsN0xEe6a-dLSz86dCw" specification="" target="_B1nMv9xkEe6bbZyrggnZzQ"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_B1nMv9xkEe6bbZyrggnZzQ" specification="entry / brigthness = 0" name="Off" incomingTransitions="_B1nMzNxkEe6bbZyrggnZzQ _Y4boENxkEe6bbZyrggnZzQ _WAyTQNxpEe6bbZyrggnZzQ _SQ0EsN0xEe6a-dLSz86dCw">
-        <outgoingTransitions xmi:id="_B1nMwtxkEe6bbZyrggnZzQ" specification="switch.toggle &#xD;&#xA;/ brigthness = minBrightness" target="_B1nMydxkEe6bbZyrggnZzQ"/>
+        <outgoingTransitions xmi:id="_B1nMwtxkEe6bbZyrggnZzQ" specification="switch.toggle&#x9;&#xD;&#xA;/ brigthness = minBrightness" target="_B1nMydxkEe6bbZyrggnZzQ"/>
         <outgoingTransitions xmi:id="_Y4boENxkEe6bbZyrggnZzQ" specification="lightning.strike" target="_B1nMv9xkEe6bbZyrggnZzQ"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_B1nMydxkEe6bbZyrggnZzQ" name="On" incomingTransitions="_B1nMwtxkEe6bbZyrggnZzQ _gmqI4N0xEe6a-dLSz86dCw _1fWPAN0xEe6a-dLSz86dCw _LK3gQN0yEe6a-dLSz86dCw">
-        <outgoingTransitions xmi:id="_B1nMzNxkEe6bbZyrggnZzQ" specification="switch.toggle" target="_B1nMv9xkEe6bbZyrggnZzQ"/>
+        <outgoingTransitions xmi:id="_B1nMzNxkEe6bbZyrggnZzQ" specification="switch.toggle     " target="_B1nMv9xkEe6bbZyrggnZzQ"/>
         <outgoingTransitions xmi:id="_TszecNxpEe6bbZyrggnZzQ" specification="lightning.strike&#xD;&#xA; / brigthness = minBrightness" target="_SRJ_0NxpEe6bbZyrggnZzQ"/>
         <outgoingTransitions xmi:id="_gmqI4N0xEe6a-dLSz86dCw" specification="switch.increaseBrightness &#xD;&#xA;[brigthness &lt; maxBrightness]&#xD;&#xA; / brigthness+=10" target="_B1nMydxkEe6bbZyrggnZzQ"/>
         <outgoingTransitions xmi:id="_1fWPAN0xEe6a-dLSz86dCw" specification="switch.reduceBrightness &#xD;&#xA;[brigthness > minBrightness]&#xD;&#xA; / brigthness-=10" target="_B1nMydxkEe6bbZyrggnZzQ"/>
@@ -120,7 +120,7 @@
     <edges xmi:id="_B1nNHNxkEe6bbZyrggnZzQ" type="Transition" element="_B1nMzNxkEe6bbZyrggnZzQ" source="_B1nM9NxkEe6bbZyrggnZzQ" target="_B1nM6NxkEe6bbZyrggnZzQ">
       <children xsi:type="notation:DecorationNode" xmi:id="_B1nNHdxkEe6bbZyrggnZzQ" type="TransitionExpression">
         <styles xsi:type="notation:ShapeStyle" xmi:id="_B1nNHtxkEe6bbZyrggnZzQ"/>
-        <layoutConstraint xsi:type="notation:Location" xmi:id="_B1nNH9xkEe6bbZyrggnZzQ" x="45" y="10"/>
+        <layoutConstraint xsi:type="notation:Location" xmi:id="_B1nNH9xkEe6bbZyrggnZzQ" x="37" y="8"/>
       </children>
       <styles xsi:type="notation:ConnectorStyle" xmi:id="_B1nNINxkEe6bbZyrggnZzQ" routing="Rectilinear" lineColor="4210752"/>
       <styles xsi:type="notation:FontStyle" xmi:id="_B1nNIdxkEe6bbZyrggnZzQ" fontName="Verdana"/>

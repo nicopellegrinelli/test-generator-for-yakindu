@@ -107,6 +107,22 @@ public class LightSimplified implements IEventDriven {
 
     private Queue<Runnable> inEventQueue = new LinkedList<Runnable>();
 
+    private double x;
+
+    private double getX() {
+        return x;
+    }
+
+    private void setX(double value) {
+        this.x = value;
+    }
+
+    public static final double y = 3.14;
+
+    private double getY() {
+        return y;
+    }
+
     private boolean isExecuting;
 
     private boolean getIsExecuting() {
@@ -126,6 +142,7 @@ public class LightSimplified implements IEventDriven {
         }
         clearInEvents();
         /* Default init sequence for statechart Light */
+        setX(0.0);
         setBrigthness(minBrightness);
         color.setValue("LIGHT");
         isExecuting = false;
