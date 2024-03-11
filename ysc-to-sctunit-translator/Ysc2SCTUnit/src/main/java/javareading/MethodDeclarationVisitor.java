@@ -7,9 +7,10 @@ import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
  * The Class MethodDeclarationVisitor.
  */
 public class MethodDeclarationVisitor extends VoidVisitorAdapter<Void> {
-	
+
 	/**
-	 * Visit a method declaration, set the visibility to private if it is protected.
+	 * Visit a method declaration, set the visibility to private if it is protected
+	 * or if it is a public set method.
 	 *
 	 * @param the method declaration
 	 * @param arg none
@@ -21,6 +22,11 @@ public class MethodDeclarationVisitor extends VoidVisitorAdapter<Void> {
 		// Changes method visibility from protected to private
 		if (node.isProtected()) {
 			node.setProtected(false);
+			node.setPrivate(true);
+		}
+		// Changes method visibility from public to private if it is a set method
+		if (node.isPublic() && (node.getNameAsString().startsWith("set") /*|| node.getNameAsString().startsWith("get")*/)) {
+			node.setPublic(false);
 			node.setPrivate(true);
 		}
 	}

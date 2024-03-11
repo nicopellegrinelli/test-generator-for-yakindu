@@ -4,7 +4,7 @@ package testcase;
  * The Class Action.
  */
 public class Action {
-	
+
 	private String enter;
 	private String event;
 	private String state;
@@ -14,20 +14,25 @@ public class Action {
 	private String proceed;
 	private String triggerWithoutEvent;
 
-
 	/**
 	 * Instantiates a new action.
 	 *
-	 * @param enter true if the action is "enter", false otherwise
-	 * @param event the event to be raised (if needed)
-	 * @param state the state to assert if it is active (if needed)
-	 * @param isActive true if the action is "assert is_active", false otherwise
-	 * @param isFinal true if the action is "assert is_final", false otherwise
-	 * @param assertTrue  true if the truth is wanted to be asserted, false if the falseness is wanted to be asserted
-	 * @param proceed true if the action is "proceed 1 cycle", false otherwise
-	 * @param triggerWithoutEvent true if the action is "triggerWithoutEvent", false otherwise
+	 * @param enter               true if the action is "enter", false otherwise
+	 * @param event               the event to be raised (if needed)
+	 * @param state               the state to assert if it is active (if needed)
+	 * @param isActive            true if the action is "assert is_active", false
+	 *                            otherwise
+	 * @param isFinal             true if the action is "assert is_final", false
+	 *                            otherwise
+	 * @param assertTrue          true if the truth is wanted to be asserted, false
+	 *                            if the falseness is wanted to be asserted
+	 * @param proceed             true if the action is "proceed 1 cycle", false
+	 *                            otherwise
+	 * @param triggerWithoutEvent true if the action is "triggerWithoutEvent", false
+	 *                            otherwise
 	 */
-	public Action(boolean enter, String event, String state, boolean isActive, boolean isFinal, boolean assertTrue, boolean proceed, boolean triggerWithoutEvent) {
+	public Action(boolean enter, String event, String state, boolean isActive, boolean isFinal, boolean assertTrue,
+			boolean proceed, boolean triggerWithoutEvent) {
 		this.enter = enter ? "" : null;
 		this.event = event;
 		this.state = state;
@@ -35,9 +40,9 @@ public class Action {
 		this.isFinal = isFinal ? "" : null;
 		this.not = assertTrue ? null : "";
 		this.proceed = proceed ? "" : null;
-		this.triggerWithoutEvent = triggerWithoutEvent? "" : null;
+		this.triggerWithoutEvent = triggerWithoutEvent ? "" : null;
 	}
-	
+
 	/**
 	 * Gets the enter string.
 	 *
@@ -64,7 +69,7 @@ public class Action {
 	public String getState() {
 		return state;
 	}
-	
+
 	/**
 	 * Gets the is active string.
 	 *
@@ -73,7 +78,7 @@ public class Action {
 	public String getIsActive() {
 		return isActive;
 	}
-	
+
 	/**
 	 * Gets the is final string.
 	 *
@@ -100,7 +105,7 @@ public class Action {
 	public String getProceed() {
 		return proceed;
 	}
-	
+
 	/**
 	 * Gets the trigger without event string.
 	 *

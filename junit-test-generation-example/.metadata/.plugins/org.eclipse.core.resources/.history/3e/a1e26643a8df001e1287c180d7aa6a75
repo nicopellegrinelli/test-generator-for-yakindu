@@ -1,0 +1,240 @@
+testclass LightTest for statechart Light {
+	@Test
+	operation test00 () {
+	    enter
+	    raise switch.toggle
+	    raise switch.reduceBrightness
+	    assert is_active
+	}
+
+	@Test
+	operation test01 () {
+	    enter
+	    raise switch.toggle
+	    raise switch.increaseBrightness
+	    assert is_active
+	}
+
+	@Test
+	operation test02 () {
+		brigthness = maxBrightness
+	}
+
+	@Test
+	operation test03 () {
+	}
+
+	@Test
+	operation test04 () {
+	}
+
+	@Test
+	operation test05 () {
+	}
+
+	@Test
+	operation test06 () {
+	}
+
+	@Test
+	operation test07 () {
+	}
+
+	@Test
+	operation test08 () {
+	}
+
+	@Test
+	operation test09 () {
+	}
+
+	@Test
+	operation test10 () {
+	}
+
+	@Test
+	operation test11 () {
+	    enter
+	    raise switch.toggle
+	    raise switch.toggle
+	    raise switch.toggle
+	    raise lightning.strike
+	    raise lightning.strike
+	    assert is_active
+	}
+
+	@Test
+	operation test12 () {
+	    enter
+	    raise switch.toggle
+	    raise switch.toggle
+	    raise switch.toggle
+	    raise color.change
+	    assert is_active
+	}
+
+	@Test
+	operation test13 () {
+	    enter
+	    raise switch.toggle
+	    raise switch.increaseBrightness
+	    assert is_active
+	}
+
+	@Test
+	operation test14 () {
+	    enter
+	    raise repair
+	    assert is_active
+	}
+
+	@Test
+	operation test15 () {
+	    enter
+	    raise lightning.strike
+	    assert is_active
+	}
+
+	@Test
+	operation test16 () {
+	    enter
+	    raise switch.toggle
+	    raise switch.toggle
+	    raise switch.toggle
+	    raise lightning.strike
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test17 () {
+	    enter
+	    raise switch.toggle
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test18 () {
+	    enter
+	    assert is_active
+	    exit
+	}
+
+	@Test
+	operation test19 () {
+	    enter
+	    raise switch.toggle
+	    raise switch.toggle
+	    raise switch.toggle
+	    raise lightning.strike
+	    assert is_active
+	    assert active (Light.main_region.broken)
+	}
+
+	@Test
+	operation test20 () {
+	    enter
+	    raise switch.toggle
+	    raise switch.toggle
+	    raise switch.toggle
+	    assert is_active
+	    assert active (Light.main_region.On)
+	}
+
+	@Test
+	operation test21 () {
+	    enter
+	    assert is_active
+	    assert active (Light.main_region.Off)
+	}
+
+	@Test
+	operation test22 () {
+	}
+
+	@Test
+	operation test23 () {
+	    assert !active (Light.main_region.On)
+	}
+
+	@Test
+	operation test24 () {
+	    assert !active (Light.main_region.broken)
+	}
+
+	@Test
+	operation test25 () {
+	    assert !active (Light.main_region.Off)
+	}
+
+	@Test
+	operation test26 () {
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test27 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test28 () {
+	    exit
+	}
+
+	@Test
+	operation test29 () {
+	}
+
+	@Test
+	operation test30 () {
+	    enter
+	    raise switch.toggle
+	    raise switch.increaseBrightness
+	    raise switch.reduceBrightness
+	    assert is_active
+	}
+
+	@Test
+	operation test31 () {
+	    raise color.change
+	}
+
+	@Test
+	operation test32 () {
+	    assert !is_active
+	    triggerWithoutEvent
+	}
+
+	@Test
+	operation test33 () {
+	    assert !is_active
+	    enter
+	    raise switch.toggle
+	    raise switch.reduceBrightness
+	    assert is_active
+	}
+
+	@Test
+	operation test34 () {
+	    assert !is_final
+	    assert !is_active
+	}
+
+	@Test
+	operation test35 () {
+	    assert !is_active
+	    enter
+	    raise switch.toggle
+	    raise switch.toggle
+	    raise switch.toggle
+	    raise lightning.strike
+	    raise repair
+	    assert is_active
+	}
+
+}

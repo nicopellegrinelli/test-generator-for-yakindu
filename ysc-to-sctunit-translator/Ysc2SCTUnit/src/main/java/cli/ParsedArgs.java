@@ -4,43 +4,46 @@ package cli;
  * The Class ParsedArgs.
  */
 public class ParsedArgs {
-	
+
 	/** The absolute path of the scc script. */
 	private String sccPath;
-	
+
 	/** The project name. */
 	private String projectName;
-	
+
 	/** The workspace path. */
 	private String workspacePath;
-	
+
 	/** The source directory (relative path). */
 	private String sourceDir;
-	
+
 	/** The name of the source file */
 	private String sourceFile;
-	
+
 	/** The target package */
 	private String targetPackage;
-	
+
 	/** The target directory (relative path). */
 	private String targetDir;
 
-	/** The directory containing the binaries of the generated java classes (relative path). */
+	/**
+	 * The directory containing the binaries of the generated java classes (relative
+	 * path).
+	 */
 	private String binaryDir;
-	
+
 	/** The directory in wich Evosuite will place JUnit tests (relative path). */
 	private String evoTestDir;
-	
+
 	/** The (evosuite) search budget. */
 	private int evoSearchBudget = 0;
-	
+
 	/** True if the parsed arguments have the option -searchBudget. */
 	private boolean hasSearchBudget = false;
-	
+
 	/** True if the parsed arguments have the option -t. */
 	private boolean t;
-	
+
 	/**
 	 * Gets the absolute path of the scc script.
 	 *
@@ -49,7 +52,7 @@ public class ParsedArgs {
 	public String getSccPath() {
 		return sccPath;
 	}
-	
+
 	/**
 	 * Gets the project name.
 	 *
@@ -58,7 +61,7 @@ public class ParsedArgs {
 	public String getProjectName() {
 		return projectName;
 	}
-	
+
 	/**
 	 * Gets the workspace path.
 	 *
@@ -67,7 +70,7 @@ public class ParsedArgs {
 	public String getWorkspacePath() {
 		return workspacePath;
 	}
-	
+
 	/**
 	 * Gets the source directory.
 	 *
@@ -76,7 +79,7 @@ public class ParsedArgs {
 	public String getSourceDir() {
 		return sourceDir;
 	}
-	
+
 	/**
 	 * Gets the source file name.
 	 *
@@ -85,7 +88,7 @@ public class ParsedArgs {
 	public String getSourceFile() {
 		return sourceFile;
 	}
-	
+
 	/**
 	 * Gets the target package.
 	 *
@@ -94,7 +97,7 @@ public class ParsedArgs {
 	public String getTargetPackage() {
 		return targetPackage;
 	}
-	
+
 	/**
 	 * Gets the target directory.
 	 *
@@ -103,7 +106,7 @@ public class ParsedArgs {
 	public String getTargetDir() {
 		return targetDir;
 	}
-	
+
 	/**
 	 * Gets the directory containing the binaries.
 	 *
@@ -112,7 +115,7 @@ public class ParsedArgs {
 	public String getBinaryDir() {
 		return binaryDir;
 	}
-	
+
 	/**
 	 * Gets the directory in wich Evosuite will place JUnit tests.
 	 *
@@ -121,7 +124,7 @@ public class ParsedArgs {
 	public String getEvoTestDir() {
 		return evoTestDir;
 	}
-	
+
 	/**
 	 * Gets the (evosuite) target directory.
 	 *
@@ -130,16 +133,17 @@ public class ParsedArgs {
 	public int getEvoSearchBudget() {
 		return evoSearchBudget;
 	}
-	
+
 	/**
 	 * Checks for the option -searchBudget.
 	 *
-	 * @return true if the parsed arguments have the option -searchBudget, false otherwise
+	 * @return true if the parsed arguments have the option -searchBudget, false
+	 *         otherwise
 	 */
 	public boolean hasSearchBudget() {
 		return hasSearchBudget;
 	}
-	
+
 	/**
 	 * Checks for the option -t (or --timeService).
 	 *
@@ -148,7 +152,7 @@ public class ParsedArgs {
 	public boolean hasT() {
 		return t;
 	}
-	
+
 	/**
 	 * Sets the absolute path of the scc script.
 	 *
@@ -157,7 +161,7 @@ public class ParsedArgs {
 	public void setSccPath(String sccPath) {
 		this.sccPath = sccPath;
 	}
-	
+
 	/**
 	 * Sets the project name.
 	 *
@@ -211,7 +215,7 @@ public class ParsedArgs {
 	public void setTargetDir(String targetDir) {
 		this.targetDir = targetDir;
 	}
-	
+
 	/**
 	 * Sets the directory containing the binaries.
 	 *
@@ -220,7 +224,7 @@ public class ParsedArgs {
 	public void setBinaryDir(String binaryDir) {
 		this.binaryDir = binaryDir;
 	}
-	
+
 	/**
 	 * Sets the directory in wich Evosuite will place JUnit tests.
 	 *
@@ -229,7 +233,7 @@ public class ParsedArgs {
 	public void setEvoTestDir(String evoTestDir) {
 		this.evoTestDir = evoTestDir;
 	}
-	
+
 	/**
 	 * Sets the (evosuite) search budget.
 	 *

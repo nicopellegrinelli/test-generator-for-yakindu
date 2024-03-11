@@ -38,18 +38,17 @@ public final class Generators {
 	 * Generate the .sgen file needed by Itemis Create to generate java code from a
 	 * .ysc file (a statechart).
 	 *
-	 * @param projectPath    the path of the project
 	 * @param projectName    the name of the project
 	 * @param statechartName the name of the statechart
-	 * @param sourceDir      the directory where the statechart is located
+	 * @param sgenPath       the path where the .sgen file is put
+	 * @param targetDir      the target directory
 	 * @param targetPackage  the target package
-	 * @param targetDir      the directory containing the target package
 	 * @param timeService    true if the statechart deals with time events, false
 	 *                       otherwise
 	 * @throws IOException if any IO errors occur.
 	 */
-	public static void generateSgenJava(String projectPath, String projectName, String statechartName, String sourceDir,
-			String targetPackage, String targetDir, boolean timeService) throws IOException {
+	public static void generateSgenJava(String projectName, String statechartName, String sgenPath, String targetDir,
+			String targetPackage, boolean timeService) throws IOException {
 		System.out.println("*******************************************");
 		System.out.println("Generating .sgen file...");
 		System.out.println("*******************************************");
@@ -64,7 +63,7 @@ public final class Generators {
 		if (timeService)
 			st.add("time", "");
 		// Create the file in the same diractory of the statechart
-		File genFile = new File(projectPath + "\\" + sourceDir + "\\" + statechartName + ".sgen");
+		File genFile = new File(sgenPath);
 		st.write(genFile, null);
 	}
 
@@ -100,25 +99,25 @@ public final class Generators {
 	 * Generate a simplified version of the java class present in the path passed as
 	 * parameter.
 	 *
-	 * @param classPath           the class path of the starting .java file
-	 * @param simplifiedClassPath the class path of the .java file containing the
-	 *                            simplified version
+	 * @param javaPath           the path of the starting .java file
+	 * @param simplifiedJavaPath the path where the .java file containing the
+	 *                           simplified version is put
 	 * @throws IOException if any IO errors occur.
 	 */
-	public static void generateSimplifiedJava(String classPath, String simplifiedClassPath) throws IOException {
+	public static void generateSimplifiedJava(String javaPath, String simplifiedJavaPath) throws IOException {
 		System.out.println("*******************************************");
 		System.out.println("Generating simplified java class...");
 		System.out.println("*******************************************");
-		CompilationUnit cu = StaticJavaParser.parse(new FileInputStream(classPath));
+		CompilationUnit cu = StaticJavaParser.parse(new FileInputStream(javaPath));
 		VoidVisitor<Void> classVisitor = new ClassDeclarationVisitor();
 		classVisitor.visit(cu, null);
 		VoidVisitor<Void> constructorVisitor = new ConstructorDeclarationVisitor();
 		constructorVisitor.visit(cu, null);
-		VoidVisitor<Void> methodVisitor = new MethodDeclarationVisitor();		
+		VoidVisitor<Void> methodVisitor = new MethodDeclarationVisitor();
 		methodVisitor.visit(cu, null);
-		VoidVisitor<Void> fieldVisitor = new FieldDeclarationVisitor();		
+		VoidVisitor<Void> fieldVisitor = new FieldDeclarationVisitor();
 		fieldVisitor.visit(cu, null);
-		BufferedWriter writer = new BufferedWriter(new FileWriter(simplifiedClassPath));
+		BufferedWriter writer = new BufferedWriter(new FileWriter(simplifiedJavaPath));
 		writer.write(cu.toString());
 		writer.close();
 	}
@@ -179,9 +178,9 @@ public final class Generators {
 	 * Generate a .sctunit file obtained translating a .java file containing junit
 	 * tests.
 	 *
-	 * @param junitTestPath   the path of the .java file containing the junit test
+	 * @param junitPath       the path of the .java file containing the junit test
 	 *                        cases
-	 * @param sctunitTestPath the path of the generated .sctunit file
+	 * @param sctunitPath     the path of the generated .sctunit file
 	 * @param statechartName  the names of the statechart
 	 * @param statesNames     the dictionary of the states names with the
 	 *                        corresponding enum as key
@@ -191,28 +190,26 @@ public final class Generators {
 	 *                        corresponding class name as key
 	 * @throws IOException if any IO errors occur.
 	 */
-	public static void generateSctunit(String junitTestPath, String sctunitTestPath, String statechartName,
-			Map<String, String> statesNames, Map<String, String> eventsNames,
-			Map<String, String> interfacesNames) throws IOException {
+	public static void generateSctunit(String junitPath, String sctunitPath, String statechartName,
+			Map<String, String> statesNames, Map<String, String> eventsNames, Map<String, String> interfacesNames)
+			throws IOException {
 		System.out.println("*******************************************");
 		System.out.println("Generating .sctunit file...");
 		System.out.println("*******************************************");
 		// Get the compilation unit of the (test) class
-		CompilationUnit cu = StaticJavaParser.parse(new FileInputStream(junitTestPath));
-
+		CompilationUnit cu = StaticJavaParser.parse(new FileInputStream(junitPath));
 		// Visit all the (test) methods contained in the compilation unit.
 		// Each visit of a method produces a TestCase object
 		List<TestCase> testCaseList = new ArrayList<TestCase>();
-		VoidVisitor<List<TestCase>> testCaseCollector = 
-				new TestCaseCollector(statechartName, statesNames, eventsNames, interfacesNames);
+		VoidVisitor<List<TestCase>> testCaseCollector = new TestCaseCollector(statechartName, statesNames, eventsNames,
+				interfacesNames);
 		testCaseCollector.visit(cu, testCaseList);
-
 		// Print to video the SCTUnit file
 		STGroupFile group = new STGroupFile("sctunit_template.stg");
 		ST st = group.getInstanceOf("test_class");
 		st.add("statechart_name", statechartName);
 		st.add("test_suite", testCaseList);
-		File genFile = new File(sctunitTestPath);
+		File genFile = new File(sctunitPath);
 		st.write(genFile, null);
 	}
 

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sgraph="http://www.yakindu.org/sct/sgraph/2.0.0">
-  <sgraph:Statechart xmi:id="_B1nMsNxkEe6bbZyrggnZzQ" specification="@EventDriven&#xA;@SuperSteps(no)&#xA;&#xA;internal:&#xA;&#x9;var x : real&#xA;&#x9;const y : real = 3.14&#xA;&#xD;&#xA;interface:&#xA;    const maxBrightness&#xA;    &#x9;&#x9;  : integer = 100&#xA;    const minBrightness&#xA;    &#x9;&#x9;  : integer = 0&#xA;    var brigthness&#xA;    &#x9;   : integer = minBrightness&#xA;&#x9;in event repair&#xA;&#xA;interface lightning:&#xA;  in event strike&#xA;&#xA;interface switch:&#xA;&#x9;in event toggle&#xA;&#x9;in event increaseBrightness&#xA;&#x9;in event reduceBrightness&#xA;&#x9;&#xA;interface color:&#xA;    var value&#xA;    &#x9;  : string = &quot;LIGHT&quot;&#xA;    in event change&#xA;&#x9;&#xA;" name="Light">
+  <sgraph:Statechart xmi:id="_B1nMsNxkEe6bbZyrggnZzQ" specification="@EventDriven&#xA;@SuperSteps(no)&#xA;&#xA;internal:&#xA;&#x9;var x : real&#xA;&#x9;const y : real = 3.14&#xA;&#xD;&#xA;interface:&#xA;    const maxBrightness&#xA;    &#x9;&#x9;  : integer = 100&#xA;    const minBrightness&#xA;    &#x9;&#x9;  : integer = 30&#xA;    var brightness&#xA;    &#x9;   : integer = minBrightness&#xA;&#x9;in event repair&#xA;&#xA;interface lightning:&#xA;  in event strike&#xA;&#xA;interface switch:&#xA;&#x9;in event toggle&#xA;&#x9;in event increaseBrightness&#xA;&#x9;in event reduceBrightness&#xA;&#x9;&#xA;interface color:&#xA;    var value&#xA;    &#x9;  : string = &quot;LIGHT&quot;&#xA;    in event change&#xA;&#x9;&#xA;" name="Light">
     <regions xmi:id="_B1nMvNxkEe6bbZyrggnZzQ" name="main region">
       <vertices xsi:type="sgraph:Entry" xmi:id="_B1nMvdxkEe6bbZyrggnZzQ">
         <outgoingTransitions xmi:id="_SQ0EsN0xEe6a-dLSz86dCw" specification="" target="_B1nMv9xkEe6bbZyrggnZzQ"/>
       </vertices>
-      <vertices xsi:type="sgraph:State" xmi:id="_B1nMv9xkEe6bbZyrggnZzQ" specification="entry / brigthness = 0" name="Off" incomingTransitions="_B1nMzNxkEe6bbZyrggnZzQ _Y4boENxkEe6bbZyrggnZzQ _WAyTQNxpEe6bbZyrggnZzQ _SQ0EsN0xEe6a-dLSz86dCw">
-        <outgoingTransitions xmi:id="_B1nMwtxkEe6bbZyrggnZzQ" specification="switch.toggle&#x9;&#xD;&#xA;/ brigthness = minBrightness" target="_B1nMydxkEe6bbZyrggnZzQ"/>
-        <outgoingTransitions xmi:id="_Y4boENxkEe6bbZyrggnZzQ" specification="lightning.strike" target="_B1nMv9xkEe6bbZyrggnZzQ"/>
+      <vertices xsi:type="sgraph:State" xmi:id="_B1nMv9xkEe6bbZyrggnZzQ" specification="entry / brightness = 0" name="Off" incomingTransitions="_B1nMzNxkEe6bbZyrggnZzQ _Y4boENxkEe6bbZyrggnZzQ _WAyTQNxpEe6bbZyrggnZzQ _SQ0EsN0xEe6a-dLSz86dCw">
+        <outgoingTransitions xmi:id="_B1nMwtxkEe6bbZyrggnZzQ" specification="switch.toggle&#x9;&#xD;&#xA;/ brightness = minBrightness" target="_B1nMydxkEe6bbZyrggnZzQ"/>
+        <outgoingTransitions xmi:id="_Y4boENxkEe6bbZyrggnZzQ" specification="lightning.strike [x &lt; y] / x++" target="_B1nMv9xkEe6bbZyrggnZzQ"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_B1nMydxkEe6bbZyrggnZzQ" name="On" incomingTransitions="_B1nMwtxkEe6bbZyrggnZzQ _gmqI4N0xEe6a-dLSz86dCw _1fWPAN0xEe6a-dLSz86dCw _LK3gQN0yEe6a-dLSz86dCw">
         <outgoingTransitions xmi:id="_B1nMzNxkEe6bbZyrggnZzQ" specification="switch.toggle     " target="_B1nMv9xkEe6bbZyrggnZzQ"/>
-        <outgoingTransitions xmi:id="_TszecNxpEe6bbZyrggnZzQ" specification="lightning.strike&#xD;&#xA; / brigthness = minBrightness" target="_SRJ_0NxpEe6bbZyrggnZzQ"/>
-        <outgoingTransitions xmi:id="_gmqI4N0xEe6a-dLSz86dCw" specification="switch.increaseBrightness &#xD;&#xA;[brigthness &lt; maxBrightness]&#xD;&#xA; / brigthness+=10" target="_B1nMydxkEe6bbZyrggnZzQ"/>
-        <outgoingTransitions xmi:id="_1fWPAN0xEe6a-dLSz86dCw" specification="switch.reduceBrightness &#xD;&#xA;[brigthness > minBrightness]&#xD;&#xA; / brigthness-=10" target="_B1nMydxkEe6bbZyrggnZzQ"/>
+        <outgoingTransitions xmi:id="_TszecNxpEe6bbZyrggnZzQ" specification="lightning.strike&#xD;&#xA; / brightness = minBrightness" target="_SRJ_0NxpEe6bbZyrggnZzQ"/>
+        <outgoingTransitions xmi:id="_gmqI4N0xEe6a-dLSz86dCw" specification="switch.increaseBrightness &#xD;&#xA;[brightness &lt; maxBrightness]&#xD;&#xA; / brightness+=10" target="_B1nMydxkEe6bbZyrggnZzQ"/>
+        <outgoingTransitions xmi:id="_1fWPAN0xEe6a-dLSz86dCw" specification="switch.reduceBrightness &#xD;&#xA;[brightness > minBrightness]&#xD;&#xA; / brightness-=10" target="_B1nMydxkEe6bbZyrggnZzQ"/>
         <outgoingTransitions xmi:id="_LK3gQN0yEe6a-dLSz86dCw" specification="color.change / color.value = &quot;RED&quot;" target="_B1nMydxkEe6bbZyrggnZzQ"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_SRJ_0NxpEe6bbZyrggnZzQ" name="broken" incomingTransitions="_TszecNxpEe6bbZyrggnZzQ">
@@ -131,7 +131,7 @@
     <edges xmi:id="_Y4boEdxkEe6bbZyrggnZzQ" type="Transition" element="_Y4boENxkEe6bbZyrggnZzQ" source="_B1nM6NxkEe6bbZyrggnZzQ" target="_B1nM6NxkEe6bbZyrggnZzQ">
       <children xsi:type="notation:DecorationNode" xmi:id="_Y4boFdxkEe6bbZyrggnZzQ" type="TransitionExpression">
         <styles xsi:type="notation:ShapeStyle" xmi:id="_Y4boFtxkEe6bbZyrggnZzQ"/>
-        <layoutConstraint xsi:type="notation:Location" xmi:id="_Y4boF9xkEe6bbZyrggnZzQ" x="4" y="14"/>
+        <layoutConstraint xsi:type="notation:Location" xmi:id="_Y4boF9xkEe6bbZyrggnZzQ" x="63" y="12"/>
       </children>
       <styles xsi:type="notation:ConnectorStyle" xmi:id="_Y4boEtxkEe6bbZyrggnZzQ" routing="Rectilinear" lineColor="4210752"/>
       <styles xsi:type="notation:FontStyle" xmi:id="_Y4boFNxkEe6bbZyrggnZzQ" fontName="Verdana"/>

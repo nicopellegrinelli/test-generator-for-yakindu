@@ -16,74 +16,88 @@ import testcase.TestCase;
  * The Class TestCaseCollector.
  */
 public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
-	
+
 	/** The name of the statechart */
 	String statechartName;
-	
-	/** The dictionary containing all the full names of states in the statechart.
-	 *  The key is the string representing the corresponding enum */
+
+	/**
+	 * The dictionary containing all the full names of states in the statechart. The
+	 * key is the string representing the corresponding enum
+	 */
 	Map<String, String> statesNames;
-	
-	/** The dictionary containing all the names of events in the statechart.
-	 *  The key is the string representing the corresponding method */
+
+	/**
+	 * The dictionary containing all the names of events in the statechart. The key
+	 * is the string representing the corresponding method
+	 */
 	Map<String, String> eventsNames;
-	
-	/** The dictionary containing all the names of interfaces in the statechart.
-	 *  The key is the string representing the corresponding class name */
+
+	/**
+	 * The dictionary containing all the names of interfaces in the statechart. The
+	 * key is the string representing the corresponding class name
+	 */
 	Map<String, String> interfacesNames;
 
 	/**
 	 * Instantiates a new TestCaseCollector regarding to a statechart.
 	 *
-	 * @param statechartName the name of the statechart
-	 * @param statesName the disctionary of the states names with the corresponding enum as key
-	 * @param eventsNames the dictionary of the events names with the corresponding method as key
-	 * @param interfacesNames the dictionary of the interfaces names with the corresponding class name as key
+	 * @param statechartName  the name of the statechart
+	 * @param statesName      the disctionary of the states names with the
+	 *                        corresponding enum as key
+	 * @param eventsNames     the dictionary of the events names with the
+	 *                        corresponding method as key
+	 * @param interfacesNames the dictionary of the interfaces names with the
+	 *                        corresponding class name as key
 	 */
-	public TestCaseCollector(String statechartName, Map<String, String> statesNames,
-			Map<String,String> eventsNames, Map<String, String> interfacesNames) {
+	public TestCaseCollector(String statechartName, Map<String, String> statesNames, Map<String, String> eventsNames,
+			Map<String, String> interfacesNames) {
 		this.statechartName = statechartName;
 		this.statesNames = statesNames;
 		this.eventsNames = eventsNames;
 		this.interfacesNames = interfacesNames;
 	}
-	
+
 	/**
-	 * Visit the method declaration and add a new TestCase instance representing the visited method declaration to the collector.
+	 * Visit the method declaration and add a new TestCase instance representing the
+	 * visited method declaration to the collector.
 	 *
-	 * @param node the method declaration
+	 * @param node      the method declaration
 	 * @param collector the collector
 	 */
 	@Override
 	public void visit(MethodDeclaration node, List<TestCase> collector) {
 		// To ensure child nodes of the current node are also visited
 		super.visit(node, collector);
-		
-		// Discards methods in which the method .enter IS NOT called or the method .setIsExecuting IS called
+
+		// Discards methods in which the method .enter IS NOT called or the method
+		// .setIsExecuting IS called. Needed when the Simplified version of the .java is
+		// NOT used
 //		if (!node.getBody().toString().contains(".enter") || node.getBody().toString().contains(".setIsExecuting")) {
 //			return;
 //		}
-		
+
 		// Gets all variable declarations expressions contained in the method
 		List<VariableDeclarator> variableDeclarationList = node.findAll(VariableDeclarator.class);
-		
+
 		// Gets all method call expressions contained in the method
 		List<MethodCallExpr> methodCallList = node.findAll(MethodCallExpr.class);
-		
+
 		// Produces two dictionaries for each variable declaration,
 		// one for the assigned expression and the other for the type.
 		Map<String, String> variableAssignments = new HashMap<String, String>();
 		Map<String, String> variableTypes = new HashMap<String, String>();
-		// The first String (key) for both dictionaries is the variable name (left-hand-side of the assignment).
-		// The second String is the assigned expression (right-hand-side of the assignment) or the type of the variable.
+		// The first String (key) for both dictionaries is the variable name
+		// (left-hand-side of the assignment).
+		// The second String is the assigned expression (right-hand-side of the
+		// assignment) or the type of the variable.
 		for (VariableDeclarator variableDecl : variableDeclarationList) {
 			// The righ-hand-side is the last child of a VariableDeclarator node
-			Node rigthHandSide = variableDecl.getChildNodes().get(variableDecl.getChildNodes().size()-1);
+			Node rigthHandSide = variableDecl.getChildNodes().get(variableDecl.getChildNodes().size() - 1);
 			variableAssignments.put(variableDecl.getNameAsString(), rigthHandSide.toString());
 			variableTypes.put(variableDecl.getNameAsString(), variableDecl.getTypeAsString());
 		}
-		
-		// Creates and populate an instance of TestCase, adding an Action 
+
+		// Creates and populate an instance of TestCase, adding an Action
 		// for each method call expression of interest contained in the test method.
 		TestCase testCase = new TestCase(node.getNameAsString());
 		for (MethodCallExpr methodCall : methodCallList) {
@@ -102,22 +116,23 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 					String event = eventsNames.get(methodName);
 					// Get the type of the object whoe method is called
 					String variableType = variableTypes.get(methodCall.getChildNodes().get(0).toString());
-					// If the type contatin a dot, then it's from a nested class, generated by a named interface
+					// If the type contatin a dot, then it's from a nested class, generated by a
+					// named interface
 					if (variableType.contains(".")) {
 						// Obtain the nested class name, if is not in the dictionary, ignore the event
-						String javaClassName = variableType.substring(variableType.indexOf('.')+1);
+						String javaClassName = variableType.substring(variableType.indexOf('.') + 1);
 						if (interfacesNames.containsKey(javaClassName)) {
 							event = interfacesNames.get(javaClassName) + "." + event;
-						}else {
-							System.out.println(node.getNameAsString() +
-									": problems encountered in the translation, the test may fail.");
+						} else {
+							System.out.println(node.getNameAsString()
+									+ ": problems encountered in the translation, the test may fail.");
 							continue;
 						}
 					}
 					testCase.addEvent(event);
-				}else {
-					System.out.println(node.getNameAsString() +
-							": problems encountered in the translation, the test may fail.");
+				} else {
+					System.out.println(
+							node.getNameAsString() + ": problems encountered in the translation, the test may fail.");
 				}
 				continue;
 			}
@@ -130,14 +145,15 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 				continue;
 			}
 			if (methodName.equals("assertTrue") || methodName.equals("assertFalse")) {
-				boolean assertTrue = methodName.equals("assertTrue");		
+				boolean assertTrue = methodName.equals("assertTrue");
 				// The method has an argument, that is retrieved.
 				String assertArgument = methodCall.getArgument(0).toString();
 				// The statement that must be checked if it is true (or false) is retrieved.
-				// If the argument is a known variable, its assigned expression (right-hand-side of the assignment) is used,
+				// If the argument is a known variable, its assigned expression (right-hand-side
+				// of the assignment) is used,
 				// else, dircetly the argument is used.
 				String statementToCheck;
-				if(variableAssignments.containsKey(assertArgument)) {
+				if (variableAssignments.containsKey(assertArgument)) {
 					statementToCheck = variableAssignments.get(assertArgument);
 				} else {
 					statementToCheck = assertArgument;
@@ -150,25 +166,28 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 					testCase.addIsFinal(assertTrue);
 					continue;
 				}
-				if(statementToCheck.contains(".isStateActive")) {
+				if (statementToCheck.contains(".isStateActive")) {
 					// The method has an argument, that is retrieved.
-					String isStateActiveArgument = 
-							statementToCheck.substring(statementToCheck.indexOf('(')+1, statementToCheck.lastIndexOf(')'));
+					String isStateActiveArgument = statementToCheck.substring(statementToCheck.indexOf('(') + 1,
+							statementToCheck.lastIndexOf(')'));
 					// The string representing the name of the state in Java is retrieved.
-					// If the argument is a known variable, its assigned expression (right-hand-side of the assignment) is used,
+					// If the argument is a known variable, its assigned expression (right-hand-side
+					// of the assignment) is used,
 					// else, dircetly the argument is used.
 					String javaStateName;
-					if(variableAssignments.containsKey(isStateActiveArgument)) {
+					if (variableAssignments.containsKey(isStateActiveArgument)) {
 						javaStateName = variableAssignments.get(isStateActiveArgument);
 					} else {
 						javaStateName = isStateActiveArgument;
 					}
-					// If the stateName is obtained using valueof, only the argument of valueof must be used as state name
+					// If the stateName is obtained using valueof, only the argument of valueof must
+					// be used as state name
 					if (javaStateName.contains("valueof")) {
-						javaStateName = javaStateName.substring(javaStateName.indexOf('(')+1, javaStateName.indexOf(')'));
+						javaStateName = javaStateName.substring(javaStateName.indexOf('(') + 1,
+								javaStateName.indexOf(')'));
 					}
 					// The string representing the enum is obtained
-					javaStateName = javaStateName.substring(javaStateName.lastIndexOf('.')+1);
+					javaStateName = javaStateName.substring(javaStateName.lastIndexOf('.') + 1);
 					// The nullstate has no equivalent in SCTUnit
 					if (javaStateName.contains("$NULLSTATE$"))
 						continue;
@@ -177,15 +196,15 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 						// The string representing the name of the state in SCTUnit is retrieved.
 						String sctunitStateName = statechartName + "." + statesNames.get(javaStateName);
 						testCase.addAssertState(sctunitStateName, assertTrue);
-					}else {
-						System.out.println(node.getNameAsString() +
-								": problems encountered in the translation, the test may fail.");
+					} else {
+						System.out.println(node.getNameAsString()
+								+ ": problems encountered in the translation, the test may fail.");
 					}
 					continue;
 				}
 			}
 		}
-		// Returns the testCase as the result of the visit of the method 
+		// Returns the testCase as the result of the visit of the method
 		collector.add(testCase);
 	}
 }

@@ -8,7 +8,7 @@ import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
  * The Class ConstructorDeclarationVisitor.
  */
 public class ConstructorDeclarationVisitor extends VoidVisitorAdapter<Void> {
-	
+
 	/**
 	 * Visit a constructor declaration, add "Simplified" at the end of the name.
 	 *
@@ -23,10 +23,10 @@ public class ConstructorDeclarationVisitor extends VoidVisitorAdapter<Void> {
 		// Else, change the type of the parameter
 		if (node.findAll(Parameter.class).isEmpty()) {
 			node.setName(node.getNameAsString() + "Simplified");
-		}else {
+		} else {
 			// The constructor has one and only one parameter
 			Parameter p = node.findAll(Parameter.class).get(0);
 			p.setType(p.getTypeAsString() + "Simplified");
-		}		
+		}
 	}
 }

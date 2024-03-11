@@ -10,7 +10,7 @@ import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
  * The Class ClassDeclarationVisitor.
  */
 public class ClassDeclarationVisitor extends VoidVisitorAdapter<Void> {
-	
+
 	/**
 	 * Visit a class decalration, adding "Simplified" at the end of the name.
 	 *
@@ -24,9 +24,10 @@ public class ClassDeclarationVisitor extends VoidVisitorAdapter<Void> {
 		// Changes class name only if the class is public and not static (nested)
 		// else, change the type of the field named parent
 		if (node.isPublic() && !node.isStatic()) {
-			node.setName(node.getNameAsString()+"Simplified");
-		}else {
-			// Used VariableDeclarator instead of FieldDeclaration because it makes the type modification easier
+			node.setName(node.getNameAsString() + "Simplified");
+		} else {
+			// Used VariableDeclarator instead of FieldDeclaration because it makes the type
+			// modification easier
 			List<VariableDeclarator> fields = node.findAll(VariableDeclarator.class);
 			for (VariableDeclarator field : fields) {
 				if (field.getName().toString().equals("parent")) {
