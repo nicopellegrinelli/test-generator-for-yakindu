@@ -203,6 +203,10 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 					continue;
 				}
 			}
+			if (methodName.equals("assertTrue")) {
+				String expected = methodCall.getArgument(0).toString();
+				String actual = methodCall.getArgument(1).toString();
+			}
 		}
 		// Returns the testCase as the result of the visit of the method
 		collector.add(testCase);

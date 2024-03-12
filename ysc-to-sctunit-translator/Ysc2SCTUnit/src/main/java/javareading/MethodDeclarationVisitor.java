@@ -24,8 +24,8 @@ public class MethodDeclarationVisitor extends VoidVisitorAdapter<Void> {
 			node.setProtected(false);
 			node.setPrivate(true);
 		}
-		// Changes method visibility from public to private if it is a set method
-		if (node.isPublic() && (node.getNameAsString().startsWith("set") /*|| node.getNameAsString().startsWith("get")*/)) {
+		// Changes method visibility from public to private if it is a set or get method
+		if (node.isPublic() && (node.getNameAsString().startsWith("set") || node.getNameAsString().startsWith("get"))) {
 			node.setPublic(false);
 			node.setPrivate(true);
 		}

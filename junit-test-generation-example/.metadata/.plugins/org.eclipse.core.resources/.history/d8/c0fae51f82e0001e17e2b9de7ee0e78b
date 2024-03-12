@@ -1,0 +1,331 @@
+testclass HistoryTest for statechart History {
+	@Test
+	operation test00 () {
+	    enter
+	    raise next
+	    raise next
+	    assert is_active
+	    assert active (History.main_region.Answering_Questions.r1.q2)
+	}
+
+	@Test
+	operation test01 () {
+	    enter
+	    raise start
+	    raise next
+	    raise next
+	    assert is_active
+	    assert active (History.main_region.Answering_Questions)
+	}
+
+	@Test
+	operation test02 () {
+	}
+
+	@Test
+	operation test03 () {
+	    triggerWithoutEvent
+	    assert !is_final
+	}
+
+	@Test
+	operation test04 () {
+	    enter
+	    triggerWithoutEvent
+	    assert is_active
+	}
+
+	@Test
+	operation test05 () {
+	    enter
+	    raise start
+	    assert is_active
+	}
+
+	@Test
+	operation test06 () {
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test07 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test08 () {
+	    enter
+	    raise start
+	    raise next
+	    raise next
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test09 () {
+	    enter
+	    raise next
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test10 () {
+	    enter
+	    raise start
+	    raise next
+	    raise next
+	    raise next
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test11 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test12 () {
+	    enter
+	    raise start
+	    raise next
+	    raise next
+	    raise pause
+	    assert is_active
+	}
+
+	@Test
+	operation test13 () {
+	    enter
+	    raise start
+	    raise next
+	    raise next
+	    raise next
+	    raise pause
+	    assert !is_final
+	}
+
+	@Test
+	operation test14 () {
+	    enter
+	    raise start
+	    raise next
+	    raise pause
+	    assert is_active
+	}
+
+	@Test
+	operation test15 () {
+	    enter
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test16 () {
+	    enter
+	    raise start
+	    raise next
+	    raise next
+	    raise next
+	    enter
+	    assert !is_final
+	}
+
+	@Test
+	operation test17 () {
+	    enter
+	    raise start
+	    raise next
+	    raise pause
+	    assert is_active
+	}
+
+	@Test
+	operation test18 () {
+	    enter
+	    raise next
+	    raise next
+	    raise next
+	    raise next
+	    assert is_active
+	    assert active (History.main_region._final_)
+	}
+
+	@Test
+	operation test19 () {
+	    enter
+	    assert is_active
+	    assert active (History.main_region.init)
+	}
+
+	@Test
+	operation test20 () {
+	    enter
+	    raise next
+	    raise next
+	    assert is_active
+	    assert active (History.main_region.Answering_Questions.r1.q2.r2.q2b)
+	}
+
+	@Test
+	operation test21 () {
+	    enter
+	    raise next
+	    assert is_active
+	    assert active (History.main_region.Answering_Questions.r1.q2.r2.q2a)
+	}
+
+	@Test
+	operation test22 () {
+	    enter
+	    raise next
+	    assert is_active
+	    assert active (History.main_region.Answering_Questions.r1.q2)
+	}
+
+	@Test
+	operation test23 () {
+	    enter
+	    raise start
+	    assert is_active
+	    assert !active (History.main_region.Answering_Questions.r1.q2)
+	}
+
+	@Test
+	operation test24 () {
+	    enter
+	    assert is_active
+	    assert active (History.main_region.Answering_Questions.r1.q1)
+	}
+
+	@Test
+	operation test25 () {
+	    enter
+	    raise start
+	    assert is_active
+	    assert active (History.main_region.Answering_Questions)
+	}
+
+	@Test
+	operation test26 () {
+	}
+
+	@Test
+	operation test27 () {
+	    assert !active (History.main_region.Answering_Questions.r1.q2)
+	}
+
+	@Test
+	operation test28 () {
+	    assert !is_active
+	    assert !active (History.main_region.Answering_Questions)
+	}
+
+	@Test
+	operation test29 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test30 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test31 () {
+	    assert !active (History.main_region.Answering_Questions.r1.q2.r2.q2b)
+	    assert !is_active
+	}
+
+	@Test
+	operation test32 () {
+	    assert !is_active
+	    assert !active (History.main_region.Answering_Questions.r1.q3)
+	}
+
+	@Test
+	operation test33 () {
+	    assert !is_active
+	    assert !active (History.main_region.Answering_Questions.r1.q2.r2.q2a)
+	}
+
+	@Test
+	operation test34 () {
+	    assert !is_active
+	    assert !active (History.main_region.Answering_Questions.r1.q1)
+	}
+
+	@Test
+	operation test35 () {
+	    enter
+	    raise next
+	    raise next
+	    raise next
+	    raise next
+	    assert is_final
+	}
+
+	@Test
+	operation test36 () {
+	    assert !is_active
+	    assert !is_final
+	}
+
+	@Test
+	operation test37 () {
+	    assert !is_active
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test38 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test39 () {
+	    enter
+	    raise next
+	    raise next
+	    raise next
+	    raise next
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test40 () {
+	    enter
+	    raise next
+	    raise next
+	    raise next
+	    raise next
+	    triggerWithoutEvent
+	    assert is_final
+	}
+
+	@Test
+	operation test41 () {
+	    assert !is_active
+	    enter
+	    raise start
+	    raise pause
+	    assert is_active
+	}
+
+}

@@ -194,10 +194,10 @@ public class Statechart {
 				if (attribute != null) {
 					String name = attribute.getNodeValue();
 					// Obtain the substring from the start to the first characterthat that is not a
-					// letter, a number or the dot.
+					// letter, a number, the underscore or the dot (i.e. un ID with dots).
 					// This ensures that the real event name (eventually starting with
 					// interface_name.) is retrieved.
-					Matcher matcher = Pattern.compile("[^a-zA-Z0-9.]").matcher(name);
+					Matcher matcher = Pattern.compile("[^a-zA-Z0-9_.]").matcher(name);
 					if (matcher.find()) {
 						name = name.substring(0, matcher.start());
 					}
@@ -231,7 +231,7 @@ public class Statechart {
 	 */
 	private String getFullName(Node node, String name) {
 		// Note that non alphanumeric characters must be substitued with '_' to be
-		// compliant with SCTUnit
+		// compliant with SCTUnit (the name must be an ID)
 		String newName = node.getAttributes().getNamedItem("name").getNodeValue().replaceAll("[^a-zA-Z0-9]", "_")
 				+ name;
 		Node parent = node.getParentNode();
