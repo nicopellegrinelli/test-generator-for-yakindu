@@ -65,13 +65,10 @@ public class TestGenerator {
 		String projectPath = workspacePath + "\\" + projectName;
 		String sourceFilePath = projectPath + "\\" + sourceDir + "\\" + sourceFile;
 
-		// Obtain the statechart name and the names of its states, events and
-		// interfaces,
+		// Obtain the statechart name and the names of its states, events and interfaces,
 		// create a dictionary for the states names with the corresponding enum as key,
-		// create a dictionary for the events names with the corresponding method as
-		// key,
-		// create a dictionary for the interfaces names with the corresponding class
-		// name as key,
+		// create a dictionary for the events names with the corresponding method as key,
+		// create a dictionary for the interfaces names with the corresponding class name as key,
 		System.out.println("*******************************************");
 		System.out.println("Reading statechart file...");
 		System.out.println("*******************************************");
@@ -107,15 +104,15 @@ public class TestGenerator {
 		String compilerD = "-d " + projectPath + "\\" + binaryDir;
 		String compilerClasspath = "-classpath " + projectPath + "\\" + targetDir;
 
-//		String evoClass = "-class " + dottedTargetPackage + "." + firstUpperStatechartName;
+		String evoClass = "-class " + dottedTargetPackage + "." + firstUpperStatechartName;
 		String evoSimplifiedClass = "-class " + dottedTargetPackage + "." + firstUpperStatechartName + "Simplified";
 		String evoProjectCP = "-projectCP " + projectPath + "\\" + binaryDir;
 		String evoDTestDir = "-Dtest_dir=" + projectPath + "\\" + evoTestDir;
 		String evoDReportDir = "-Dreport_dir=" + projectPath + "\\evosuite-report";
 
-//		String junitPath = projectPath + "\\" + evoTestDir + "\\" + targetPackage + "\\" + firstUpperStatechartName
-//				+ "_ESTest.java";
-//		String sctunitPath = projectPath + "\\" + sourceDir + "\\" + firstUpperStatechartName + "Test.sctunit";
+		String junitPath = projectPath + "\\" + evoTestDir + "\\" + targetPackage + "\\" + firstUpperStatechartName
+				+ "_ESTest.java";
+		String sctunitPath = projectPath + "\\" + sourceDir + "\\" + firstUpperStatechartName + "Test.sctunit";
 
 		String simplifiedJunitPath = projectPath + "\\" + evoTestDir + "\\" + targetPackage + "\\"
 				+ firstUpperStatechartName + "Simplified_ESTest.java";
@@ -137,8 +134,8 @@ public class TestGenerator {
 		// Compile the new simplified class
 		compile(compilerD, compilerClasspath, simplifiedJavaPath);
 
-//		Generators.generateJunit(evoClass, evoProjectCP, evoDTestDir, evoDReportDir, hasSearchBudget, evoSearchBudget);
-//		Generators.generateSctunit(junitPath, sctunitPath, statechartName, statesNames, eventsNames, interfacesNames);
+		Generators.generateJunit(evoClass, evoProjectCP, evoDTestDir, evoDReportDir, hasSearchBudget, evoSearchBudget);
+		Generators.generateSctunit(junitPath, sctunitPath, statechartName, statesNames, eventsNames, interfacesNames);
 
 		// Call the Evosuite test generator
 		Generators.generateJunit(evoSimplifiedClass, evoProjectCP, evoDTestDir, evoDReportDir, hasSearchBudget,

@@ -10,7 +10,10 @@ import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 public class ConstructorDeclarationVisitor extends VoidVisitorAdapter<Void> {
 
 	/**
-	 * Visit a constructor declaration, add "Simplified" at the end of the name.
+	 * Visit a constructor declaration, add "Simplified" at the end of the name if
+	 * it is the constructor of the pubblic class (recognizable by the absence of
+	 * parameters), else (it's the contrstructor of a nested class) change the type
+	 * of its parameter.
 	 *
 	 * @param the constructor declaration
 	 * @param arg none
@@ -20,7 +23,7 @@ public class ConstructorDeclarationVisitor extends VoidVisitorAdapter<Void> {
 		// To ensure child nodes of the current node are also visited
 		super.visit(node, arg);
 		// Changes constructor name if it has no parameters
-		// Else, change the type of the parameter
+		// else, change the type of the parameter
 		if (node.findAll(Parameter.class).isEmpty()) {
 			node.setName(node.getNameAsString() + "Simplified");
 		} else {

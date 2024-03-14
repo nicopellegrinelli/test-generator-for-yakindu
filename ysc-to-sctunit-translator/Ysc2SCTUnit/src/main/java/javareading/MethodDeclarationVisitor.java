@@ -19,6 +19,9 @@ public class MethodDeclarationVisitor extends VoidVisitorAdapter<Void> {
 	public void visit(MethodDeclaration node, Void arg) {
 		// To ensure child nodes of the current node are also visited
 		super.visit(node, arg);
+		// Do nothing if the method is setOperationCallback
+		if (node.getNameAsString().equals("setOperationCallback"))
+			return;
 		// Changes method visibility from protected to private
 		if (node.isProtected()) {
 			node.setProtected(false);

@@ -1,0 +1,134 @@
+testclass OperationTestTest for statechart OperationTest {
+	@Test
+	operation test00 () {
+	}
+
+	@Test
+	operation test01 () {
+	    enter
+	    raise a
+	    raise a
+	    assert is_active
+	}
+
+	@Test
+	operation test02 () {
+	}
+
+	@Test
+	operation test03 () {
+	    enter
+	    raise a
+	    triggerWithoutEvent
+	    assert is_active
+	}
+
+	@Test
+	operation test04 () {
+	    enter
+	    raise a
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test05 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test06 () {
+	    enter
+	    raise a
+	    assert is_active
+	    assert active (OperationTest.main_region.StateB)
+	}
+
+	@Test
+	operation test07 () {
+	    enter
+	    assert is_active
+	    assert active (OperationTest.main_region.StateA)
+	}
+
+	@Test
+	operation test08 () {
+	    assert !active (OperationTest.main_region.StateB)
+	}
+
+	@Test
+	operation test09 () {
+	}
+
+	@Test
+	operation test10 () {
+	    assert !active (OperationTest.main_region.StateA)
+	}
+
+	@Test
+	operation test11 () {
+	    raise a
+	}
+
+	@Test
+	operation test12 () {
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test13 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test14 () {
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test15 () {
+	    enter
+	}
+
+	@Test
+	operation test16 () {
+	    enter
+	}
+
+	@Test
+	operation test17 () {
+	    triggerWithoutEvent
+	}
+
+	@Test
+	operation test18 () {
+	    enter
+	    raise a
+	    raise I.b
+	    assert is_active
+	}
+
+	@Test
+	operation test19 () {
+	    enter
+	    raise I.b
+	    assert is_active
+	}
+
+	@Test
+	operation test20 () {
+	    assert !is_final
+	}
+
+	@Test
+	operation test21 () {
+	    raise I.b
+	}
+
+}

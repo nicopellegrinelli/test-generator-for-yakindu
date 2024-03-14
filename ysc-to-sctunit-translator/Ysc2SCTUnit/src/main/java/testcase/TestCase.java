@@ -25,7 +25,7 @@ public class TestCase {
 	 * Add an "enter" action.
 	 */
 	public void addEnter() {
-		actions.add(new Action(true, null, null, false, false, false, false, false));
+		actions.add(new Action(true, null, null, null, false, false, false, false, false));
 	}
 
 	/**
@@ -34,7 +34,17 @@ public class TestCase {
 	 * @param event the event to be raised
 	 */
 	public void addEvent(String event) {
-		actions.add(new Action(false, event, null, false, false, false, false, false));
+		actions.add(new Action(false, event, null, null, false, false, false, false, false));
+	}
+	
+	/**
+	 * Add a "raise event: value" action.
+	 *
+	 * @param event the event to be raised
+	 * @param value the value of the raised typed event
+	 */
+	public void addTypedEvent(String event, String value) {
+		actions.add(new Action(false, event, value, null, false, false, false, false, false));
 	}
 
 	/**
@@ -45,7 +55,7 @@ public class TestCase {
 	 *                   falseness is wanted to be asserted
 	 */
 	public void addAssertState(String state, boolean assertTrue) {
-		actions.add(new Action(false, null, state, false, false, assertTrue, false, false));
+		actions.add(new Action(false, null, null, state, false, false, assertTrue, false, false));
 	}
 
 	/**
@@ -55,7 +65,7 @@ public class TestCase {
 	 *                   falseness is wanted to be asserted
 	 */
 	public void addIsActive(boolean assertTrue) {
-		actions.add(new Action(false, null, null, true, false, assertTrue, false, false));
+		actions.add(new Action(false, null, null, null, true, false, assertTrue, false, false));
 	}
 
 	/**
@@ -65,28 +75,28 @@ public class TestCase {
 	 *                   falseness is wanted to be asserted
 	 */
 	public void addIsFinal(boolean assertTrue) {
-		actions.add(new Action(false, null, null, false, true, assertTrue, false, false));
+		actions.add(new Action(false, null, null, null, false, true, assertTrue, false, false));
 	}
 
 	/**
 	 * Adds a "proceed 1 cycle" action.
 	 */
 	public void addProceedCycle() {
-		actions.add(new Action(false, null, null, false, false, false, true, false));
+		actions.add(new Action(false, null, null, null, false, false, false, true, false));
 	}
 
 	/**
 	 * Add a "triggerWithoutEvent" action.
 	 */
 	public void addTriggerWithoutEvent() {
-		actions.add(new Action(false, null, null, false, false, false, false, true));
+		actions.add(new Action(false, null, null, null, false, false, false, false, true));
 	}
 
 	/**
 	 * Add an "exit" action.
 	 */
 	public void addExit() {
-		actions.add(new Action(false, null, null, false, false, false, false, false));
+		actions.add(new Action(false, null, null, null, false, false, false, false, false));
 	}
 
 	/**

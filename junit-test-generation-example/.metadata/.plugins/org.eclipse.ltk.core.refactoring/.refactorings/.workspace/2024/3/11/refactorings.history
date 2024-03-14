@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <session version="1.0">
-<refactoring comment="Delete resource &apos;Temp/evosuite-report&apos;" deleteContents="false" description="Delete resource &apos;Temp/evosuite-report&apos;" element1="/Temp/evosuite-report" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1710170319995"/>
+<refactoring comment="Delete resource &apos;Temp/evosuite-report&apos;" deleteContents="false" description="Delete resource &apos;Temp/evosuite-report&apos;" element1="/Temp/evosuite-report" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1710432676280"/>
 </session>

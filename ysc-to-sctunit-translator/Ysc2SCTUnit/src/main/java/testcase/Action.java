@@ -7,6 +7,7 @@ public class Action {
 
 	private String enter;
 	private String event;
+	private String eventValue;
 	private String state;
 	private String isActive;
 	private String isFinal;
@@ -19,6 +20,8 @@ public class Action {
 	 *
 	 * @param enter               true if the action is "enter", false otherwise
 	 * @param event               the event to be raised (if needed)
+	 * @param eventValue          the value associated with the raised typed event,
+	 *                            null if the event has no type
 	 * @param state               the state to assert if it is active (if needed)
 	 * @param isActive            true if the action is "assert is_active", false
 	 *                            otherwise
@@ -31,10 +34,11 @@ public class Action {
 	 * @param triggerWithoutEvent true if the action is "triggerWithoutEvent", false
 	 *                            otherwise
 	 */
-	public Action(boolean enter, String event, String state, boolean isActive, boolean isFinal, boolean assertTrue,
-			boolean proceed, boolean triggerWithoutEvent) {
+	public Action(boolean enter, String event, String eventValue, String state, boolean isActive, boolean isFinal,
+			boolean assertTrue, boolean proceed, boolean triggerWithoutEvent) {
 		this.enter = enter ? "" : null;
 		this.event = event;
+		this.eventValue = eventValue;
 		this.state = state;
 		this.isActive = isActive ? "" : null;
 		this.isFinal = isFinal ? "" : null;
@@ -59,6 +63,15 @@ public class Action {
 	 */
 	public String getEvent() {
 		return event;
+	}
+	
+	/**
+	 * Gets the string representing the value of the event.
+	 *
+	 * @return the string
+	 */
+	public String getEventValue() {
+		return eventValue;
 	}
 
 	/**

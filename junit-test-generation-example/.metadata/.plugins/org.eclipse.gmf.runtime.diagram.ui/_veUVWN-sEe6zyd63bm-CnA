@@ -1,9 +1,7 @@
-#Mon Mar 11 16:25:30 CET 2024
+#Thu Mar 14 17:29:43 CET 2024
 rulergrid.rulerunit=1
 print.margin.left=0.5
-viewport.x=-25
 rulergrid.gridlinestyle=6
-viewport.y=-35
 zoom=1.0
 print.useMillim=true
 print.usePortrait=true
