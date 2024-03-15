@@ -206,8 +206,8 @@ public final class CLIManager {
 				.build();
 		Option evoSearchBudget = Option.builder("evoSearchBudget").argName("arg").hasArg()
 				.desc("the search budget to impose to Evosuite, it must be a positive integer").build();
-		Option timeService = new Option("t", "timeService", false,
-				"enable the generation of a timer service for statecharts that use timed event triggers.");
+		Option timeService = new Option("t", "timerService", false,
+				"also generates a default timer service implementation in java. Does not change the sctunit output.");
 		Option help = new Option("h", "help", false, "print this message.");
 
 		options.addOption(sccPath);

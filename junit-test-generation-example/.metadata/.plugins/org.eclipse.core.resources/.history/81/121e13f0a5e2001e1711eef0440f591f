@@ -1,0 +1,23 @@
+GeneratorModel for create::java {
+
+	const PROJECT : string = "Temp"
+
+	const FOLDER : string = "src"
+
+	statechart OperationTest {
+
+		feature GeneralFeatures {
+			TimerService = true
+		}
+
+		feature Naming {
+		    basePackage = "statechart"
+		}
+
+		feature Outlet {
+			targetProject = PROJECT
+			targetFolder = FOLDER
+			libraryTargetFolder = FOLDER
+		}
+	}
+}

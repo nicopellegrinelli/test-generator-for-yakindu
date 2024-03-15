@@ -1,5 +1,6 @@
 package javareading;
 
+import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
 import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 
@@ -19,8 +20,10 @@ public class MethodDeclarationVisitor extends VoidVisitorAdapter<Void> {
 	public void visit(MethodDeclaration node, Void arg) {
 		// To ensure child nodes of the current node are also visited
 		super.visit(node, arg);
-		// Do nothing if the method is setOperationCallback
-		if (node.getNameAsString().equals("setOperationCallback"))
+		// Do nothing if the method is setOperationCallback or setTimerService or if it
+		// is a method inside an interface
+		if (node.getNameAsString().equals("setOperationCallback") || node.getNameAsString().equals("setTimerService")
+				|| ((ClassOrInterfaceDeclaration) node.getParentNode().get()).isInterface())
 			return;
 		// Changes method visibility from protected to private
 		if (node.isProtected()) {
