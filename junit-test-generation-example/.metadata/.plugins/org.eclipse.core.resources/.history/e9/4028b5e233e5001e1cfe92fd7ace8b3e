@@ -1,0 +1,14 @@
+testclass StatechartTest for statechart TemporalEvents2 {
+	
+	@Test
+	operation test() {
+		enter
+		assert active (main_region.StateO)
+		proceed 1s
+		assert active (main_region.StateA)
+		assert t == 0
+		proceed 100ns
+		assert t == 100
+		exit
+	}
+}

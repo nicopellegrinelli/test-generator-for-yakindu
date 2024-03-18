@@ -1,0 +1,9 @@
+testclass TemporalEvents2Test for statechart TemporalEvents2 {
+	
+	@Test
+	operation test() {
+		enter
+
+		exit
+	}
+}

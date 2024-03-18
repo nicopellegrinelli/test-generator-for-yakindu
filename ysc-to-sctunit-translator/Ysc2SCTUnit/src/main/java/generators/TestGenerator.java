@@ -18,7 +18,9 @@ import org.xml.sax.SAXException;
 
 import cli.CLIManager;
 import cli.ParsedArgs;
-import statechart.Statechart;
+import javareading.JavaReader;
+import javareading.ProceedTime;
+import yscreading.Statechart;
 
 /**
  * The Class TestGenerator.
@@ -127,6 +129,12 @@ public class TestGenerator {
 
 		// Compile the generated classes
 		compile(compilerD, compilerClasspath, javaPath);
+		
+		// Obtain the proceed time associated with time events
+		List<ProceedTime> proceedTimes = JavaReader.getProceedTimes(javaPath);
+		for(ProceedTime p : proceedTimes) {
+			System.out.println(p.getId() + ": " + p.getValue() + " " + p.getUnit());
+		}
 
 		// Modify the generated Java code to create a simplified version
 		Generators.generateSimplifiedJava(javaPath, simplifiedJavaPath);

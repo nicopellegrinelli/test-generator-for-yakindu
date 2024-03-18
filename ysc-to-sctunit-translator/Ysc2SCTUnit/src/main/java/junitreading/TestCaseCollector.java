@@ -10,8 +10,6 @@ import com.github.javaparser.ast.body.VariableDeclarator;
 import com.github.javaparser.ast.expr.MethodCallExpr;
 import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 
-import testcase.TestCase;
-
 /**
  * The Class TestCaseCollector.
  */

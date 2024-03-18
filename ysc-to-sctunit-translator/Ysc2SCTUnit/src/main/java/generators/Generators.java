@@ -20,12 +20,12 @@ import com.github.javaparser.StaticJavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.visitor.VoidVisitor;
 
-import javareading.ClassDeclarationVisitor;
-import javareading.ConstructorDeclarationVisitor;
-import javareading.MethodDeclarationVisitor;
-import javareading.FieldDeclarationVisitor;
+import javawriting.ClassDeclarationVisitor;
+import javawriting.ConstructorDeclarationVisitor;
+import javawriting.FieldDeclarationVisitor;
+import javawriting.MethodDeclarationVisitor;
+import junitreading.TestCase;
 import junitreading.TestCaseCollector;
-import testcase.TestCase;
 
 /**
  * Contains a set of methods usable to generate various type of files. All
