@@ -156,13 +156,6 @@ public final class CLIManager {
 				}
 			}
 
-			// Check if the arguments have the option -t
-			if (cmd.hasOption("t")) {
-				parsedArgs.setT(true);
-			} else {
-				parsedArgs.setT(false);
-			}
-
 			return parsedArgs;
 		}
 	}
@@ -206,8 +199,6 @@ public final class CLIManager {
 				.build();
 		Option evoSearchBudget = Option.builder("evoSearchBudget").argName("arg").hasArg()
 				.desc("the search budget to impose to Evosuite, it must be a positive integer").build();
-		Option timeService = new Option("t", "timerService", false,
-				"also generates a default timer service implementation in java. Does not change the sctunit output.");
 		Option help = new Option("h", "help", false, "print this message.");
 
 		options.addOption(sccPath);
@@ -219,7 +210,6 @@ public final class CLIManager {
 		options.addOption(binaryDirOpt);
 		options.addOption(evoTestDir);
 		options.addOption(evoSearchBudget);
-		options.addOption(timeService);
 		options.addOption(help);
 
 		return options;

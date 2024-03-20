@@ -1,0 +1,142 @@
+testclass TemporalEvents2Test for statechart TemporalEvents2 {
+	@Test
+	operation test00 () {
+	    triggerWithoutEvent
+	    assert !is_active
+	}
+
+	@Test
+	operation test06 () {
+	    enter
+	    proceed 1s
+	    raise b
+	    proceed 1s
+	    assert is_active
+	}
+
+	@Test
+	operation test07 () {
+	    enter
+	    raise b
+	    assert is_active
+	}
+
+	@Test
+	operation test08 () {
+	    enter
+	    proceed 1s
+	    proceed 1s
+	    assert is_active
+	}
+
+	@Test
+	operation test09 () {
+	    enter
+	    proceed 1s
+	    raise c
+	    assert is_active
+	}
+
+	@Test
+	operation test10 () {
+	    exit
+	    assert !is_final
+	}
+
+	@Test
+	operation test11 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test12 () {
+	    enter
+	    assert is_active
+	    assert active (TemporalEvents2.main_region.StateO)
+	}
+
+	@Test
+	operation test13 () {
+	}
+
+	@Test
+	operation test14 () {
+	    assert !active (TemporalEvents2.main_region.StateD)
+	}
+
+	@Test
+	operation test15 () {
+	    assert !active (TemporalEvents2.main_region.StateO)
+	}
+
+	@Test
+	operation test16 () {
+	    assert !active (TemporalEvents2.main_region.StateC)
+	}
+
+	@Test
+	operation test17 () {
+	    assert !active (TemporalEvents2.main_region.StateB)
+	}
+
+	@Test
+	operation test18 () {
+	    assert !active (TemporalEvents2.main_region.StateA)
+	}
+
+	@Test
+	operation test19 () {
+	    assert !is_final
+	}
+
+	@Test
+	operation test20 () {
+	    assert !is_active
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test21 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test23 () {
+	    enter
+	    proceed 1s
+	    raise b
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test27 () {
+	    enter
+	    proceed 1s
+	    raise a
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test28 () {
+	    assert !is_final
+	    assert !is_active
+	}
+
+	@Test
+	operation test29 () {
+	    enter
+	    proceed 1s
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+}

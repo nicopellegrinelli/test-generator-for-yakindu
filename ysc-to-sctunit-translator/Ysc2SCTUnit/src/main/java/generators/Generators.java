@@ -8,6 +8,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URISyntaxException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -20,6 +22,7 @@ import com.github.javaparser.StaticJavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.visitor.VoidVisitor;
 
+import javareading.ProceedTime;
 import javawriting.ClassDeclarationVisitor;
 import javawriting.ConstructorDeclarationVisitor;
 import javawriting.FieldDeclarationVisitor;
@@ -43,12 +46,10 @@ public final class Generators {
 	 * @param sgenPath       the path where the .sgen file is put
 	 * @param targetDir      the target directory
 	 * @param targetPackage  the target package
-	 * @param timeService    true if the statechart deals with time events, false
-	 *                       otherwise
 	 * @throws IOException if any IO errors occur.
 	 */
 	public static void generateSgenJava(String projectName, String statechartName, String sgenPath, String targetDir,
-			String targetPackage, boolean timeService) throws IOException {
+			String targetPackage) throws IOException {
 		System.out.println("*******************************************");
 		System.out.println("Generating .sgen file...");
 		System.out.println("*******************************************");
@@ -60,8 +61,6 @@ public final class Generators {
 		st.add("directory", targetDir.replace("\\", "\\\\"));
 		st.add("package_name", targetPackage);
 		st.add("statechart_name", statechartName);
-		if (timeService)
-			st.add("time", "");
 		// Create the file in the same diractory of the statechart
 		File genFile = new File(sgenPath);
 		st.write(genFile, null);
@@ -138,13 +137,13 @@ public final class Generators {
 	 * @param searchBudget    the search budget, not setted if hasSearchBudget is
 	 *                        false
 	 */
-	public static void generateJunit(String evoClass, String evoProjectCP, String DtestDir, String DreportDir,
-			boolean hasSearchBudget, int searchBudget) {
+	public static void generateJunit(String evoClass, String evoProjectCP, String DtestDir,
+			String DreportDir, boolean hasSearchBudget, int searchBudget) {
 		System.out.println("*******************************************");
 		System.out.println("Calling Evosuite test generator...");
 		System.out.println("*******************************************");
-		List<String> evoArgs = new ArrayList<>();
 		// Set necessary arguments
+		List<String> evoArgs = new ArrayList<>();
 		evoArgs.addAll(Arrays.asList(evoClass.split(" ")));
 		evoArgs.addAll(Arrays.asList(evoProjectCP.split(" ")));
 		evoArgs.add(DtestDir);
@@ -191,8 +190,8 @@ public final class Generators {
 	 * @throws IOException if any IO errors occur.
 	 */
 	public static void generateSctunit(String junitPath, String sctunitPath, String statechartName,
-			Map<String, String> statesNames, Map<String, String> eventsNames, Map<String, String> interfacesNames)
-			throws IOException {
+			Map<String, String> statesNames, Map<String, String> eventsNames, Map<String, String> interfacesNames,
+			Map<Integer, ProceedTime> proceedTimes) throws IOException {
 		System.out.println("*******************************************");
 		System.out.println("Generating .sctunit file...");
 		System.out.println("*******************************************");
@@ -201,9 +200,13 @@ public final class Generators {
 		// Visit all the (test) methods contained in the compilation unit.
 		// Each visit of a method produces a TestCase object
 		List<TestCase> testCaseList = new ArrayList<TestCase>();
-		VoidVisitor<List<TestCase>> testCaseCollector = new TestCaseCollector(statechartName, statesNames, eventsNames,
-				interfacesNames);
+		TestCaseCollector testCaseCollector = new TestCaseCollector(statechartName, statesNames, eventsNames,
+				interfacesNames, proceedTimes);
 		testCaseCollector.visit(cu, testCaseList);
+		if (testCaseCollector.hasTimeEvents()) {
+			System.out.println("\nWARNING: the generated test suite uses time events,\n"
+					+ "it is not guaranteed that all the test methods will pass.");
+		}
 		// Print to video the SCTUnit file
 		STGroupFile group = new STGroupFile("sctunit_template.stg");
 		ST st = group.getInstanceOf("test_class");
@@ -211,6 +214,7 @@ public final class Generators {
 		st.add("test_suite", testCaseList);
 		File genFile = new File(sctunitPath);
 		st.write(genFile, null);
+
 	}
 
 }

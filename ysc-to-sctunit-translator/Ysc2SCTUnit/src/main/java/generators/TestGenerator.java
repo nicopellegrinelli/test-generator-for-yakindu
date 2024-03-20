@@ -2,9 +2,10 @@ package generators;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -20,7 +21,7 @@ import cli.CLIManager;
 import cli.ParsedArgs;
 import javareading.JavaReader;
 import javareading.ProceedTime;
-import yscreading.Statechart;
+import yscreading.YscReader;
 
 /**
  * The Class TestGenerator.
@@ -61,39 +62,14 @@ public class TestGenerator {
 		String evoTestDir = parsedArgs.getEvoTestDir();
 		boolean hasSearchBudget = parsedArgs.hasSearchBudget();
 		int evoSearchBudget = parsedArgs.getEvoSearchBudget();
-		boolean timeService = parsedArgs.hasT();
 
-		// Obtain the Strings needed to retrieve information from the statechart file
+		// Obtain the needed Strings
 		String projectPath = workspacePath + "\\" + projectName;
 		String sourceFilePath = projectPath + "\\" + sourceDir + "\\" + sourceFile;
 
-		// Obtain the statechart name and the names of its states, events and interfaces,
-		// create a dictionary for the states names with the corresponding enum as key,
-		// create a dictionary for the events names with the corresponding method as key,
-		// create a dictionary for the interfaces names with the corresponding class name as key,
-		System.out.println("*******************************************");
-		System.out.println("Reading statechart file...");
-		System.out.println("*******************************************");
-		Statechart statechart = new Statechart(sourceFilePath);
-		String statechartName = statechart.getStatechartName();
-		Map<String, String> statesNames = new HashMap<String, String>();
-		for (String name : statechart.getStatesNames()) {
-			String enumName = name.toUpperCase().replace('.', '_');
-			statesNames.put(enumName, name);
-		}
-		Map<String, String> eventsNames = new HashMap<String, String>();
-		for (String name : statechart.getEventsNames()) {
-			String methodName = "raise" + name.substring(0, 1).toUpperCase() + name.substring(1);
-			eventsNames.put(methodName, name);
-		}
-		Map<String, String> interfacesNames = new HashMap<String, String>();
-		for (String name : statechart.getInterfacesNames()) {
-			String className = name.substring(0, 1).toUpperCase() + name.substring(1);
-			interfacesNames.put(className, name);
-		}
+		YscReader yscReader = new YscReader(sourceFilePath);
+		String statechartName = yscReader.getStatechartName();
 
-		// Obtain all needed Strings
-		// In some cases, the statechart name with first letter capital is needed
 		String firstUpperStatechartName = statechartName.substring(0, 1).toUpperCase() + statechartName.substring(1);
 
 		String sgenPath = projectPath + "\\" + sourceDir + "\\" + firstUpperStatechartName + ".sgen";
@@ -122,36 +98,40 @@ public class TestGenerator {
 				+ "SimplifiedTest.sctunit";
 
 		// Generate the .sgen file needed by Itemis Create to generate the java code
-		Generators.generateSgenJava(projectName, statechartName, sgenPath, targetDir, dottedTargetPackage, timeService);
+		Generators.generateSgenJava(projectName, statechartName, sgenPath, targetDir, dottedTargetPackage);
 
 		// Call the Itemis Create generators
 		Generators.callICGenerators(projectPath, itemisScc, sourceDir, sourceFile, statechartName);
 
 		// Compile the generated classes
 		compile(compilerD, compilerClasspath, javaPath);
-		
-		// Obtain the proceed time associated with time events
-		List<ProceedTime> proceedTimes = JavaReader.getProceedTimes(javaPath);
-		for(ProceedTime p : proceedTimes) {
-			System.out.println(p.getId() + ": " + p.getValue() + " " + p.getUnit());
-		}
 
 		// Modify the generated Java code to create a simplified version
 		Generators.generateSimplifiedJava(javaPath, simplifiedJavaPath);
 
 		// Compile the new simplified class
 		compile(compilerD, compilerClasspath, simplifiedJavaPath);
-
-		Generators.generateJunit(evoClass, evoProjectCP, evoDTestDir, evoDReportDir, hasSearchBudget, evoSearchBudget);
-		Generators.generateSctunit(junitPath, sctunitPath, statechartName, statesNames, eventsNames, interfacesNames);
+		
+		// Delete the VirtualTimer.class file to hide it to Evosuite
+		String virtualTimerPath = projectPath + "//" + binaryDir + "//com//yakindu//core//VirtualTimer.class";
+		if (Files.exists(Paths.get(virtualTimerPath))) {
+			new File(virtualTimerPath).delete();
+		}
 
 		// Call the Evosuite test generator
-		Generators.generateJunit(evoSimplifiedClass, evoProjectCP, evoDTestDir, evoDReportDir, hasSearchBudget,
-				evoSearchBudget);
+		Generators.generateJunit(evoSimplifiedClass, evoProjectCP, evoDTestDir, evoDReportDir,
+				hasSearchBudget, evoSearchBudget);
 
 		// Generate the .sctunit file
+		Map<String, String> statesNames = yscReader.getStatesNames();
+		Map<String, String> eventsNames = yscReader.getEventsNames();
+		Map<String, String> interfacesNames = yscReader.getInterfacesNames();
+		Map<Integer, ProceedTime> proceedTimes = JavaReader.getProceedTimes(javaPath);
 		Generators.generateSctunit(simplifiedJunitPath, simplifiedSctunitPath, statechartName, statesNames, eventsNames,
-				interfacesNames);
+				interfacesNames, proceedTimes);
+
+//		Generators.generateJunit(evoClass, evoProjectCP, evoDTestDir, evoDReportDir, hasSearchBudget, evoSearchBudget);
+//		Generators.generateSctunit(junitPath, sctunitPath, statechartName, statesNames, eventsNames, interfacesNames);
 
 		// End the execution
 		System.out.println("*******************************************");
@@ -165,14 +145,13 @@ public class TestGenerator {
 	 * Compile.
 	 *
 	 * @param compilerD         the string "-d ProjectPath", where ProjectPath is
-	 *                          the path of the directory containing the .class
-	 *                          files
+	 *                          the path of the directory where the .class
+	 *                          files will be put
 	 * @param compilerClasspath the string "-classpath ClassPath", where ClassPath
-	 *                          is the path of the directory containing the .java
-	 *                          files
-	 * @param classPath         the path of the class to compile
+	 *                          is the classpath of the compilation
+	 * @param javaPath         the path of the .java file to compile
 	 */
-	private static void compile(String compilerD, String compilerClasspath, String classPath) {
+	private static void compile(String compilerD, String compilerClasspath, String javaPath) {
 		System.out.println("*******************************************");
 		System.out.println("Compiling...");
 		System.out.println("*******************************************");
@@ -182,7 +161,7 @@ public class TestGenerator {
 		compilationArgs.addAll(Arrays.asList(compilerClasspath.split(" ")));
 		compilationArgs.add("-implicit:class");
 		StandardJavaFileManager stdFileManager = compiler.getStandardFileManager(null, null, null);
-		File f = new File(classPath);
+		File f = new File(javaPath);
 		Iterable<? extends JavaFileObject> compilationUnits = stdFileManager
 				.getJavaFileObjectsFromFiles(Arrays.asList(f));
 		compiler.getTask(null, null, null, compilationArgs, null, compilationUnits).call();

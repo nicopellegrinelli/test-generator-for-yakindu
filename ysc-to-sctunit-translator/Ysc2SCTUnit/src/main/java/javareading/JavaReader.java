@@ -2,21 +2,34 @@ package javareading;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 import com.github.javaparser.StaticJavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.expr.MethodCallExpr;
 
+/**
+ * The Class JavaReader.
+ */
 public final class JavaReader {
 
-	public static List<ProceedTime> getProceedTimes(String javaPath) throws FileNotFoundException {
+	/**
+	 * Create and return dictionary for the time events in the specified java file
+	 * with the corresponding id as key.
+	 *
+	 * @param javaPath the path of the .java file
+	 * @return the dictionary
+	 * @throws FileNotFoundException if the file does not exist,is a directory
+	 *                               rather than a regular file,or for some other
+	 *                               reason cannot be opened forreading.
+	 */
+	public static Map<Integer, ProceedTime> getProceedTimes(String javaPath) throws FileNotFoundException {
 		// Get the compilation unit of the java class
 		CompilationUnit cu = StaticJavaParser.parse(new FileInputStream(javaPath));
 		// Create a dictionary for the time events, the key is the ID, the value is the
 		// associated time
-		List<ProceedTime> proceedTimes = new ArrayList<ProceedTime>();
+		Map<Integer, ProceedTime> proceedTimes = new HashMap<Integer, ProceedTime>();
 		for (MethodCallExpr m : cu.findAll(MethodCallExpr.class)) {
 			// At each time event correspond a setTimer() method call
 			if (m.getNameAsString().equals("setTimer")) {
@@ -29,14 +42,14 @@ public final class JavaReader {
 				TimeUnit unit;
 				if (expr.contains("* 1000l")) {
 					unit = TimeUnit.SECONDS;
-				} else if(expr.contains("/ 1000l")) {
+				} else if (expr.contains("/ 1000l")) {
 					unit = TimeUnit.MICROSECONDS;
 				} else if (expr.contains("/ 1000000l")) {
 					unit = TimeUnit.NANOSECONDS;
 				} else {
 					unit = TimeUnit.MILLISECONDS;
 				}
-				proceedTimes.add(new ProceedTime(id, value, unit));
+				proceedTimes.put(id, new ProceedTime(value, unit));
 			}
 		}
 		return proceedTimes;

@@ -8,7 +8,10 @@ import com.github.javaparser.ast.Node;
 import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.body.VariableDeclarator;
 import com.github.javaparser.ast.expr.MethodCallExpr;
+import com.github.javaparser.ast.stmt.TryStmt;
 import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
+
+import javareading.ProceedTime;
 
 /**
  * The Class TestCaseCollector.
@@ -37,6 +40,14 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 	Map<String, String> interfacesNames;
 
 	/**
+	 * The dictionary containing all the time events used in the statechart. The key
+	 * is the id
+	 */
+	Map<Integer, ProceedTime> proceedTimes;
+	
+	private boolean timeEvents;
+
+	/**
 	 * Instantiates a new TestCaseCollector regarding to a statechart.
 	 *
 	 * @param statechartName  the name of the statechart
@@ -46,13 +57,17 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 	 *                        corresponding method as key
 	 * @param interfacesNames the dictionary of the interfaces names with the
 	 *                        corresponding class name as key
+	 * @param proceedTimes    the dictionary of the time events with the
+	 *                        corresponding id key
 	 */
 	public TestCaseCollector(String statechartName, Map<String, String> statesNames, Map<String, String> eventsNames,
-			Map<String, String> interfacesNames) {
+			Map<String, String> interfacesNames, Map<Integer, ProceedTime> proceedTimes) {
 		this.statechartName = statechartName;
 		this.statesNames = statesNames;
 		this.eventsNames = eventsNames;
 		this.interfacesNames = interfacesNames;
+		this.proceedTimes = proceedTimes;
+		this.timeEvents = false;
 	}
 
 	/**
@@ -73,6 +88,10 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 //		if (!node.getBody().toString().contains(".enter") || node.getBody().toString().contains(".setIsExecuting")) {
 //			return;
 //		}
+		// Discards methods dealing with exceptions (i.e. using try catch statements)
+		if (!node.findAll(TryStmt.class).isEmpty()) {
+			return;
+		}
 
 		// Gets all variable declarations expressions contained in the method
 		List<VariableDeclarator> variableDeclarationList = node.findAll(VariableDeclarator.class);
@@ -109,6 +128,35 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 				continue;
 			}
 			if (methodName.startsWith("raise")) {
+				if (methodName.equals("raiseTimeEvent")) {
+					// The method raiseTimeEvent has only one argument and it's an int
+					String arg = methodCall.getArgument(0).toString();
+					// Only positive numbers are meaningfull
+					if (!arg.contains("-") && !arg.contains("(") && !arg.contains(")")) {
+						// Ignore time events not in the dictionary
+						if (proceedTimes.containsKey(Integer.parseInt(arg))) {
+							ProceedTime pt = proceedTimes.get(Integer.parseInt(arg));
+							String unit = "";
+							switch (pt.getUnit()) {
+							case SECONDS:
+								unit = "s";
+								break;
+							case MILLISECONDS:
+								unit = "ms";
+								break;
+							case MICROSECONDS:
+								unit = "us";
+								break;
+							case NANOSECONDS:
+								unit = "ns";
+								break;
+							}
+							testCase.addProceedTime(String.valueOf(pt.getValue()), unit);
+							this.timeEvents = true;
+						}
+					}
+					continue;
+				}
 				// Ignore events not in the dictionary
 				if (eventsNames.containsKey(methodName)) {
 					String event = eventsNames.get(methodName);
@@ -227,4 +275,15 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 		// Returns the testCase as the result of the visit of the method
 		collector.add(testCase);
 	}
+	
+
+	/**
+	 * Checks for time events.
+	 *
+	 * @return true, if successful
+	 */
+	public boolean hasTimeEvents() {
+		return timeEvents;
+	}
+	
 }

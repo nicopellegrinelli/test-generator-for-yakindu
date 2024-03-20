@@ -22,7 +22,7 @@ public class TemporalEvents2 implements ITimed, IEventDriven {
 	
 	private ITimerService timerService;
 	
-	private final boolean[] timeEvents = new boolean[7];
+	private final boolean[] timeEvents = new boolean[3];
 	
 	private Queue<Runnable> inEventQueue = new LinkedList<Runnable>();
 	private boolean isExecuting;
@@ -41,8 +41,6 @@ public class TemporalEvents2 implements ITimed, IEventDriven {
 		
 		clearInEvents();
 		
-		/* Default init sequence for statechart TemporalEvents2 */
-		setT(0l);
 		
 		isExecuting = false;
 	}
@@ -89,13 +87,13 @@ public class TemporalEvents2 implements ITimed, IEventDriven {
 		return false;
 	}
 	private void clearInEvents() {
+		a = false;
+		b = false;
+		c = false;
+		d = false;
 		timeEvents[0] = false;
 		timeEvents[1] = false;
 		timeEvents[2] = false;
-		timeEvents[3] = false;
-		timeEvents[4] = false;
-		timeEvents[5] = false;
-		timeEvents[6] = false;
 	}
 	
 	private void microStep() {
@@ -182,69 +180,80 @@ public class TemporalEvents2 implements ITimed, IEventDriven {
 	}
 	
 	
-	private long t;
+	private boolean a;
 	
-	public long getT() {
-		return t;
+	
+	public void raiseA() {
+		inEventQueue.add(() -> {
+			a = true;
+		});
+		runCycle();
 	}
 	
-	public void setT(long value) {
-		this.t = value;
+	private boolean b;
+	
+	
+	public void raiseB() {
+		inEventQueue.add(() -> {
+			b = true;
+		});
+		runCycle();
+	}
+	
+	private boolean c;
+	
+	
+	public void raiseC() {
+		inEventQueue.add(() -> {
+			c = true;
+		});
+		runCycle();
+	}
+	
+	private boolean d;
+	
+	
+	public void raiseD() {
+		inEventQueue.add(() -> {
+			d = true;
+		});
+		runCycle();
 	}
 	
 	/* Entry action for state 'StateA'. */
 	private void entryAction_main_region_StateA() {
 		/* Entry action for state 'StateA'. */
-		timerService.setTimer(this, 0, (1l * 1000l), false);
-		timerService.setTimer(this, 1, 500l, true);
-		setT(0l);
-	}
-	
-	/* Entry action for state 'StateB'. */
-	private void entryAction_main_region_StateB() {
-		/* Entry action for state 'StateB'. */
-		timerService.setTimer(this, 2, 1l, false);
-		timerService.setTimer(this, 3, (500l / 1000l), true);
-	}
-	
-	/* Entry action for state 'StateC'. */
-	private void entryAction_main_region_StateC() {
-		/* Entry action for state 'StateC'. */
-		timerService.setTimer(this, 4, (1l / 1000l), false);
-		timerService.setTimer(this, 5, (500l / 1000000l), true);
+		timerService.setTimer(this, 0, 500l, true);
 	}
 	
 	/* Entry action for state 'StateO'. */
 	private void entryAction_main_region_StateO() {
 		/* Entry action for state 'StateO'. */
-		timerService.setTimer(this, 6, (10l * 1000l), false);
+		timerService.setTimer(this, 1, (1l * 1000l), false);
+	}
+	
+	/* Entry action for state 'StateD'. */
+	private void entryAction_main_region_StateD() {
+		/* Entry action for state 'StateD'. */
+		timerService.setTimer(this, 2, (500000l / 1000l), false);
 	}
 	
 	/* Exit action for state 'StateA'. */
 	private void exitAction_main_region_StateA() {
 		/* Exit action for state 'StateA'. */
 		timerService.unsetTimer(this, 0);
-		timerService.unsetTimer(this, 1);
-	}
-	
-	/* Exit action for state 'StateB'. */
-	private void exitAction_main_region_StateB() {
-		/* Exit action for state 'StateB'. */
-		timerService.unsetTimer(this, 2);
-		timerService.unsetTimer(this, 3);
-	}
-	
-	/* Exit action for state 'StateC'. */
-	private void exitAction_main_region_StateC() {
-		/* Exit action for state 'StateC'. */
-		timerService.unsetTimer(this, 4);
-		timerService.unsetTimer(this, 5);
 	}
 	
 	/* Exit action for state 'StateO'. */
 	private void exitAction_main_region_StateO() {
 		/* Exit action for state 'StateO'. */
-		timerService.unsetTimer(this, 6);
+		timerService.unsetTimer(this, 1);
+	}
+	
+	/* Exit action for state 'StateD'. */
+	private void exitAction_main_region_StateD() {
+		/* Exit action for state 'StateD'. */
+		timerService.unsetTimer(this, 2);
 	}
 	
 	/* 'default' enter sequence for state StateA */
@@ -257,14 +266,12 @@ public class TemporalEvents2 implements ITimed, IEventDriven {
 	/* 'default' enter sequence for state StateB */
 	private void enterSequence_main_region_StateB_default() {
 		/* 'default' enter sequence for state StateB */
-		entryAction_main_region_StateB();
 		stateVector[0] = State.MAIN_REGION_STATEB;
 	}
 	
 	/* 'default' enter sequence for state StateC */
 	private void enterSequence_main_region_StateC_default() {
 		/* 'default' enter sequence for state StateC */
-		entryAction_main_region_StateC();
 		stateVector[0] = State.MAIN_REGION_STATEC;
 	}
 	
@@ -278,6 +285,7 @@ public class TemporalEvents2 implements ITimed, IEventDriven {
 	/* 'default' enter sequence for state StateD */
 	private void enterSequence_main_region_StateD_default() {
 		/* 'default' enter sequence for state StateD */
+		entryAction_main_region_StateD();
 		stateVector[0] = State.MAIN_REGION_STATED;
 	}
 	
@@ -298,14 +306,12 @@ public class TemporalEvents2 implements ITimed, IEventDriven {
 	private void exitSequence_main_region_StateB() {
 		/* Default exit sequence for state StateB */
 		stateVector[0] = State.$NULLSTATE$;
-		exitAction_main_region_StateB();
 	}
 	
 	/* Default exit sequence for state StateC */
 	private void exitSequence_main_region_StateC() {
 		/* Default exit sequence for state StateC */
 		stateVector[0] = State.$NULLSTATE$;
-		exitAction_main_region_StateC();
 	}
 	
 	/* Default exit sequence for state StateO */
@@ -319,6 +325,7 @@ public class TemporalEvents2 implements ITimed, IEventDriven {
 	private void exitSequence_main_region_StateD() {
 		/* Default exit sequence for state StateD */
 		stateVector[0] = State.$NULLSTATE$;
+		exitAction_main_region_StateD();
 	}
 	
 	/* Default exit sequence for region main region */
@@ -360,20 +367,38 @@ public class TemporalEvents2 implements ITimed, IEventDriven {
 		/* The reactions of state StateA. */
 		long transitioned_after = transitioned_before;
 		if (transitioned_after<0l) {
-			if (timeEvents[0]) {
+			if (a) {
 				exitSequence_main_region_StateA();
-				timeEvents[0] = false;
 				enterSequence_main_region_StateB_default();
 				react(0l);
 				transitioned_after = 0l;
+			} else {
+				if (b) {
+					exitSequence_main_region_StateA();
+					enterSequence_main_region_StateC_default();
+					react(0l);
+					transitioned_after = 0l;
+				} else {
+					if (timeEvents[0]) {
+						exitSequence_main_region_StateA();
+						timeEvents[0] = false;
+						enterSequence_main_region_StateD_default();
+						react(0l);
+						transitioned_after = 0l;
+					} else {
+						if (c) {
+							exitSequence_main_region_StateA();
+							enterSequence_main_region_StateA_default();
+							react(0l);
+							transitioned_after = 0l;
+						}
+					}
+				}
 			}
 		}
 		/* If no transition was taken */
 		if (transitioned_after==transitioned_before) {
 			/* then execute local reactions. */
-			if (timeEvents[1]) {
-				setT(getT() + 1l);
-			}
 			transitioned_after = react(transitioned_before);
 		}
 		return transitioned_after;
@@ -382,46 +407,16 @@ public class TemporalEvents2 implements ITimed, IEventDriven {
 	private long main_region_StateB_react(long transitioned_before) {
 		/* The reactions of state StateB. */
 		long transitioned_after = transitioned_before;
-		if (transitioned_after<0l) {
-			if (timeEvents[2]) {
-				exitSequence_main_region_StateB();
-				timeEvents[2] = false;
-				enterSequence_main_region_StateC_default();
-				react(0l);
-				transitioned_after = 0l;
-			}
-		}
-		/* If no transition was taken */
-		if (transitioned_after==transitioned_before) {
-			/* then execute local reactions. */
-			if (timeEvents[3]) {
-				setT(getT() + 1l);
-			}
-			transitioned_after = react(transitioned_before);
-		}
+		/* Always execute local reactions. */
+		transitioned_after = react(transitioned_before);
 		return transitioned_after;
 	}
 	
 	private long main_region_StateC_react(long transitioned_before) {
 		/* The reactions of state StateC. */
 		long transitioned_after = transitioned_before;
-		if (transitioned_after<0l) {
-			if (timeEvents[4]) {
-				exitSequence_main_region_StateC();
-				timeEvents[4] = false;
-				enterSequence_main_region_StateD_default();
-				react(0l);
-				transitioned_after = 0l;
-			}
-		}
-		/* If no transition was taken */
-		if (transitioned_after==transitioned_before) {
-			/* then execute local reactions. */
-			if (timeEvents[5]) {
-				setT(getT() + 1l);
-			}
-			transitioned_after = react(transitioned_before);
-		}
+		/* Always execute local reactions. */
+		transitioned_after = react(transitioned_before);
 		return transitioned_after;
 	}
 	
@@ -429,9 +424,9 @@ public class TemporalEvents2 implements ITimed, IEventDriven {
 		/* The reactions of state StateO. */
 		long transitioned_after = transitioned_before;
 		if (transitioned_after<0l) {
-			if (timeEvents[6]) {
+			if (timeEvents[1]) {
 				exitSequence_main_region_StateO();
-				timeEvents[6] = false;
+				timeEvents[1] = false;
 				enterSequence_main_region_StateA_default();
 				react(0l);
 				transitioned_after = 0l;
@@ -448,8 +443,20 @@ public class TemporalEvents2 implements ITimed, IEventDriven {
 	private long main_region_StateD_react(long transitioned_before) {
 		/* The reactions of state StateD. */
 		long transitioned_after = transitioned_before;
-		/* Always execute local reactions. */
-		transitioned_after = react(transitioned_before);
+		if (transitioned_after<0l) {
+			if (timeEvents[2]) {
+				exitSequence_main_region_StateD();
+				timeEvents[2] = false;
+				enterSequence_main_region_StateA_default();
+				react(0l);
+				transitioned_after = 0l;
+			}
+		}
+		/* If no transition was taken */
+		if (transitioned_after==transitioned_before) {
+			/* then execute local reactions. */
+			transitioned_after = react(transitioned_before);
+		}
 		return transitioned_after;
 	}
 	

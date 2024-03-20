@@ -13,16 +13,18 @@ public class Action {
 	private String isFinal;
 	private String not;
 	private String proceed;
+	private String timeValue;
+	private String timeUnit;
 	private String triggerWithoutEvent;
 
 	/**
-	 * Instantiates a new action.
+	 * Instantiates a new action. The Strings that are not needed for the acton must
+	 * be null
 	 *
 	 * @param enter               true if the action is "enter", false otherwise
-	 * @param event               the event to be raised (if needed)
-	 * @param eventValue          the value associated with the raised typed event,
-	 *                            null if the event has no type
-	 * @param state               the state to assert if it is active (if needed)
+	 * @param event               the event to be raised
+	 * @param eventValue          the value associated with the raised typed event
+	 * @param state               the state to assert if it is active
 	 * @param isActive            true if the action is "assert is_active", false
 	 *                            otherwise
 	 * @param isFinal             true if the action is "assert is_final", false
@@ -31,11 +33,14 @@ public class Action {
 	 *                            if the falseness is wanted to be asserted
 	 * @param proceed             true if the action is "proceed 1 cycle", false
 	 *                            otherwise
+	 * @param timeValue           the value associated with the proceed time event
+	 * @param timeUnit            the time unit associated with the proceed time
+	 *                            event
 	 * @param triggerWithoutEvent true if the action is "triggerWithoutEvent", false
 	 *                            otherwise
 	 */
 	public Action(boolean enter, String event, String eventValue, String state, boolean isActive, boolean isFinal,
-			boolean assertTrue, boolean proceed, boolean triggerWithoutEvent) {
+			boolean assertTrue, boolean proceed, String timeValue, String timeUnit, boolean triggerWithoutEvent) {
 		this.enter = enter ? "" : null;
 		this.event = event;
 		this.eventValue = eventValue;
@@ -44,6 +49,8 @@ public class Action {
 		this.isFinal = isFinal ? "" : null;
 		this.not = assertTrue ? null : "";
 		this.proceed = proceed ? "" : null;
+		this.timeValue = timeValue;
+		this.timeUnit = timeUnit;
 		this.triggerWithoutEvent = triggerWithoutEvent ? "" : null;
 	}
 
@@ -64,7 +71,7 @@ public class Action {
 	public String getEvent() {
 		return event;
 	}
-	
+
 	/**
 	 * Gets the string representing the value of the event.
 	 *
@@ -117,6 +124,24 @@ public class Action {
 	 */
 	public String getProceed() {
 		return proceed;
+	}
+
+	/**
+	 * Gets the time value string.
+	 *
+	 * @return the string
+	 */
+	public String getTimeValue() {
+		return timeValue;
+	}
+
+	/**
+	 * Gets the time unit string.
+	 *
+	 * @return the string
+	 */
+	public String getTimeUnit() {
+		return timeUnit;
 	}
 
 	/**

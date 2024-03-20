@@ -41,9 +41,6 @@ public class ParsedArgs {
 	/** True if the parsed arguments have the option -searchBudget. */
 	private boolean hasSearchBudget = false;
 
-	/** True if the parsed arguments have the option -t. */
-	private boolean t;
-
 	/**
 	 * Gets the absolute path of the scc script.
 	 *
@@ -145,15 +142,6 @@ public class ParsedArgs {
 	}
 
 	/**
-	 * Checks for the option -t (or --timeService).
-	 *
-	 * @return true if the parsed arguments have the option -t, false otherwise
-	 */
-	public boolean hasT() {
-		return t;
-	}
-
-	/**
 	 * Sets the absolute path of the scc script.
 	 *
 	 * @param sccPath the absolute path of the scc script
@@ -242,15 +230,6 @@ public class ParsedArgs {
 	public void setEvoSearchBudget(int evoSearchBudget) {
 		this.hasSearchBudget = true;
 		this.evoSearchBudget = evoSearchBudget;
-	}
-
-	/**
-	 * Sets if the parsed arguments have the option t.
-	 *
-	 * @param t specifies whether there is a -t option or not
-	 */
-	public void setT(boolean t) {
-		this.t = t;
 	}
 
 }

@@ -1,0 +1,144 @@
+testclass TemporalEvents2Test for statechart TemporalEvents2 {
+	@Test
+	operation test04 () {
+	    enter
+	    proceed 1s
+	    assert is_active
+	}
+
+	@Test
+	operation test05 () {
+	    enter
+	    proceed 10s
+	    proceed 10s
+	    assert is_active
+	}
+
+	@Test
+	operation test06 () {
+	    exit
+	    assert !is_final
+	}
+
+	@Test
+	operation test07 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test08 () {
+	    enter
+	    proceed 10s
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test09 () {
+	    enter
+	    assert is_active
+	    assert active (TemporalEvents2.main_region.StateO)
+	}
+
+	@Test
+	operation test10 () {
+	    enter
+	    proceed 10s
+	    proceed 1s
+	    assert active (TemporalEvents2.main_region.StateB)
+	}
+
+	@Test
+	operation test11 () {
+	    enter
+	    proceed 10s
+	    assert is_active
+	    assert active (TemporalEvents2.main_region.StateA)
+	}
+
+	@Test
+	operation test12 () {
+	    assert !active (TemporalEvents2.main_region.StateD)
+	}
+
+	@Test
+	operation test13 () {
+	    assert !active (TemporalEvents2.main_region.StateO)
+	}
+
+	@Test
+	operation test14 () {
+	    assert !active (TemporalEvents2.main_region.StateC)
+	}
+
+	@Test
+	operation test15 () {
+	    assert !active (TemporalEvents2.main_region.StateB)
+	}
+
+	@Test
+	operation test16 () {
+	}
+
+	@Test
+	operation test17 () {
+	    assert !active (TemporalEvents2.main_region.StateA)
+	}
+
+	@Test
+	operation test18 () {
+	    triggerWithoutEvent
+	    assert !is_active
+	}
+
+	@Test
+	operation test19 () {
+	    enter
+	    proceed 10s
+	    proceed 1s
+	    triggerWithoutEvent
+	    assert !is_final
+	}
+
+	@Test
+	operation test20 () {
+	    assert !is_active
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test21 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test24 () {
+	    assert !is_active
+	    enter
+	    proceed 10s
+	    proceed 500ms
+	    assert is_active
+	}
+
+	@Test
+	operation test25 () {
+	    assert !is_final
+	    assert !is_active
+	}
+
+	@Test
+	operation test26 () {
+	    enter
+	    proceed 10s
+	    proceed 1s
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+}
