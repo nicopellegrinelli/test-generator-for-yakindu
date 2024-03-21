@@ -44,7 +44,7 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 	 * is the id
 	 */
 	Map<Integer, ProceedTime> proceedTimes;
-	
+
 	private boolean timeEvents;
 
 	/**
@@ -180,8 +180,7 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 					if (methodCall.getArguments().size() > 0) {
 						String value = methodCall.getArgument(0).toString();
 						// If the argument is not a string (something starting and ending with double
-						// quotes) or the boolean values true or false,
-						// it may need some modifications
+						// quotes) or the boolean values true or false, it may need some modifications
 						if (!(value.startsWith("\"") && value.endsWith("\"")
 								&& !(value.equals("true") || value.equals("false")))) {
 							// If it contains null, the raise event is ignored because null is not supported
@@ -275,7 +274,6 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 		// Returns the testCase as the result of the visit of the method
 		collector.add(testCase);
 	}
-	
 
 	/**
 	 * Checks for time events.
@@ -285,5 +283,5 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 	public boolean hasTimeEvents() {
 		return timeEvents;
 	}
-	
+
 }

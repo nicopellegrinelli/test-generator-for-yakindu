@@ -1,0 +1,179 @@
+testclass Controller2Test for statechart Controller2 {
+	@Test
+	operation test00 () {
+	    enter
+	    raise myEvent
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test03 () {
+	    enter
+	    raise myEvent
+	    raise myEvent
+	    raise myEvent
+	    raise myEvent
+	    raise myEvent
+	    assert !is_final
+	}
+
+	@Test
+	operation test04 () {
+	    enter
+	    raise myEvent
+	    raise myEvent
+	    raise myEvent
+	    triggerWithoutEvent
+	    assert is_active
+	}
+
+	@Test
+	operation test05 () {
+	    enter
+	    raise myEvent
+	    raise myEvent
+	    triggerWithoutEvent
+	    assert is_active
+	}
+
+	@Test
+	operation test06 () {
+	    enter
+	    raise myEvent
+	    triggerWithoutEvent
+	    assert is_active
+	}
+
+	@Test
+	operation test07 () {
+	    enter
+	    triggerWithoutEvent
+	    assert is_active
+	}
+
+	@Test
+	operation test08 () {
+	    exit
+	    assert !is_final
+	}
+
+	@Test
+	operation test09 () {
+	    enter
+	    raise myEvent
+	    raise myEvent
+	    raise myEvent
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test10 () {
+	    enter
+	    raise myEvent
+	    raise myEvent
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test12 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test13 () {
+	    enter
+	    raise myEvent
+	    raise myEvent
+	    assert is_active
+	    assert active (Controller2.main_region.StateC)
+	}
+
+	@Test
+	operation test14 () {
+	    enter
+	    raise myEvent
+	    assert is_active
+	    assert active (Controller2.main_region.StateB)
+	}
+
+	@Test
+	operation test15 () {
+	    enter
+	    assert is_active
+	    assert active (Controller2.main_region.StateA)
+	}
+
+	@Test
+	operation test16 () {
+	}
+
+	@Test
+	operation test17 () {
+	    assert !active (Controller2.main_region.StateD)
+	}
+
+	@Test
+	operation test18 () {
+	    assert !active (Controller2.main_region.StateC)
+	}
+
+	@Test
+	operation test19 () {
+	    assert !active (Controller2.main_region.StateB)
+	}
+
+	@Test
+	operation test20 () {
+	    assert !active (Controller2.main_region.StateE)
+	}
+
+	@Test
+	operation test21 () {
+	    assert !active (Controller2.main_region.StateA)
+	}
+
+	@Test
+	operation test22 () {
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test23 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test24 () {
+	    triggerWithoutEvent
+	    assert !is_active
+	}
+
+	@Test
+	operation test25 () {
+	    enter
+	    raise myEvent
+	    raise myEvent
+	    raise myEvent
+	    raise myEvent
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test26 () {
+	    assert !is_final
+	    assert !is_active
+	}
+
+}

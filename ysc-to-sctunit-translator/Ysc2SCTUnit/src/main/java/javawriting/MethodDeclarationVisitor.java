@@ -11,7 +11,7 @@ public class MethodDeclarationVisitor extends VoidVisitorAdapter<Void> {
 
 	/**
 	 * Visit a method declaration, set the visibility to private if it is protected
-	 * or if it is a public set method.
+	 * or if it is a variable public set method.
 	 *
 	 * @param the method declaration
 	 * @param arg none
@@ -32,6 +32,13 @@ public class MethodDeclarationVisitor extends VoidVisitorAdapter<Void> {
 		}
 		// Changes method visibility from public to private if it is a set or get method
 		if (node.isPublic() && (node.getNameAsString().startsWith("set") || node.getNameAsString().startsWith("get"))) {
+			// For set methods, change visibility only if the parameter's type is an Itemis
+			// Create built-in type
+			if (node.getNameAsString().startsWith("set")) {
+				String type = node.getParameter(0).getTypeAsString();
+				if (!type.matches("long|double|boolean|String"))
+					return;
+			}
 			node.setPublic(false);
 			node.setPrivate(true);
 		}

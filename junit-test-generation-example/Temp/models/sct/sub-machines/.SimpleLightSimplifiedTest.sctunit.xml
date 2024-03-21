@@ -1,6 +1,4 @@
 <testsuite name="SimpleLightTest" time="">
-  <testcase name="test00" classname="platform:/resource/Temp/models/sct/sub-machines/SimpleLightSimplifiedTest.sctunit#SimpleLightTest.test00" time="">
-  </testcase>
   <testcase name="test01" classname="platform:/resource/Temp/models/sct/sub-machines/SimpleLightSimplifiedTest.sctunit#SimpleLightTest.test01" time="">
   </testcase>
   <testcase name="test02" classname="platform:/resource/Temp/models/sct/sub-machines/SimpleLightSimplifiedTest.sctunit#SimpleLightTest.test02" time="">
@@ -30,7 +28,5 @@
   <testcase name="test14" classname="platform:/resource/Temp/models/sct/sub-machines/SimpleLightSimplifiedTest.sctunit#SimpleLightTest.test14" time="">
   </testcase>
   <testcase name="test15" classname="platform:/resource/Temp/models/sct/sub-machines/SimpleLightSimplifiedTest.sctunit#SimpleLightTest.test15" time="">
-  </testcase>
-  <testcase name="test16" classname="platform:/resource/Temp/models/sct/sub-machines/SimpleLightSimplifiedTest.sctunit#SimpleLightTest.test16" time="">
   </testcase>
 </testsuite>

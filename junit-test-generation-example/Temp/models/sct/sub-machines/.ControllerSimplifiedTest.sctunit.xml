@@ -1,6 +1,4 @@
 <testsuite name="ControllerTest" time="">
-  <testcase name="test00" classname="platform:/resource/Temp/models/sct/sub-machines/ControllerSimplifiedTest.sctunit#ControllerTest.test00" time="">
-  </testcase>
   <testcase name="test01" classname="platform:/resource/Temp/models/sct/sub-machines/ControllerSimplifiedTest.sctunit#ControllerTest.test01" time="">
   </testcase>
   <testcase name="test02" classname="platform:/resource/Temp/models/sct/sub-machines/ControllerSimplifiedTest.sctunit#ControllerTest.test02" time="">
@@ -29,6 +27,8 @@
   </testcase>
   <testcase name="test14" classname="platform:/resource/Temp/models/sct/sub-machines/ControllerSimplifiedTest.sctunit#ControllerTest.test14" time="">
   </testcase>
-  <testcase name="test15" classname="platform:/resource/Temp/models/sct/sub-machines/ControllerSimplifiedTest.sctunit#ControllerTest.test15" time="">
+  <testcase name="test16" classname="platform:/resource/Temp/models/sct/sub-machines/ControllerSimplifiedTest.sctunit#ControllerTest.test16" time="">
+  </testcase>
+  <testcase name="test17" classname="platform:/resource/Temp/models/sct/sub-machines/ControllerSimplifiedTest.sctunit#ControllerTest.test17" time="">
   </testcase>
 </testsuite>

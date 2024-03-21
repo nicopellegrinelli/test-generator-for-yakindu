@@ -27,13 +27,11 @@ public class ClassDeclarationVisitor extends VoidVisitorAdapter<Void> {
 		// operations in the statechart
 		if (node.isInterface())
 			return;
-		// Changes class name only if the class is public and not static (nested)
-		// else, change the type of the field named parent
+		// Changes class name only if the class is public and not static (i.e. not a
+		// nested class) else, change the type of the field named "parent"
 		if (node.isPublic() && !node.isStatic()) {
 			node.setName(node.getNameAsString() + "Simplified");
 		} else {
-			// Used VariableDeclarator instead of FieldDeclaration because it makes the type
-			// modification easier
 			List<VariableDeclarator> fields = node.findAll(VariableDeclarator.class);
 			for (VariableDeclarator field : fields) {
 				if (field.getName().toString().equals("parent")) {

@@ -216,32 +216,62 @@ public class YscReader {
 			if (child.getNodeName().equals("outgoingTransitions")) {
 				Node attribute = child.getAttributes().getNamedItem("specification");
 				if (attribute != null) {
-					String name = attribute.getNodeValue();
-					// Obtain the substring from the start to the first characterthat that is not a
-					// letter, a number, the underscore or the dot (i.e. un ID with dots).
-					// This ensures that the real event name (eventually starting with
-					// interface_name.) is retrieved.
-					Matcher matcher = Pattern.compile("[^a-zA-Z0-9_.]").matcher(name);
-					if (matcher.find()) {
-						name = name.substring(0, matcher.start());
+					String specificationAttr = attribute.getNodeValue();
+					// Replace all sequences of withe spaces with just one space
+					specificationAttr = specificationAttr.replaceAll("\\s+", " ");
+					List<String> triggers = new ArrayList<String>();
+					String trigger;
+					// Triggers could be separated by commas, scan the string retrieving single
+					// triggers
+					while (specificationAttr.contains(",")) {
+						// Add the trigger and remove the relative substring
+						addTrigger(triggers, specificationAttr.substring(0, specificationAttr.indexOf(",")));
+						specificationAttr = specificationAttr.substring(specificationAttr.indexOf(",") + 1);
 					}
-					if (!name.equals("")) {
-						// Transitions containing a point are relative to events from an interface with
-						// a name
-						if (name.contains(".")) {
-							String interfaceName = name.substring(0, name.indexOf('.'));
+					// After the last comma is removed, there is still a trigger to manage
+					Matcher matcher = Pattern.compile("\\[|/|#").matcher(specificationAttr);
+					if (matcher.find())
+						trigger = specificationAttr.substring(0, matcher.start());
+					else
+						trigger = specificationAttr;
+					addTrigger(triggers, trigger);
+					// Scan all triggers, adding the new one to the relative dictionaries
+					for (String t : triggers) {
+						// Transitions containing a dot are relative to events from a named interface
+						if (t.contains(".")) {
+							String interfaceName = t.substring(0, t.indexOf('.'));
 							if (!interfacesNames.contains(interfaceName))
 								interfacesNames.add(interfaceName);
-							String eventName = name.substring(name.indexOf('.') + 1);
+							String eventName = t.substring(t.indexOf('.') + 1);
 							if (!eventsNames.contains(eventName))
 								eventsNames.add(eventName);
 						} else {
-							if (!eventsNames.contains(name))
-								eventsNames.add(name);
+							if (!eventsNames.contains(t))
+								eventsNames.add(t);
 						}
 					}
 				}
 			}
+		}
+	}
+
+	/**
+	 * Add the string representing the trigger to the list. All spaces will be
+	 * removed and triggers relative to time events or conicident to other keywords
+	 * will not be added.
+	 *
+	 * @param triggers the list where to put the new one
+	 * @param trigger  the string representing the trigger to add
+	 */
+	private void addTrigger(List<String> triggers, String trigger) {
+		// Triggers relative to time events or conicident to other keywords are useless.
+		if (trigger.contains("after ") || trigger.contains("every ")
+				|| trigger.replace(" ", "").matches("always|oncycle|else|default"))
+			return;
+		// Remove the remainings spaces from the string
+		String trg = trigger.replace(" ", "");
+		if (!trg.isEmpty()) {
+			triggers.add(trg);
 		}
 	}
 

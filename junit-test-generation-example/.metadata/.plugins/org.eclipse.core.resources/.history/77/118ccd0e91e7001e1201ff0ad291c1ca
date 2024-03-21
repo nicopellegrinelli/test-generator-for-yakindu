@@ -1,0 +1,318 @@
+testclass EntryExitTest for statechart EntryExit {
+	@Test
+	operation test00 () {
+	    enter
+	    raise b
+	    assert is_active
+	    assert active (EntryExit.main_region.Multiple_Alternatives)
+	}
+
+	@Test
+	operation test02 () {
+	    enter
+	    raise c
+	    raise b
+	    assert is_active
+	}
+
+	@Test
+	operation test03 () {
+	    enter
+	    raise c
+	    raise next
+	    raise a
+	    assert is_active
+	}
+
+	@Test
+	operation test04 () {
+	    raise a
+	    assert !is_final
+	}
+
+	@Test
+	operation test05 () {
+	    enter
+	    raise a
+	    raise a
+	    assert is_active
+	}
+
+	@Test
+	operation test06 () {
+	    enter
+	    raise b
+	    raise next
+	    raise c
+	    assert is_active
+	}
+
+	@Test
+	operation test07 () {
+	    enter
+	    raise c
+	    triggerWithoutEvent
+	    assert is_active
+	}
+
+	@Test
+	operation test08 () {
+	    enter
+	    raise b
+	    triggerWithoutEvent
+	    assert is_active
+	}
+
+	@Test
+	operation test09 () {
+	    enter
+	    triggerWithoutEvent
+	    assert is_active
+	}
+
+	@Test
+	operation test10 () {
+	    exit
+	    assert !is_final
+	}
+
+	@Test
+	operation test11 () {
+	    enter
+	    raise b
+	    raise next
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test12 () {
+	    enter
+	    raise b
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test13 () {
+	    enter
+	    raise a
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test14 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test15 () {
+	    enter
+	    raise c
+	    raise next
+	    assert is_active
+	    assert active (EntryExit.main_region.D)
+	}
+
+	@Test
+	operation test16 () {
+	    enter
+	    raise b
+	    raise next
+	    assert is_active
+	    assert active (EntryExit.main_region.E)
+	}
+
+	@Test
+	operation test17 () {
+	    enter
+	    raise c
+	    raise next
+	    raise next
+	    raise next
+	    assert is_active
+	    assert active (EntryExit.main_region._final_)
+	}
+
+	@Test
+	operation test18 () {
+	    enter
+	    raise c
+	    assert is_active
+	    assert active (EntryExit.main_region.Multiple_Alternatives.r1.C)
+	}
+
+	@Test
+	operation test19 () {
+	    enter
+	    raise b
+	    assert is_active
+	    assert active (EntryExit.main_region.Multiple_Alternatives.r1.B)
+	}
+
+	@Test
+	operation test20 () {
+	    enter
+	    raise a
+	    assert is_active
+	    assert active (EntryExit.main_region.Multiple_Alternatives.r1.A)
+	}
+
+	@Test
+	operation test21 () {
+	    enter
+	    raise c
+	    assert is_active
+	    assert active (EntryExit.main_region.Multiple_Alternatives)
+	}
+
+	@Test
+	operation test22 () {
+	    enter
+	    assert is_active
+	    assert !active (EntryExit.main_region.Multiple_Alternatives)
+	}
+
+	@Test
+	operation test23 () {
+	    enter
+	    assert is_active
+	    assert active (EntryExit.main_region.init)
+	}
+
+	@Test
+	operation test24 () {
+	}
+
+	@Test
+	operation test25 () {
+	    assert !is_active
+	    assert !active (EntryExit.main_region.Multiple_Alternatives)
+	}
+
+	@Test
+	operation test26 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test27 () {
+	    assert !active (EntryExit.main_region.E)
+	    assert !is_active
+	}
+
+	@Test
+	operation test28 () {
+	    assert !is_active
+	    assert !active (EntryExit.main_region._final_)
+	}
+
+	@Test
+	operation test29 () {
+	    assert !is_active
+	    assert !active (EntryExit.main_region.Multiple_Alternatives.r1.C)
+	}
+
+	@Test
+	operation test30 () {
+	    assert !is_active
+	    assert !active (EntryExit.main_region.Multiple_Alternatives.r1.A)
+	}
+
+	@Test
+	operation test31 () {
+	    assert !is_active
+	    assert !active (EntryExit.main_region.Multiple_Alternatives.r1.B)
+	}
+
+	@Test
+	operation test32 () {
+	    assert !is_active
+	    assert !active (EntryExit.main_region.init)
+	}
+
+	@Test
+	operation test33 () {
+	    enter
+	    raise c
+	    raise next
+	    raise next
+	    raise next
+	    assert is_final
+	}
+
+	@Test
+	operation test34 () {
+	    assert !is_final
+	    assert !is_active
+	}
+
+	@Test
+	operation test35 () {
+	    assert !is_active
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test36 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test37 () {
+	    enter
+	    raise c
+	    raise next
+	    raise next
+	    raise next
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test38 () {
+	    enter
+	    raise c
+	    raise next
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test39 () {
+	    enter
+	    raise a
+	    raise next
+	    assert is_final
+	}
+
+	@Test
+	operation test40 () {
+	    enter
+	    raise b
+	    raise next
+	    raise next
+	    raise a
+	    assert is_final
+	}
+
+	@Test
+	operation test41 () {
+	    enter
+	    raise c
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+}

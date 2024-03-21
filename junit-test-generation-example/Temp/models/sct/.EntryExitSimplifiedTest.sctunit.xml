@@ -1,8 +1,6 @@
 <testsuite name="EntryExitTest" time="">
   <testcase name="test00" classname="platform:/resource/Temp/models/sct/EntryExitSimplifiedTest.sctunit#EntryExitTest.test00" time="">
   </testcase>
-  <testcase name="test01" classname="platform:/resource/Temp/models/sct/EntryExitSimplifiedTest.sctunit#EntryExitTest.test01" time="">
-  </testcase>
   <testcase name="test02" classname="platform:/resource/Temp/models/sct/EntryExitSimplifiedTest.sctunit#EntryExitTest.test02" time="">
   </testcase>
   <testcase name="test03" classname="platform:/resource/Temp/models/sct/EntryExitSimplifiedTest.sctunit#EntryExitTest.test03" time="">
@@ -80,5 +78,7 @@
   <testcase name="test39" classname="platform:/resource/Temp/models/sct/EntryExitSimplifiedTest.sctunit#EntryExitTest.test39" time="">
   </testcase>
   <testcase name="test40" classname="platform:/resource/Temp/models/sct/EntryExitSimplifiedTest.sctunit#EntryExitTest.test40" time="">
+  </testcase>
+  <testcase name="test41" classname="platform:/resource/Temp/models/sct/EntryExitSimplifiedTest.sctunit#EntryExitTest.test41" time="">
   </testcase>
 </testsuite>

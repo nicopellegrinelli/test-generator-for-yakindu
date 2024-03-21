@@ -1,0 +1,125 @@
+testclass TriggersTest for statechart Triggers {
+	@Test
+	operation test00 () {
+	    raise intf.oncycle_1
+	}
+
+	@Test
+	operation test01 () {
+	    raise intf.every_oncycle
+	}
+
+	@Test
+	operation test02 () {
+	    raise intf.Event_Name
+	}
+
+	@Test
+	operation test03 () {
+	    raise intf.b
+	}
+
+	@Test
+	operation test04 () {
+	    raise intf.a
+	}
+
+	@Test
+	operation test05 () {
+	    triggerWithoutEvent
+	    assert !is_active
+	}
+
+	@Test
+	operation test06 () {
+	    proceed 3s
+	    assert !is_active
+	}
+
+	@Test
+	operation test09 () {
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test10 () {
+	    enter
+	    assert is_active
+	    assert active (Triggers.main_region.StateB)
+	}
+
+	@Test
+	operation test11 () {
+	}
+
+	@Test
+	operation test12 () {
+	    assert !active (Triggers.main_region.StateF)
+	}
+
+	@Test
+	operation test13 () {
+	    assert !active (Triggers.main_region.StateD)
+	}
+
+	@Test
+	operation test14 () {
+	    assert !active (Triggers.main_region.StateC)
+	}
+
+	@Test
+	operation test15 () {
+	    assert !active (Triggers.main_region.StateB)
+	}
+
+	@Test
+	operation test16 () {
+	    assert !active (Triggers.main_region.StateE)
+	}
+
+	@Test
+	operation test17 () {
+	    assert !active (Triggers.main_region.StateA)
+	}
+
+	@Test
+	operation test18 () {
+	    enter
+	    raise afterX
+	    assert is_active
+	}
+
+	@Test
+	operation test19 () {
+	    raise every200ns
+	    assert !is_active
+	}
+
+	@Test
+	operation test20 () {
+	    assert !is_active
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test21 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test24 () {
+	    assert !is_final
+	    assert !is_active
+	}
+
+	@Test
+	operation test28 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+}

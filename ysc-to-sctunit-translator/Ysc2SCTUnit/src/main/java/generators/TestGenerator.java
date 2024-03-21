@@ -43,7 +43,6 @@ public class TestGenerator {
 		System.out.println("--------------------------------------------------------------");
 		System.out.println("\t\t\tYsc2SCTUnit");
 		System.out.println("--------------------------------------------------------------");
-
 		// Parse the arguments
 		ParsedArgs parsedArgs = CLIManager.parse(args);
 		if (parsedArgs == null) {
@@ -111,7 +110,7 @@ public class TestGenerator {
 
 		// Compile the new simplified class
 		compile(compilerD, compilerClasspath, simplifiedJavaPath);
-		
+
 		// Delete the VirtualTimer.class file to hide it to Evosuite
 		String virtualTimerPath = projectPath + "//" + binaryDir + "//com//yakindu//core//VirtualTimer.class";
 		if (Files.exists(Paths.get(virtualTimerPath))) {
@@ -119,8 +118,8 @@ public class TestGenerator {
 		}
 
 		// Call the Evosuite test generator
-		Generators.generateJunit(evoSimplifiedClass, evoProjectCP, evoDTestDir, evoDReportDir,
-				hasSearchBudget, evoSearchBudget);
+		Generators.generateJunit(evoSimplifiedClass, evoProjectCP, evoDTestDir, evoDReportDir, hasSearchBudget,
+				evoSearchBudget);
 
 		// Generate the .sctunit file
 		Map<String, String> statesNames = yscReader.getStatesNames();
@@ -145,11 +144,11 @@ public class TestGenerator {
 	 * Compile.
 	 *
 	 * @param compilerD         the string "-d ProjectPath", where ProjectPath is
-	 *                          the path of the directory where the .class
-	 *                          files will be put
+	 *                          the path of the directory where the .class files
+	 *                          will be put
 	 * @param compilerClasspath the string "-classpath ClassPath", where ClassPath
 	 *                          is the classpath of the compilation
-	 * @param javaPath         the path of the .java file to compile
+	 * @param javaPath          the path of the .java file to compile
 	 */
 	private static void compile(String compilerD, String compilerClasspath, String javaPath) {
 		System.out.println("*******************************************");
