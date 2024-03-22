@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sgraph="http://www.yakindu.org/sct/sgraph/2.0.0">
-  <sgraph:Statechart xmi:id="_veUVMN-sEe6zyd63bm-CnA" specification="@EventDriven&#xA;@SuperSteps(no)&#xD;&#xA;&#xA;interface:&#xA;&#x9;var value: integer = 0 &#xA;&#x9;in event end&#xA;&#x9;in event start&#xA;&#x9;in event prepare" name="EasyChoice">
+  <sgraph:Statechart xmi:id="_veUVMN-sEe6zyd63bm-CnA" specification="@CycleBased(200)&#xA;//@EventDriven&#xA;@SuperSteps(no)&#xD;&#xA;&#xA;interface:&#xA;&#x9;var value: integer = 0 &#xA;&#x9;in event end&#xA;&#x9;in event start&#xA;&#x9;in event prepare" name="EasyChoice">
     <regions xmi:id="_veUVPN-sEe6zyd63bm-CnA" name="main region">
       <vertices xsi:type="sgraph:Entry" xmi:id="_veUVPd-sEe6zyd63bm-CnA">
         <outgoingTransitions xmi:id="_veUVPt-sEe6zyd63bm-CnA" target="_veUVP9-sEe6zyd63bm-CnA"/>

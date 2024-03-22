@@ -1,0 +1,171 @@
+testclass LightTest for statechart Light {
+	@Test
+	operation test01 () {
+	}
+
+	@Test
+	operation test02 () {
+	}
+
+	@Test
+	operation test03 () {
+	}
+
+	@Test
+	operation test04 () {
+	    enter
+	    raise switch.toggle
+	    proceed 1 cycle
+	    raise switch.toggle
+	    proceed 1 cycle
+	    assert is_active
+	}
+
+	@Test
+	operation test05 () {
+	    enter
+	    proceed 1 cycle
+	    assert is_active
+	}
+
+	@Test
+	operation test06 () {
+	    raise switch.toggle
+	    enter
+	    proceed 1 cycle
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test07 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test08 () {
+	    enter
+	    raise switch.toggle
+	    proceed 1 cycle
+	    assert is_active
+	    assert active (Light.main_region.On)
+	}
+
+	@Test
+	operation test09 () {
+	    enter
+	    assert is_active
+	    assert active (Light.main_region.Off)
+	}
+
+	@Test
+	operation test10 () {
+	}
+
+	@Test
+	operation test11 () {
+	    assert !active (Light.main_region.On)
+	}
+
+	@Test
+	operation test12 () {
+	    assert !active (Light.main_region.broken)
+	}
+
+	@Test
+	operation test13 () {
+	    assert !active (Light.main_region.Off)
+	}
+
+	@Test
+	operation test14 () {
+	    proceed 1 cycle
+	    assert !is_active
+	}
+
+	@Test
+	operation test15 () {
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test16 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test17 () {
+	    exit
+	    assert !is_final
+	}
+
+	@Test
+	operation test18 () {
+	    assert !is_active
+	    enter
+	    raise switch.toggle
+	    proceed 1 cycle
+	    raise switch.reduceBrightness
+	    proceed 1 cycle
+	    assert is_active
+	}
+
+	@Test
+	operation test19 () {
+	    assert !is_active
+	    enter
+	    raise lightning.strike
+	    proceed 1 cycle
+	    raise lightning.strike
+	    proceed 1 cycle
+	    raise lightning.strike
+	    proceed 1 cycle
+	    raise lightning.strike
+	    proceed 1 cycle
+	    raise lightning.strike
+	    proceed 1 cycle
+	    assert is_active
+	}
+
+	@Test
+	operation test20 () {
+	    assert !is_active
+	    enter
+	    raise switch.toggle
+	    proceed 1 cycle
+	    raise switch.increaseBrightness
+	    proceed 1 cycle
+	    raise switch.reduceBrightness
+	    proceed 1 cycle
+	    assert is_active
+	}
+
+	@Test
+	operation test21 () {
+	    raise repair
+	    assert !is_active
+	}
+
+	@Test
+	operation test22 () {
+	    assert !is_final
+	    assert !is_active
+	}
+
+	@Test
+	operation test23 () {
+	    assert !is_active
+	    enter
+	    raise switch.toggle
+	    proceed 1 cycle
+	    raise color.change
+	    proceed 1 cycle
+	    assert is_active
+	}
+
+}

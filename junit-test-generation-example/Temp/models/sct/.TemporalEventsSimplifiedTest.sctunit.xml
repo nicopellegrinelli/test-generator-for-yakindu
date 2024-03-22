@@ -1,8 +1,4 @@
 <testsuite name="TemporalEventsTest" time="">
-  <testcase name="test00" classname="platform:/resource/Temp/models/sct/TemporalEventsSimplifiedTest.sctunit#TemporalEventsTest.test00" time="">
-  </testcase>
-  <testcase name="test03" classname="platform:/resource/Temp/models/sct/TemporalEventsSimplifiedTest.sctunit#TemporalEventsTest.test03" time="">
-  </testcase>
   <testcase name="test04" classname="platform:/resource/Temp/models/sct/TemporalEventsSimplifiedTest.sctunit#TemporalEventsTest.test04" time="">
   </testcase>
   <testcase name="test05" classname="platform:/resource/Temp/models/sct/TemporalEventsSimplifiedTest.sctunit#TemporalEventsTest.test05" time="">
@@ -27,11 +23,11 @@
   </testcase>
   <testcase name="test15" classname="platform:/resource/Temp/models/sct/TemporalEventsSimplifiedTest.sctunit#TemporalEventsTest.test15" time="">
   </testcase>
+  <testcase name="test16" classname="platform:/resource/Temp/models/sct/TemporalEventsSimplifiedTest.sctunit#TemporalEventsTest.test16" time="">
+  </testcase>
   <testcase name="test17" classname="platform:/resource/Temp/models/sct/TemporalEventsSimplifiedTest.sctunit#TemporalEventsTest.test17" time="">
   </testcase>
   <testcase name="test18" classname="platform:/resource/Temp/models/sct/TemporalEventsSimplifiedTest.sctunit#TemporalEventsTest.test18" time="">
-  </testcase>
-  <testcase name="test19" classname="platform:/resource/Temp/models/sct/TemporalEventsSimplifiedTest.sctunit#TemporalEventsTest.test19" time="">
   </testcase>
   <testcase name="test20" classname="platform:/resource/Temp/models/sct/TemporalEventsSimplifiedTest.sctunit#TemporalEventsTest.test20" time="">
   </testcase>
@@ -39,14 +35,14 @@
   </testcase>
   <testcase name="test22" classname="platform:/resource/Temp/models/sct/TemporalEventsSimplifiedTest.sctunit#TemporalEventsTest.test22" time="">
   </testcase>
-  <testcase name="test25" classname="platform:/resource/Temp/models/sct/TemporalEventsSimplifiedTest.sctunit#TemporalEventsTest.test25" time="">
+  <testcase name="test23" classname="platform:/resource/Temp/models/sct/TemporalEventsSimplifiedTest.sctunit#TemporalEventsTest.test23" time="">
   </testcase>
-  <testcase name="test26" classname="platform:/resource/Temp/models/sct/TemporalEventsSimplifiedTest.sctunit#TemporalEventsTest.test26" time="">
+  <testcase name="test24" classname="platform:/resource/Temp/models/sct/TemporalEventsSimplifiedTest.sctunit#TemporalEventsTest.test24" time="">
   </testcase>
   <testcase name="test28" classname="platform:/resource/Temp/models/sct/TemporalEventsSimplifiedTest.sctunit#TemporalEventsTest.test28" time="">
   </testcase>
   <testcase name="test29" classname="platform:/resource/Temp/models/sct/TemporalEventsSimplifiedTest.sctunit#TemporalEventsTest.test29" time="">
   </testcase>
-  <testcase name="test33" classname="platform:/resource/Temp/models/sct/TemporalEventsSimplifiedTest.sctunit#TemporalEventsTest.test33" time="">
+  <testcase name="test31" classname="platform:/resource/Temp/models/sct/TemporalEventsSimplifiedTest.sctunit#TemporalEventsTest.test31" time="">
   </testcase>
 </testsuite>

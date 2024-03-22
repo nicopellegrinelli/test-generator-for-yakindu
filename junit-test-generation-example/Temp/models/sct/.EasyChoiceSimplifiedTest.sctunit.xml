@@ -1,6 +1,4 @@
 <testsuite name="EasyChoiceTest" time="">
-  <testcase name="test00" classname="platform:/resource/Temp/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test00" time="">
-  </testcase>
   <testcase name="test01" classname="platform:/resource/Temp/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test01" time="">
   </testcase>
   <testcase name="test02" classname="platform:/resource/Temp/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test02" time="">
@@ -50,11 +48,5 @@
   <testcase name="test24" classname="platform:/resource/Temp/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test24" time="">
   </testcase>
   <testcase name="test25" classname="platform:/resource/Temp/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test25" time="">
-  </testcase>
-  <testcase name="test26" classname="platform:/resource/Temp/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test26" time="">
-  </testcase>
-  <testcase name="test27" classname="platform:/resource/Temp/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test27" time="">
-  </testcase>
-  <testcase name="test28" classname="platform:/resource/Temp/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test28" time="">
   </testcase>
 </testsuite>

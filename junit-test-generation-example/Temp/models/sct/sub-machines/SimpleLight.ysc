@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sgraph="http://www.yakindu.org/sct/sgraph/2.0.0">
-  <sgraph:Statechart xmi:id="_JuWN6OEiEe6NnPNg52dFNQ" specification="@EventDriven&#xA;@SuperSteps(no)&#xD;&#xA;&#xA;&#xA;interface:&#xA;&#x9;var brightness : integer&#xA;&#x9;in event toggle&#xA;&#x9;in event inc&#xA;&#x9;in event dec" name="SimpleLight">
+  <sgraph:Statechart xmi:id="_JuWN6OEiEe6NnPNg52dFNQ" specification="@CycleBased(200)&#xA;@SuperSteps(no)&#xD;&#xA;&#xA;&#xA;interface:&#xA;&#x9;var brightness : integer&#xA;&#x9;in event toggle&#xA;&#x9;in event inc&#xA;&#x9;in event dec" name="SimpleLight">
     <regions xmi:id="_JupI2-EiEe6NnPNg52dFNQ" name="main region">
       <vertices xsi:type="sgraph:Entry" xmi:id="_JupI3OEiEe6NnPNg52dFNQ">
         <outgoingTransitions xmi:id="_JupI3eEiEe6NnPNg52dFNQ" target="_JupI3uEiEe6NnPNg52dFNQ"/>

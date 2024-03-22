@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sgraph="http://www.yakindu.org/sct/sgraph/2.0.0">
-  <sgraph:Statechart xmi:id="_MA9JvuEiEe6NnPNg52dFNQ" specification="@EventDriven&#xA;@SuperSteps(no)&#xD;&#xA;&#xA;import: &quot;SimpleLight.ysc&quot;&#xA;&#xA;interface:&#xA;&#x9;var SL1: SimpleLight&#xA;&#x9;var SL2: SimpleLight&#xA;&#x9;in event powerOn&#xA;&#x9;in event control1&#xA;&#x9;in event control2&#xA;&#x9;in event dec&#xA;&#x9;in event inc" name="Controller">
+  <sgraph:Statechart xmi:id="_MA9JvuEiEe6NnPNg52dFNQ" specification="@CycleBased(200)&#xA;@SuperSteps(no)&#xD;&#xA;&#xA;import: &quot;SimpleLight.ysc&quot;&#xA;&#xA;interface:&#xA;&#x9;var SL1: SimpleLight&#xA;&#x9;var SL2: SimpleLight&#xA;&#x9;in event powerOn&#xA;&#x9;in event control1&#xA;&#x9;in event control2&#xA;&#x9;in event dec&#xA;&#x9;in event inc" name="Controller">
     <regions xmi:id="_MA9JyuEiEe6NnPNg52dFNQ" name="main region">
       <vertices xsi:type="sgraph:Entry" xmi:id="_MA9Jy-EiEe6NnPNg52dFNQ">
         <outgoingTransitions xmi:id="_MA9JzOEiEe6NnPNg52dFNQ" target="_MA9JzeEiEe6NnPNg52dFNQ"/>

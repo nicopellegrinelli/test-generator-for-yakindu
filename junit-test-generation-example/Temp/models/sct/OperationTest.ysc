@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sgraph="http://www.yakindu.org/sct/sgraph/2.0.0">
-  <sgraph:Statechart xmi:id="_ZgiwAOIVEe6EXfX2EmYbeQ" specification="@EventDriven&#xA;@SuperSteps(no)&#xD;&#xA;&#xA;interface:&#xA;&#x9;var val: integer&#xA;&#x9;operation op1(value: integer)&#xA;&#x9;in event a&#xA;&#x9;&#xA;interface I:&#xA;&#x9;operation op2(): integer&#xA;&#x9;in event b" name="OperationTest">
+  <sgraph:Statechart xmi:id="_ZgiwAOIVEe6EXfX2EmYbeQ" specification="@EventDriven&#xA;@SuperSteps(yes)&#xD;&#xA;&#xA;interface:&#xA;&#x9;var val: integer&#xA;&#x9;operation op1(value: integer)&#xA;&#x9;in event a&#xA;&#x9;&#xA;interface I:&#xA;&#x9;operation op2(): integer&#xA;&#x9;in event b" name="OperationTest">
     <regions xmi:id="_Zgsg6-IVEe6EXfX2EmYbeQ" name="main region">
       <vertices xsi:type="sgraph:Entry" xmi:id="_Zgsg7OIVEe6EXfX2EmYbeQ">
         <outgoingTransitions xmi:id="_Zgsg7eIVEe6EXfX2EmYbeQ" target="_Zgsg7uIVEe6EXfX2EmYbeQ"/>

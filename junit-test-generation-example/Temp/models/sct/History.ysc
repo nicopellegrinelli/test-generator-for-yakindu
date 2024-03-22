@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sgraph="http://www.yakindu.org/sct/sgraph/2.0.0">
-  <sgraph:Statechart xmi:id="_Y6r2cOB4Ee6eNbMo3grWOA" specification="@EventDriven&#xA;@SuperSteps(no)&#xD;&#xA;&#xA;interface:&#xA;&#x9;in event next&#xA;&#x9;in event start&#xA;&#x9;in event pause&#xA;&#x9;in event shallow_continue&#xA;&#x9;in event deep_continue" name="History">
+  <sgraph:Statechart xmi:id="_Y6r2cOB4Ee6eNbMo3grWOA" specification="@CycleBased(200)&#xA;//@EventDriven&#xA;@SuperSteps(yes)&#xD;&#xA;&#xA;interface:&#xA;&#x9;in event next&#xA;&#x9;in event start&#xA;&#x9;in event pause&#xA;&#x9;in event shallow_continue&#xA;&#x9;in event deep_continue" name="History">
     <regions xmi:id="_Y6r2fOB4Ee6eNbMo3grWOA" name="main region">
       <vertices xsi:type="sgraph:Entry" xmi:id="_Y6r2feB4Ee6eNbMo3grWOA">
         <outgoingTransitions xmi:id="_NBAZEOCAEe6eNbMo3grWOA" specification="" target="_ICU4kOCAEe6eNbMo3grWOA"/>

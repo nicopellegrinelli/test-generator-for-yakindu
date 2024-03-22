@@ -1,0 +1,96 @@
+testclass OperationTestTest for statechart OperationTest {
+	@Test
+	operation test00 () {
+	    triggerWithoutEvent
+	    assert !is_final
+	}
+
+	@Test
+	operation test03 () {
+	}
+
+	@Test
+	operation test04 () {
+	    enter
+	    raise a
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test05 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test06 () {
+	    enter
+	    raise a
+	    assert is_active
+	    assert active (OperationTest.main_region.StateB)
+	}
+
+	@Test
+	operation test07 () {
+	}
+
+	@Test
+	operation test08 () {
+	    assert !active (OperationTest.main_region.StateB)
+	}
+
+	@Test
+	operation test09 () {
+	    assert !active (OperationTest.main_region.StateA)
+	}
+
+	@Test
+	operation test11 () {
+	    raise I.b
+	}
+
+	@Test
+	operation test12 () {
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test13 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test14 () {
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test18 () {
+	    assert !is_active
+	    enter
+	    raise a
+	    raise I.b
+	    assert is_active
+	}
+
+	@Test
+	operation test19 () {
+	    assert !is_final
+	    assert !is_active
+	}
+
+	@Test
+	operation test20 () {
+	    assert !is_active
+	    enter
+	    assert is_active
+	    assert active (OperationTest.main_region.StateA)
+	}
+
+}

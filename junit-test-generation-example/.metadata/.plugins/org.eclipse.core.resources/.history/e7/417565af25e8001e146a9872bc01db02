@@ -1,0 +1,225 @@
+testclass EasyChoiceTest for statechart EasyChoice {
+	@Test
+	operation test01 () {
+	    enter
+	    raise prepare
+	    proceed 1 cycle
+	    raise prepare
+	    proceed 1 cycle
+	    raise start
+	    proceed 1 cycle
+	    raise end
+	    proceed 1 cycle
+	    assert is_final
+	}
+
+	@Test
+	operation test02 () {
+	    enter
+	    raise prepare
+	    proceed 1 cycle
+	    raise start
+	    proceed 1 cycle
+	    proceed 1 cycle
+	    assert is_active
+	}
+
+	@Test
+	operation test03 () {
+	    raise start
+	    enter
+	    proceed 1 cycle
+	    assert is_active
+	}
+
+	@Test
+	operation test04 () {
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test05 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test06 () {
+	    enter
+	    raise prepare
+	    proceed 1 cycle
+	    raise start
+	    proceed 1 cycle
+	    raise end
+	    proceed 1 cycle
+	    assert is_active
+	    assert active (EasyChoice.main_region._final_)
+	}
+
+	@Test
+	operation test07 () {
+	    enter
+	    raise prepare
+	    proceed 1 cycle
+	    raise prepare
+	    proceed 1 cycle
+	    raise start
+	    proceed 1 cycle
+	    assert is_active
+	    assert active (EasyChoice.main_region.TwoTimes)
+	}
+
+	@Test
+	operation test08 () {
+	    enter
+	    raise prepare
+	    proceed 1 cycle
+	    raise start
+	    proceed 1 cycle
+	    assert is_active
+	    assert active (EasyChoice.main_region.OneTime)
+	}
+
+	@Test
+	operation test09 () {
+	    enter
+	    assert is_active
+	    assert active (EasyChoice.main_region.Start)
+	}
+
+	@Test
+	operation test10 () {
+	}
+
+	@Test
+	operation test11 () {
+	    assert !active (EasyChoice.main_region._final_)
+	}
+
+	@Test
+	operation test12 () {
+	    assert !active (EasyChoice.main_region.A_lot_of_times)
+	}
+
+	@Test
+	operation test13 () {
+	    assert !active (EasyChoice.main_region.OneTime)
+	}
+
+	@Test
+	operation test14 () {
+	    assert !active (EasyChoice.main_region.TwoTimes)
+	}
+
+	@Test
+	operation test15 () {
+	    assert !active (EasyChoice.main_region.Start)
+	}
+
+	@Test
+	operation test16 () {
+	    proceed 1 cycle
+	    assert !is_active
+	}
+
+	@Test
+	operation test17 () {
+	    assert !is_active
+	    enter
+	    raise prepare
+	    proceed 1 cycle
+	    raise prepare
+	    proceed 1 cycle
+	    raise start
+	    proceed 1 cycle
+	    proceed 1 cycle
+	    assert is_active
+	}
+
+	@Test
+	operation test18 () {
+	    enter
+	    raise prepare
+	    proceed 1 cycle
+	    raise start
+	    proceed 1 cycle
+	    raise end
+	    proceed 1 cycle
+	    assert is_final
+	}
+
+	@Test
+	operation test19 () {
+	    assert !is_final
+	    assert !is_active
+	}
+
+	@Test
+	operation test20 () {
+	    assert !is_active
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test21 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test22 () {
+	    enter
+	    raise prepare
+	    proceed 1 cycle
+	    raise start
+	    proceed 1 cycle
+	    raise end
+	    proceed 1 cycle
+	    proceed 1 cycle
+	    assert is_final
+	}
+
+	@Test
+	operation test23 () {
+	    enter
+	    raise prepare
+	    proceed 1 cycle
+	    raise start
+	    proceed 1 cycle
+	    raise end
+	    proceed 1 cycle
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test24 () {
+	    enter
+	    raise prepare
+	    proceed 1 cycle
+	    raise prepare
+	    proceed 1 cycle
+	    raise start
+	    proceed 1 cycle
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test25 () {
+	    enter
+	    raise prepare
+	    proceed 1 cycle
+	    raise start
+	    proceed 1 cycle
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+}

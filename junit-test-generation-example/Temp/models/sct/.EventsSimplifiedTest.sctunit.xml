@@ -1,8 +1,6 @@
 <testsuite name="EventsTest" time="">
   <testcase name="test00" classname="platform:/resource/Temp/models/sct/EventsSimplifiedTest.sctunit#EventsTest.test00" time="">
   </testcase>
-  <testcase name="test01" classname="platform:/resource/Temp/models/sct/EventsSimplifiedTest.sctunit#EventsTest.test01" time="">
-  </testcase>
   <testcase name="test02" classname="platform:/resource/Temp/models/sct/EventsSimplifiedTest.sctunit#EventsTest.test02" time="">
   </testcase>
   <testcase name="test03" classname="platform:/resource/Temp/models/sct/EventsSimplifiedTest.sctunit#EventsTest.test03" time="">
@@ -66,5 +64,7 @@
   <testcase name="test32" classname="platform:/resource/Temp/models/sct/EventsSimplifiedTest.sctunit#EventsTest.test32" time="">
   </testcase>
   <testcase name="test33" classname="platform:/resource/Temp/models/sct/EventsSimplifiedTest.sctunit#EventsTest.test33" time="">
+  </testcase>
+  <testcase name="test34" classname="platform:/resource/Temp/models/sct/EventsSimplifiedTest.sctunit#EventsTest.test34" time="">
   </testcase>
 </testsuite>

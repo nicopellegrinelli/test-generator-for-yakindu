@@ -1,6 +1,4 @@
 <testsuite name="LightTest" time="">
-  <testcase name="test00" classname="platform:/resource/Temp/models/sct/LightSimplifiedTest.sctunit#LightTest.test00" time="">
-  </testcase>
   <testcase name="test01" classname="platform:/resource/Temp/models/sct/LightSimplifiedTest.sctunit#LightTest.test01" time="">
   </testcase>
   <testcase name="test02" classname="platform:/resource/Temp/models/sct/LightSimplifiedTest.sctunit#LightTest.test02" time="">
@@ -46,13 +44,5 @@
   <testcase name="test22" classname="platform:/resource/Temp/models/sct/LightSimplifiedTest.sctunit#LightTest.test22" time="">
   </testcase>
   <testcase name="test23" classname="platform:/resource/Temp/models/sct/LightSimplifiedTest.sctunit#LightTest.test23" time="">
-  </testcase>
-  <testcase name="test24" classname="platform:/resource/Temp/models/sct/LightSimplifiedTest.sctunit#LightTest.test24" time="">
-  </testcase>
-  <testcase name="test25" classname="platform:/resource/Temp/models/sct/LightSimplifiedTest.sctunit#LightTest.test25" time="">
-  </testcase>
-  <testcase name="test26" classname="platform:/resource/Temp/models/sct/LightSimplifiedTest.sctunit#LightTest.test26" time="">
-  </testcase>
-  <testcase name="test27" classname="platform:/resource/Temp/models/sct/LightSimplifiedTest.sctunit#LightTest.test27" time="">
   </testcase>
 </testsuite>

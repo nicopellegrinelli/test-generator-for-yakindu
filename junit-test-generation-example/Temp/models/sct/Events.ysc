@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sgraph="http://www.yakindu.org/sct/sgraph/2.0.0">
-  <sgraph:Statechart xmi:id="_TqZZoOHhEe6FDZUdXqFB4w" specification="@EventDriven&#xA;@SuperSteps(no)&#xD;&#xA;&#xA;internal:&#xA;&#x9;event internalEvent&#xA;&#x9;&#xA;interface:&#xA;&#x9;in event b: boolean&#xA;&#x9;in event i: integer&#xA;&#x9;in event str: string&#xA;&#x9;in event inEvent&#xA;&#x9;out event outEvent&#xA;&#x9;in event typedInEvent : real&#xA;&#x9;out event typedOutEvent: integer" name="Events">
+  <sgraph:Statechart xmi:id="_TqZZoOHhEe6FDZUdXqFB4w" specification="@CycleBased(200)&#xA;//@EventDriven&#xA;@SuperSteps(no)&#xD;&#xA;&#xA;internal:&#xA;&#x9;event internalEvent&#xA;&#x9;&#xA;interface:&#xA;&#x9;in event b: boolean&#xA;&#x9;in event i: integer&#xA;&#x9;in event str: string&#xA;&#x9;in event inEvent&#xA;&#x9;out event outEvent&#xA;&#x9;in event typedInEvent : real&#xA;&#x9;out event typedOutEvent: integer" name="Events">
     <regions xmi:id="_Tqs7i-HhEe6FDZUdXqFB4w" name="main region">
       <vertices xsi:type="sgraph:Entry" xmi:id="_Tqs7jOHhEe6FDZUdXqFB4w">
         <outgoingTransitions xmi:id="_Tqs7jeHhEe6FDZUdXqFB4w" specification="" target="_Tqs7juHhEe6FDZUdXqFB4w"/>

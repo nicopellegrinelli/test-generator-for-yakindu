@@ -1,10 +1,6 @@
 <testsuite name="OperationTestTest" time="">
   <testcase name="test00" classname="platform:/resource/Temp/models/sct/OperationTestSimplifiedTest.sctunit#OperationTestTest.test00" time="">
   </testcase>
-  <testcase name="test01" classname="platform:/resource/Temp/models/sct/OperationTestSimplifiedTest.sctunit#OperationTestTest.test01" time="">
-  </testcase>
-  <testcase name="test02" classname="platform:/resource/Temp/models/sct/OperationTestSimplifiedTest.sctunit#OperationTestTest.test02" time="">
-  </testcase>
   <testcase name="test03" classname="platform:/resource/Temp/models/sct/OperationTestSimplifiedTest.sctunit#OperationTestTest.test03" time="">
   </testcase>
   <testcase name="test04" classname="platform:/resource/Temp/models/sct/OperationTestSimplifiedTest.sctunit#OperationTestTest.test04" time="">
@@ -19,8 +15,6 @@
   </testcase>
   <testcase name="test09" classname="platform:/resource/Temp/models/sct/OperationTestSimplifiedTest.sctunit#OperationTestTest.test09" time="">
   </testcase>
-  <testcase name="test10" classname="platform:/resource/Temp/models/sct/OperationTestSimplifiedTest.sctunit#OperationTestTest.test10" time="">
-  </testcase>
   <testcase name="test11" classname="platform:/resource/Temp/models/sct/OperationTestSimplifiedTest.sctunit#OperationTestTest.test11" time="">
   </testcase>
   <testcase name="test12" classname="platform:/resource/Temp/models/sct/OperationTestSimplifiedTest.sctunit#OperationTestTest.test12" time="">
@@ -29,18 +23,10 @@
   </testcase>
   <testcase name="test14" classname="platform:/resource/Temp/models/sct/OperationTestSimplifiedTest.sctunit#OperationTestTest.test14" time="">
   </testcase>
-  <testcase name="test15" classname="platform:/resource/Temp/models/sct/OperationTestSimplifiedTest.sctunit#OperationTestTest.test15" time="">
-  </testcase>
-  <testcase name="test16" classname="platform:/resource/Temp/models/sct/OperationTestSimplifiedTest.sctunit#OperationTestTest.test16" time="">
-  </testcase>
-  <testcase name="test17" classname="platform:/resource/Temp/models/sct/OperationTestSimplifiedTest.sctunit#OperationTestTest.test17" time="">
-  </testcase>
   <testcase name="test18" classname="platform:/resource/Temp/models/sct/OperationTestSimplifiedTest.sctunit#OperationTestTest.test18" time="">
   </testcase>
   <testcase name="test19" classname="platform:/resource/Temp/models/sct/OperationTestSimplifiedTest.sctunit#OperationTestTest.test19" time="">
   </testcase>
   <testcase name="test20" classname="platform:/resource/Temp/models/sct/OperationTestSimplifiedTest.sctunit#OperationTestTest.test20" time="">
-  </testcase>
-  <testcase name="test21" classname="platform:/resource/Temp/models/sct/OperationTestSimplifiedTest.sctunit#OperationTestTest.test21" time="">
   </testcase>
 </testsuite>

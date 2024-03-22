@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sgraph="http://www.yakindu.org/sct/sgraph/2.0.0">
-  <sgraph:Statechart xmi:id="_D6TbkOegEe6unoR6l7GLUA" specification="@EventDriven&#xA;@SuperSteps(no)&#xD;&#xA;&#xA;import: &quot;Controller.ysc&quot;&#xA;import: &quot;SimpleLight.ysc&quot;&#xA;&#xA;interface:&#xA;&#x9;var integer: integer&#xA;&#x9;var real: real&#xA;&#x9;var boolean: boolean&#xA;&#x9;var string: string&#xA;&#x9;var controller: Controller&#xA;&#x9;var light: SimpleLight&#xA;&#x9;in event myEvent" name="Controller2">
+  <sgraph:Statechart xmi:id="_D6TbkOegEe6unoR6l7GLUA" specification="@CycleBased(200)&#xA;@SuperSteps(yes)&#xD;&#xA;&#xA;import: &quot;Controller.ysc&quot;&#xA;import: &quot;SimpleLight.ysc&quot;&#xA;&#xA;interface:&#xA;&#x9;var integer: integer&#xA;&#x9;var real: real&#xA;&#x9;var boolean: boolean&#xA;&#x9;var string: string&#xA;&#x9;var controller: Controller&#xA;&#x9;var light: SimpleLight&#xA;&#x9;in event myEvent" name="Controller2">
     <regions xmi:id="_D6cla-egEe6unoR6l7GLUA" name="main region">
       <vertices xsi:type="sgraph:Entry" xmi:id="_D6clbOegEe6unoR6l7GLUA">
         <outgoingTransitions xmi:id="_D6clbeegEe6unoR6l7GLUA" target="_D6clbuegEe6unoR6l7GLUA"/>
@@ -11,7 +11,7 @@
       <vertices xsi:type="sgraph:State" xmi:id="_D6cleOegEe6unoR6l7GLUA" specification="exit / light.enter" name="StateB" incomingTransitions="_D6clceegEe6unoR6l7GLUA">
         <outgoingTransitions xmi:id="_o-xzsOegEe6unoR6l7GLUA" specification="myEvent / real = 3.14" target="_kLr4IOegEe6unoR6l7GLUA"/>
       </vertices>
-      <vertices xsi:type="sgraph:State" xmi:id="_kLr4IOegEe6unoR6l7GLUA" specification="exit / light.isActive()" name="StateC" incomingTransitions="_o-xzsOegEe6unoR6l7GLUA">
+      <vertices xsi:type="sgraph:State" xmi:id="_kLr4IOegEe6unoR6l7GLUA" specification="exit / raise light.toggle" name="StateC" incomingTransitions="_o-xzsOegEe6unoR6l7GLUA">
         <outgoingTransitions xmi:id="_puqYgOegEe6unoR6l7GLUA" specification="myEvent / boolean = true" target="_kWfZ8OegEe6unoR6l7GLUA"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_kWfZ8OegEe6unoR6l7GLUA" specification="exit / light.^exit" name="StateD" incomingTransitions="_puqYgOegEe6unoR6l7GLUA">
@@ -86,7 +86,7 @@
           <styles xsi:type="notation:ShapeStyle" xmi:id="_kL2QMeegEe6unoR6l7GLUA" fontName="Verdana" fillColor="15720400" lineColor="12632256"/>
           <styles xsi:type="notation:FontStyle" xmi:id="_kL2QMuegEe6unoR6l7GLUA"/>
           <styles xsi:type="notation:BooleanValueStyle" xmi:id="_kL4scOegEe6unoR6l7GLUA" name="isHorizontal" booleanValue="true"/>
-          <layoutConstraint xsi:type="notation:Bounds" xmi:id="_kL2QM-egEe6unoR6l7GLUA" x="368" y="172" width="154" height="53"/>
+          <layoutConstraint xsi:type="notation:Bounds" xmi:id="_kL2QM-egEe6unoR6l7GLUA" x="368" y="172" width="174" height="53"/>
         </children>
         <children xmi:id="_kWidQOegEe6unoR6l7GLUA" type="State" element="_kWfZ8OegEe6unoR6l7GLUA">
           <children xsi:type="notation:DecorationNode" xmi:id="_kWidROegEe6unoR6l7GLUA" type="StateName">
@@ -123,7 +123,7 @@
         <layoutConstraint xsi:type="notation:Bounds" xmi:id="_D6clr-egEe6unoR6l7GLUA"/>
       </children>
       <styles xsi:type="notation:ShapeStyle" xmi:id="_D6clsOegEe6unoR6l7GLUA" fontName="Verdana" fillColor="16448250" lineColor="12632256"/>
-      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_D6clseegEe6unoR6l7GLUA" x="29" y="10" width="573" height="460"/>
+      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_D6clseegEe6unoR6l7GLUA" x="29" y="10" width="583" height="460"/>
     </children>
     <children xsi:type="notation:Shape" xmi:id="_D6clsuegEe6unoR6l7GLUA" type="StatechartText" fontName="Verdana" lineColor="4210752">
       <children xsi:type="notation:DecorationNode" xmi:id="_D6cls-egEe6unoR6l7GLUA" type="StatechartName">
@@ -164,7 +164,7 @@
       </children>
       <styles xsi:type="notation:ConnectorStyle" xmi:id="_o-zB0eegEe6unoR6l7GLUA" routing="Rectilinear" lineColor="4210752"/>
       <styles xsi:type="notation:FontStyle" xmi:id="_o-zB0-egEe6unoR6l7GLUA" fontName="Verdana"/>
-      <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_o-zB0uegEe6unoR6l7GLUA" points="[-44, 27, -40, -65]$[-44, 66, -40, -26]"/>
+      <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_o-zB0uegEe6unoR6l7GLUA" points="[-44, 27, -50, -65]$[-44, 66, -50, -26]"/>
     </edges>
     <edges xmi:id="_purmoOegEe6unoR6l7GLUA" type="Transition" element="_puqYgOegEe6unoR6l7GLUA" source="_kL2QMOegEe6unoR6l7GLUA" target="_kWidQOegEe6unoR6l7GLUA">
       <children xsi:type="notation:DecorationNode" xmi:id="_purmpOegEe6unoR6l7GLUA" type="TransitionExpression">
@@ -173,7 +173,7 @@
       </children>
       <styles xsi:type="notation:ConnectorStyle" xmi:id="_purmoeegEe6unoR6l7GLUA" routing="Rectilinear" lineColor="4210752"/>
       <styles xsi:type="notation:FontStyle" xmi:id="_purmo-egEe6unoR6l7GLUA" fontName="Verdana"/>
-      <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_purmouegEe6unoR6l7GLUA" points="[-38, 27, -36, -58]$[-38, 59, -36, -26]"/>
+      <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_purmouegEe6unoR6l7GLUA" points="[-48, 27, -36, -58]$[-48, 59, -36, -26]"/>
     </edges>
     <edges xmi:id="_p98KoOegEe6unoR6l7GLUA" type="Transition" element="_p968gOegEe6unoR6l7GLUA" source="_kWidQOegEe6unoR6l7GLUA" target="_nbrpQOegEe6unoR6l7GLUA">
       <children xsi:type="notation:DecorationNode" xmi:id="_p98KpOegEe6unoR6l7GLUA" type="TransitionExpression">

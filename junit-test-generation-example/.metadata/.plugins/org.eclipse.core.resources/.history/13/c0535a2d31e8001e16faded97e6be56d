@@ -1,0 +1,111 @@
+testclass TemporalEvents2Test for statechart TemporalEvents2 {
+	@Test
+	operation test00 () {
+	    proceed 500ms
+	    assert !is_active
+	}
+
+	@Test
+	operation test03 () {
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test04 () {
+	    enter
+	    assert is_active
+	    assert active (TemporalEvents2.main_region.StateO)
+	}
+
+	@Test
+	operation test05 () {
+	}
+
+	@Test
+	operation test06 () {
+	    assert !active (TemporalEvents2.main_region.StateD)
+	}
+
+	@Test
+	operation test07 () {
+	    assert !active (TemporalEvents2.main_region.StateO)
+	}
+
+	@Test
+	operation test08 () {
+	    assert !active (TemporalEvents2.main_region.StateC)
+	}
+
+	@Test
+	operation test09 () {
+	    assert !active (TemporalEvents2.main_region.StateB)
+	}
+
+	@Test
+	operation test10 () {
+	    assert !active (TemporalEvents2.main_region.StateA)
+	}
+
+	@Test
+	operation test11 () {
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test12 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test15 () {
+	    raise c
+	    assert !is_active
+	}
+
+	@Test
+	operation test17 () {
+	    enter
+	    proceed 1 cycle
+	    assert is_active
+	}
+
+	@Test
+	operation test18 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test19 () {
+	    raise b
+	    assert !is_active
+	}
+
+	@Test
+	operation test20 () {
+	    proceed 1 cycle
+	    assert !is_final
+	}
+
+	@Test
+	operation test21 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test22 () {
+	    assert !is_active
+	    assert !is_final
+	}
+
+	@Test
+	operation test23 () {
+	    raise a
+	    assert !is_active
+	}
+
+}
