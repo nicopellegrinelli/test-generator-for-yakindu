@@ -8,8 +8,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URISyntaxException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -205,7 +203,8 @@ public final class Generators {
 		testCaseCollector.visit(cu, testCaseList);
 		if (testCaseCollector.hasTimeEvents()) {
 			System.out.println("\nWARNING: the generated test suite uses time events,\n"
-					+ "it is not guaranteed that all the test methods will pass.");
+					+ "it is not guaranteed that all the test methods will pass,\n"
+					+ "especially  if the execution is Cycle-based.");
 		}
 		// Print to video the SCTUnit file
 		STGroupFile group = new STGroupFile("sctunit_template.stg");

@@ -1,6 +1,6 @@
 package junitreading;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -18,14 +18,21 @@ public class TestCase {
 	 */
 	public TestCase(String name) {
 		this.name = name;
-		actions = new ArrayList<Action>();
+		actions = new LinkedList<Action>();
 	}
 
 	/**
 	 * Add an "enter" action.
 	 */
 	public void addEnter() {
-		actions.add(new Action(true, null, null, null, false, false, false, false, null, null, false));
+		actions.add(new Action(true, false, null, null, null, false, false, false, false, null, null, false));
+	}
+	
+	/**
+	 * Add an "exit" action.
+	 */
+	public void addExit() {
+		actions.add(new Action(false, true, null, null, null, false, false, false, false, null, null, false));
 	}
 
 	/**
@@ -34,7 +41,7 @@ public class TestCase {
 	 * @param event the event to be raised
 	 */
 	public void addEvent(String event) {
-		actions.add(new Action(false, event, null, null, false, false, false, false, null, null, false));
+		actions.add(new Action(false, false, event, null, null, false, false, false, false, null, null, false));
 	}
 
 	/**
@@ -44,7 +51,7 @@ public class TestCase {
 	 * @param value the value of the raised typed event
 	 */
 	public void addTypedEvent(String event, String value) {
-		actions.add(new Action(false, event, value, null, false, false, false, false, null, null, false));
+		actions.add(new Action(false, false, event, value, null, false, false, false, false, null, null, false));
 	}
 
 	/**
@@ -55,7 +62,7 @@ public class TestCase {
 	 *                   falseness is wanted to be asserted
 	 */
 	public void addAssertState(String state, boolean assertTrue) {
-		actions.add(new Action(false, null, null, state, false, false, assertTrue, false, null, null, false));
+		actions.add(new Action(false, false, null, null, state, false, false, assertTrue, false, null, null, false));
 	}
 
 	/**
@@ -65,7 +72,7 @@ public class TestCase {
 	 *                   falseness is wanted to be asserted
 	 */
 	public void addIsActive(boolean assertTrue) {
-		actions.add(new Action(false, null, null, null, true, false, assertTrue, false, null, null, false));
+		actions.add(new Action(false, false, null, null, null, true, false, assertTrue, false, null, null, false));
 	}
 
 	/**
@@ -75,14 +82,14 @@ public class TestCase {
 	 *                   falseness is wanted to be asserted
 	 */
 	public void addIsFinal(boolean assertTrue) {
-		actions.add(new Action(false, null, null, null, false, true, assertTrue, false, null, null, false));
+		actions.add(new Action(false, false, null, null, null, false, true, assertTrue, false, null, null, false));
 	}
 
 	/**
 	 * Adds a "proceed 1 cycle" action.
 	 */
 	public void addProceedCycle() {
-		actions.add(new Action(false, null, null, null, false, false, false, true, null, null, false));
+		actions.add(new Action(false, false, null, null, null, false, false, false, true, null, null, false));
 	}
 
 	/**
@@ -92,21 +99,14 @@ public class TestCase {
 	 * @param timeUnit the time unit (s, ms, us or ns)
 	 */
 	public void addProceedTime(String value, String unit) {
-		actions.add(new Action(false, null, null, null, false, false, false, false, value, unit, false));
+		actions.add(new Action(false, false, null, null, null, false, false, false, false, value, unit, false));
 	}
 
 	/**
 	 * Add a "triggerWithoutEvent" action.
 	 */
 	public void addTriggerWithoutEvent() {
-		actions.add(new Action(false, null, null, null, false, false, false, false, null, null, true));
-	}
-
-	/**
-	 * Add an "exit" action.
-	 */
-	public void addExit() {
-		actions.add(new Action(false, null, null, null, false, false, false, false, null, null, false));
+		actions.add(new Action(false, false, null, null, null, false, false, false, false, null, null, true));
 	}
 
 	/**

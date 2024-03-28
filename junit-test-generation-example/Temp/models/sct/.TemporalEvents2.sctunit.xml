@@ -1,7 +1,0 @@
-<testsuite name="TemporalEvents2Test" time="">
-  <testcase name="test" classname="platform:/resource/Temp/models/sct/TemporalEvents2.sctunit#TemporalEvents2Test.test" time="">
-    <failure>Assertion failed: "assert t == 2020202" (Line 17)
-    	name: t, value: 2998
-    </failure>
-  </testcase>
-</testsuite>

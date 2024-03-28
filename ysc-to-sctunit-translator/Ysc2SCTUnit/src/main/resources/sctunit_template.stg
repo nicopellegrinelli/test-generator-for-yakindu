@@ -21,6 +21,6 @@ actions(action) ::=
 <elseif(action.proceed)>proceed 1 cycle
 <elseif(action.timeValue)>proceed <action.timeValue><action.timeUnit>
 <elseif(action.triggerWithoutEvent)>triggerWithoutEvent
-<else>exit
+<elseif(action.exit)>exit
 <endif>
 >>

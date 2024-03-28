@@ -271,6 +271,19 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 				}
 			}
 		}
+		// Check if a proceed statement is called after an exit statement, if yes, ignore the test case
+		boolean afterExit = false;
+		for (Action a : testCase.getActions()) {
+			if (a.getExit() != null)
+				afterExit = true;
+			else if (a.getEnter() != null)
+				afterExit = false;
+			else if ((a.getProceed() != null || a.getTimeUnit() != null) && afterExit) {
+				System.out.println(node.getNameAsString()
+						+ ": proceed statement called after exit statement, the test is skipped.");
+				return;
+			}
+		}
 		// Returns the testCase as the result of the visit of the method
 		collector.add(testCase);
 	}

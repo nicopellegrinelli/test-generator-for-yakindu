@@ -1,0 +1,30 @@
+GeneratorModel for create::java {
+
+	const PROJECT : string = "Temp"
+
+	const FOLDER : string = "src"
+
+	statechart TemporalEvents {
+		feature Naming {
+			basePackage = "statechart"
+		}
+
+		feature Outlet {
+			targetProject = PROJECT
+			targetFolder = FOLDER
+			libraryTargetFolder = FOLDER
+		}
+
+		feature FunctionInlining {
+			inlineReactions = true
+			inlineEntryActions = true
+			inlineExitActions = true
+			inlineEnterSequences = true
+			inlineExitSequences = true
+			inlineChoices = true
+			inlineEnterRegion = true
+			inlineExitRegion = true
+			inlineEntries = true
+		}
+	}
+}

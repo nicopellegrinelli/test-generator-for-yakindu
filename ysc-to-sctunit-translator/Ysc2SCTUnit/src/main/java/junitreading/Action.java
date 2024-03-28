@@ -6,6 +6,7 @@ package junitreading;
 public class Action {
 
 	private String enter;
+	private String exit;
 	private String event;
 	private String eventValue;
 	private String state;
@@ -22,6 +23,7 @@ public class Action {
 	 * be null
 	 *
 	 * @param enter               true if the action is "enter", false otherwise
+	 * @param exit                true if the action is "exit", false otherwise
 	 * @param event               the event to be raised
 	 * @param eventValue          the value associated with the raised typed event
 	 * @param state               the state to assert if it is active
@@ -39,9 +41,10 @@ public class Action {
 	 * @param triggerWithoutEvent true if the action is "triggerWithoutEvent", false
 	 *                            otherwise
 	 */
-	public Action(boolean enter, String event, String eventValue, String state, boolean isActive, boolean isFinal,
+	public Action(boolean enter, boolean exit, String event, String eventValue, String state, boolean isActive, boolean isFinal,
 			boolean assertTrue, boolean proceed, String timeValue, String timeUnit, boolean triggerWithoutEvent) {
 		this.enter = enter ? "" : null;
+		this.exit = exit ? "" : null;
 		this.event = event;
 		this.eventValue = eventValue;
 		this.state = state;
@@ -61,6 +64,15 @@ public class Action {
 	 */
 	public String getEnter() {
 		return enter;
+	}
+	
+	/**
+	 * Gets the exit string.
+	 *
+	 * @return the string
+	 */
+	public String getExit() {
+		return exit;
 	}
 
 	/**
