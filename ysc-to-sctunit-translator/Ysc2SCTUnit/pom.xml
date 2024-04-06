@@ -17,7 +17,7 @@
 			<resource>
 				<directory>src/main/resources</directory>
 				<includes>
-					<include>sgen_java_template.stg</include>
+					<include>sgen_template.stg</include>
 					<include>sctunit_template.stg</include>
 				</includes>
 			</resource>
