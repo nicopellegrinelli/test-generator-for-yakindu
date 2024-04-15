@@ -57,7 +57,9 @@ public class JavaWriter implements IJavaWriter {
 	public void callICGenerator(String projectPath, String itemisScc, String sourceDir, String sourceFile,
 			String statechartName) throws IOException {
 		Process p = new ProcessBuilder(itemisScc, "-m", sourceFile + "," + statechartName + ".sgen")
-				.redirectErrorStream(true).directory(new File(projectPath + "\\" + sourceDir)).start();
+				.redirectErrorStream(true)
+				.directory(new File(projectPath + "\\" + sourceDir))
+				.start();
 		BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
 		String line = null;
 		while ((line = reader.readLine()) != null) {

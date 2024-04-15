@@ -136,6 +136,9 @@ public class Ysc2Sctunit {
 		Map<Integer, ProceedTime> proceedTimes = javaReader.getProceedTimes(javaPath);
 
 		// Compile the generated classes
+		System.out.println("*******************************************");
+		System.out.println("Compiling...");
+		System.out.println("*******************************************");
 		compile(compilerD, compilerClasspath, javaPath);
 
 		// Modify the generated Java code to create a simplified version
@@ -145,6 +148,9 @@ public class Ysc2Sctunit {
 		javaWriter.writeSimplifiedVersion(javaPath, simplifiedJavaPath);
 
 		// Compile the new simplified class
+		System.out.println("*******************************************");
+		System.out.println("Compiling...");
+		System.out.println("*******************************************");
 		compile(compilerD, compilerClasspath, simplifiedJavaPath);
 
 		// Delete the VirtualTimer.class file to hide it to Evosuite
@@ -192,9 +198,6 @@ public class Ysc2Sctunit {
 	 * @param javaPath          the path of the .java file to compile
 	 */
 	private static void compile(String compilerD, String compilerClasspath, String javaPath) {
-		System.out.println("*******************************************");
-		System.out.println("Compiling...");
-		System.out.println("*******************************************");
 		JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
 		List<String> compilationArgs = new ArrayList<String>();
 		compilationArgs.addAll(Arrays.asList(compilerD.split(" ")));

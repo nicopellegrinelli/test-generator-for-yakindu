@@ -123,7 +123,7 @@ public class InputValues {
 	}
 
 	/**
-	 * Gets the (evosuite) target directory.
+	 * Gets the (evosuite) search budget, 0 if not present.
 	 *
 	 * @return the (evosuite) search budget
 	 */

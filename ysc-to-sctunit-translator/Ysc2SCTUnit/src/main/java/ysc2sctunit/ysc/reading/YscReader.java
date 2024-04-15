@@ -43,13 +43,14 @@ public class YscReader implements IYscReader {
 	 * Instantiates a new statechart.
 	 *
 	 * @param path the path of the .ysc file
-	 * @throws ParserConfigurationException if a DocumentBuildercannot be created
+	 * @throws ParserConfigurationException if a DocumentBuilder cannot be created
 	 *                                      which satisfies the configuration
 	 *                                      requested.
 	 * @throws SAXException                 if any parse errors occur.
 	 * @throws IOException                  if any IO errors occur.
+	 * @throws NullPointerException         if the input string is null.
 	 */
-	public YscReader(String path) throws ParserConfigurationException, SAXException, IOException {
+	public YscReader(String path) throws ParserConfigurationException, SAXException, IOException, NullPointerException {
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = factory.newDocumentBuilder();
 		Document document = builder.parse(new File(path));

@@ -17,7 +17,8 @@ public class SgenWriter implements ISgenWriter {
 	 *
 	 * @param projectName    the name of the project
 	 * @param statechartName the name of the statechart
-	 * @param sgenPath       the path where the .sgen file is put
+	 * @param sgenPath       the absolute path (with also the file) of the .sgen
+	 *                       file that will be generated
 	 * @param targetDir      the target directory
 	 * @param targetPackage  the target package
 	 * @throws IOException if any IO errors occur.
@@ -33,7 +34,7 @@ public class SgenWriter implements ISgenWriter {
 		st.add("directory", targetDir.replace("\\", "\\\\"));
 		st.add("package_name", targetPackage);
 		st.add("statechart_name", statechartName);
-		// Create the file in the same diractory of the statechart
+		// Create the file in the same directory of the statechart
 		File genFile = new File(sgenPath);
 		st.write(genFile, null);
 	}

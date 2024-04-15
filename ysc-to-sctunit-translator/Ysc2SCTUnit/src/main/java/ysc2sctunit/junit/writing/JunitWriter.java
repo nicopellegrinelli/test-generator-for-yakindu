@@ -18,9 +18,9 @@ public class JunitWriter implements IJunitWriter {
 	 *                        fully qualified class name
 	 * @param evoProjectCP    the string "-projectCP ClassPath", where ClassPath is
 	 *                        the class path for the test generation
-	 * @param DtestDir        the string "Dtest_dir=Directory", where Directory is
+	 * @param DtestDir        the string "-Dtest_dir=Directory", where Directory is
 	 *                        the directory in which tests will be placed
-	 * @param DreportDir      the string "Dreport_dir=Directory", where Directory is
+	 * @param DreportDir      the string "-Dreport_dir=Directory", where Directory is
 	 *                        the directory in which statistics will be placed
 	 * @param hasSearchBudget true if a search budget must be imposed, false
 	 *                        otherwise
