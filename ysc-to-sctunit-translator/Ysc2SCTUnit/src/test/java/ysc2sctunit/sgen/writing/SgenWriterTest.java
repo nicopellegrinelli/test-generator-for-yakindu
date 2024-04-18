@@ -36,7 +36,7 @@ public class SgenWriterTest {
 	}
 
 	@Test(expected = NullPointerException.class)
-	public void testNullArguments() throws IOException {
+	public void testNullPath() throws IOException {
 		String wrongSgenPath = null;
 		writer.writeSgen(PROJECT_NAME, STATECHART_NAME, wrongSgenPath, TARGET_DIR, TARGET_PACKAGE);
 	}
@@ -48,7 +48,7 @@ public class SgenWriterTest {
 	}
 
 	@Test
-	public void testCorrectPath() throws IOException {
+	public void testCorrectParameters() throws IOException {
 		assertFalse(Files.exists(Paths.get(sgenPath)));
 		writer.writeSgen(PROJECT_NAME, STATECHART_NAME, sgenPath, TARGET_DIR, TARGET_PACKAGE);
 		assertTrue(Files.exists(Paths.get(sgenPath)));
