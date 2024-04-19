@@ -19,7 +19,6 @@ import org.junit.rules.TemporaryFolder;
 import ysc2sctunit.junit.reading.TestCase;
 
 public class SctunitWriterTest {
-	
 	private static final String STATECHART_NAME = "Statechart";
 	
 	private static ISctunitWriter writer;
@@ -34,7 +33,7 @@ public class SctunitWriterTest {
 	public static void initTempFolder() throws IOException {
 		writer = new SctunitWriter();
 		rootPath = tmpFolder.getRoot().getCanonicalFile().toString();
-		sctunitPath = rootPath + "/" + STATECHART_NAME + ".sctunit";
+		sctunitPath = rootPath + "\\" + STATECHART_NAME + ".sctunit";
 	}
 	
 	@After
@@ -62,7 +61,7 @@ public class SctunitWriterTest {
 		t.addEnter();
 		testCases.add(t);
 		
-		String wrongSctunitPath = "";
+		String wrongSctunitPath = rootPath;
 		
 		writer.writeSctunit(wrongSctunitPath, STATECHART_NAME, new ArrayList<TestCase>());
 	}

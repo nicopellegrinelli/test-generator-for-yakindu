@@ -15,7 +15,7 @@ public class CliManagerTest {
 	private static final String SCC = "scc.bat";
 	private static final String WORKSPACE_PATH = "workspace";
 	private static final String PROJECT_NAME = "project";
-	private static final String PROJECT_PATH = WORKSPACE_PATH + "/" + PROJECT_NAME;
+	private static final String PROJECT_PATH = WORKSPACE_PATH + "\\" + PROJECT_NAME;
 	private static final String SOURCE_DIR = "model";
 	private static final String SOURCE_FILE_NAME = "Statechart";
 	private static final String SOURCE_FILE = SOURCE_FILE_NAME + ".ysc";
@@ -64,7 +64,7 @@ public class CliManagerTest {
 		String[] args = new String[] 
 				{
 					"-h",
-					"-scc", rootPath + "/" + SCC
+					"-scc", rootPath + "\\" + SCC
 				};
 		InputValues expected = null;
 		InputValues actual = cli.parse(args);
@@ -82,7 +82,7 @@ public class CliManagerTest {
 	public void testMissingRequiredOption() throws IOException {
 		String[] args = new String[] 
 				{
-					"-projectPath", rootPath + "/" + PROJECT_PATH,
+					"-projectPath", rootPath + "\\" + PROJECT_PATH,
 					"-sourceDir", SOURCE_DIR,
 					"-sourceFile", SOURCE_FILE_NAME,
 					"-targetDir", TARGET_DIR,
@@ -98,7 +98,7 @@ public class CliManagerTest {
 		String[] args = new String[] 
 				{
 					"-scc", "WrongSccPath",
-					"-projectPath", rootPath + "/" + PROJECT_PATH,
+					"-projectPath", rootPath + "\\" + PROJECT_PATH,
 					"-sourceDir", SOURCE_DIR,
 					"-sourceFile", SOURCE_FILE_NAME,
 					"-targetPackage", TARGET_PACKAGE,
@@ -107,11 +107,11 @@ public class CliManagerTest {
 		InputValues actual = cli.parse(args);
 		assertEquals(expected, actual);
 		
-		// SCC is a file
+		// SCC is not a file
 		args = new String[] 
 				{
 					"-scc", rootPath,
-					"-projectPath", rootPath + "/" + PROJECT_PATH,
+					"-projectPath", rootPath + "\\" + PROJECT_PATH,
 					"-sourceDir", SOURCE_DIR,
 					"-sourceFile", SOURCE_FILE_NAME,
 					"-targetPackage", TARGET_PACKAGE,
@@ -122,7 +122,7 @@ public class CliManagerTest {
 		// ProjectPath does not exist
 		args = new String[] 
 				{
-					"-scc", rootPath + "/" + SCC,
+					"-scc", rootPath + "\\" + SCC,
 					"-projectPath", "WrongProjectPath",
 					"-sourceDir", SOURCE_DIR,
 					"-sourceFile", SOURCE_FILE_NAME,
@@ -134,8 +134,8 @@ public class CliManagerTest {
 		// SourceDir does not exist
 		args = new String[] 
 				{
-					"-scc", rootPath + "/" + SCC,
-					"-projectPath", rootPath + "/" + PROJECT_PATH,
+					"-scc", rootPath + "\\" + SCC,
+					"-projectPath", rootPath + "\\" + PROJECT_PATH,
 					"-sourceDir", "WrongSourceDir",
 					"-sourceFile", SOURCE_FILE_NAME,
 					"-targetPackage", TARGET_PACKAGE,
@@ -146,8 +146,8 @@ public class CliManagerTest {
 		// SourceFile does not exist
 		args = new String[] 
 				{
-					"-scc", rootPath + "/" + SCC,
-					"-projectPath", rootPath + "/" + PROJECT_PATH,
+					"-scc", rootPath + "\\" + SCC,
+					"-projectPath", rootPath + "\\" + PROJECT_PATH,
 					"-sourceDir", SOURCE_DIR,
 					"-sourceFile", "WrongSourceFile",
 					"-targetPackage", TARGET_PACKAGE,
@@ -158,8 +158,8 @@ public class CliManagerTest {
 		// BinaryDir does not exist
 		args = new String[] 
 				{
-					"-scc", rootPath + "/" + SCC,
-					"-projectPath", rootPath + "/" + PROJECT_PATH,
+					"-scc", rootPath + "\\" + SCC,
+					"-projectPath", rootPath + "\\" + PROJECT_PATH,
 					"-sourceDir", SOURCE_DIR,
 					"-sourceFile", SOURCE_FILE_NAME,
 					"-targetPackage", TARGET_PACKAGE,
@@ -171,8 +171,8 @@ public class CliManagerTest {
 		// EvoSearchBudget is negative
 		args = new String[] 
 				{
-					"-scc", rootPath + "/" + SCC,
-					"-projectPath", rootPath + "/" + PROJECT_PATH,
+					"-scc", rootPath + "\\" + SCC,
+					"-projectPath", rootPath + "\\" + PROJECT_PATH,
 					"-sourceDir", SOURCE_DIR,
 					"-sourceFile", SOURCE_FILE_NAME,
 					"-targetPackage", TARGET_PACKAGE,
@@ -184,8 +184,8 @@ public class CliManagerTest {
 		// EvoSearchBudget is not a number
 		args = new String[] 
 				{
-					"-scc", rootPath + "/" + SCC,
-					"-projectPath", rootPath + "/" + PROJECT_PATH,
+					"-scc", rootPath + "\\" + SCC,
+					"-projectPath", rootPath + "\\" + PROJECT_PATH,
 					"-sourceDir", SOURCE_DIR,
 					"-sourceFile", SOURCE_FILE_NAME,
 					"-targetPackage", TARGET_PACKAGE,
@@ -199,8 +199,8 @@ public class CliManagerTest {
 	public void testAllCorrectOption() throws IOException {
 		String[] args = new String[] 
 				{
-					"-scc", rootPath + "/" + SCC,
-					"-projectPath", rootPath + "/" + PROJECT_PATH,
+					"-scc", rootPath + "\\" + SCC,
+					"-projectPath", rootPath + "\\" + PROJECT_PATH,
 					"-sourceDir", SOURCE_DIR,
 					"-sourceFile", SOURCE_FILE_NAME,
 					"-targetDir", TARGET_DIR,

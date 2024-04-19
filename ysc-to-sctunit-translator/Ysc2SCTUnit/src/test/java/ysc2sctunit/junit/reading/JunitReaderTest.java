@@ -14,7 +14,11 @@ import ysc2sctunit.java.reading.ProceedTime;
 import ysc2sctunit.java.reading.TimeUnit;
 
 public class JunitReaderTest {
-	IJunitReader reader = new JunitReader();
+	private static final String RESOURCES_DIR = "src\\test\\resources";
+	private static final String FILE_NAME = "Junitreading_statechart_test.java";
+	private static final String STATECHART_NAME = "Statechart";
+	
+	private static IJunitReader reader = new JunitReader();
 	
 	@Test(expected = NullPointerException.class)
 	public void testNullInput() throws IOException {
@@ -28,9 +32,9 @@ public class JunitReaderTest {
 	}
 
 	@Test
-	public void test() throws IOException {
-		String junitPath = "src/test/resources/Statechart5Test.java";
-		String statechartName = "Statechart";
+	public void testCorrectInput() throws IOException {
+		String junitPath = RESOURCES_DIR + "\\" + FILE_NAME;
+		String statechartName = STATECHART_NAME;
 		
 		Map<String, String> statesNames = new HashMap<String, String>();
 		String state_a = "main_region.StateA";

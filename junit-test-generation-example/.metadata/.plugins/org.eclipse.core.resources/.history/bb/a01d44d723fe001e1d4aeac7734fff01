@@ -1,0 +1,19 @@
+GeneratorModel for create::java {
+
+	const PROJECT : string = "TestResources"
+
+	const FOLDER : string = "src"
+
+	statechart Junitwriting_statechart {
+		
+		feature Naming {
+		    basePackage = "junitwriting"
+		}
+
+		feature Outlet {
+			targetProject = PROJECT
+			targetFolder = FOLDER
+			libraryTargetFolder = "src"
+		}
+	}
+}

@@ -12,7 +12,11 @@ import org.junit.Test;
 import org.xml.sax.SAXException;
 
 public class YscReaderTest {
-	IYscReader reader;
+	private static final String RESOURCES_DIR = "src\\test\\resources";
+	private static final String FILE_NAME = "Yscreading_Statechart.ysc";
+	private static final String STATECHART_NAME = "SctName";
+	
+	private static IYscReader reader;
 	
 	@Test(expected = NullPointerException.class)
 	public void testNullInput() throws ParserConfigurationException, SAXException, IOException {
@@ -26,14 +30,14 @@ public class YscReaderTest {
 	
 	@Test(expected = IOException.class)
 	public void testNotExistingInput() throws ParserConfigurationException, SAXException, IOException {
-		reader = new YscReader("src/test/resources/NotExistingStatechart1.ysc");
+		reader = new YscReader(RESOURCES_DIR + "\\" + "NotExistingStatechart.ysc");
 	}
 	
 	@Test
 	public void testCorrectInput() throws ParserConfigurationException, SAXException, IOException {
-		reader = new YscReader("src/test/resources/Statechart1.ysc");
+		reader = new YscReader(RESOURCES_DIR + "\\" + FILE_NAME);
 		
-		String expectedStatechartName = "StcName";
+		String expectedStatechartName = STATECHART_NAME;
 		assertEquals(expectedStatechartName, reader.getStatechartName());
 		
 		Map<String, String> expectedStatesNames = new HashMap<String, String>();

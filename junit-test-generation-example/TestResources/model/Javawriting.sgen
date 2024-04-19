@@ -1,0 +1,32 @@
+GeneratorModel for create::java {
+
+	const PROJECT : string = "TestResources"
+
+	const FOLDER : string = "src"
+
+	statechart Javawriting_statechart {
+		
+		feature Naming {
+		    basePackage = "javawriting"
+		}
+
+		feature Outlet {
+			targetProject = PROJECT
+			targetFolder = FOLDER
+			libraryTargetFolder = "src"
+		}
+	}
+
+	statechart Javawriting_submachine {
+		
+		feature Naming {
+		    basePackage = "javawriting"
+		}
+
+		feature Outlet {
+			targetProject = PROJECT
+			targetFolder = FOLDER
+			libraryTargetFolder = "src"
+		}
+	}
+}

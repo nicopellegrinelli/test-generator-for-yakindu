@@ -2,11 +2,13 @@ package ysc2sctunit.java.writing;
 
 import static org.junit.Assert.*;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+import org.junit.After;
 import org.junit.BeforeClass;
 import org.junit.ClassRule;
 import org.junit.Test;
@@ -21,7 +23,8 @@ import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.body.VariableDeclarator;
 
 public class JavaWriterTest {
-	private static final String JAVA_NAME = "Statechart3";
+	private static final String RESOURCES_DIR = "src\\test\\resources";
+	private static final String JAVA_NAME = "Javawriting_statechart";
 	
 	private static IJavaWriter writer;
 	
@@ -36,8 +39,14 @@ public class JavaWriterTest {
 	public static void initTempFolder() throws IOException {
 		writer = new JavaWriter();
 		rootPath = tmpFolder.getRoot().getCanonicalFile().toString();
-		javaPath = "src/test/resources/" + JAVA_NAME + ".java";
-		simplifiedJavaPath = rootPath + "/" + JAVA_NAME + "Simplified.java";
+		javaPath = RESOURCES_DIR + "\\" + JAVA_NAME + ".java";
+		simplifiedJavaPath = rootPath + "\\" + JAVA_NAME + "Simplified.java";
+	}
+	
+	@After
+	public void deleteFile() {
+		if (Files.exists(Paths.get(simplifiedJavaPath)))
+			new File(simplifiedJavaPath).delete();
 	}
 	
 	@Test(expected = NullPointerException.class)

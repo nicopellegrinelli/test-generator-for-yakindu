@@ -2,20 +2,21 @@ package ysc2sctunit.sgen.writing;
 
 import static org.junit.Assert.*;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+import org.junit.After;
 import org.junit.BeforeClass;
 import org.junit.ClassRule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
 public class SgenWriterTest {
-	private static final String PROJECT_NAME = "Project";
 	private static final String STATECHART_NAME = "Statechart";
-	private static final String BASE_PATH = "model";
+	private static final String PROJECT_NAME = "Project";
 	private static final String TARGET_DIR = "TargetDir";
 	private static final String TARGET_PACKAGE = "TargetPackage";
 	
@@ -31,8 +32,13 @@ public class SgenWriterTest {
 	public static void initTempFolder() throws IOException {
 		writer = new SgenWriter();
 		rootPath = tmpFolder.getRoot().getCanonicalFile().toString();
-		sgenPath = rootPath + "/" + BASE_PATH + "/" + STATECHART_NAME + ".sgen";
-		tmpFolder.newFolder(BASE_PATH);
+		sgenPath = rootPath + "\\" + STATECHART_NAME + ".sgen";
+	}
+	
+	@After
+	public void deleteFile() {
+		if (Files.exists(Paths.get(sgenPath)))
+			new File(sgenPath).delete();
 	}
 
 	@Test(expected = NullPointerException.class)

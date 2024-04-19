@@ -10,7 +10,10 @@ import org.junit.Test;
 
 
 public class JavaReaderTest {
-	IJavaReader reader = new JavaReader();
+	private static final String RESOURCES_DIR = "src\\test\\resources";
+	private static final String FILE_NAME = "Javareading_statechart.java";
+	
+	private static IJavaReader reader = new JavaReader();
 	
 	@Test(expected = NullPointerException.class)
 	public void testNullInput() throws FileNotFoundException{
@@ -24,12 +27,12 @@ public class JavaReaderTest {
 	
 	@Test(expected = FileNotFoundException.class)
 	public void testNotExistingInput() throws FileNotFoundException{
-		reader.getProceedTimes("src/test/resources/NotExistingStatechart2.java");
+		reader.getProceedTimes(RESOURCES_DIR + "\\" + "NotExistingStatechart.java");
 	}
 
 	@Test
 	public void testCorrectInput() throws FileNotFoundException {
-		Map<Integer, ProceedTime> actual = reader.getProceedTimes("src/test/resources/Statechart2.java");
+		Map<Integer, ProceedTime> actual = reader.getProceedTimes(RESOURCES_DIR + "\\" + FILE_NAME);
 		Map<Integer, ProceedTime> expected = new HashMap<Integer, ProceedTime>();
 		expected.put(0, new ProceedTime(100, TimeUnit.MILLISECONDS));
 		expected.put(1, new ProceedTime(3, TimeUnit.SECONDS));

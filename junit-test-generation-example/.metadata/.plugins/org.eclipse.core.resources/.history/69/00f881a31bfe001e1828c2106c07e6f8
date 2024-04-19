@@ -1,0 +1,15 @@
+GeneratorModel for create::java {
+
+	const PROJECT : string = "TestResources"
+
+	const FOLDER : string = "src"
+
+	statechart Statechart4 {
+
+		feature Outlet {
+			targetProject = PROJECT
+			targetFolder = FOLDER
+			libraryTargetFolder = "src"
+		}
+	}
+}
