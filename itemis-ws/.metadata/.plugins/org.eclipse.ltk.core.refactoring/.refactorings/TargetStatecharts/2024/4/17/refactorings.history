@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 6 elements from project &apos;TargetStatecharts&apos;&#x0D;&#x0A;- Original project: &apos;TargetStatecharts&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     TargetStatecharts/src/com.yakindu.core&#x0D;&#x0A;     TargetStatecharts/src/statechart&#x0D;&#x0A;     TargetStatecharts/test/statechart&#x0D;&#x0A;     evosuite-report&#x0D;&#x0A;     ExamplStc.sgen&#x0D;&#x0A;     ExamplStcSimplifiedTest.sctunit" description="Delete elements" element1="models/ExamplStcSimplifiedTest.sctunit" element2="evosuite-report" element3="models/ExamplStc.sgen" element4="/src&lt;statechart" element5="/test&lt;statechart" element6="/src&lt;com.yakindu.core" element7="/src&lt;com.yakindu" element8="/src&lt;com" elements="5" flags="589830" id="org.eclipse.jdt.ui.delete" resources="3" stamp="1713796770326" subPackages="false" version="1.0"/>
+</session>

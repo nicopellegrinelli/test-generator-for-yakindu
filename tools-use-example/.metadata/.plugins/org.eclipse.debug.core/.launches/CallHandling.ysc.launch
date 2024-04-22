@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<launchConfiguration type="com.yakindu.sct.simulation.core.launch.statechart">
-    <stringAttribute key="filename" value="/CallHandling/model/CallHandling.ysc"/>
-    <stringAttribute key="operationClass" value=""/>
-    <booleanAttribute key="org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING" value="false"/>
-</launchConfiguration>

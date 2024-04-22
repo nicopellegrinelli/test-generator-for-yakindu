@@ -82,12 +82,6 @@ public class TestCaseCollector extends VoidVisitorAdapter<List<TestCase>> {
 		// To ensure child nodes of the current node are also visited
 		super.visit(node, collector);
 
-		// Discards methods in which the method .enter IS NOT called or the method
-		// .setIsExecuting IS called. Needed when the Simplified version of the .java is
-		// NOT used
-//		if (!node.getBody().toString().contains(".enter") || node.getBody().toString().contains(".setIsExecuting")) {
-//			return;
-//		}
 		// Discards methods dealing with exceptions (i.e. using try catch statements)
 		if (!node.findAll(TryStmt.class).isEmpty()) {
 			return;

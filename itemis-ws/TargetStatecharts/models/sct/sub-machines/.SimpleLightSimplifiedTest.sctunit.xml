@@ -1,0 +1,32 @@
+<testsuite name="SimpleLightTest" time="">
+  <testcase name="test01" classname="platform:/resource/Temp/models/sct/sub-machines/SimpleLightSimplifiedTest.sctunit#SimpleLightTest.test01" time="">
+  </testcase>
+  <testcase name="test02" classname="platform:/resource/Temp/models/sct/sub-machines/SimpleLightSimplifiedTest.sctunit#SimpleLightTest.test02" time="">
+  </testcase>
+  <testcase name="test03" classname="platform:/resource/Temp/models/sct/sub-machines/SimpleLightSimplifiedTest.sctunit#SimpleLightTest.test03" time="">
+  </testcase>
+  <testcase name="test04" classname="platform:/resource/Temp/models/sct/sub-machines/SimpleLightSimplifiedTest.sctunit#SimpleLightTest.test04" time="">
+  </testcase>
+  <testcase name="test05" classname="platform:/resource/Temp/models/sct/sub-machines/SimpleLightSimplifiedTest.sctunit#SimpleLightTest.test05" time="">
+  </testcase>
+  <testcase name="test06" classname="platform:/resource/Temp/models/sct/sub-machines/SimpleLightSimplifiedTest.sctunit#SimpleLightTest.test06" time="">
+  </testcase>
+  <testcase name="test07" classname="platform:/resource/Temp/models/sct/sub-machines/SimpleLightSimplifiedTest.sctunit#SimpleLightTest.test07" time="">
+  </testcase>
+  <testcase name="test08" classname="platform:/resource/Temp/models/sct/sub-machines/SimpleLightSimplifiedTest.sctunit#SimpleLightTest.test08" time="">
+  </testcase>
+  <testcase name="test09" classname="platform:/resource/Temp/models/sct/sub-machines/SimpleLightSimplifiedTest.sctunit#SimpleLightTest.test09" time="">
+  </testcase>
+  <testcase name="test10" classname="platform:/resource/Temp/models/sct/sub-machines/SimpleLightSimplifiedTest.sctunit#SimpleLightTest.test10" time="">
+  </testcase>
+  <testcase name="test11" classname="platform:/resource/Temp/models/sct/sub-machines/SimpleLightSimplifiedTest.sctunit#SimpleLightTest.test11" time="">
+  </testcase>
+  <testcase name="test12" classname="platform:/resource/Temp/models/sct/sub-machines/SimpleLightSimplifiedTest.sctunit#SimpleLightTest.test12" time="">
+  </testcase>
+  <testcase name="test13" classname="platform:/resource/Temp/models/sct/sub-machines/SimpleLightSimplifiedTest.sctunit#SimpleLightTest.test13" time="">
+  </testcase>
+  <testcase name="test14" classname="platform:/resource/Temp/models/sct/sub-machines/SimpleLightSimplifiedTest.sctunit#SimpleLightTest.test14" time="">
+  </testcase>
+  <testcase name="test15" classname="platform:/resource/Temp/models/sct/sub-machines/SimpleLightSimplifiedTest.sctunit#SimpleLightTest.test15" time="">
+  </testcase>
+</testsuite>

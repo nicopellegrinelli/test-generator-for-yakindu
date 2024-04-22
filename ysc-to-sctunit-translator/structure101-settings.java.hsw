@@ -14,17 +14,13 @@
   <property name="hide-externals" value="true" />
   <classpath>
     <classpathentry kind="lib" path="Ysc2SCTUnit/target/classes" module="Ysc2SCTUnit" displaymodule="Ysc2SCTUnit" />
-    <classpathentry kind="lib" path="JUnit2SCTUnit/target/classes" module="JUnit2SCTUnit" displaymodule="JUnit2SCTUnit" />
     <classpathentry kind="lib" path="Ysc2SCTUnit/target/test-classes" module="Ysc2SCTUnit" displaymodule="Ysc2SCTUnit" />
-    <classpathentry kind="lib" path="JUnit2SCTUnit/target/test-classes" module="JUnit2SCTUnit" displaymodule="JUnit2SCTUnit" />
   </classpath>
   <pom-root-files />
   <modules>
     <module name="Ysc2SCTUnit" kind="ide-project" />
-    <module name="JUnit2SCTUnit" kind="ide-project" />
   </modules>
   <modules-in-scope>
-    <module name="JUnit2SCTUnit" />
     <module name="Ysc2SCTUnit" />
   </modules-in-scope>
   <excludes>

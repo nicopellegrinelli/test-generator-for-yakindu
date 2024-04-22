@@ -1,6 +1,0 @@
-GeneratorModel for create::c::yet {
-
-	const PROJECT : string = ""
-
-	const FOLDER : string = ""
-}

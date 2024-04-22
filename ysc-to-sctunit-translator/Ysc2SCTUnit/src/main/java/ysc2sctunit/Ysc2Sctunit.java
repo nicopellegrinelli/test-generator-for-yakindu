@@ -102,15 +102,10 @@ public class Ysc2Sctunit {
 		String compilerD = "-d " + projectPath + "\\" + binaryDir;
 		String compilerClasspath = "-classpath " + projectPath + "\\" + targetDir;
 
-//		String evoClass = "-class " + dottedTargetPackage + "." + firstUpperStatechartName;
 		String evoSimplifiedClass = "-class " + dottedTargetPackage + "." + firstUpperStatechartName + "Simplified";
 		String evoProjectCP = "-projectCP " + projectPath + "\\" + binaryDir;
 		String evoDTestDir = "-Dtest_dir=" + projectPath + "\\" + evoTestDir;
 		String evoDReportDir = "-Dreport_dir=" + projectPath + "\\evosuite-report";
-
-//		String junitPath = projectPath + "\\" + evoTestDir + "\\" + targetPackage + "\\" + firstUpperStatechartName
-//				+ "_ESTest.java";
-//		String sctunitPath = projectPath + "\\" + sourceDir + "\\" + firstUpperStatechartName + "Test.sctunit";
 
 		String simplifiedJunitPath = projectPath + "\\" + evoTestDir + "\\" + targetPackage + "\\"
 				+ firstUpperStatechartName + "Simplified_ESTest.java";

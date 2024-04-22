@@ -1,6 +1,0 @@
-<testsuite name="LightSwitchTest" time="">
-  <testcase name="isStateOffActiveAfterInit" classname="platform:/resource/LightSwitch/test/LightSwitchTest.sctunit#LightSwitchTest.isStateOffActiveAfterInit" time="">
-  </testcase>
-  <testcase name="isStateOnActiveAfterOperateInOffState" classname="platform:/resource/LightSwitch/test/LightSwitchTest.sctunit#LightSwitchTest.isStateOnActiveAfterOperateInOffState" time="">
-  </testcase>
-</testsuite>
