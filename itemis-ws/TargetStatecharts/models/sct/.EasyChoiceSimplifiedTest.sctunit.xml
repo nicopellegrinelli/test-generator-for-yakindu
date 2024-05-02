@@ -1,0 +1,38 @@
+<testsuite name="EasyChoiceTest" time="">
+  <testcase name="test00" classname="platform:/resource/TargetStatecharts/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test00" time="">
+  </testcase>
+  <testcase name="test01" classname="platform:/resource/TargetStatecharts/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test01" time="">
+  </testcase>
+  <testcase name="test02" classname="platform:/resource/TargetStatecharts/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test02" time="">
+  </testcase>
+  <testcase name="test03" classname="platform:/resource/TargetStatecharts/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test03" time="">
+  </testcase>
+  <testcase name="test04" classname="platform:/resource/TargetStatecharts/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test04" time="">
+  </testcase>
+  <testcase name="test05" classname="platform:/resource/TargetStatecharts/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test05" time="">
+  </testcase>
+  <testcase name="test06" classname="platform:/resource/TargetStatecharts/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test06" time="">
+  </testcase>
+  <testcase name="test07" classname="platform:/resource/TargetStatecharts/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test07" time="">
+  </testcase>
+  <testcase name="test08" classname="platform:/resource/TargetStatecharts/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test08" time="">
+  </testcase>
+  <testcase name="test09" classname="platform:/resource/TargetStatecharts/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test09" time="">
+  </testcase>
+  <testcase name="test10" classname="platform:/resource/TargetStatecharts/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test10" time="">
+  </testcase>
+  <testcase name="test11" classname="platform:/resource/TargetStatecharts/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test11" time="">
+  </testcase>
+  <testcase name="test12" classname="platform:/resource/TargetStatecharts/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test12" time="">
+  </testcase>
+  <testcase name="test13" classname="platform:/resource/TargetStatecharts/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test13" time="">
+  </testcase>
+  <testcase name="test14" classname="platform:/resource/TargetStatecharts/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test14" time="">
+  </testcase>
+  <testcase name="test15" classname="platform:/resource/TargetStatecharts/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test15" time="">
+  </testcase>
+  <testcase name="test16" classname="platform:/resource/TargetStatecharts/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test16" time="">
+  </testcase>
+  <testcase name="test17" classname="platform:/resource/TargetStatecharts/models/sct/EasyChoiceSimplifiedTest.sctunit#EasyChoiceTest.test17" time="">
+  </testcase>
+</testsuite>

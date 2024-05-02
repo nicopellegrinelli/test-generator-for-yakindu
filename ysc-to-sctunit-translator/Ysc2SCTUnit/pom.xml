@@ -54,7 +54,7 @@
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>libs/</classpathPrefix>
 							<mainClass>
-								generators.TestGenerator
+								ysc2sctunit.Ysc2Sctunit	
 							</mainClass>
 						</manifest>
 					</archive>

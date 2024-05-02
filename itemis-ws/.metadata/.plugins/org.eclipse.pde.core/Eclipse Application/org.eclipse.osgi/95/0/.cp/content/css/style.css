@@ -1,0 +1,200 @@
+/* @import "bootstrap.min.css";  */
+
+@font-face {
+	font-family: Montserrat;
+	src: url('../fonts/Montserrat-Regular.ttf');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: Montserrat;
+	src: url('../fonts/Montserrat-Bold.ttf');
+	font-weight: 700;
+}
+
+html {
+	width: 100%;
+}
+
+body {
+	background-position: center center; 
+  	background-attachment: fixed; 
+	background-repeat: no-repeat; 
+	background-size: cover;
+	background-color: #fbfcfd;
+	font-family: "Montserrat", sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.42857143;
+	color: #333;
+}
+
+#csstrap {
+	display: none;
+}
+
+h3.card-title {
+	font-weight: bolder;
+}
+
+h4.-heading small_ {
+	color: black
+}
+
+.btn-secondary {
+	display: block;
+}
+
+div#header.row {
+	margin-bottom: 20px;
+}
+
+div#header._row {
+	margin-bottom: 10px;
+	background: rgb(220, 200, 200);
+}
+
+div.card {
+	background-color: rgba(241, 242, 244, 0.7);
+}
+
+
+div.card .card-header,
+li.media,
+div.media {
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+div#link {
+	text-decoration: underline;
+}
+
+.pro {
+	cursor: pointer;
+	background: url(../img/pro_feature.png) right bottom no-repeat;
+}
+
+
+.contact-text {
+	padding-top: 15px;
+	padding-bottom: 5px;
+	padding-right: 10px;
+}
+
+.contact-link {
+	padding-top: 10px;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.copyright{
+	padding-top: 15px;
+}
+
+
+.social-media {
+	vertical-align: middle;
+}
+
+.media-object{
+	width: 32px;
+	height: 32px;
+}
+
+ul.icons{
+	list-style: none;
+	vertical-align: middle;
+	text-align: center;
+	padding-left: 5px;
+}
+
+ul.icons li {
+	display: inline-block;
+}
+
+.list-group-item {
+	margin: 3px;
+}
+
+/* a.link-box-link,
+a.link-box-link:hover {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+	width: auto;
+} */
+
+.fa {
+	padding: 15px;
+	font-size: 30px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
+	margin-right: 5px;
+	margin-top: 2px;
+}
+
+.fa:hover {
+	opacity: 0.8;
+}
+
+.fa-linkedin {
+	background: #3B5998;
+	color: white;
+}
+
+.fa-twitter {
+	background: #55ACEE;
+	color: white;
+}
+
+.fa-youtube {
+	background: rgb(216, 33, 42);
+	color: white;
+}
+
+.link-box:hover {
+	background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%,
+		rgba(254, 253, 253, 0) 1%, rgba(205, 220, 243, 1.0) 100%);
+		cursor: pointer;
+}
+
+/* Fix for grid issue in Safari */
+.row:before, .row:after {display: none !important;}
+
+.mainContainer {
+	width: 80%;
+}
+
+.welcomeTitle {
+	color: #1565c0;
+	font-size: 40px;
+	font-weight: 700;
+}
+
+button {
+	display: flex;
+	align-items: center;
+	height: 5vh;
+	margin: 5%;
+	border: none;
+	background-color: #1565c0;
+	border-radius: 5px;
+	color: #f3f3f3;
+}
+
+.btn-primary {
+	color: #fff;
+	background-color: #1565c0;
+	border-color: #357ebd
+}
+
+.logo {
+	width: 10em;
+	position: absolute;
+}
+
+.header {
+	width: 100%;
+	display: flex;
+}

@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Temp
+Bundle-SymbolicName: Temp
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: com.yakindu.sctunit.coverage;bundle-version="5.2.1",
+ com.yakindu.sct.model.sgraph;bundle-version="5.2.1",
+ org.eclipse.emf.ecore;bundle-version="2.36.0",
+ org.eclipse.gmf.runtime.notation;bundle-version="1.10.0"
+Automatic-Module-Name: Temp
+Bundle-RequiredExecutionEnvironment: JavaSE-17

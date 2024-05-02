@@ -1,0 +1,129 @@
+testclass EasyChoiceTest for statechart EasyChoice {
+	@Test
+	operation test00 () {
+	    raise start
+	    enter
+	    proceed 1 cycle
+	    assert is_active
+	}
+
+	@Test
+	operation test01 () {
+	    enter
+	    raise prepare
+	    proceed 1 cycle
+	    raise start
+	    proceed 1 cycle
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test02 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test03 () {
+	    enter
+	    raise prepare
+	    proceed 1 cycle
+	    raise start
+	    proceed 1 cycle
+	    assert is_active
+	    assert active (EasyChoice.main_region.OneTime)
+	}
+
+	@Test
+	operation test04 () {
+	    enter
+	    assert is_active
+	    assert active (EasyChoice.main_region.Start)
+	}
+
+	@Test
+	operation test05 () {
+	}
+
+	@Test
+	operation test06 () {
+	    assert !active (EasyChoice.main_region._final_)
+	}
+
+	@Test
+	operation test07 () {
+	    assert !active (EasyChoice.main_region.TwoTimes)
+	}
+
+	@Test
+	operation test08 () {
+	    assert !active (EasyChoice.main_region.OneTime)
+	}
+
+	@Test
+	operation test09 () {
+	    assert !active (EasyChoice.main_region.A_lot_of_times)
+	}
+
+	@Test
+	operation test10 () {
+	    assert !active (EasyChoice.main_region.Start)
+	}
+
+	@Test
+	operation test11 () {
+	    proceed 1 cycle
+	    assert !is_active
+	}
+
+	@Test
+	operation test12 () {
+	    assert !is_final
+	}
+
+	@Test
+	operation test13 () {
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test14 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test15 () {
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test16 () {
+	    enter
+	    raise prepare
+	    proceed 1 cycle
+	    raise start
+	    proceed 1 cycle
+	    raise end
+	    proceed 1 cycle
+	    assert is_final
+	}
+
+	@Test
+	operation test17 () {
+	    raise prepare
+	    assert !is_active
+	    enter
+	    proceed 1 cycle
+	    raise start
+	    proceed 1 cycle
+	    proceed 1 cycle
+	    assert is_active
+	}
+
+}

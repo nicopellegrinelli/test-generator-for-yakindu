@@ -1,2 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.yakindu.sctunit.coverage.Measurement.Measure"/>
+    <fullyQualifiedTypeName name="org.eclipse.xtext.resource.IResourceFactory"/>
+    <fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.impl.ResourceFactoryImpl"/>
+    <fullyQualifiedTypeName name="java.net.URI"/>
+    <fullyQualifiedTypeName name="com.yakindu.sctunit.sCTUnit.SCTUnitElement"/>
+    <fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.Resource"/>
+    <fullyQualifiedTypeName name="com.yakindu.sct.model.sgraph.resource.ResourceUtil"/>
+    <fullyQualifiedTypeName name="org.eclipse.debug.core.ILaunchManager"/>
+    <fullyQualifiedTypeName name="org.eclipse.debug.core.DebugPlugin"/>
+    <fullyQualifiedTypeName name="org.eclipse.debug.core.ILaunchConfigurationType"/>
+    <fullyQualifiedTypeName name="org.eclipse.emf.ecore.util.EcoreUtil"/>
+    <fullyQualifiedTypeName name="com.yakindu.sctunit.sCTUnit.SCTUnitPackage.Literals"/>
+    <fullyQualifiedTypeName name="org.eclipse.debug.core.ILaunch"/>
+    <fullyQualifiedTypeName name="com.yakindu.sctunit.simulation.core.launch.SCTUnitLaunchConfigurationDelegate"/>
+    <fullyQualifiedTypeName name="com.yakindu.sctunit.simulation.core.engine.SCTUnitSimulationEngine"/>
+    <fullyQualifiedTypeName name="java.nio.file.Paths"/>
+    <fullyQualifiedTypeName name="java.nio.file.Files"/>
+    <fullyQualifiedTypeName name="java.nio.charset.StandardCharsets"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.JsonNode"/>
+    <fullyQualifiedTypeName name="com.yakindu.sctunit.coverage.JSONToMeasurement"/>
+    <fullyQualifiedTypeName name="com.yakindu.sctunit.simulation.core.debugmodel.SCTUnitDebugTarget"/>
+    <fullyQualifiedTypeName name="com.yakindu.sctunit.coverage.StatechartMeasurementBuilder"/>
+    <fullyQualifiedTypeName name="com.yakindu.sctunit.coverage.Measurement"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.yakindu.sctunit.sCTUnit.SCTUnitClass"/>
+    <fullyQualifiedTypeName name="com.yakindu.base.types.Property"/>
+    <fullyQualifiedTypeName name="com.yakindu.sctunit.coverage.MeasurementExtension"/>
+    <fullyQualifiedTypeName name="com.yakindu.sctunit.sCTUnit.SCTUnitSuite"/>
+    <fullyQualifiedTypeName name="com.yakindu.sctunit.sCTUnit.impl.SCTUnitSuiteImpl"/>
+    <fullyQualifiedTypeName name="org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.core.JsonFactory"/>
+    <fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.Resource.Factory"/>
+    <fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.Resource.Factory.Registry"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.eclipse.emf.edit.provider.resource.ResourceItemProviderAdapterFactory"/>
+    <fullyQualifiedTypeName name="org.eclipse.emf.edit.provider.ComposedAdapterFactory"/>
+    <fullyQualifiedTypeName name="org.eclipse.emf.common.command.BasicCommandStack"/>
+    <fullyQualifiedTypeName name="org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain"/>
+    <fullyQualifiedTypeName name="com.yakindu.sctunit.sCTUnit.impl.SCTUnitFactoryImpl"/>
+    <fullyQualifiedTypeName name="com.yakindu.sctunit.sCTUnit.util.SCTUnitAdapterFactory"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="org.eclipse.emf.ecore.plugin.EcorePlugin"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="org.eclipse.emf.ecore.xmi.impl.XMLResourceFactoryImpl"/>
+    <fullyQualifiedTypeName name="com.yakindu.sct.model.sgraph.SGraphPackage"/>
+    <fullyQualifiedTypeName name="org.eclipse.gmf.runtime.emf.core.util.PackageUtil"/>
+    <fullyQualifiedTypeName name="com.yakindu.base.base.impl.BasePackageImpl"/>
+    <fullyQualifiedTypeName name="com.yakindu.sctunit.sCTUnit.TestPackage"/>
+    <fullyQualifiedTypeName name="com.yakindu.base.base.BasePackage"/>
+    <fullyQualifiedTypeName name="org.eclipse.gmf.runtime.notation.NotationPackage"/>
+    <fullyQualifiedTypeName name="org.eclipse.emf.ecore.EPackage"/>
+</qualifiedTypeNameHistroy>

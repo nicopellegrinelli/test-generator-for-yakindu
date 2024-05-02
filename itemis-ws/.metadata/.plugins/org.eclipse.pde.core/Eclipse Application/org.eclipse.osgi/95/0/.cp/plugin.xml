@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.intro">
+      <intro
+            class="com.yakindu.sct.product.intro.AutoClosingIntroPart"
+            icon="icons/icon-16.png"
+            id="com.yakindu.sct.product.intro">
+      </intro>
+      <introProductBinding
+            introId="com.yakindu.sct.product.intro"
+            productId="com.yakindu.sct.products.full.product">
+      </introProductBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro.config">
+      <config
+            content="introContent.xml"
+            id="com.yakindu.sct.intro.introConfigId"
+            introId="com.yakindu.sct.product.intro">
+         <presentation
+               home-page-id="root">
+            <implementation
+                  kind="html"
+                  os="win32,linux,macosx"
+                  style="content/style.css">
+            </implementation>
+         </presentation>
+      </config>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="com.yakindu.sct.product.intro.commands.category"
+            name="Sample Category">
+      </category>
+      <command
+            categoryId="com.yakindu.sct.product.intro.commands.category"
+            id="com.yakindu.sct.product.intro.commands.openWelcomeCmd"
+            name="Sample Command">
+      </command>
+      <command
+            defaultHandler="com.yakindu.sct.product.intro.handlers.OpenReleaseNotesHandler"
+            description="Open release notes"
+            id="com.yakindu.sct.product.intro.commands.openReleaseNotesCmd"
+            name="Release Notes">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="com.yakindu.sct.product.intro.handlers.OpenWelcomeHandler"
+            commandId="com.yakindu.sct.product.intro.commands.openWelcomeCmd">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.yakindu.sct.product.intro.commands.openWelcomeCmd"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+6">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="com.yakindu.sct.product.intro.toolbars.sampleToolbar"
+               label="itemis CREATE">
+            <command
+                  commandId="com.yakindu.sct.product.intro.commands.openWelcomeCmd"
+                  icon="icons/icon-16.png"
+                  id="com.yakindu.sct.product.intro.toolbars.welcomeToolbar"
+                  label="Welcome"
+                  mode="FORCE_TEXT"
+                  tooltip="Open Welcome Page">
+            </command>
+         </toolbar>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:help?after=about">
+         <command
+               commandId="com.yakindu.sct.product.intro.commands.openReleaseNotesCmd"
+               icon="icons/icon-16.png"
+               label="itemis CREATE Release Notes"
+               style="push"
+               tooltip="Open release notes website">
+         </command>
+      </menuContribution>
+   </extension>
+</plugin>

@@ -1,0 +1,161 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: com.yakindu.sct.product.intro
+Bundle-SymbolicName: com.yakindu.sct.product.intro;singleton:=true
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.ui
+ .intro,org.eclipse.ui.forms,org.eclipse.swt,org.eclipse.ui.workbench,
+ org.eclipse.ui.intro.universal;visibility:=reexport,org.eclipse.xtext
+ .xbase.lib,org.eclipse.core.resources
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: itemis AG
+Export-Package: com.yakindu.sct.product.intro.mail
+Bundle-Name: itemis CREATE Welcome Page
+Bundle-Version: 5.2.1.202312211636
+Bundle-Activator: com.yakindu.sct.product.intro.Activator
+Build-Jdk-Spec: 17
+Created-By: Maven Archiver 3.5.2
+
+Name: com/yakindu/sct/product/intro/OpenExampleIntroAction.class
+SHA-256-Digest: vUEEZ8167gyFqyOdG9D/wEl+CnyF9tMnWYvUUXgozmA=
+
+Name: com/yakindu/sct/product/intro/WriteSupportMailAction.class
+SHA-256-Digest: yfAdTaKDN1tEs1pmP/2eV8websDQpkxjzQvi3plVSsI=
+
+Name: plugin.xml
+SHA-256-Digest: tVRR1CxPks4CEYU8onGpoumZLOWPJDVFPhuxXJkYmDE=
+
+Name: content/img/book.svg
+SHA-256-Digest: z41BwtyRh85lYp1UXW4E3KcQ3+DYdfthcVeF2wrU0F0=
+
+Name: content/welcome.xhtml
+SHA-256-Digest: nd2y6Vi/cZPOzCOvnxQmlMG+aAQOzCOHmKzZGM+i9GM=
+
+Name: content/img/info-circle.svg
+SHA-256-Digest: asGsMzS8q1LuxMd0S9hMexLCT8eTA2EsIIMIFaTz00c=
+
+Name: content/fonts/glyphicons-halflings-regular.eot
+SHA-256-Digest: 9JXzTk8XfPARWvmVu7/rP8q8iFAodudvxRpKtDm8hDE=
+
+Name: com/yakindu/sct/product/intro/mail/SupportMail$1.class
+SHA-256-Digest: xcbjKzbRd7tvnhdbAHX+Pw8JJqWpDNFBqK0pspoiMYQ=
+
+Name: content/img/coverage-view.png
+SHA-256-Digest: r5wrsI4VwH79KfHkI3ByjqF5WNgHqq8fjX+KyWPnI38=
+
+Name: content/img/file-earmark-plus.svg
+SHA-256-Digest: E5cF/1qq4pdqjG61apL++OcMO6yTw7UZW/UhVpmPLBk=
+
+Name: content/img/camera-video.svg
+SHA-256-Digest: tHB8K+PlwuQhIPzWhurhw8ZpveTdQaxH9u16vRfKBYs=
+
+Name: content/img/multism.png
+SHA-256-Digest: PcdJXKv9Mju+QZY804DSwDJITV6FZkVq4p8TN2otgCA=
+
+Name: content/img/pro_feature.png
+SHA-256-Digest: sjAgcQ+ZlEesEtwIW7+nPVNDpbzWbtK7j3GtTR4ZEZ8=
+
+Name: content/fonts/Montserrat-Regular.ttf
+SHA-256-Digest: Mvm9xz7PMIoZwOkYtAfhLaErbNmmZ97Nwt3LdPRXg5o=
+
+Name: content/fonts/Montserrat-Bold.ttf
+SHA-256-Digest: nLfcGO5hdauGvqAI63r/GZLqewaTOWTV4uhkCQIGwgo=
+
+Name: com/yakindu/sct/product/intro/OpenURLWithExternalBrowserAction.c
+ lass
+SHA-256-Digest: Ts/HlPdUSTQALjrtnDv1sqN0/elBNc6T7e6XO9698vg=
+
+Name: content/img/display.svg
+SHA-256-Digest: /vROj8jca6WxLY7DkZn1dpwZFVWALV89H/RUnFXncqU=
+
+Name: com/yakindu/sct/product/intro/AutoClosingIntroPart$1.class
+SHA-256-Digest: RZKcCld8xJMDXmYe4LTKh+7juOXfnZn3U0/6oKBioJE=
+
+Name: content/img/pencil-square.svg
+SHA-256-Digest: BpBhxJFIfTlwlP7aNCGJKCo0+8Xl0oc/wfxI2e6gIUs=
+
+Name: content/css/style.css
+SHA-256-Digest: aYOg2ZfH7zgUFjKrdGKgyPLM0T391AV/Fkb9psFME4Q=
+
+Name: com/yakindu/sct/product/intro/Activator.class
+SHA-256-Digest: 82uABnp8bt5VR0NreVbT8AzuI0Sxmosr+m6ekwnjX/k=
+
+Name: content/js/bootstrap.min.js
+SHA-256-Digest: 5+02zu5UULQkO7w1GIr6vftCgMfFdZcAHeDtFnKZsBs=
+
+Name: content/img/box.svg
+SHA-256-Digest: 3TllGT9iQB7MhMG4/y5mG2Z4UpeWSYpntyZCqrQcORQ=
+
+Name: com/yakindu/sct/product/intro/mail/MailTemplate.class
+SHA-256-Digest: Tx+j9hrRc1USleAp1z6T/q5cU/XnUopk4WP9QFVqHtI=
+
+Name: content/img/yet_target_trace_debugging.png
+SHA-256-Digest: Pf1yNTemSbq3O8H5ij+m/WhDqcRqlhKDMMbFcilR6cE=
+
+Name: content/img/cdomain.png
+SHA-256-Digest: f+uMftA0OFWBqU+OM5kLlokGk9BZJLmLo19LxbUfBjE=
+
+Name: content/img/microcontroller.jpg
+SHA-256-Digest: GPTmnWdE10BmCka1HgyrMpAfzQ1QmSPhFkGKk/gIuaU=
+
+Name: com/yakindu/sct/product/intro/handlers/OpenWelcomeHandler.class
+SHA-256-Digest: N2H6JYOEzoMX7mP2lgU7TY2dQFXysYeb72YF6sktZ+o=
+
+Name: com/yakindu/sct/product/intro/AutoClosingIntroPart.class
+SHA-256-Digest: xIl9nfEnV1KZRv224RybniS6Md3IvBODLUUPuqgsZvk=
+
+Name: com/yakindu/sct/product/intro/mail/.MailTemplate.java._trace
+SHA-256-Digest: CKA0hiKXAu+ZomtqGhy3WbO99cuLf48KzGPQ6Fj8K6k=
+
+Name: content/img/pencil.svg
+SHA-256-Digest: VL0TfOZ0YM1KHKSInPOYef4Au7tfVPARyorcq9QQ7LM=
+
+Name: content/img/file-richtext.svg
+SHA-256-Digest: CE/9dqvZoLhiJ0zjRMXEXdlyHmbDybDArIpvVfc7oBg=
+
+Name: content/img/SCT-Welcomepage-01.png
+SHA-256-Digest: npCPvnBQ4i7ajfHYwOgItOUFSCHcwZYrFlTbAPA7qLU=
+
+Name: content/fonts/glyphicons-halflings-regular.svg
+SHA-256-Digest: 0WjVCojHMLTmgw3A2iorUdrkZYp32WGZQ8J7js/BnRo=
+
+Name: com/yakindu/sct/product/intro/mail/MailTemplate.xtend
+SHA-256-Digest: GbPLlTAy+DjgHjVLzJxXBQEcdWZBYFpLpmjKhCkKGxo=
+
+Name: content/img/scxml_small.png
+SHA-256-Digest: x9ROBcbk2SrkWbeWLK1fEQ7uAOch7OfTpKOTEqUYOCs=
+
+Name: content/fonts/glyphicons-halflings-regular.ttf
+SHA-256-Digest: vRjv0+/XD+yK0JYRogzb+ZRAssHUAIXCm+A2+JHWU1g=
+
+Name: com/yakindu/sct/product/intro/handlers/OpenReleaseNotesHandler.c
+ lass
+SHA-256-Digest: UaOae7Fgz6MuFOhGOv4rpAGmlIatQ0DCVK6j0TeZ1Bw=
+
+Name: com/yakindu/sct/product/intro/mail/SupportMail.class
+SHA-256-Digest: BmB80tpsLJzKvBEaZeR3oEPPdS6+E9Q01e7PtSnrWvk=
+
+Name: content/img/itemisCREATE_256px.png
+SHA-256-Digest: DpzRyAFw0p3yi2IHYULOMQWTSyEBLWg4K3DF/dcjEZ4=
+
+Name: content/img/archive.svg
+SHA-256-Digest: LWBZEkkr/Iqv9c4RYlXGQKiTMXmbIX3WGWY3EsD5xZA=
+
+Name: introContent.xml
+SHA-256-Digest: CjXOsCTN9axdLn0lQeEJOBV1izs+Z+qLRwfRVcfl+K0=
+
+Name: content/css/bootstrap.css
+SHA-256-Digest: ltBKKMx+60yK0zalYtvecswWAlVRSJ+4H1g3mw8XJsY=
+
+Name: content/img/envelope.svg
+SHA-256-Digest: KagL1tWb83P+JC0maJypGNdKS+oB3SO+mYMrNJW3y1c=
+
+Name: com/yakindu/sct/product/intro/mail/PluginVersion.class
+SHA-256-Digest: g0ITTOdQwWcrKI7+1rQFgraCfgLaWtaBWHxw8dLC2Ak=
+
+Name: content/fonts/glyphicons-halflings-regular.woff
+SHA-256-Digest: /Jadwcb/Uxq882gIncuvV3UTOwYm/1a1IwGgWfwPnh4=
+
+Name: icons/icon-16.png
+SHA-256-Digest: IzXiSEp3AsO4VH47B5YZWyXqiz7/QGa61Ric01FRPeE=
+

@@ -59,7 +59,7 @@ public class SgenWriterTest {
 		writer.writeSgen(PROJECT_NAME, STATECHART_NAME, sgenPath, TARGET_DIR, TARGET_PACKAGE);
 		assertTrue(Files.exists(Paths.get(sgenPath)));
 
-		String sgen = new String(Files.readAllBytes(Paths.get(sgenPath)), StandardCharsets.UTF_8);;
+		String sgen = new String(Files.readAllBytes(Paths.get(sgenPath)), StandardCharsets.UTF_8);
 		assertTrue(sgen.contains("const PROJECT : string = \""+ PROJECT_NAME + "\""));
 		assertTrue(sgen.contains("const FOLDER : string = \""+ TARGET_DIR + "\""));
 		assertTrue(sgen.contains("statechart " + STATECHART_NAME + " {"));

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.yakindu.sctunit.simulation.core.launch">
+    <stringAttribute key="filename" value="/TargetStatecharts/models/sct/LightSimplifiedTest.sctunit"/>
+    <booleanAttribute key="generateCoverage" value="true"/>
+    <booleanAttribute key="hideCoverageFiles" value="false"/>
+    <intAttribute key="numberOfCoverageFilesToStore" value="5"/>
+    <booleanAttribute key="org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING" value="false"/>
+</launchConfiguration>

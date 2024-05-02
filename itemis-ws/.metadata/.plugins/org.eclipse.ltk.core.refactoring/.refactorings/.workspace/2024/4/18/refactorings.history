@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;Temp/models/ExamplStc-2024-04-30-101659.cov&apos;" deleteContents="false" description="Delete resource &apos;Temp/models/ExamplStc-2024-04-30-101659.cov&apos;" element1="/Temp/models/ExamplStc-2024-04-30-101659.cov" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1714465092025"/>
+</session>

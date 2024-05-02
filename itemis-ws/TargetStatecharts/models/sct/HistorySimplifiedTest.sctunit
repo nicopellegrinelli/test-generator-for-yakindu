@@ -1,0 +1,6 @@
+testclass HistoryTest for statechart History {
+	@Test
+	operation notGeneratedAnyTest () {
+	}
+
+}

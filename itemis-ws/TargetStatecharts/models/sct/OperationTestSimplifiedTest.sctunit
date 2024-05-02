@@ -1,0 +1,41 @@
+testclass OperationTestTest for statechart OperationTest {
+	@Test
+	operation test00 () {
+	}
+
+	@Test
+	operation test01 () {
+	}
+
+	@Test
+	operation test02 () {
+	    assert !active (OperationTest.main_region.StateB)
+	}
+
+	@Test
+	operation test03 () {
+	    assert !active (OperationTest.main_region.StateA)
+	}
+
+	@Test
+	operation test05 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test08 () {
+	    assert !is_final
+	}
+
+	@Test
+	operation test12 () {
+	    assert !is_final
+	}
+
+	@Test
+	operation test13 () {
+	    exit
+	    assert !is_active
+	}
+
+}
