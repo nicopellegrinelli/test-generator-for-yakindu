@@ -6,7 +6,7 @@ package ysc2sctunit.java.reading;
 public class ProceedTime {
 		
 	/** The value of the time event. */
-	private int value;
+	private long value;
 	
 	/** The time unit of the time event. */
 	private TimeUnit unit;
@@ -17,7 +17,7 @@ public class ProceedTime {
 	 * @param value the value
 	 * @param unit the time unit
 	 */
-	public ProceedTime(int value, TimeUnit unit) {
+	public ProceedTime(long value, TimeUnit unit) {
 		this.value = value;
 		this.unit = unit;
 	}
@@ -27,7 +27,7 @@ public class ProceedTime {
 	 *
 	 * @return the value
 	 */
-	public int getValue() {
+	public long getValue() {
 		return value;
 	}
 

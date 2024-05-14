@@ -39,18 +39,22 @@ public class JavaReader implements IJavaReader {
 				// The third argument represents the proceed time in millisconds associated with
 				// the event, e.g: (5l * 1000l), (500l / 1000000l), 500l
 				String expr = m.getArgument(2).toString().replaceAll("[()]", "");
-				int value = Integer.parseInt(expr.substring(0, expr.indexOf('l')));
-				TimeUnit unit;
-				if (expr.contains("* 1000l")) {
-					unit = TimeUnit.SECONDS;
-				} else if (expr.contains("/ 1000l")) {
-					unit = TimeUnit.MICROSECONDS;
-				} else if (expr.contains("/ 1000000l")) {
-					unit = TimeUnit.NANOSECONDS;
-				} else {
-					unit = TimeUnit.MILLISECONDS;
+				try {
+					long value = Long.parseLong(expr.substring(0, expr.indexOf('l')));
+					TimeUnit unit;
+					if (expr.contains("* 1000l")) {
+						unit = TimeUnit.SECONDS;
+					} else if (expr.contains("/ 1000l")) {
+						unit = TimeUnit.MICROSECONDS;
+					} else if (expr.contains("/ 1000000l")) {
+						unit = TimeUnit.NANOSECONDS;
+					} else {
+						unit = TimeUnit.MILLISECONDS;
+					}
+					proceedTimes.put(id, new ProceedTime(value, unit));
+				} catch (NumberFormatException e) {
+					System.out.println("Unable to read time event with ID " + id + ", this may result in failing test methods.");
 				}
-				proceedTimes.put(id, new ProceedTime(value, unit));
 			}
 		}
 		return proceedTimes;

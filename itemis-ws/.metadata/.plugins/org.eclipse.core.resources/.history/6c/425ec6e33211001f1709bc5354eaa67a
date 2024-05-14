@@ -1,0 +1,139 @@
+testclass test_converter_entry_exit_actions_expectedTest for statechart test_converter_entry_exit_actions_expected {
+	@Test
+	operation test00 () {
+	    raise user.off_button
+	}
+
+	@Test
+	operation test03 () {
+	}
+
+	@Test
+	operation test04 () {
+	}
+
+	@Test
+	operation test05 () {
+	    enter
+	    raise sensor.motion
+	    raise sensor.motion
+	    assert is_active
+	}
+
+	@Test
+	operation test06 () {
+	    enter
+	    raise sensor.motion
+	    proceed 30000000000ns
+	    assert is_active
+	}
+
+	@Test
+	operation test07 () {
+	    enter
+	    triggerWithoutEvent
+	    assert is_active
+	}
+
+	@Test
+	operation test08 () {
+	    enter
+	    raise user.on_button
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test09 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test10 () {
+	    enter
+	    assert is_active
+	    assert active (test_converter_entry_exit_actions_expected.main_region.MotionSensing.r1.Off)
+	}
+
+	@Test
+	operation test11 () {
+	    enter
+	    assert is_active
+	    assert active (test_converter_entry_exit_actions_expected.main_region.MotionSensing)
+	}
+
+	@Test
+	operation test12 () {
+	}
+
+	@Test
+	operation test13 () {
+	    assert !active (test_converter_entry_exit_actions_expected.main_region.MotionSensing)
+	}
+
+	@Test
+	operation test14 () {
+	    assert !active (test_converter_entry_exit_actions_expected.main_region.Manual)
+	}
+
+	@Test
+	operation test15 () {
+	    assert !active (test_converter_entry_exit_actions_expected.main_region.MotionSensing.r1.On)
+	}
+
+	@Test
+	operation test16 () {
+	    assert !active (test_converter_entry_exit_actions_expected.main_region.Hello)
+	}
+
+	@Test
+	operation test17 () {
+	    assert !active (test_converter_entry_exit_actions_expected.main_region.MotionSensing.r1.Off)
+	}
+
+	@Test
+	operation test18 () {
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test19 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test20 () {
+	    exit
+	    assert !is_final
+	}
+
+	@Test
+	operation test25 () {
+	    assert !is_active
+	    assert !is_final
+	}
+
+	@Test
+	operation test26 () {
+	    assert !is_active
+	    enter
+	    raise user.on_button
+	    raise user.on_button
+	    assert is_active
+	}
+
+	@Test
+	operation test27 () {
+	    assert !is_active
+	    enter
+	    raise user.on_button
+	    triggerWithoutEvent
+	    assert is_active
+	}
+
+}

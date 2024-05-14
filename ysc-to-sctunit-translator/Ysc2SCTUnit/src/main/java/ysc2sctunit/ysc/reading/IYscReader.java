@@ -3,6 +3,8 @@ package ysc2sctunit.ysc.reading;
 import java.util.Map;
 
 public interface IYscReader {
+	
+	boolean hasNamespace();
 
 	public String getStatechartName();
 

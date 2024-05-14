@@ -1,0 +1,72 @@
+package main;
+
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.impl.ResourceFactoryImpl;
+import org.eclipse.emf.ecore.resource.impl.ResourceImpl;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.gmf.runtime.notation.NotationPackage;
+
+
+import com.yakindu.sct.model.sgraph.SGraphPackage;
+import com.yakindu.sctunit.coverage.JSONToMeasurement;
+import com.yakindu.sctunit.coverage.Measurement;
+import com.yakindu.sctunit.coverage.MeasurementExtension;
+import com.yakindu.sctunit.sCTUnit.impl.SCTUnitFactoryImpl;
+
+public class GetCoverage {
+
+	public static void main(String[] args) throws IOException {
+		String wsPath = args[0]; // "C:/Users/lenovo/Desktop/ProgettiGit/test-generator-for-yakindu/itemis-ws"
+		String projectName = args[1]; // "TargetStatecharts"
+		String covPath = args[2]; // "models/ExamplStc-2024-05-01-142926.cov"
+
+//		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("sctunit", new ResourceFactoryImpl() {
+//			public Resource createResource(URI uri) {
+//				String[] args = { "-platformResource", projectName, "file:///" + wsPath + "/" + projectName + "/" };
+//				EcorePlugin.handlePlatformResourceOptions(args);
+//
+//				EPackage.Registry.INSTANCE.put(SGraphPackage.eNS_URI, SGraphPackage.eINSTANCE);
+//				EPackage.Registry.INSTANCE.put("http://www.eclipse.org/gmf/runtime/1.0.2/notation",
+//						NotationPackage.eINSTANCE);
+//				
+//				return new ResourceImpl(uri);
+//			}
+//		});
+		
+		String covString = new String(Files.readAllBytes(Paths.get(wsPath + "/" + projectName + "/" + covPath)),
+				StandardCharsets.UTF_8);
+		
+		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("sctunit", new ResourceFactoryImpl());
+		
+		String[] args2 = { "-platformResource", projectName, "file:///" + wsPath + "/" + projectName + "/" };
+		EcorePlugin.handlePlatformResourceOptions(args2);
+
+		EPackage.Registry.INSTANCE.put(SGraphPackage.eNS_URI, SGraphPackage.eINSTANCE);
+		EPackage.Registry.INSTANCE.put("http://www.eclipse.org/gmf/runtime/1.0.2/notation",
+				NotationPackage.eINSTANCE);
+
+		JSONToMeasurement j2m = new JSONToMeasurement(covString);
+		Measurement measurement = j2m.generateMeasurement();
+		
+		MeasurementExtension measurementExtension = new MeasurementExtension();
+		
+		Measurement.StateTransitionCoverage coverage = measurementExtension.coverage(measurement);
+		int value = (int) ((coverage.coverage) * 100.0F);
+		System.out.println(value + "%");
+		
+		System.out.println("--Submeasures--");
+		for (Measurement m: measurement.getChildren().get(0).getChildren()) {			
+			coverage = measurementExtension.coverage(m);
+			value = (int) ((coverage.coverage) * 100.0F);
+			System.out.println(m.getName() + ": " + value + "%");
+		}
+	}
+
+}

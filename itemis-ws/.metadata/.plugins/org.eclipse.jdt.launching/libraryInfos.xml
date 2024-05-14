@@ -20,5 +20,6 @@
             <entry path="C:\Program Files\Java\jdk1.8.0_202\jre\lib\endorsed"/>
         </endorsedDirs>
     </libraryInfo>
+    <libraryInfo home="C:\Program Files\Java\jdk-17.0.2" version="17.0.2"/>
     <libraryInfo home="C:\Users\lenovo\Desktop\itemis_CREATE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.stripped.win32.x86_64_17.0.9.v20231028-0858\jre" version="17.0.9"/>
 </libraryInfos>

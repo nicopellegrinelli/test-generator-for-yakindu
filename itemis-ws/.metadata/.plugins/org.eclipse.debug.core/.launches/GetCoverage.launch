@@ -13,6 +13,6 @@
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="main.GetCoverage"/>
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="Temp"/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="C:/Users/lenovo/Desktop/ProgettiGit/test-generator-for-yakindu/itemis-ws/Temp/ models/ExamplStc-2024-05-01-142926.cov"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="C:/Users/lenovo/Desktop/ProgettiGit/test-generator-for-yakindu/itemis-ws Test models/LightSwitchTest-2024-05-08-085409.cov"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Temp"/>
 </launchConfiguration>

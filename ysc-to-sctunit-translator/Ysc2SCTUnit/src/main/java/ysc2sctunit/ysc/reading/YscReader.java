@@ -18,6 +18,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class YscReader, contains the information of a statechart read from a ysc
  * file.
@@ -26,6 +27,9 @@ public class YscReader implements IYscReader {
 
 	/** The node in the DOM representing the statechart. */
 	private Node statechartNode;
+	
+	/** True if the statechart has a namespace, false otherwise.*/
+	private boolean hasNamespace;
 
 	/** The statechart name. */
 	private String statechartName;
@@ -58,6 +62,15 @@ public class YscReader implements IYscReader {
 		this.statechartNode = document.getElementsByTagName("sgraph:Statechart").item(0);
 
 		this.initStatechart();
+	}
+	
+	/**
+	 * Checks if the statechart has a namespace.
+	 *
+	 * @return true, if the statechart has a namespace, false otherwise */
+	@Override
+	public boolean hasNamespace() {
+		return this.hasNamespace;
 	}
 
 	/**
@@ -127,6 +140,9 @@ public class YscReader implements IYscReader {
 	 * names.
 	 */
 	private void initStatechart() {
+		// Check if the statechart has a namespace
+		this.hasNamespace = this.statechartNode.getAttributes().getNamedItem("namespace") != null;
+		
 		// Obtain the name of the statechart
 		Node attribute = this.statechartNode.getAttributes().getNamedItem("name");
 		this.statechartName = attribute.getNodeValue();

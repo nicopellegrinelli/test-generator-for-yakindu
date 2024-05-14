@@ -36,6 +36,7 @@ import ysc2sctunit.sgen.writing.ISgenWriter;
 import ysc2sctunit.sgen.writing.SgenWriter;
 import ysc2sctunit.ysc.reading.IYscReader;
 import ysc2sctunit.ysc.reading.YscReader;
+import ysc2sctunit.ysc.writing.YscWriter;
 
 /**
  * The Class Ysc2Sctunit, contains the main method.
@@ -83,11 +84,18 @@ public class Ysc2Sctunit {
 		String sourceFilePath = projectPath + "\\" + sourceDir + "\\" + sourceFile;
 
 		// Read the statechart
+		System.out.println("*******************************************");
+		System.out.println("Reading .ysc file...");
+		System.out.println("*******************************************");
 		IYscReader yscReader = new YscReader(sourceFilePath);
 		String statechartName = yscReader.getStatechartName();
 		Map<String, String> statesNames = yscReader.getStatesNames();
 		Map<String, String> eventsNames = yscReader.getEventsNames();
 		Map<String, String> interfacesNames = yscReader.getInterfacesNames();
+		
+		// If necessary, create a new .ysc file without the definition of the namespace
+		if (yscReader.hasNamespace())
+			sourceFile = YscWriter.writeWithoutNSVersion(sourceFilePath);
 
 		// Obtain the needed Strings
 		String firstUpperStatechartName = statechartName.substring(0, 1).toUpperCase() + statechartName.substring(1);
@@ -125,8 +133,11 @@ public class Ysc2Sctunit {
 		System.out.println("*******************************************");
 		IJavaWriter javaWriter = new JavaWriter();
 		javaWriter.callICGenerator(projectPath, itemisScc, sourceDir, sourceFile, statechartName);
-		
+
 		// Read the java file
+		System.out.println("*******************************************");
+		System.out.println("Reading .java file...");
+		System.out.println("*******************************************");
 		IJavaReader javaReader = new JavaReader();
 		Map<Integer, ProceedTime> proceedTimes = javaReader.getProceedTimes(javaPath);
 
@@ -164,13 +175,16 @@ public class Ysc2Sctunit {
 
 		// Read the junit file
 		System.out.println("*******************************************");
-		System.out.println("Generating .sctunit file...");
+		System.out.println("Reading .junit file...");
 		System.out.println("*******************************************");
 		IJunitReader junitReader = new JunitReader();
 		List<TestCase> testCaseList = junitReader.getTestCases(simplifiedJunitPath, statechartName, statesNames,
 				eventsNames, interfacesNames, proceedTimes);
-		
+
 		// Generate the .sctunit file
+		System.out.println("*******************************************");
+		System.out.println("Generating .sctunit file...");
+		System.out.println("*******************************************");
 		ISctunitWriter sctunitWriter = new SctunitWriter();
 		sctunitWriter.writeSctunit(simplifiedSctunitPath, statechartName, testCaseList);
 

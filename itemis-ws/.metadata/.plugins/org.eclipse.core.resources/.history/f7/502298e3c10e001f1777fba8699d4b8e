@@ -1,0 +1,204 @@
+testclass motionDetectionTest for statechart motionDetection {
+	@Test
+	operation test05 () {
+	    raise user.mode_button
+	    enter
+	    proceed 1 cycle
+	    raise lum_sensor.dark
+	    proceed 1 cycle
+	    raise lum_sensor.bright
+	    proceed 1 cycle
+	    assert is_active
+	}
+
+	@Test
+	operation test06 () {
+	    enter
+	    proceed 1 cycle
+	    assert is_active
+	}
+
+	@Test
+	operation test07 () {
+	    enter
+	    raise user.on_button
+	    proceed 1 cycle
+	    proceed 1 cycle
+	    assert is_active
+	}
+
+	@Test
+	operation test08 () {
+	    enter
+	    raise user.mode_button
+	    proceed 1 cycle
+	    raise user.on_button
+	    proceed 1 cycle
+	    assert is_active
+	}
+
+	@Test
+	operation test09 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test10 () {
+	    raise user.mode_button
+	    enter
+	    proceed 1 cycle
+	    raise lum_sensor.dark
+	    proceed 1 cycle
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test11 () {
+	    enter
+	    raise user.mode_button
+	    proceed 1 cycle
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test12 () {
+	    enter
+	    raise user.on_button
+	    proceed 1 cycle
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test13 () {
+	    enter
+	    assert is_active
+	    assert active (motionDetection.main_region.AutomaticMode.r1.MotionDetectionMode.r1.Idle)
+	}
+
+	@Test
+	operation test14 () {
+	    enter
+	    assert is_active
+	    assert active (motionDetection.main_region.AutomaticMode.r1.MotionDetectionMode)
+	}
+
+	@Test
+	operation test15 () {
+	    enter
+	    raise user.mode_button
+	    proceed 1 cycle
+	    assert is_active
+	    assert !active (motionDetection.main_region.AutomaticMode.r1.MotionDetectionMode)
+	}
+
+	@Test
+	operation test16 () {
+	    enter
+	    raise user.mode_button
+	    proceed 1 cycle
+	    assert is_active
+	    assert active (motionDetection.main_region.AutomaticMode.r1.TwilightDetectionMode.r1.Idle)
+	}
+
+	@Test
+	operation test17 () {
+	    enter
+	    raise user.mode_button
+	    proceed 1 cycle
+	    assert is_active
+	    assert active (motionDetection.main_region.AutomaticMode.r1.TwilightDetectionMode)
+	}
+
+	@Test
+	operation test18 () {
+	    enter
+	    raise user.on_button
+	    proceed 1 cycle
+	    assert is_active
+	    assert !active (motionDetection.main_region.AutomaticMode.r1.TwilightDetectionMode)
+	}
+
+	@Test
+	operation test19 () {
+	    enter
+	    assert is_active
+	    assert active (motionDetection.main_region.AutomaticMode)
+	}
+
+	@Test
+	operation test20 () {
+	    enter
+	    raise user.on_button
+	    proceed 1 cycle
+	    assert is_active
+	    assert !active (motionDetection.main_region.AutomaticMode)
+	}
+
+	@Test
+	operation test21 () {
+	    enter
+	    raise user.on_button
+	    proceed 1 cycle
+	    assert is_active
+	    assert active (motionDetection.main_region.ManualMode)
+	}
+
+	@Test
+	operation test32 () {
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test39 () {
+	    assert !is_active
+	    enter
+	    raise user.on_button
+	    proceed 1 cycle
+	    raise user.on_button
+	    proceed 1 cycle
+	    assert is_active
+	}
+
+	@Test
+	operation test40 () {
+	    raise user.mode_button
+	    enter
+	    proceed 1 cycle
+	    raise lum_sensor.dark
+	    proceed 1 cycle
+	    raise user.on_button
+	    proceed 1 cycle
+	    assert is_active
+	}
+
+	@Test
+	operation test41 () {
+	    raise user.mode_button
+	    enter
+	    proceed 1 cycle
+	    raise user.mode_button
+	    proceed 1 cycle
+	    assert is_active
+	}
+
+	@Test
+	operation test43 () {
+	    raise user.on_button
+	    enter
+	    proceed 1 cycle
+	    raise user.off_button
+	    proceed 1 cycle
+	    assert !is_final
+	}
+
+}
