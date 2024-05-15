@@ -1,4 +1,0 @@
-testsuite StatechartTestSuite {
-	eventdrivenTest,
-	LightSwitchTest
-}

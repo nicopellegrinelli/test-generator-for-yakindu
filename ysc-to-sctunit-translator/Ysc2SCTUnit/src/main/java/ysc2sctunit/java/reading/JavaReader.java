@@ -36,7 +36,7 @@ public class JavaReader implements IJavaReader {
 			if (m.getNameAsString().equals("setTimer")) {
 				// The second argument is the integer representing the ID
 				int id = Integer.parseInt(m.getArgument(1).toString());
-				// The third argument represents the proceed time in millisconds associated with
+				// The third argument represents the proceed time in milliseconds associated with
 				// the event, e.g: (5l * 1000l), (500l / 1000000l), 500l
 				String expr = m.getArgument(2).toString().replaceAll("[()]", "");
 				try {
@@ -52,7 +52,7 @@ public class JavaReader implements IJavaReader {
 						unit = TimeUnit.MILLISECONDS;
 					}
 					proceedTimes.put(id, new ProceedTime(value, unit));
-				} catch (NumberFormatException e) {
+				} catch (Exception e) {
 					System.out.println("Unable to read time event with ID " + id + ", this may result in failing test methods.");
 				}
 			}
