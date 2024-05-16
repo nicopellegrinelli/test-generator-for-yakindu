@@ -1,5 +1,5 @@
-test_class(statechart_name, test_suite) ::= 
-<<testclass <statechart_name>Test for statechart <statechart_name> {
+test_class(statechart_name, test_suite, isSimplified) ::= 
+<<testclass <statechart_name><if(isSimplified)>Simplified<endif>Test for statechart <statechart_name> {
 	<test_suite:{test_case | <test_method(test_case, test_case.actions)>}>
 }>>
 

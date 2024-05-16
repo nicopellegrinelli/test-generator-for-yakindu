@@ -186,7 +186,7 @@ public class Ysc2Sctunit {
 		System.out.println("Generating .sctunit file...");
 		System.out.println("*******************************************");
 		ISctunitWriter sctunitWriter = new SctunitWriter();
-		sctunitWriter.writeSctunit(simplifiedSctunitPath, statechartName, testCaseList);
+		sctunitWriter.writeSctunit(simplifiedSctunitPath, statechartName, testCaseList, true);
 
 		// End the execution
 		System.out.println("*******************************************");

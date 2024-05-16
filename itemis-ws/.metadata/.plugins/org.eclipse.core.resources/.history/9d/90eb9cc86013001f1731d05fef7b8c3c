@@ -1,0 +1,207 @@
+testclass test41Test for statechart test41 {
+	@Test
+	operation test00 () {
+	}
+
+	@Test
+	operation test01 () {
+	}
+
+	@Test
+	operation test02 () {
+	}
+
+	@Test
+	operation test03 () {
+	}
+
+	@Test
+	operation test04 () {
+	}
+
+	@Test
+	operation test05 () {
+	}
+
+	@Test
+	operation test06 () {
+	}
+
+	@Test
+	operation test07 () {
+	}
+
+	@Test
+	operation test10 () {
+	    enter
+	    raise Panel.btn_pressed
+	    raise vier
+	    raise Panel.btn_pressed
+	    assert is_active
+	}
+
+	@Test
+	operation test11 () {
+	    enter
+	    raise vier
+	    raise Panel.btn_pressed
+	    assert is_active
+	}
+
+	@Test
+	operation test12 () {
+	    enter
+	    raise Panel.btn_pressed
+	    raise Panel.btn_pressed
+	    raise Panel.btn_pressed
+	    raise vier
+	    raise Panel.btn_pressed
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test13 () {
+	    enter
+	    raise Panel.btn_pressed
+	    raise Panel.btn_pressed
+	    raise Panel.btn_pressed
+	    raise Panel.btn_pressed
+	    raise Panel.btn_pressed
+	    raise Panel.btn_pressed
+	    raise Panel.btn_pressed
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test14 () {
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test15 () {
+	    enter
+	    raise Panel.btn_pressed
+	    raise vier
+	    raise Panel.btn_pressed
+	    assert is_active
+	    assert active (test41.main_region.StateB.Region_1.StateD)
+	}
+
+	@Test
+	operation test16 () {
+	    enter
+	    raise Panel.btn_pressed
+	    assert is_active
+	    assert active (test41.main_region.StateB.Region_1.StateC)
+	}
+
+	@Test
+	operation test17 () {
+	    enter
+	    raise Panel.btn_pressed
+	    assert is_active
+	    assert active (test41.main_region.StateB)
+	}
+
+	@Test
+	operation test18 () {
+	    enter
+	    assert is_active
+	    assert !active (test41.main_region.StateB)
+	}
+
+	@Test
+	operation test19 () {
+	    enter
+	    assert is_active
+	    assert active (test41.main_region.StateA)
+	}
+
+	@Test
+	operation test20 () {
+	}
+
+	@Test
+	operation test21 () {
+	    assert !is_active
+	    assert !active (test41.main_region.StateB)
+	}
+
+	@Test
+	operation test22 () {
+	    assert !active (test41.main_region.StateB.Region_1.StateC)
+	    assert !is_active
+	}
+
+	@Test
+	operation test23 () {
+	    assert !active (test41.main_region.StateB.Region_1.StateD)
+	    assert !is_active
+	}
+
+	@Test
+	operation test24 () {
+	    assert !is_active
+	    assert !active (test41.main_region.StateA)
+	}
+
+	@Test
+	operation test25 () {
+	    triggerWithoutEvent
+	    assert !is_active
+	}
+
+	@Test
+	operation test26 () {
+	    assert !is_active
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test27 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test28 () {
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test29 () {
+	    enter
+	    assert !is_active
+	}
+
+	@Test
+	operation test30 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test31 () {
+	    assert !is_active
+	    assert !is_final
+	}
+
+	@Test
+	operation test32 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test33 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+}

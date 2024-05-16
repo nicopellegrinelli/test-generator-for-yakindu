@@ -32,8 +32,8 @@ public class JavaReader implements IJavaReader {
 		// associated time
 		Map<Integer, ProceedTime> proceedTimes = new HashMap<Integer, ProceedTime>();
 		for (MethodCallExpr m : cu.findAll(MethodCallExpr.class)) {
-			// At each time event correspond a setTimer() method call
-			if (m.getNameAsString().equals("setTimer")) {
+			// At each time event correspond a setTimer() method call with 4 arguments
+			if (m.getNameAsString().equals("setTimer") && m.getArguments().size() == 4) {
 				// The second argument is the integer representing the ID
 				int id = Integer.parseInt(m.getArgument(1).toString());
 				// The third argument represents the proceed time in milliseconds associated with

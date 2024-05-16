@@ -51,7 +51,7 @@ public class SctunitWriterTest {
 		
 		String wrongSctunitPath = null;
 		
-		writer.writeSctunit(wrongSctunitPath, STATECHART_NAME, new ArrayList<TestCase>());
+		writer.writeSctunit(wrongSctunitPath, STATECHART_NAME, new ArrayList<TestCase>(), false);
 	}
 	
 	@Test(expected = IOException.class)
@@ -63,13 +63,13 @@ public class SctunitWriterTest {
 		
 		String wrongSctunitPath = rootPath;
 		
-		writer.writeSctunit(wrongSctunitPath, STATECHART_NAME, new ArrayList<TestCase>());
+		writer.writeSctunit(wrongSctunitPath, STATECHART_NAME, new ArrayList<TestCase>(), false);
 	}
 	
 	@Test
 	public void testNullTestCases() throws IOException {
 		assertFalse(Files.exists(Paths.get(sctunitPath)));
-		writer.writeSctunit(sctunitPath, STATECHART_NAME, null);
+		writer.writeSctunit(sctunitPath, STATECHART_NAME, null, false);
 		assertTrue(Files.exists(Paths.get(sctunitPath)));
 		String sctunit = new String(Files.readAllBytes(Paths.get(sctunitPath)), StandardCharsets.UTF_8);
 		assertTrue(sctunit.contains("testclass " + STATECHART_NAME + "Test for statechart " + STATECHART_NAME + " {"));
@@ -101,11 +101,11 @@ public class SctunitWriterTest {
 		testCases.add(t);
 		
 		assertFalse(Files.exists(Paths.get(sctunitPath)));
-		writer.writeSctunit(sctunitPath, STATECHART_NAME, testCases);
+		writer.writeSctunit(sctunitPath, STATECHART_NAME, testCases, true);
 		assertTrue(Files.exists(Paths.get(sctunitPath)));
 
 		String sctunit = new String(Files.readAllBytes(Paths.get(sctunitPath)), StandardCharsets.UTF_8);
-		assertTrue(sctunit.contains("testclass " + STATECHART_NAME + "Test for statechart " + STATECHART_NAME + " {"));
+		assertTrue(sctunit.contains("testclass " + STATECHART_NAME + "Simplified" + "Test for statechart " + STATECHART_NAME + " {"));
 		assertTrue(sctunit.contains("operation " + testName + " () {"));
 		assertTrue(sctunit.contains("enter"));
 		assertTrue(sctunit.contains("proceed 1 cycle"));

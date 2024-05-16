@@ -9,6 +9,8 @@
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
 			<item value="setTimer"/>
+			<item value=""/>
+			<item value="trigger"/>
 			<item value="my"/>
 			<item value="enter"/>
 			<item value="getRedPeriod"/>
@@ -21,7 +23,6 @@
 			<item value=".cov"/>
 			<item value="cov"/>
 			<item value="getResource"/>
-			<item value="resource"/>
 		</list>
 		<list key="replacehistory">
 		</list>

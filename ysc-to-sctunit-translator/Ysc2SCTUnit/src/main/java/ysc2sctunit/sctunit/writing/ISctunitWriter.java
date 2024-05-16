@@ -7,6 +7,6 @@ import ysc2sctunit.junit.reading.TestCase;
 
 public interface ISctunitWriter {
 
-	public void writeSctunit(String sctunitPath, String statechartName, List<TestCase> testCaseList) throws IOException;
+	public void writeSctunit(String sctunitPath, String statechartName, List<TestCase> testCaseList, boolean isSimplified) throws IOException;
 
 }

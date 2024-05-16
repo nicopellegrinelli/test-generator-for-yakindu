@@ -1,0 +1,274 @@
+testclass ExamplStcTest for statechart ExamplStc {
+	@Test
+	operation test00 () {
+	}
+
+	@Test
+	operation test01 () {
+	}
+
+	@Test
+	operation test02 () {
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test03 () {
+	}
+
+	@Test
+	operation test04 () {
+	}
+
+	@Test
+	operation test05 () {
+	}
+
+	@Test
+	operation test06 () {
+	    enter
+	    raise Work
+	    assert is_active
+	}
+
+	@Test
+	operation test07 () {
+	    enter
+	    raise power_on
+	    raise Work
+	    raise Work
+	    assert is_active
+	}
+
+	@Test
+	operation test08 () {
+	    enter
+	    raise used1
+	    raise b12W
+	    assert is_active
+	}
+
+	@Test
+	operation test09 () {
+	    enter
+	    raise power_on
+	    raise start
+	    assert is_active
+	}
+
+	@Test
+	operation test10 () {
+	    enter
+	    raise used1
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test11 () {
+	    exit
+	    assert !is_final
+	}
+
+	@Test
+	operation test12 () {
+	    enter
+	    raise power_on
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test13 () {
+	    enter
+	    assert is_active
+	    assert !active (ExamplStc.main_region.On)
+	}
+
+	@Test
+	operation test14 () {
+	}
+
+	@Test
+	operation test15 () {
+	    assert !active (ExamplStc.main_region.On.r_0.Simplified_analyses012)
+	}
+
+	@Test
+	operation test16 () {
+	    assert !active (ExamplStc.main_region.On)
+	}
+
+	@Test
+	operation test17 () {
+	    assert !active (ExamplStc.out_region.OUT2)
+	}
+
+	@Test
+	operation test18 () {
+	    assert !active (ExamplStc.out_region.OUT1)
+	}
+
+	@Test
+	operation test19 () {
+	    assert !active (ExamplStc.main_region.On.r_0.Simplified_analyses012.r_2.an2_b)
+	}
+
+	@Test
+	operation test20 () {
+	    assert !active (ExamplStc.main_region.chill)
+	}
+
+	@Test
+	operation test21 () {
+	    assert !active (ExamplStc.main_region._final_)
+	}
+
+	@Test
+	operation test22 () {
+	    assert !active (ExamplStc.main_region.On.r_0._final_)
+	}
+
+	@Test
+	operation test23 () {
+	    assert !active (ExamplStc.main_region.On.r_0.Simplified_analyses012.r___1.an1)
+	}
+
+	@Test
+	operation test24 () {
+	    assert !active (ExamplStc.main_region.On.r_0.Init_analyses)
+	}
+
+	@Test
+	operation test25 () {
+	    assert !active (ExamplStc.main_region.On.r_0.working)
+	}
+
+	@Test
+	operation test26 () {
+	    assert !active (ExamplStc.main_region.idle)
+	}
+
+	@Test
+	operation test27 () {
+	    assert !active (ExamplStc.main_region.On.r_0.Simplified_analyses012.r_2.an2_a)
+	}
+
+	@Test
+	operation test28 () {
+	    assert !active (ExamplStc.main_region.Off_)
+	}
+
+	@Test
+	operation test29 () {
+	    raise start
+	    raise used2
+	    assert !is_active
+	}
+
+	@Test
+	operation test30 () {
+	    raise power_on
+	}
+
+	@Test
+	operation test31 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test32 () {
+	    assert !is_active
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test33 () {
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test34 () {
+	    enter
+	    assert !is_active
+	}
+
+	@Test
+	operation test35 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test36 () {
+	    triggerWithoutEvent
+	    assert !is_final
+	}
+
+	@Test
+	operation test37 () {
+	    raise end_all
+	    assert !is_active
+	}
+
+	@Test
+	operation test38 () {
+	    raise a
+	    assert !is_final
+	}
+
+	@Test
+	operation test39 () {
+	    raise end
+	    assert !is_final
+	}
+
+	@Test
+	operation test40 () {
+	    assert !is_final
+	}
+
+	@Test
+	operation test41 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test42 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test43 () {
+	    assert !is_active
+	    enter
+	    raise used1
+	    raise used2
+	    assert is_active
+	}
+
+	@Test
+	operation test44 () {
+	    enter
+	    raise power_on
+	    raise Work
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test45 () {
+	    assert !is_active
+	    enter
+	    raise power_on
+	    raise analyze
+	    raise power_on
+	    assert is_active
+	}
+
+}
