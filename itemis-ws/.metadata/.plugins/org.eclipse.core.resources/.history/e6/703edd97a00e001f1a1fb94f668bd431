@@ -1,9 +1,0 @@
-testclass StatechartTest for statechart _01_LightSwitch {
-	
-	@Test
-	operation test() {
-		enter
-		
-		exit
-	}
-}

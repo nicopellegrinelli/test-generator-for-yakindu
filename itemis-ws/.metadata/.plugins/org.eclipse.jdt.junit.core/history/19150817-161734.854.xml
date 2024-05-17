@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="SystemTest" tests="36" started="36" failures="3" errors="0" ignored="0">
+  <testsuite name="SystemTest">
+    <testcase name="test00" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test00"/>
+    <testcase name="test01" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test01"/>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test02"/>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test03"/>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test04"/>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test05"/>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test06"/>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test07"/>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test08"/>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test09"/>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test10"/>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test11"/>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test12"/>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test13"/>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test16"/>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test17"/>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test18"/>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test19"/>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test20"/>
+    <testcase name="test21" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test21"/>
+    <testcase name="test22" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test22"/>
+    <testcase name="test24" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test24"/>
+    <testcase name="test26" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test26">
+      <failure>Test failed due to 'java.lang.IllegalArgumentException': "Don't know how to execute EObjectImpl in context ElementReferenceExpressionImpl"</failure>
+    </testcase>
+    <testcase name="test27" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test27"/>
+    <testcase name="test28" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test28"/>
+    <testcase name="test29" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test29"/>
+    <testcase name="test30" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test30"/>
+    <testcase name="test31" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test31"/>
+    <testcase name="test32" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test32"/>
+    <testcase name="test33" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test33"/>
+    <testcase name="test34" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test34"/>
+    <testcase name="test35" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test35"/>
+    <testcase name="test36" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test36"/>
+    <testcase name="test38" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test38"/>
+    <testcase name="test39" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test39">
+      <failure>Test failed due to 'java.lang.IllegalArgumentException': "Don't know how to execute EObjectImpl in context ElementReferenceExpressionImpl"</failure>
+    </testcase>
+    <testcase name="test40" classname="platform:/resource/Test/models/from_other_repos/SystemTest.sctunit#SystemTest.test40">
+      <failure>Test failed due to 'java.lang.IllegalArgumentException': "Don't know how to execute EObjectImpl in context ElementReferenceExpressionImpl"</failure>
+    </testcase>
+  </testsuite>
+</testrun>
