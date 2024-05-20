@@ -1,0 +1,18 @@
+GeneratorModel for create::java {
+
+	const PROJECT : string = "Test"
+
+	const FOLDER : string = "src"
+
+	statechart _02_composite_states {	
+		feature Naming {
+		    basePackage = "statechart"
+		}
+
+		feature Outlet {
+			targetProject = PROJECT
+			targetFolder = FOLDER
+			libraryTargetFolder = FOLDER
+		}
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;Test/models/from_stl4iot/Library/AtomicComponents/Actuator_Component.sgen&apos;" deleteContents="false" description="Delete resource &apos;Test/models/from_stl4iot/Library/AtomicComponents/Actuator_Component.sgen&apos;" element1="/Test/models/from_stl4iot/Library/AtomicComponents/Actuator_Component.sgen" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1716184066119"/>
+</session>
