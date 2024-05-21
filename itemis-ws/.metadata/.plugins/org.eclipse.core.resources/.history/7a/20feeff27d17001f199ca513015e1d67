@@ -1,0 +1,166 @@
+testclass Elevator_UnitSimplifiedTest for statechart Elevator_Unit {
+	@Test
+	operation test00 () {
+	    raise direction.up
+	}
+
+	@Test
+	operation test01 () {
+	    raise direction.down
+	}
+
+	@Test
+	operation test02 () {
+	    proceed 100ms
+	}
+
+	@Test
+	operation test07 () {
+	    raise stopped
+	}
+
+	@Test
+	operation test08 () {
+	}
+
+	@Test
+	operation test09 () {
+	    enter
+	    raise toggle
+	    raise input.down
+	}
+
+	@Test
+	operation test10 () {
+	    enter
+	    raise toggle
+	    raise inUse
+	    raise input.submit
+	}
+
+	@Test
+	operation test11 () {
+	    enter
+	    raise toggle
+	    raise stopped
+	}
+
+	@Test
+	operation test12 () {
+	    enter
+	    raise toggle
+	    exit
+	}
+
+	@Test
+	operation test13 () {
+	    enter
+	    exit
+	}
+
+	@Test
+	operation test14 () {
+	    enter
+	    raise toggle
+	}
+
+	@Test
+	operation test15 () {
+	}
+
+	@Test
+	operation test16 () {
+	}
+
+	@Test
+	operation test17 () {
+	}
+
+	@Test
+	operation test18 () {
+	}
+
+	@Test
+	operation test19 () {
+	}
+
+	@Test
+	operation test20 () {
+	}
+
+	@Test
+	operation test21 () {
+	}
+
+	@Test
+	operation test22 () {
+	}
+
+	@Test
+	operation test23 () {
+	}
+
+	@Test
+	operation test24 () {
+	}
+
+	@Test
+	operation test25 () {
+	}
+
+	@Test
+	operation test26 () {
+	}
+
+	@Test
+	operation test27 () {
+	    triggerWithoutEvent
+	}
+
+	@Test
+	operation test28 () {
+	}
+
+	@Test
+	operation test29 () {
+	    enter
+	}
+
+	@Test
+	operation test30 () {
+	    exit
+	}
+
+	@Test
+	operation test32 () {
+	}
+
+	@Test
+	operation test34 () {
+	    enter
+	    raise toggle
+	    raise inUse
+	    raise stopped
+	}
+
+	@Test
+	operation test36 () {
+	}
+
+	@Test
+	operation test37 () {
+	    enter
+	    raise toggle
+	    raise input.up
+	    raise input.submit
+	    raise stopped
+	}
+
+	@Test
+	operation test38 () {
+	    enter
+	    raise toggle
+	    raise input.up
+	}
+
+}

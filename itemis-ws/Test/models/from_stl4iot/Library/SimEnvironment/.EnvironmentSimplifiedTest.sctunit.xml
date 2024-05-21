@@ -1,0 +1,11 @@
+<testsuite name="EnvironmentSimplifiedTest" time="">
+  <testcase name="test00" classname="platform:/resource/Test/models/from_stl4iot/Library/SimEnvironment/EnvironmentSimplifiedTest.sctunit#EnvironmentSimplifiedTest.test00" time="">
+  </testcase>
+  <testcase name="test01" classname="platform:/resource/Test/models/from_stl4iot/Library/SimEnvironment/EnvironmentSimplifiedTest.sctunit#EnvironmentSimplifiedTest.test01" time="">
+  </testcase>
+  <testcase name="test02" classname="platform:/resource/Test/models/from_stl4iot/Library/SimEnvironment/EnvironmentSimplifiedTest.sctunit#EnvironmentSimplifiedTest.test02" time="">
+  </testcase>
+  <testcase name="test03" classname="platform:/resource/Test/models/from_stl4iot/Library/SimEnvironment/EnvironmentSimplifiedTest.sctunit#EnvironmentSimplifiedTest.test03" time="">
+    <failure>Test failed due to 'com.yakindu.base.expressions.interpreter.base.InterpreterException': "Don't know how to raise event of type com.yakindu.sct.model.sruntime.impl.CompositeSlotImpl ! "</failure>
+  </testcase>
+</testsuite>
