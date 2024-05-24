@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config date="1716482810418" transient="false" version="3.0">
+<site enabled="true" policy="USER-EXCLUDE" updateable="true" url="platform:/base/">
+<feature id="com.yakindu.sct.generator.application.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sct.generator.application.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="org.eclipse.cdt" url="features/org.eclipse.cdt_11.5.0.202403041627/" version="11.5.0.202403041627">
+</feature>
+<feature id="org.eclipse.help" plugin-identifier="org.eclipse.help.base" url="features/org.eclipse.help_2.3.1600.v20231201-0110/" version="2.3.1600.v20231201-0110">
+</feature>
+<feature id="com.yakindu.sctunit.generator.java.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sctunit.generator.java.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="com.yakindu.yet.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.yet.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="com.yakindu.sct.web.integration.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sct.web.integration.feature_4.1.1.202404022003/" version="4.1.1.202404022003">
+</feature>
+<feature id="com.yakindu.sctunit.generator.cpp.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sctunit.generator.cpp.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="org.eclipse.cdt.gnu.build" plugin-identifier="org.eclipse.cdt.build.gcc.ui" url="features/org.eclipse.cdt.gnu.build_11.5.0.202402230238/" version="11.5.0.202402230238">
+</feature>
+<feature id="org.eclipse.xtext.xbase.lib" url="features/org.eclipse.xtext.xbase.lib_2.33.0.v20231121-0955/" version="2.33.0.v20231121-0955">
+</feature>
+<feature id="org.eclipse.equinox.p2.core.feature" url="features/org.eclipse.equinox.p2.core.feature_1.7.0.v20231112-1314/" version="1.7.0.v20231112-1314">
+</feature>
+<feature id="com.yakindu.sct.license.pro.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sct.license.pro.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="com.yakindu.sct.simulation.debugging.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sct.simulation.debugging.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="org.eclipse.ecf.core.ssl.feature" url="features/org.eclipse.ecf.core.ssl.feature_1.1.501.v20230507-1921/" version="1.1.501.v20230507-1921">
+</feature>
+<feature id="org.eclipse.ecf.filetransfer.ssl.feature" url="features/org.eclipse.ecf.filetransfer.ssl.feature_1.1.402.v20231021-2127/" version="1.1.402.v20231021-2127">
+</feature>
+<feature id="org.eclipse.cdt.platform" plugin-identifier="org.eclipse.cdt.platform.branding" url="features/org.eclipse.cdt.platform_11.5.0.202403041627/" version="11.5.0.202403041627">
+</feature>
+<feature id="com.yakindu.sct.product.java.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sct.product.java.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="org.eclipse.userstorage" url="features/org.eclipse.userstorage_1.2.0.v20210517-0327/" version="1.2.0.v20210517-0327">
+</feature>
+<feature id="com.yakindu.sct.license.standard.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sct.license.standard.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="com.yakindu.sct.product.editor.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sct.product.editor.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="com.yakindu.sct.domain.c.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sct.domain.c.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="com.yakindu.sct.generator.application.win32.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sct.generator.application.win32.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="org.eclipse.xtext.xbase" url="features/org.eclipse.xtext.xbase_2.33.0.v20231121-0955/" version="2.33.0.v20231121-0955">
+</feature>
+<feature id="com.yakindu.sct.product.c.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sct.product.c.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="com.yakindu.sct.products.feature" url="features/com.yakindu.sct.products.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="org.eclipse.justj.openjdk.hotspot.jre.full.stripped" url="features/org.eclipse.justj.openjdk.hotspot.jre.full.stripped_17.0.10.v20240120-1143/" version="17.0.10.v20240120-1143">
+</feature>
+<feature id="com.itemis.create.statechart.generator.csharp.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.itemis.create.statechart.generator.csharp.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="com.yakindu.sct.search.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sct.search.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="org.eclipse.rcp" url="features/org.eclipse.rcp_4.30.0.v20231201-0512/" version="4.30.0.v20231201-0512">
+</feature>
+<feature id="org.eclipse.equinox.p2.discovery.feature" url="features/org.eclipse.equinox.p2.discovery.feature_1.3.200.v20231104-1339/" version="1.3.200.v20231104-1339">
+</feature>
+<feature id="org.eclipse.equinox.p2.rcp.feature" url="features/org.eclipse.equinox.p2.rcp.feature_1.4.2200.v20231112-1314/" version="1.4.2200.v20231112-1314">
+</feature>
+<feature id="org.eclipse.ecf.filetransfer.feature" url="features/org.eclipse.ecf.filetransfer.feature_3.14.1900.v20230715-1945/" version="3.14.1900.v20230715-1945">
+</feature>
+<feature id="org.eclipse.ecf.filetransfer.httpclientjava.feature" url="features/org.eclipse.ecf.filetransfer.httpclientjava.feature_2.0.200.v20231114-1017/" version="2.0.200.v20231114-1017">
+</feature>
+<feature id="org.eclipse.epp.mpc" plugin-identifier="org.eclipse.epp.mpc.ui" url="features/org.eclipse.epp.mpc_1.10.2.v20231116-1812/" version="1.10.2.v20231116-1812">
+</feature>
+<feature id="com.yakindu.base.xtext.utils.jface.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.base.xtext.utils.jface.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="com.yakindu.sct.domain.java.feature" url="features/com.yakindu.sct.domain.java.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="com.yakindu.sctunit.generator.c.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sctunit.generator.c.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="org.sf.feeling.decompiler" url="features/org.sf.feeling.decompiler_3.5.0/" version="3.5.0">
+</feature>
+<feature id="com.yakindu.sct.generator.image.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sct.generator.image.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="com.yakindu.sct.license.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sct.license.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="com.yakindu.sct.generator.cpp.qt.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sct.generator.cpp.qt.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="org.eclipse.cdt.gdb" url="features/org.eclipse.cdt.gdb_11.5.0.202402230238/" version="11.5.0.202402230238">
+</feature>
+<feature id="org.sf.feeling.decompiler.fernflower" url="features/org.sf.feeling.decompiler.fernflower_3.5.0/" version="3.5.0">
+</feature>
+<feature id="com.yakindu.sct.generator.python.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sct.generator.python.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="org.sf.feeling.decompiler.cfr" url="features/org.sf.feeling.decompiler.cfr_3.5.0/" version="3.5.0">
+</feature>
+<feature id="org.eclipse.pde" url="features/org.eclipse.pde_3.15.200.v20231201-0110/" version="3.15.200.v20231201-0110">
+</feature>
+<feature id="org.eclipse.xtext.redist" url="features/org.eclipse.xtext.redist_2.33.0.v20231121-0955/" version="2.33.0.v20231121-0955">
+</feature>
+<feature id="org.eclipse.ecf.filetransfer.httpclient5.feature" url="features/org.eclipse.ecf.filetransfer.httpclient5.feature_1.1.702.v20231114-1017/" version="1.1.702.v20231114-1017">
+</feature>
+<feature id="org.eclipse.cdt.gnu.dsf" plugin-identifier="org.eclipse.cdt.dsf.gdb.ui" url="features/org.eclipse.cdt.gnu.dsf_11.5.0.202402230238/" version="11.5.0.202402230238">
+</feature>
+<feature id="com.yakindu.sct.generator.c.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sct.generator.c.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="com.yakindu.licmgmt.ui.feature" url="features/com.yakindu.licmgmt.ui.feature_3.1.0.202106300400/" version="3.1.0.202106300400">
+</feature>
+<feature id="org.eclipse.jdt" url="features/org.eclipse.jdt_3.19.300.v20231201-0110/" version="3.19.300.v20231201-0110">
+</feature>
+<feature id="com.yakindu.base.xtext.utils.gmf.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.base.xtext.utils.gmf.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="org.eclipse.emf.common" url="features/org.eclipse.emf.common_2.30.0.v20230916-0637/" version="2.30.0.v20230916-0637">
+</feature>
+<feature id="com.yakindu.sctunit.coverage.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sctunit.coverage.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="org.sf.feeling.decompiler.jd" url="features/org.sf.feeling.decompiler.jd_3.5.0/" version="3.5.0">
+</feature>
+<feature id="com.yakindu.licmgmt.feature" url="features/com.yakindu.licmgmt.feature_3.0.0.202106300400/" version="3.0.0.202106300400">
+</feature>
+<feature id="com.yakindu.sct.product.python.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sct.product.python.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="org.eclipse.pde.source" url="features/org.eclipse.pde.source_3.15.200.v20231201-0110/" version="3.15.200.v20231201-0110">
+</feature>
+<feature id="org.sf.feeling.decompiler.procyon" url="features/org.sf.feeling.decompiler.procyon_3.5.0/" version="3.5.0">
+</feature>
+<feature id="com.yakindu.sct.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sct.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="com.yakindu.sct.generator.cpp.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sct.generator.cpp.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="com.yakindu.base.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.base.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="com.yakindu.sctunit.generator.application.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sctunit.generator.application.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="org.eclipse.emf.ecore" url="features/org.eclipse.emf.ecore_2.36.0.v20231002-1156/" version="2.36.0.v20231002-1156">
+</feature>
+<feature id="org.eclipse.equinox.p2.user.ui" url="features/org.eclipse.equinox.p2.user.ui_2.4.2200.v20231112-1314/" version="2.4.2200.v20231112-1314">
+</feature>
+<feature id="com.yakindu.sct.types.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sct.types.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="org.eclipse.equinox.p2.extras.feature" url="features/org.eclipse.equinox.p2.extras.feature_1.4.2200.v20231112-1314/" version="1.4.2200.v20231112-1314">
+</feature>
+<feature id="com.yakindu.sctunit.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sctunit.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="com.itemis.create.sctunit.generator.csharp.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.itemis.create.sctunit.generator.csharp.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="org.eclipse.ecf.core.feature" url="features/org.eclipse.ecf.core.feature_1.6.2.v20231021-2127/" version="1.6.2.v20231021-2127">
+</feature>
+<feature id="com.yakindu.base.gmf.runtime.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.base.gmf.runtime.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="org.eclipse.platform" url="features/org.eclipse.platform_4.30.0.v20231201-0512/" version="4.30.0.v20231201-0512">
+</feature>
+<feature id="com.yakindu.sct.generator.java.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sct.generator.java.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="com.yakindu.sctunit.generator.python.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sctunit.generator.python.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="com.itemis.create.product.csharp.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.itemis.create.product.csharp.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="org.eclipse.cdt.gnu.debug" plugin-identifier="org.eclipse.cdt.launch" url="features/org.eclipse.cdt.gnu.debug_11.5.0.202402230238/" version="11.5.0.202402230238">
+</feature>
+<feature id="org.eclipse.cdt.native" plugin-identifier="org.eclipse.cdt.core.native" url="features/org.eclipse.cdt.native_11.5.0.202403041627/" version="11.5.0.202403041627">
+</feature>
+<feature id="org.sf.feeling.decompiler.vineflower" url="features/org.sf.feeling.decompiler.vineflower_3.5.0/" version="3.5.0">
+</feature>
+<feature id="com.yakindu.sct.product.scxml.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sct.product.scxml.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+<feature id="org.eclipse.e4.rcp" url="features/org.eclipse.e4.rcp_4.30.0.v20231113-1355/" version="4.30.0.v20231113-1355">
+</feature>
+<feature id="com.yakindu.sct.generator.scxml.feature" plugin-identifier="com.yakindu.sct.branding" url="features/com.yakindu.sct.generator.scxml.feature_5.2.2.202404022003/" version="5.2.2.202404022003">
+</feature>
+</site>
+</config>

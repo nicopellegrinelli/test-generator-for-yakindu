@@ -1,6 +1,0 @@
-Directory,TargetClass,EvosuiteCoverage,SctUnitCoverage
-from_other_repos,MqttClientStatechart,0.5952240486346518,0.8
-from_other_repos,MqttClientStatechartSimplified,0.6185685688104136,TestFailed
-from_other_repos,MqttClientStatechartSimplified,0.6185685688104136,CompilingError
-from_other_repos,MqttClientStatechartSimplified,0.6185685688104136,NotGenerated
-from_other_repos,MqttClientStatechartSimplified,NotGenerated,NotGenerated
