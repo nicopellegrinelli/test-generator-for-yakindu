@@ -1,9 +1,0 @@
-testsuite ____SuiteForDefault {
-	Active_Systems_CounterTest,
-	Controller_ComponentTest,
-	DeviceTemp_ComponentTest,
-	Network_ComponentTest,
-	Power_ComponentTest,
-	Sensor_ComponentTest,
-	Ultrasonic_SensorTest
-}

@@ -1,0 +1,145 @@
+testclass SimpleTrafficLightSimplifiedTest for statechart SimpleTrafficLight {
+	@Test
+	operation test04 () {
+	    enter
+	    triggerWithoutEvent
+	    assert is_active
+	}
+
+	@Test
+	operation test05 () {
+	}
+
+	@Test
+	operation test06 () {
+	    enter
+	    raise pedestrian.pushButton
+	    assert is_active
+	}
+
+	@Test
+	operation test07 () {
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test08 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test09 () {
+	    enter
+	    raise break
+	    assert is_active
+	    assert active (SimpleTrafficLight.main_region.Not_Working)
+	}
+
+	@Test
+	operation test10 () {
+	    enter
+	    assert is_active
+	    assert active (SimpleTrafficLight.main_region.Working.r1.Red)
+	}
+
+	@Test
+	operation test11 () {
+	    enter
+	    assert is_active
+	    assert active (SimpleTrafficLight.main_region.Working)
+	}
+
+	@Test
+	operation test12 () {
+	}
+
+	@Test
+	operation test13 () {
+	    assert !active (SimpleTrafficLight.main_region.Working)
+	}
+
+	@Test
+	operation test14 () {
+	    assert !active (SimpleTrafficLight.main_region.Not_Working)
+	}
+
+	@Test
+	operation test15 () {
+	    assert !active (SimpleTrafficLight.main_region.Working.r1.Green)
+	}
+
+	@Test
+	operation test16 () {
+	    assert !active (SimpleTrafficLight.main_region.Working.r1.Red)
+	}
+
+	@Test
+	operation test17 () {
+	    assert !active (SimpleTrafficLight.main_region.Working.r1.Yellow)
+	}
+
+	@Test
+	operation test19 () {
+	    raise pedestrian.pushButton
+	}
+
+	@Test
+	operation test20 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test23 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test24 () {
+	    assert !is_active
+	    enter
+	    raise break
+	    raise break
+	    assert is_active
+	}
+
+	@Test
+	operation test25 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test26 () {
+	    assert !is_final
+	    assert !is_active
+	}
+
+	@Test
+	operation test27 () {
+	    assert !is_active
+	    enter
+	    proceed 30s
+	    raise break
+	    assert is_active
+	}
+
+	@Test
+	operation test28 () {
+	    enter
+	    raise break
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test29 () {
+	    assert !is_active
+	    enter
+	    assert is_active
+	}
+
+}

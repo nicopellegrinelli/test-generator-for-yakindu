@@ -1,0 +1,15 @@
+GeneratorModel for create::c::yet {
+
+	const PROJECT : string = "TargetStatecharts"
+
+	const FOLDER : string = "src-gen"
+
+	statechart EqualStatecharts {
+
+		feature Outlet {
+			targetProject = PROJECT
+			targetFolder = FOLDER
+			libraryTargetFolder = "src"
+		}
+	}
+}

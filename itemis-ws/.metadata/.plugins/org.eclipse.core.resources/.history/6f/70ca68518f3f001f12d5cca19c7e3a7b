@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+encoding//models/SimpleTrafficLight.ysc=UTF-8
+encoding//models/Statechart.ysc=UTF-8
+encoding//models/Temp.ysc=UTF-8
+encoding//models/sct/EasyChoice.ysc=UTF-8
+encoding//models/sct/EntryExit.ysc=UTF-8
+encoding//models/sct/Events.ysc=UTF-8
+encoding//models/sct/History.ysc=UTF-8
+encoding//models/sct/Light.ysc=UTF-8
+encoding//models/sct/OperationTest.ysc=UTF-8
+encoding//models/sct/TemporalEvents.ysc=UTF-8
+encoding//models/sct/TemporalEvents2.ysc=UTF-8
+encoding//models/sct/sub-machines/Controller.ysc=UTF-8
+encoding//models/sct/sub-machines/Controller2.ysc=UTF-8
+encoding//models/sct/sub-machines/SimpleLight.ysc=UTF-8
+encoding/<project>=UTF-8

@@ -1,0 +1,9 @@
+testclass StatechartTest for statechart EqualStatecharts {
+	
+	@Test
+	operation test() {
+		enter
+		
+		exit
+	}
+}

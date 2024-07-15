@@ -1,0 +1,8 @@
+testclass StatechartTest for statechart EqualStatecharts {
+	
+	@Test
+	operation test() {
+		enter
+		assert active(main_region.state_a.region_1.state_b.region_2.state_c)
+	}
+}

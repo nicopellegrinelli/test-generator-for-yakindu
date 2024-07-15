@@ -1,0 +1,165 @@
+testclass MyStatechartSimplifiedTest for statechart MyStatechart {
+	@Test
+	operation test05 () {
+	    enter
+	    proceed 5s
+	    triggerWithoutEvent
+	    assert is_active
+	}
+
+	@Test
+	operation test06 () {
+	    enter
+	    triggerWithoutEvent
+	    assert is_active
+	}
+
+	@Test
+	operation test07 () {
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test08 () {
+	    enter
+	    proceed 5s
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test09 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test10 () {
+	    enter
+	    proceed 5s
+	    raise boolEvent: true
+	    assert active (MyStatechart.main_region.StateC)
+	}
+
+	@Test
+	operation test11 () {
+	    enter
+	    proceed 5s
+	    raise boolEvent: false
+	    assert is_active
+	    assert active (MyStatechart.main_region._final_)
+	}
+
+	@Test
+	operation test12 () {
+	    enter
+	    proceed 5s
+	    assert is_active
+	    assert active (MyStatechart.main_region.StateB)
+	}
+
+	@Test
+	operation test13 () {
+	    enter
+	    assert is_active
+	    assert active (MyStatechart.main_region.StateA)
+	}
+
+	@Test
+	operation test14 () {
+	}
+
+	@Test
+	operation test15 () {
+	    assert !active (MyStatechart.main_region.StateC)
+	}
+
+	@Test
+	operation test16 () {
+	    assert !active (MyStatechart.main_region.StateB)
+	}
+
+	@Test
+	operation test17 () {
+	    assert !active (MyStatechart.main_region._final_)
+	}
+
+	@Test
+	operation test18 () {
+	    assert !active (MyStatechart.main_region.StateA)
+	}
+
+	@Test
+	operation test19 () {
+	    enter
+	    proceed 5s
+	    raise boolEvent: true
+	    raise boolEvent: false
+	    assert is_active
+	}
+
+	@Test
+	operation test20 () {
+	    enter
+	    proceed 5s
+	    raise boolEvent: false
+	    assert is_active
+	    assert is_final
+	}
+
+	@Test
+	operation test21 () {
+	    assert !is_final
+	}
+
+	@Test
+	operation test22 () {
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test23 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test25 () {
+	    enter
+	    proceed 5s
+	    raise boolEvent: false
+	    raise boolEvent: true
+	    assert is_active
+	}
+
+	@Test
+	operation test27 () {
+	    enter
+	    proceed 5s
+	    raise boolEvent: true
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test28 () {
+	    enter
+	    proceed 5s
+	    raise boolEvent: false
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test29 () {
+	    triggerWithoutEvent
+	    assert !is_active
+	}
+
+}

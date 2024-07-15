@@ -1,0 +1,6 @@
+<testsuite name="SimpleTrafficLightTest" time="">
+  <testcase name="workingStateTest" classname="platform:/resource/TargetStatecharts/models/SimpleTrafficLightTest.sctunit#SimpleTrafficLightTest.workingStateTest" time="">
+  </testcase>
+  <testcase name="notWorkingStateTest" classname="platform:/resource/TargetStatecharts/models/SimpleTrafficLightTest.sctunit#SimpleTrafficLightTest.notWorkingStateTest" time="">
+  </testcase>
+</testsuite>
