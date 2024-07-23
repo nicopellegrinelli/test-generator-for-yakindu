@@ -1,0 +1,135 @@
+Directory,Statechart,NumStates,AvgDepth,MaxDepth,StandardEvosuiteCoverage,StandardSCTUnitCoverage,StandardSCTUnitStatus,SimplifiedEvosuiteCoverage,SimplifiedSCTUnitCoverage,SimplifiedSCTUnitStatus
+from_stl4iot/Library/AtomicComponents,Actuator_Component,6,1.6666666666666667,3,0.61,0.00,FAILED,0.76,0.36,PASSED
+from_stl4iot/Library/AtomicComponents,Controller_Component,5,1.6,2,0.59,0.00,PASSED,0.80,0.62,PASSED
+from_stl4iot/Library/AtomicComponents,DeviceTemp_Component,7,2.142857142857143,3,0.62,0.00,PASSED,0.68,0.24,PASSED
+from_stl4iot/Library/AtomicComponents,Network_Component,7,2.4285714285714284,4,0.57,0.00,PASSED,0.79,0.73,PASSED
+from_stl4iot/Library/AtomicComponents,Power_Component,3,1.6666666666666667,2,0.69,0.00,PASSED,0.80,0.60,PASSED
+from_stl4iot/Library/AtomicComponents,Sensor_Component,4,1.5,2,0.63,0.00,PASSED,0.84,0.64,PASSED
+from_stl4iot/Library/AtomicComponents,Ultrasonic_Sensor,4,1.5,2,0.66,0.00,PASSED,0.89,1.00,PASSED
+from_stl4iot/Library/BaseSystemUnits,AirConditioner_Unit,11,2.090909090909091,3,0.55,0.00,PASSED,0.88,0.94,PASSED
+from_stl4iot/Library/BaseSystemUnits,Elevator_Unit,11,1.9090909090909092,3,0.55,0.00,PASSED,0.82,0.00,BLOCKED
+from_stl4iot/Library/BaseSystemUnits,FireAlarm_Unit,20,2.4,3,0.57,0.00,PASSED,0.80,0.71,PASSED
+from_stl4iot/Library/BaseSystemUnits,LEDLight_Unit,5,1.8,3,0.59,0.00,PASSED,0.79,0.52,PASSED
+from_stl4iot/Library/BaseSystemUnits,Microwave_Unit,9,2.0,3,0.56,0.00,PASSED,0.88,0.90,PASSED
+from_stl4iot/Library/BaseSystemUnits,TrafficLight_Unit,12,2.0833333333333335,3,0.61,0.00,ERRORS,0.75,0.53,PASSED
+from_stl4iot/Library/BaseSystemUnits,TV_Unit,6,1.8333333333333333,3,0.57,0.00,PASSED,0.78,0.59,PASSED
+from_stl4iot/Library/Managers,Active_Systems_Manager,1,1.0,1,0.98,1.00,FAILED,0.91,1.00,PASSED
+from_stl4iot/Library/Managers,HUB_PowerManager,4,1.25,2,0.64,0.00,PASSED,0.89,0.76,PASSED
+from_stl4iot/Library/PhysicalEntities,PhysicalEntity_Template,12,2.1666666666666665,3,0.57,0.00,PASSED,0.52,0.00,PASSED
+from_stl4iot/Library/PhysicalEntities,Ultrasonic_MotionDetector,12,2.1666666666666665,3,0.54,0.00,PASSED,0.53,0.00,PASSED
+from_stl4iot/Library/SimEnvironment,Environment,21,2.857142857142857,5,0.53,0.00,PASSED,0.66,0.00,ERRORS
+from_stl4iot/Library,HUB_Template,17,2.588235294117647,4,0.53,0.00,PASSED,0.50,0.00,PASSED
+from_stl4iot/Library,IoT_Template,21,2.1904761904761907,3,0.53,0.00,PASSED,0.52,0.00,PASSED
+from_stl4iot,sample,8,2.0,3,0.57,0.00,PASSED,0.90,0.91,PASSED
+from_stl4iot,SmartFireSystem_v2.0,24,2.4166666666666665,4,0.52,0.00,PASSED,0.51,0.00,PASSED
+from_stl4iot,SmartHubSystem,38,3.026315789473684,4,0.51,0.00,ERRORS,0.49,0.00,PASSED
+from_stl4iot,SmartLightHUB,21,2.6666666666666665,4,0.49,0.00,PASSED,0.47,0.00,PASSED
+from_stl4iot,SmartLightSystem_v2.1,21,2.1904761904761907,3,0.52,0.00,PASSED,0.51,0.00,PASSED
+from_stl4iot,SmartMicrowaveSystem_v2.0,21,2.1904761904761907,3,0.53,0.00,PASSED,0.51,0.00,PASSED
+from_stl4iot,SmartTrafficLight_v1.0,21,2.1904761904761907,3,0.53,0.00,PASSED,0.57,0.00,PASSED
+from_stl4iot,SmartTVSystem_v2.0,21,2.1904761904761907,3,0.53,0.00,PASSED,0.51,0.00,PASSED
+from_itemis,___TrafficLight,6,1.6666666666666667,2,0.63,0.00,PASSED,0.86,0.82,PASSED
+from_itemis,__ReleaseProcess,3,1.0,1,0.65,0.00,ERRORS,NOT GENERATED,0.00,NOT GENERATED
+from_itemis,_blink,7,1.7142857142857142,2,0.56,0.00,PASSED,0.69,0.35,PASSED
+from_itemis,_Child,2,1.0,1,0.96,1.00,FAILED,0.93,1.00,PASSED
+from_itemis,_flash,2,1.0,1,0.62,0.00,PASSED,0.90,0.50,FAILED
+from_itemis,_led,2,1.0,1,0.97,0.83,FAILED,0.93,1.00,PASSED
+from_itemis,_light,2,1.0,1,0.63,0.00,PASSED,0.93,1.00,PASSED
+from_itemis,_TwoWayTrafficControl2,5,1.4,2,0.71,0.12,FAILED,0.76,0.12,PASSED
+from_itemis,01_LightSwitch,2,1.0,1,0.97,1.00,FAILED,0.93,1.00,PASSED
+from_itemis,01_no_hierarchy,5,1.0,1,0.61,0.00,NOT GENERATED,0.84,0.59,PASSED
+from_itemis,01_no_history,8,2.25,3,0.59,0.00,PASSED,0.71,0.42,PASSED
+from_itemis,02_composite_states,7,1.5714285714285714,2,0.60,0.00,PASSED,0.73,0.37,PASSED
+from_itemis,02_DimmableLightSwitch,2,1.0,1,0.97,0.87,FAILED,0.91,0.87,PASSED
+from_itemis,02_shallow_history,8,2.25,3,0.58,0.00,PASSED,0.86,0.80,PASSED
+from_itemis,03_deep_history,8,2.25,3,0.57,0.00,PASSED,0.84,0.73,PASSED
+from_itemis,03_MotionLightSwitch,6,1.6666666666666667,2,0.55,0.00,PASSED,0.92,1.00,PASSED
+from_itemis,03_nested_composite_states,8,2.25,3,0.59,0.00,PASSED,0.87,0.84,PASSED
+from_itemis,04_LightAndMotionSensingLightSwitch,12,2.3333333333333335,3,0.51,0.00,PASSED,0.78,0.64,PASSED
+from_itemis,04_subdiagrams,8,2.25,3,0.60,0.00,PASSED,0.83,0.69,PASSED
+from_itemis,05_PresenceSimulationLightSwitch,9,2.111111111111111,3,0.58,0.00,ERRORS,0.73,0.53,PASSED
+from_itemis,ArduinoHMI,19,2.3684210526315788,3,0.52,0.00,PASSED,0.69,0.46,PASSED
+from_itemis,blink1,4,1.5,2,0.63,0.00,PASSED,0.90,0.75,FAILED
+from_itemis,blinkyStateMachine,3,1.0,1,0.54,0.00,PASSED,0.78,0.62,PASSED
+from_itemis,BouncingBall,3,1.0,1,0.95,0.37,FAILED,0.77,0.37,PASSED
+from_itemis,childfirst,4,1.5,2,0.96,1.00,FAILED,0.92,1.00,PASSED
+from_itemis,controller,2,1.0,1,0.62,0.66,PASSED,0.92,0.91,PASSED
+from_itemis,cyclebased,5,1.0,1,0.58,0.00,PASSED,0.80,0.63,PASSED
+from_itemis,DigitalWatch,26,2.1923076923076925,4,0.55,0.00,PASSED,0.59,0.18,PASSED
+from_itemis,Elevator,4,1.5,2,0.61,0.00,PASSED,0.85,0.66,PASSED
+from_itemis,EventBuffersDisabled,4,1.0,1,0.96,1.00,ERRORS,0.88,0.75,PASSED
+from_itemis,EventBuffersEnabled,4,1.0,1,0.97,1.00,ERRORS,0.94,1.00,PASSED
+from_itemis,eventdriven,5,1.0,1,0.57,0.00,PASSED,0.94,0.81,FAILED
+from_itemis,keyboard,4,1.0,1,0.96,1.00,FAILED,0.93,1.00,PASSED
+from_itemis,light_controller,4,1.5,2,0.56,0.00,PASSED,NOT GENERATED,0.00,NOT GENERATED
+from_itemis,light_switch,2,1.0,1,0.64,0.00,PASSED,0.92,1.00,PASSED
+from_itemis,LightCtrl,2,1.0,1,0.59,0.00,PASSED,0.92,1.00,PASSED
+from_itemis,orthogonality,7,1.5714285714285714,2,0.97,0.14,ERRORS,0.95,0.14,ERRORS
+from_itemis,Parent,2,1.0,1,0.97,0.91,FAILED,NOT GENERATED,0.00,NOT GENERATED
+from_itemis,parentfirst,4,1.5,2,0.92,0.80,FAILED,0.88,0.80,PASSED
+from_itemis,rgb,5,1.0,1,0.92,0.76,FAILED,0.86,0.76,FAILED
+from_itemis,signalcontrol,9,2.111111111111111,3,0.64,0.04,ERRORS,NOT GENERATED,0.00,NOT GENERATED
+from_itemis,Statechart,2,1.0,1,0.97,1.00,FAILED,0.93,1.00,PASSED
+from_itemis,StateMachine,2,1.0,1,0.60,0.00,PASSED,0.96,1.00,PASSED
+from_itemis,StreetCrossingSystem,4,1.0,1,0.59,0.00,PASSED,0.56,0.00,PASSED
+from_itemis,SuperStepsDisabled,4,1.0,1,0.97,0.90,ERRORS,0.85,0.63,PASSED
+from_itemis,SuperStepsEnabled,4,1.0,1,0.96,1.00,ERRORS,0.92,1.00,PASSED
+from_itemis,TrafficLightCtrl,13,2.3846153846153846,3,0.57,0.00,ERRORS,0.79,0.72,PASSED
+from_itemis,TrafficLightCtrl1,14,2.0,3,0.57,0.00,PASSED,0.67,0.33,PASSED
+from_itemis,TrafficLightStateMachine,9,2.0,3,0.55,0.00,PASSED,0.79,0.65,PASSED
+from_itemis,TwoWayTrafficControl,9,1.6666666666666667,2,0.60,0.00,ERRORS,NOT GENERATED,0.00,NOT GENERATED
+from_itemis,watch,ERROR,ERROR,ERROR,NOT GENERATED,0.00,NOT GENERATED,NOT GENERATED,0.00,NOT GENERATED
+from_itemis,watch_subdiagrams,ERROR,ERROR,ERROR,NOT GENERATED,0.00,NOT GENERATED,NOT GENERATED,0.00,NOT GENERATED
+from_itemis,ZowiSCT,12,1.6666666666666667,2,0.54,0.00,PASSED,0.64,0.30,PASSED
+from_other_repos,_MotorControl,5,1.8,2,0.96,1.00,FAILED,0.93,1.00,PASSED
+from_other_repos,_Physics,3,1.6666666666666667,2,0.64,0.00,PASSED,0.92,1.00,PASSED
+from_other_repos,_Trolley,23,2.739130434782609,4,0.52,0.00,ERRORS,0.71,0.36,PASSED
+from_other_repos,A,1,1.0,1,0.64,0.00,PASSED,0.91,0.80,PASSED
+from_other_repos,alarm2,4,1.0,1,0.57,0.00,PASSED,0.93,0.92,PASSED
+from_other_repos,ArduinoHMI,19,2.3684210526315788,3,0.52,0.00,PASSED,0.64,0.30,PASSED
+from_other_repos,aufgage_3_pvr,14,1.0,1,NOT GENERATED,0.00,NOT GENERATED,NOT GENERATED,0.00,NOT GENERATED
+from_other_repos,B,2,1.5,2,0.61,0.00,PASSED,0.92,1.00,PASSED
+from_other_repos,bareMetalPolling,2,1.0,1,0.60,0.00,PASSED,0.96,1.00,PASSED
+from_other_repos,base,3,1.0,1,0.64,0.00,PASSED,0.91,0.77,PASSED
+from_other_repos,C,3,1.0,1,0.62,0.00,PASSED,0.90,0.77,PASSED
+from_other_repos,C2,4,1.0,1,0.61,0.00,PASSED,0.90,0.77,FAILED
+from_other_repos,coffeeMachine,7,1.0,1,0.54,0.00,PASSED,0.76,0.30,PASSED
+from_other_repos,Configure,5,1.0,1,0.56,0.00,PASSED,0.86,0.60,FAILED
+from_other_repos,D,7,1.8571428571428572,2,0.60,0.00,PASSED,0.91,0.88,FAILED
+from_other_repos,E,3,1.6666666666666667,2,0.66,0.00,PASSED,0.80,0.81,PASSED
+from_other_repos,heatingSys,3,1.0,1,0.57,0.00,PASSED,0.94,1.00,PASSED
+from_other_repos,Lampada,3,1.0,1,0.97,0.90,FAILED,0.93,1.00,PASSED
+from_other_repos,LineFollower,3,1.0,1,0.72,0.00,PASSED,0.80,0.46,PASSED
+from_other_repos,motionDetection,8,2.25,3,0.60,0.00,NOT GENERATED,0.81,0.69,PASSED
+from_other_repos,MqttClientStatechart,22,1.9545454545454546,3,0.60,0.00,PASSED,0.60,0.11,PASSED
+from_other_repos,musicPlayer,39,3.2051282051282053,5,0.46,0.00,PASSED,0.64,0.32,PASSED
+from_other_repos,onoff,24,2.125,3,0.54,0.00,ERRORS,0.76,0.58,PASSED
+from_other_repos,OperatingMode,5,1.0,1,0.56,0.00,PASSED,0.81,0.52,PASSED
+from_other_repos,Route,12,1.5,2,0.43,0.00,PASSED,0.68,0.41,PASSED
+from_other_repos,Section,24,2.625,4,0.47,0.00,ERRORS,0.53,0.21,PASSED
+from_other_repos,Signal,5,1.4,2,0.54,0.00,PASSED,0.86,0.33,FAILED
+from_other_repos,SignalController,30,2.8333333333333335,4,0.46,0.00,PASSED,0.47,0.03,PASSED
+from_other_repos,Statechart1,10,1.6,2,0.53,0.00,PASSED,0.85,0.78,PASSED
+from_other_repos,Statechart12,12,2.5,4,0.58,0.00,ERRORS,0.77,0.54,PASSED
+from_other_repos,Statechart13,16,2.5,4,0.55,0.00,PASSED,0.74,0.42,PASSED
+from_other_repos,Statechart14,11,2.5454545454545454,4,0.57,0.00,ERRORS,0.76,0.51,PASSED
+from_other_repos,Statechart2,45,2.1555555555555554,3,0.53,0.00,PASSED,0.54,0.02,PASSED
+from_other_repos,Statechart3,3,1.0,1,0.62,0.00,PASSED,0.92,1.00,PASSED
+from_other_repos,Statechart4,5,1.2,2,0.89,0.84,FAILED,0.84,0.84,PASSED
+from_other_repos,Statechart5,5,1.0,1,0.63,0.00,NOT GENERATED,0.80,0.53,PASSED
+from_other_repos,Statechart6,3,1.0,1,0.61,0.00,PASSED,0.92,1.00,PASSED
+from_other_repos,Statechart7,8,1.0,1,0.57,0.00,PASSED,0.69,0.30,PASSED
+from_other_repos,Switch,10,1.9,3,NOT GENERATED,0.00,NOT GENERATED,NOT GENERATED,0.00,NOT GENERATED
+from_other_repos,System,2,1.5,2,0.78,0.33,ERRORS,NOT GENERATED,0.00,NOT GENERATED
+from_other_repos,test_convert_entry_exit_actions,5,1.4,2,0.56,0.00,PASSED,0.77,0.50,PASSED
+from_other_repos,test_convert_entry_exit_actions_expected,5,1.4,2,0.55,0.00,PASSED,0.78,0.60,PASSED
+from_other_repos,test_get_statechart_mappings31,3,1.0,1,0.97,1.00,FAILED,0.93,1.00,PASSED
+from_other_repos,test_remove_duplicate_transitions,2,1.0,1,0.96,0.00,NOT GENERATED,0.91,0.85,PASSED
+from_other_repos,test_remove_duplicate_transitions_expected,2,1.0,1,0.97,0.00,NOT GENERATED,0.92,1.00,PASSED
+from_other_repos,test_remove_unnecessary_nesting_orthogonal_state,4,1.5,2,0.96,1.00,FAILED,0.92,1.00,PASSED
+from_other_repos,test_remove_unnecessary_nesting_transfer_transitions,3,1.3333333333333333,2,0.78,0.27,FAILED,0.75,0.27,PASSED
+from_other_repos,test_remove_unreachable_states_expected,4,1.5,2,0.96,1.00,FAILED,0.93,1.00,PASSED
+from_other_repos,test32,2,1.0,1,0.68,0.00,ERRORS,0.91,1.00,PASSED
+from_other_repos,test41,4,1.5,2,0.97,0.00,NOT GENERATED,0.85,0.81,PASSED
+from_other_repos,Tracker,6,1.5,2,0.50,0.00,ERRORS,0.66,0.30,PASSED
+from_other_repos,Update,10,1.0,1,0.48,0.00,PASSED,0.57,0.14,PASSED

@@ -1,0 +1,43 @@
+<testsuite name="C2SimplifiedTest" time="">
+  <testcase name="test04" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test04" time="">
+  </testcase>
+  <testcase name="test05" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test05" time="">
+  </testcase>
+  <testcase name="test06" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test06" time="">
+  </testcase>
+  <testcase name="test07" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test07" time="">
+  </testcase>
+  <testcase name="test08" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test08" time="">
+  </testcase>
+  <testcase name="test09" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test09" time="">
+    <failure>Assertion failed: "assert active (C2.main_region.One)" (Line 48)
+    	Expected: One, actual: [Temp]
+    </failure>
+  </testcase>
+  <testcase name="test10" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test10" time="">
+  </testcase>
+  <testcase name="test11" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test11" time="">
+  </testcase>
+  <testcase name="test12" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test12" time="">
+  </testcase>
+  <testcase name="test13" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test13" time="">
+  </testcase>
+  <testcase name="test14" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test14" time="">
+  </testcase>
+  <testcase name="test15" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test15" time="">
+  </testcase>
+  <testcase name="test16" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test16" time="">
+  </testcase>
+  <testcase name="test17" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test17" time="">
+  </testcase>
+  <testcase name="test19" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test19" time="">
+  </testcase>
+  <testcase name="test20" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test20" time="">
+  </testcase>
+  <testcase name="test21" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test21" time="">
+  </testcase>
+  <testcase name="test22" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test22" time="">
+  </testcase>
+  <testcase name="test23" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test23" time="">
+  </testcase>
+</testsuite>

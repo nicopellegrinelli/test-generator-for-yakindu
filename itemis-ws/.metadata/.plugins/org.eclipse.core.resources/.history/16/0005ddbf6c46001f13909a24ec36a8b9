@@ -1,0 +1,13 @@
+testclass StatechartTest for statechart Statechart2 {
+	
+	@Test
+	operation test() {
+		enter
+		assert active(main_region.StateA._region0._StateB_._region0.StateC._region0.StateE)
+		assert active(main_region.StateA._region0._StateB_._region1.StateD._region0.StateF)
+		assert active(main_region.StateA._region0._StateB_._region2._final_)
+		assert active(main_region.StateA._region0._StateB_._region3._final_)
+		assert active(main_region.StateA._region0._StateB_._region4.StateG)
+		exit
+	}
+}

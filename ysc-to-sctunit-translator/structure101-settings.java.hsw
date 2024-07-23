@@ -15,12 +15,18 @@
   <classpath>
     <classpathentry kind="lib" path="Ysc2SCTUnit/target/classes" module="Ysc2SCTUnit" displaymodule="Ysc2SCTUnit" />
     <classpathentry kind="lib" path="Ysc2SCTUnit/target/test-classes" module="Ysc2SCTUnit" displaymodule="Ysc2SCTUnit" />
+    <classpathentry kind="lib" path="StateCounter/target/classes" module="StateCounter" displaymodule="StateCounter" />
+    <classpathentry kind="lib" path="StateCounter/target/test-classes" module="StateCounter" displaymodule="StateCounter" />
   </classpath>
   <pom-root-files />
   <modules>
     <module name="Ysc2SCTUnit" kind="ide-project" />
+    <module name="StateCounter" kind="ide-project">
+      <requires name="Ysc2SCTUnit" kind="ide-project" />
+    </module>
   </modules>
   <modules-in-scope>
+    <module name="StateCounter" />
     <module name="Ysc2SCTUnit" />
   </modules-in-scope>
   <excludes>

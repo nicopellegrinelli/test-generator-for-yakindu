@@ -1,6 +1,7 @@
-#Thu May 09 10:36:52 CEST 2024
+#Tue Jul 16 14:19:22 CEST 2024
 rulergrid.rulerunit=1
 print.margin.left=0.5
+viewport.x=135
 rulergrid.gridlinestyle=6
 zoom=1.0
 print.useMillim=true

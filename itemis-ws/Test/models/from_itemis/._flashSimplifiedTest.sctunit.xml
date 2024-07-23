@@ -1,0 +1,33 @@
+<testsuite name="_flashSimplifiedTest" time="">
+  <testcase name="test03" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test03" time="">
+  </testcase>
+  <testcase name="test04" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test04" time="">
+  </testcase>
+  <testcase name="test05" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test05" time="">
+  </testcase>
+  <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test06" time="">
+    <failure>Assertion failed: "assert active (_flash.flash.Dark)" (Line 27)
+    	Expected: Dark, actual: [Light]
+    </failure>
+  </testcase>
+  <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test07" time="">
+  </testcase>
+  <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test08" time="">
+  </testcase>
+  <testcase name="test09" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test09" time="">
+  </testcase>
+  <testcase name="test10" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test10" time="">
+  </testcase>
+  <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test12" time="">
+  </testcase>
+  <testcase name="test13" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test13" time="">
+  </testcase>
+  <testcase name="test14" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test14" time="">
+  </testcase>
+  <testcase name="test17" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test17" time="">
+  </testcase>
+  <testcase name="test18" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test18" time="">
+  </testcase>
+  <testcase name="test19" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test19" time="">
+  </testcase>
+</testsuite>

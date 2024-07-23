@@ -1,0 +1,57 @@
+<testsuite name="eventdrivenSimplifiedTest" time="">
+  <testcase name="test05" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test05" time="">
+  </testcase>
+  <testcase name="test06" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test06" time="">
+  </testcase>
+  <testcase name="test07" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test07" time="">
+  </testcase>
+  <testcase name="test08" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test08" time="">
+  </testcase>
+  <testcase name="test09" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test09" time="">
+  </testcase>
+  <testcase name="test10" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test10" time="">
+  </testcase>
+  <testcase name="test11" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test11" time="">
+  </testcase>
+  <testcase name="test12" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test12" time="">
+  </testcase>
+  <testcase name="test13" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test13" time="">
+    <failure>Assertion failed: "assert active (eventdriven.main_region.StateE)" (Line 75)
+    	Expected: StateE, actual: [StateD]
+    </failure>
+  </testcase>
+  <testcase name="test14" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test14" time="">
+  </testcase>
+  <testcase name="test15" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test15" time="">
+  </testcase>
+  <testcase name="test16" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test16" time="">
+  </testcase>
+  <testcase name="test17" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test17" time="">
+  </testcase>
+  <testcase name="test18" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test18" time="">
+  </testcase>
+  <testcase name="test19" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test19" time="">
+  </testcase>
+  <testcase name="test20" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test20" time="">
+  </testcase>
+  <testcase name="test21" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test21" time="">
+  </testcase>
+  <testcase name="test22" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test22" time="">
+  </testcase>
+  <testcase name="test23" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test23" time="">
+  </testcase>
+  <testcase name="test24" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test24" time="">
+  </testcase>
+  <testcase name="test25" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test25" time="">
+  </testcase>
+  <testcase name="test27" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test27" time="">
+  </testcase>
+  <testcase name="test29" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test29" time="">
+  </testcase>
+  <testcase name="test30" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test30" time="">
+  </testcase>
+  <testcase name="test31" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test31" time="">
+  </testcase>
+  <testcase name="test32" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test32" time="">
+  </testcase>
+</testsuite>

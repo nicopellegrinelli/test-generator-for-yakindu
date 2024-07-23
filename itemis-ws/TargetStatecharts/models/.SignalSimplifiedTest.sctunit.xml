@@ -1,0 +1,53 @@
+<testsuite name="SignalSimplifiedTest" time="">
+  <testcase name="test00" classname="platform:/resource/TargetStatecharts/models/SignalSimplifiedTest.sctunit#SignalSimplifiedTest.test00" time="">
+  </testcase>
+  <testcase name="test05" classname="platform:/resource/TargetStatecharts/models/SignalSimplifiedTest.sctunit#SignalSimplifiedTest.test05" time="">
+  </testcase>
+  <testcase name="test06" classname="platform:/resource/TargetStatecharts/models/SignalSimplifiedTest.sctunit#SignalSimplifiedTest.test06" time="">
+  </testcase>
+  <testcase name="test07" classname="platform:/resource/TargetStatecharts/models/SignalSimplifiedTest.sctunit#SignalSimplifiedTest.test07" time="">
+  </testcase>
+  <testcase name="test08" classname="platform:/resource/TargetStatecharts/models/SignalSimplifiedTest.sctunit#SignalSimplifiedTest.test08" time="">
+  </testcase>
+  <testcase name="test09" classname="platform:/resource/TargetStatecharts/models/SignalSimplifiedTest.sctunit#SignalSimplifiedTest.test09" time="">
+  </testcase>
+  <testcase name="test10" classname="platform:/resource/TargetStatecharts/models/SignalSimplifiedTest.sctunit#SignalSimplifiedTest.test10" time="">
+  </testcase>
+  <testcase name="test11" classname="platform:/resource/TargetStatecharts/models/SignalSimplifiedTest.sctunit#SignalSimplifiedTest.test11" time="">
+    <failure>Assertion failed: "assert active (Signal.main_region.Turning)" (Line 60)
+    	Expected: Turning, actual: [Idle]
+    </failure>
+  </testcase>
+  <testcase name="test12" classname="platform:/resource/TargetStatecharts/models/SignalSimplifiedTest.sctunit#SignalSimplifiedTest.test12" time="">
+  </testcase>
+  <testcase name="test13" classname="platform:/resource/TargetStatecharts/models/SignalSimplifiedTest.sctunit#SignalSimplifiedTest.test13" time="">
+  </testcase>
+  <testcase name="test14" classname="platform:/resource/TargetStatecharts/models/SignalSimplifiedTest.sctunit#SignalSimplifiedTest.test14" time="">
+  </testcase>
+  <testcase name="test15" classname="platform:/resource/TargetStatecharts/models/SignalSimplifiedTest.sctunit#SignalSimplifiedTest.test15" time="">
+  </testcase>
+  <testcase name="test16" classname="platform:/resource/TargetStatecharts/models/SignalSimplifiedTest.sctunit#SignalSimplifiedTest.test16" time="">
+  </testcase>
+  <testcase name="test17" classname="platform:/resource/TargetStatecharts/models/SignalSimplifiedTest.sctunit#SignalSimplifiedTest.test17" time="">
+  </testcase>
+  <testcase name="test18" classname="platform:/resource/TargetStatecharts/models/SignalSimplifiedTest.sctunit#SignalSimplifiedTest.test18" time="">
+  </testcase>
+  <testcase name="test19" classname="platform:/resource/TargetStatecharts/models/SignalSimplifiedTest.sctunit#SignalSimplifiedTest.test19" time="">
+  </testcase>
+  <testcase name="test21" classname="platform:/resource/TargetStatecharts/models/SignalSimplifiedTest.sctunit#SignalSimplifiedTest.test21" time="">
+  </testcase>
+  <testcase name="test22" classname="platform:/resource/TargetStatecharts/models/SignalSimplifiedTest.sctunit#SignalSimplifiedTest.test22" time="">
+  </testcase>
+  <testcase name="test28" classname="platform:/resource/TargetStatecharts/models/SignalSimplifiedTest.sctunit#SignalSimplifiedTest.test28" time="">
+  </testcase>
+  <testcase name="test29" classname="platform:/resource/TargetStatecharts/models/SignalSimplifiedTest.sctunit#SignalSimplifiedTest.test29" time="">
+  </testcase>
+  <testcase name="test30" classname="platform:/resource/TargetStatecharts/models/SignalSimplifiedTest.sctunit#SignalSimplifiedTest.test30" time="">
+  </testcase>
+  <testcase name="test31" classname="platform:/resource/TargetStatecharts/models/SignalSimplifiedTest.sctunit#SignalSimplifiedTest.test31" time="">
+  </testcase>
+  <testcase name="test32" classname="platform:/resource/TargetStatecharts/models/SignalSimplifiedTest.sctunit#SignalSimplifiedTest.test32" time="">
+  </testcase>
+  <testcase name="test33" classname="platform:/resource/TargetStatecharts/models/SignalSimplifiedTest.sctunit#SignalSimplifiedTest.test33" time="">
+  </testcase>
+</testsuite>

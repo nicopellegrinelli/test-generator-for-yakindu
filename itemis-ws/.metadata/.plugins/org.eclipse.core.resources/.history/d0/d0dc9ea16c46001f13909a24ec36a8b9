@@ -1,0 +1,9 @@
+testclass _____________StatechartTest for statechart Elevator_Unit {
+	
+	@Test
+	operation test() {
+		enter
+		
+		exit
+	}
+}

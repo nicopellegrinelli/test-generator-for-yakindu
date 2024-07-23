@@ -1,0 +1,167 @@
+testclass SignalSimplifiedTest for statechart Signal {
+	@Test
+	operation test00 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test05 () {
+	    enter
+	    raise turn: -382
+	    raise fail
+	    triggerWithoutEvent
+	    assert is_active
+	}
+
+	@Test
+	operation test06 () {
+	    enter
+	    raise fail
+	    assert is_active
+	}
+
+	@Test
+	operation test07 () {
+	    enter
+	    raise turn: -382
+	    enter
+	    raise turn: -382
+	    assert is_active
+	}
+
+	@Test
+	operation test08 () {
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test09 () {
+	    enter
+	    raise turn: -382
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test10 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test11 () {
+	    enter
+	    raise turn: -382
+	    assert is_active
+	    assert active (Signal.main_region.Turning)
+	}
+
+	@Test
+	operation test12 () {
+	    enter
+	    assert is_active
+	    assert !active (Signal.main_region.Turning)
+	}
+
+	@Test
+	operation test13 () {
+	    enter
+	    assert is_active
+	    assert active (Signal.main_region.Idle)
+	}
+
+	@Test
+	operation test14 () {
+	}
+
+	@Test
+	operation test15 () {
+	    assert !active (Signal.main_region.Turning)
+	}
+
+	@Test
+	operation test16 () {
+	    assert !active (Signal.main_region.Turning.Turn_processing.Send)
+	}
+
+	@Test
+	operation test17 () {
+	    assert !active (Signal.main_region.Turning.Turn_processing.Pending)
+	}
+
+	@Test
+	operation test18 () {
+	    assert !active (Signal.main_region.Fail)
+	}
+
+	@Test
+	operation test19 () {
+	    assert !active (Signal.main_region.Idle)
+	}
+
+	@Test
+	operation test21 () {
+	    raise clear
+	    assert !is_active
+	}
+
+	@Test
+	operation test22 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test28 () {
+	    assert !is_active
+	    enter
+	    raise turn: -382
+	    raise ok
+	    assert is_active
+	}
+
+	@Test
+	operation test29 () {
+	    assert !is_active
+	    enter
+	    raise turn: -382
+	    raise queued
+	    assert is_active
+	}
+
+	@Test
+	operation test30 () {
+	    enter
+	    raise turn: -382
+	    raise fail
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test31 () {
+	    assert !is_final
+	    assert !is_active
+	}
+
+	@Test
+	operation test32 () {
+	    assert !is_active
+	    enter
+	    raise turn: -382
+	    raise turn: 1493
+	    assert is_active
+	}
+
+	@Test
+	operation test33 () {
+	    assert !is_active
+	    enter
+	    assert is_active
+	}
+
+}
