@@ -6,8 +6,8 @@
 	<artifactId>ysc2sctunit</artifactId>
 	<version>0.0.2</version>
 	<packaging>jar</packaging>
-
 	<properties>
+		<evosuite-systemPath>${project.basedir}/lib/evosuite-1.2.0.jar</evosuite-systemPath>
 		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -54,7 +54,7 @@
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>libs/</classpathPrefix>
 							<mainClass>
-								ysc2sctunit.Ysc2Sctunit	
+								ysc2sctunit.Ysc2Sctunit
 							</mainClass>
 						</manifest>
 					</archive>
@@ -78,9 +78,10 @@
 		<dependency>
 			<groupId>evosuite</groupId>
 			<artifactId>evosuite</artifactId>
-			<version>1.0.6</version>
+			<version>1.2.0</version>
+			<scope>system</scope>
+			<systemPath>${evosuite-systemPath}</systemPath>
 		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/org.antlr/stringtemplate -->
 		<dependency>
 			<groupId>org.antlr</groupId>
@@ -102,7 +103,7 @@
 			<artifactId>commons-cli</artifactId>
 			<version>1.6.0</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.assertj</groupId>
 			<artifactId>assertj-core</artifactId>
