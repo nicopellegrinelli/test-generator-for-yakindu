@@ -1,0 +1,2 @@
+id, sut, goals, covered_goals, coverage, tests, budget, consumed_budget, fitness_evaluations, feasible_paths, feasible_rate, algorithm, criteria, random_seed, lr_seed
+1722347007344,examples.traffic_light,9,9,1.0,9,60,1,39359,3327,0.08452958662567646,MOSA,TRANSITION,null,123
