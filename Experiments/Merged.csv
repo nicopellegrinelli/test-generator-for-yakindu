@@ -86,7 +86,6 @@ from_other_repos,_Physics,3,1.6666666666666667,2,0.64,0.00,PASSED,0.92,1.00,PASS
 from_other_repos,_Trolley,23,2.739130434782609,4,0.52,0.00,ERRORS,0.71,0.36,PASSED
 from_other_repos,A,1,1.0,1,0.64,0.00,PASSED,0.91,0.80,PASSED
 from_other_repos,alarm2,4,1.0,1,0.57,0.00,PASSED,0.93,0.92,PASSED
-from_other_repos,ArduinoHMI,19,2.3684210526315788,3,0.52,0.00,PASSED,0.64,0.30,PASSED
 from_other_repos,aufgage_3_pvr,14,1.0,1,NOT GENERATED,0.00,NOT GENERATED,NOT GENERATED,0.00,NOT GENERATED
 from_other_repos,B,2,1.5,2,0.61,0.00,PASSED,0.92,1.00,PASSED
 from_other_repos,bareMetalPolling,2,1.0,1,0.60,0.00,PASSED,0.96,1.00,PASSED

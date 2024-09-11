@@ -1,0 +1,90 @@
+testclass TrafficLightSimplifiedTest for statechart TrafficLight {
+	@Test
+	operation test01 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test02 () {
+	    enter
+	    assert is_active
+	    assert active (TrafficLight.main_region.red)
+	}
+
+	@Test
+	operation test03 () {
+	}
+
+	@Test
+	operation test04 () {
+	    assert !active (TrafficLight.main_region.yellow)
+	}
+
+	@Test
+	operation test05 () {
+	    assert !active (TrafficLight.main_region.pending)
+	}
+
+	@Test
+	operation test06 () {
+	    assert !active (TrafficLight.main_region.green)
+	}
+
+	@Test
+	operation test07 () {
+	    assert !active (TrafficLight.main_region.red)
+	}
+
+	@Test
+	operation test08 () {
+	    proceed 1 cycle
+	    assert !is_final
+	}
+
+	@Test
+	operation test09 () {
+	    enter
+	    assert is_active
+	}
+
+	@Test
+	operation test10 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test11 () {
+	    exit
+	    assert !is_final
+	}
+
+	@Test
+	operation test12 () {
+	    assert !is_active
+	    assert !is_final
+	}
+
+	@Test
+	operation test13 () {
+	    raise sec
+	    assert !is_active
+	}
+
+	@Test
+	operation test14 () {
+	    raise pedestrian
+	    assert !is_active
+	}
+
+	@Test
+	operation test15 () {
+	    assert !is_active
+	    enter
+	    proceed 1 cycle
+	    assert is_active
+	}
+
+}

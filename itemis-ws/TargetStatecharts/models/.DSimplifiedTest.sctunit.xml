@@ -10,9 +10,6 @@
   <testcase name="test08" classname="platform:/resource/TargetStatecharts/models/DSimplifiedTest.sctunit#DSimplifiedTest.test08" time="">
   </testcase>
   <testcase name="test09" classname="platform:/resource/TargetStatecharts/models/DSimplifiedTest.sctunit#DSimplifiedTest.test09" time="">
-    <failure>Assertion failed: "assert active (D.main_region.Orthogonal.r1.One)" (Line 47)
-    	Expected: One, actual: [S, Orthogonal, Temp, Orthogonal]
-    </failure>
   </testcase>
   <testcase name="test10" classname="platform:/resource/TargetStatecharts/models/DSimplifiedTest.sctunit#DSimplifiedTest.test10" time="">
   </testcase>
@@ -34,15 +31,15 @@
   </testcase>
   <testcase name="test19" classname="platform:/resource/TargetStatecharts/models/DSimplifiedTest.sctunit#DSimplifiedTest.test19" time="">
   </testcase>
-  <testcase name="test20" classname="platform:/resource/TargetStatecharts/models/DSimplifiedTest.sctunit#DSimplifiedTest.test20" time="">
-  </testcase>
   <testcase name="test21" classname="platform:/resource/TargetStatecharts/models/DSimplifiedTest.sctunit#DSimplifiedTest.test21" time="">
   </testcase>
-  <testcase name="test23" classname="platform:/resource/TargetStatecharts/models/DSimplifiedTest.sctunit#DSimplifiedTest.test23" time="">
+  <testcase name="test22" classname="platform:/resource/TargetStatecharts/models/DSimplifiedTest.sctunit#DSimplifiedTest.test22" time="">
   </testcase>
   <testcase name="test24" classname="platform:/resource/TargetStatecharts/models/DSimplifiedTest.sctunit#DSimplifiedTest.test24" time="">
   </testcase>
   <testcase name="test25" classname="platform:/resource/TargetStatecharts/models/DSimplifiedTest.sctunit#DSimplifiedTest.test25" time="">
+  </testcase>
+  <testcase name="test26" classname="platform:/resource/TargetStatecharts/models/DSimplifiedTest.sctunit#DSimplifiedTest.test26" time="">
   </testcase>
   <testcase name="test27" classname="platform:/resource/TargetStatecharts/models/DSimplifiedTest.sctunit#DSimplifiedTest.test27" time="">
   </testcase>

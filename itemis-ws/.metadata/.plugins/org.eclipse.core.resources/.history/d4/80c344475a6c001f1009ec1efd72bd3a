@@ -1,0 +1,162 @@
+testclass TrafficLightSimplifiedTest for statechart TrafficLight_WT {
+	@Test
+	operation test05 () {
+	    enter
+	    raise pedestrian
+	    assert is_active
+	}
+
+	@Test
+	operation test06 () {
+	    enter
+	    proceed 60s
+	    triggerWithoutEvent
+	    assert is_active
+	}
+
+	@Test
+	operation test07 () {
+	    enter
+	    proceed 60s
+	    raise pedestrian
+	    proceed 60s
+	    assert is_active
+	}
+
+	@Test
+	operation test08 () {
+	    exit
+	    assert !is_final
+	}
+
+	@Test
+	operation test09 () {
+	    enter
+	    proceed 60s
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test10 () {
+	    enter
+	    proceed 60s
+	    raise pedestrian
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test11 () {
+	    enter
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test12 () {
+	    enter
+	    proceed 60s
+	    assert is_active
+	    assert active (TrafficLight.main_region.green)
+	}
+
+	@Test
+	operation test13 () {
+	    enter
+	    proceed 60s
+	    raise pedestrian
+	    proceed 60s
+	    assert active (TrafficLight.main_region.yellow)
+	}
+
+	@Test
+	operation test14 () {
+	    enter
+	    proceed 60s
+	    raise pedestrian
+	    assert is_active
+	    assert active (TrafficLight.main_region.pending)
+	}
+
+	@Test
+	operation test15 () {
+	    enter
+	    assert is_active
+	    assert active (TrafficLight.main_region.red)
+	}
+
+	@Test
+	operation test16 () {
+	    assert !active (TrafficLight.main_region.green)
+	}
+
+	@Test
+	operation test17 () {
+	    assert !active (TrafficLight.main_region.yellow)
+	}
+
+	@Test
+	operation test18 () {
+	    assert !active (TrafficLight.main_region.pending)
+	}
+
+	@Test
+	operation test19 () {
+	}
+
+	@Test
+	operation test20 () {
+	    assert !active (TrafficLight.main_region.red)
+	}
+
+	@Test
+	operation test21 () {
+	    raise pedestrian
+	    assert !is_final
+	}
+
+	@Test
+	operation test22 () {
+	    assert !is_active
+	    enter
+	    proceed 60s
+	    raise pedestrian
+	    proceed 60s
+	    triggerWithoutEvent
+	    assert is_active
+	}
+
+	@Test
+	operation test23 () {
+	    assert !is_active
+	}
+
+	@Test
+	operation test25 () {
+	    assert !is_active
+	    assert !is_final
+	}
+
+	@Test
+	operation test26 () {
+	    enter
+	    proceed 60s
+	    raise pedestrian
+	    proceed 60s
+	    assert is_active
+	    exit
+	    assert !is_active
+	}
+
+	@Test
+	operation test27 () {
+	    assert !is_active
+	    enter
+	    assert is_active
+	}
+
+}

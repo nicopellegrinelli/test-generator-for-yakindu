@@ -1,0 +1,12 @@
+testsuite SuiteForCluster1 {
+	Network_ComponentSimplifiedTest,
+	HUB_TemplateSimplifiedTest,
+	SmartFireSystem_v2.0SimplifiedTest,
+	SmartLightHUBSimplifiedTest,
+	DigitalWatchSimplifiedTest,
+	_TrolleySimplifiedTest,
+	SectionSimplifiedTest,
+	Statechart12SimplifiedTest,
+	Statechart13SimplifiedTest,
+	Statechart14SimplifiedTest		
+}

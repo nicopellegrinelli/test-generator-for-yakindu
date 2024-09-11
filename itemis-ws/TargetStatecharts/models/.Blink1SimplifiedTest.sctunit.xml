@@ -1,6 +1,8 @@
 <testsuite name="blink1SimplifiedTest" time="">
   <testcase name="test00" classname="platform:/resource/TargetStatecharts/models/Blink1SimplifiedTest.sctunit#blink1SimplifiedTest.test00" time="">
   </testcase>
+  <testcase name="test03" classname="platform:/resource/TargetStatecharts/models/Blink1SimplifiedTest.sctunit#blink1SimplifiedTest.test03" time="">
+  </testcase>
   <testcase name="test04" classname="platform:/resource/TargetStatecharts/models/Blink1SimplifiedTest.sctunit#blink1SimplifiedTest.test04" time="">
   </testcase>
   <testcase name="test05" classname="platform:/resource/TargetStatecharts/models/Blink1SimplifiedTest.sctunit#blink1SimplifiedTest.test05" time="">
@@ -16,15 +18,10 @@
   <testcase name="test10" classname="platform:/resource/TargetStatecharts/models/Blink1SimplifiedTest.sctunit#blink1SimplifiedTest.test10" time="">
   </testcase>
   <testcase name="test11" classname="platform:/resource/TargetStatecharts/models/Blink1SimplifiedTest.sctunit#blink1SimplifiedTest.test11" time="">
-    <failure>Assertion failed: "assert active (blink1.esp.Blink.blinky.On)" (Line 72)
-    	Expected: On, actual: [Off, Blink]
-    </failure>
   </testcase>
   <testcase name="test12" classname="platform:/resource/TargetStatecharts/models/Blink1SimplifiedTest.sctunit#blink1SimplifiedTest.test12" time="">
   </testcase>
   <testcase name="test13" classname="platform:/resource/TargetStatecharts/models/Blink1SimplifiedTest.sctunit#blink1SimplifiedTest.test13" time="">
-  </testcase>
-  <testcase name="test14" classname="platform:/resource/TargetStatecharts/models/Blink1SimplifiedTest.sctunit#blink1SimplifiedTest.test14" time="">
   </testcase>
   <testcase name="test15" classname="platform:/resource/TargetStatecharts/models/Blink1SimplifiedTest.sctunit#blink1SimplifiedTest.test15" time="">
   </testcase>
@@ -32,18 +29,8 @@
   </testcase>
   <testcase name="test17" classname="platform:/resource/TargetStatecharts/models/Blink1SimplifiedTest.sctunit#blink1SimplifiedTest.test17" time="">
   </testcase>
-  <testcase name="test19" classname="platform:/resource/TargetStatecharts/models/Blink1SimplifiedTest.sctunit#blink1SimplifiedTest.test19" time="">
-  </testcase>
-  <testcase name="test20" classname="platform:/resource/TargetStatecharts/models/Blink1SimplifiedTest.sctunit#blink1SimplifiedTest.test20" time="">
-  </testcase>
   <testcase name="test21" classname="platform:/resource/TargetStatecharts/models/Blink1SimplifiedTest.sctunit#blink1SimplifiedTest.test21" time="">
   </testcase>
-  <testcase name="test22" classname="platform:/resource/TargetStatecharts/models/Blink1SimplifiedTest.sctunit#blink1SimplifiedTest.test22" time="">
-  </testcase>
-  <testcase name="test25" classname="platform:/resource/TargetStatecharts/models/Blink1SimplifiedTest.sctunit#blink1SimplifiedTest.test25" time="">
-  </testcase>
-  <testcase name="test26" classname="platform:/resource/TargetStatecharts/models/Blink1SimplifiedTest.sctunit#blink1SimplifiedTest.test26" time="">
-  </testcase>
-  <testcase name="test28" classname="platform:/resource/TargetStatecharts/models/Blink1SimplifiedTest.sctunit#blink1SimplifiedTest.test28" time="">
+  <testcase name="test23" classname="platform:/resource/TargetStatecharts/models/Blink1SimplifiedTest.sctunit#blink1SimplifiedTest.test23" time="">
   </testcase>
 </testsuite>

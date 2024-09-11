@@ -10,9 +10,6 @@
   <testcase name="test08" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test08" time="">
   </testcase>
   <testcase name="test09" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test09" time="">
-    <failure>Assertion failed: "assert active (C2.main_region.One)" (Line 48)
-    	Expected: One, actual: [Temp]
-    </failure>
   </testcase>
   <testcase name="test10" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test10" time="">
   </testcase>
@@ -30,7 +27,7 @@
   </testcase>
   <testcase name="test17" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test17" time="">
   </testcase>
-  <testcase name="test19" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test19" time="">
+  <testcase name="test18" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test18" time="">
   </testcase>
   <testcase name="test20" classname="platform:/resource/TargetStatecharts/models/C2SimplifiedTest.sctunit#C2SimplifiedTest.test20" time="">
   </testcase>

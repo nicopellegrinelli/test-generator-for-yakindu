@@ -1,0 +1,28 @@
+<testsuite name="AlwaysSimplifiedTest" time="">
+  <testcase name="test01" classname="platform:/resource/TargetStatecharts/models/AlwaysSimplifiedTest.sctunit#AlwaysSimplifiedTest.test01" time="">
+  </testcase>
+  <testcase name="test02" classname="platform:/resource/TargetStatecharts/models/AlwaysSimplifiedTest.sctunit#AlwaysSimplifiedTest.test02" time="">
+  </testcase>
+  <testcase name="test03" classname="platform:/resource/TargetStatecharts/models/AlwaysSimplifiedTest.sctunit#AlwaysSimplifiedTest.test03" time="">
+  </testcase>
+  <testcase name="test04" classname="platform:/resource/TargetStatecharts/models/AlwaysSimplifiedTest.sctunit#AlwaysSimplifiedTest.test04" time="">
+  </testcase>
+  <testcase name="test05" classname="platform:/resource/TargetStatecharts/models/AlwaysSimplifiedTest.sctunit#AlwaysSimplifiedTest.test05" time="">
+  </testcase>
+  <testcase name="test06" classname="platform:/resource/TargetStatecharts/models/AlwaysSimplifiedTest.sctunit#AlwaysSimplifiedTest.test06" time="">
+  </testcase>
+  <testcase name="test07" classname="platform:/resource/TargetStatecharts/models/AlwaysSimplifiedTest.sctunit#AlwaysSimplifiedTest.test07" time="">
+  </testcase>
+  <testcase name="test08" classname="platform:/resource/TargetStatecharts/models/AlwaysSimplifiedTest.sctunit#AlwaysSimplifiedTest.test08" time="">
+  </testcase>
+  <testcase name="test09" classname="platform:/resource/TargetStatecharts/models/AlwaysSimplifiedTest.sctunit#AlwaysSimplifiedTest.test09" time="">
+  </testcase>
+  <testcase name="test10" classname="platform:/resource/TargetStatecharts/models/AlwaysSimplifiedTest.sctunit#AlwaysSimplifiedTest.test10" time="">
+  </testcase>
+  <testcase name="test11" classname="platform:/resource/TargetStatecharts/models/AlwaysSimplifiedTest.sctunit#AlwaysSimplifiedTest.test11" time="">
+  </testcase>
+  <testcase name="test12" classname="platform:/resource/TargetStatecharts/models/AlwaysSimplifiedTest.sctunit#AlwaysSimplifiedTest.test12" time="">
+  </testcase>
+  <testcase name="test13" classname="platform:/resource/TargetStatecharts/models/AlwaysSimplifiedTest.sctunit#AlwaysSimplifiedTest.test13" time="">
+  </testcase>
+</testsuite>

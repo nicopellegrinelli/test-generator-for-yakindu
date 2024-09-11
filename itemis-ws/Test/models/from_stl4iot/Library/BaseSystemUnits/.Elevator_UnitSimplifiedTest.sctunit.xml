@@ -1,0 +1,66 @@
+<testsuite name="Elevator_UnitSimplifiedTest" time="">
+  <testcase name="test00" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test00" time="">
+  </testcase>
+  <testcase name="test01" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test01" time="">
+  </testcase>
+  <testcase name="test02" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test02" time="">
+  </testcase>
+  <testcase name="test03" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test03" time="">
+  </testcase>
+  <testcase name="test04" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test04" time="">
+  </testcase>
+  <testcase name="test05" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test05" time="">
+  </testcase>
+  <testcase name="test06" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test06" time="">
+  </testcase>
+  <testcase name="test10" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test10" time="">
+  </testcase>
+  <testcase name="test11" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test11" time="">
+  </testcase>
+  <testcase name="test12" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test12" time="">
+  </testcase>
+  <testcase name="test13" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test13" time="">
+  </testcase>
+  <testcase name="test14" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test14" time="">
+  </testcase>
+  <testcase name="test15" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test15" time="">
+  </testcase>
+  <testcase name="test16" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test16" time="">
+  </testcase>
+  <testcase name="test17" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test17" time="">
+  </testcase>
+  <testcase name="test18" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test18" time="">
+  </testcase>
+  <testcase name="test19" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test19" time="">
+  </testcase>
+  <testcase name="test20" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test20" time="">
+  </testcase>
+  <testcase name="test21" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test21" time="">
+  </testcase>
+  <testcase name="test22" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test22" time="">
+  </testcase>
+  <testcase name="test23" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test23" time="">
+  </testcase>
+  <testcase name="test24" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test24" time="">
+  </testcase>
+  <testcase name="test25" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test25" time="">
+  </testcase>
+  <testcase name="test26" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test26" time="">
+  </testcase>
+  <testcase name="test27" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test27" time="">
+  </testcase>
+  <testcase name="test28" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test28" time="">
+  </testcase>
+  <testcase name="test29" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test29" time="">
+  </testcase>
+  <testcase name="test30" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test30" time="">
+  </testcase>
+  <testcase name="test32" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test32" time="">
+  </testcase>
+  <testcase name="test37" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test37" time="">
+  </testcase>
+  <testcase name="test38" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test38" time="">
+  </testcase>
+  <testcase name="test39" classname="platform:/resource/Test/models/from_stl4iot/Library/BaseSystemUnits/Elevator_UnitSimplifiedTest.sctunit#Elevator_UnitSimplifiedTest.test39" time="">
+  </testcase>
+</testsuite>

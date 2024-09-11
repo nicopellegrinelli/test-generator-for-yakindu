@@ -1,0 +1,6 @@
+testsuite SuiteForCluster1 {
+	SmartHubSystemSimplifiedTest,
+	musicPlayerSimplifiedTest,
+	SignalControllerSimplifiedTest,
+	Statechart2SimplifiedTest
+}

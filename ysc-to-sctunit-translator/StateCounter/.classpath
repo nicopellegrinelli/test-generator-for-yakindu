@@ -36,6 +36,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/Ysc2SCTUnit"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/CREATest"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

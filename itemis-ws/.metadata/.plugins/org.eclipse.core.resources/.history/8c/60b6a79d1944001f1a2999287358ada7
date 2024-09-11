@@ -1,9 +1,0 @@
-testclass StatechartTest for statechart watch {
-	
-	@Test
-	operation test() {
-		enter
-		
-		exit
-	}
-}

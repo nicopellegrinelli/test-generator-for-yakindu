@@ -1,0 +1,9 @@
+testclass StatechartTest for statechart TrafficLight_CB {
+	
+	@Test
+	operation test() {
+		enter
+		proceed 60 cycle
+		exit
+	}
+}

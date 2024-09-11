@@ -1,4 +1,6 @@
 <testsuite name="eventdrivenSimplifiedTest" time="">
+  <testcase name="test04" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test04" time="">
+  </testcase>
   <testcase name="test05" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test05" time="">
   </testcase>
   <testcase name="test06" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test06" time="">
@@ -16,9 +18,6 @@
   <testcase name="test12" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test12" time="">
   </testcase>
   <testcase name="test13" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test13" time="">
-    <failure>Assertion failed: "assert active (eventdriven.main_region.StateE)" (Line 75)
-    	Expected: StateE, actual: [StateD]
-    </failure>
   </testcase>
   <testcase name="test14" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test14" time="">
   </testcase>
@@ -40,18 +39,10 @@
   </testcase>
   <testcase name="test23" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test23" time="">
   </testcase>
-  <testcase name="test24" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test24" time="">
-  </testcase>
-  <testcase name="test25" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test25" time="">
+  <testcase name="test26" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test26" time="">
   </testcase>
   <testcase name="test27" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test27" time="">
   </testcase>
-  <testcase name="test29" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test29" time="">
-  </testcase>
-  <testcase name="test30" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test30" time="">
-  </testcase>
-  <testcase name="test31" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test31" time="">
-  </testcase>
-  <testcase name="test32" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test32" time="">
+  <testcase name="test28" classname="platform:/resource/TargetStatecharts/models/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test28" time="">
   </testcase>
 </testsuite>

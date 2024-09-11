@@ -1,0 +1,1842 @@
+<testsuite name="SuiteForCluster0" time="">
+  <testsuite name="Active_Systems_CounterSimplifiedTest" time="">
+    <testcase name="test01" classname="platform:/resource/Test/models/from_stl4iot/Library/Managers/Active_Systems_CounterSimplifiedTest.sctunit#Active_Systems_CounterSimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_stl4iot/Library/Managers/Active_Systems_CounterSimplifiedTest.sctunit#Active_Systems_CounterSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_stl4iot/Library/Managers/Active_Systems_CounterSimplifiedTest.sctunit#Active_Systems_CounterSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_stl4iot/Library/Managers/Active_Systems_CounterSimplifiedTest.sctunit#Active_Systems_CounterSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_stl4iot/Library/Managers/Active_Systems_CounterSimplifiedTest.sctunit#Active_Systems_CounterSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_stl4iot/Library/Managers/Active_Systems_CounterSimplifiedTest.sctunit#Active_Systems_CounterSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_stl4iot/Library/Managers/Active_Systems_CounterSimplifiedTest.sctunit#Active_Systems_CounterSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_stl4iot/Library/Managers/Active_Systems_CounterSimplifiedTest.sctunit#Active_Systems_CounterSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_stl4iot/Library/Managers/Active_Systems_CounterSimplifiedTest.sctunit#Active_Systems_CounterSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_stl4iot/Library/Managers/Active_Systems_CounterSimplifiedTest.sctunit#Active_Systems_CounterSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_stl4iot/Library/Managers/Active_Systems_CounterSimplifiedTest.sctunit#Active_Systems_CounterSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_stl4iot/Library/Managers/Active_Systems_CounterSimplifiedTest.sctunit#Active_Systems_CounterSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_stl4iot/Library/Managers/Active_Systems_CounterSimplifiedTest.sctunit#Active_Systems_CounterSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_stl4iot/Library/Managers/Active_Systems_CounterSimplifiedTest.sctunit#Active_Systems_CounterSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_stl4iot/Library/Managers/Active_Systems_CounterSimplifiedTest.sctunit#Active_Systems_CounterSimplifiedTest.test15" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="_ChildSimplifiedTest" time="">
+    <testcase name="test01" classname="platform:/resource/Test/models/from_itemis/_ChildSimplifiedTest.sctunit#_ChildSimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_itemis/_ChildSimplifiedTest.sctunit#_ChildSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_itemis/_ChildSimplifiedTest.sctunit#_ChildSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_itemis/_ChildSimplifiedTest.sctunit#_ChildSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_itemis/_ChildSimplifiedTest.sctunit#_ChildSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/_ChildSimplifiedTest.sctunit#_ChildSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/_ChildSimplifiedTest.sctunit#_ChildSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/_ChildSimplifiedTest.sctunit#_ChildSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_itemis/_ChildSimplifiedTest.sctunit#_ChildSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_itemis/_ChildSimplifiedTest.sctunit#_ChildSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_itemis/_ChildSimplifiedTest.sctunit#_ChildSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/_ChildSimplifiedTest.sctunit#_ChildSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_itemis/_ChildSimplifiedTest.sctunit#_ChildSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_itemis/_ChildSimplifiedTest.sctunit#_ChildSimplifiedTest.test14" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="_flashSimplifiedTest" time="">
+    <testcase name="test03" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test06" time="">
+      <failure>Assertion failed: "assert active (_flash.flash.Dark)" (Line 27)
+      	Expected: Dark, actual: [Light]
+      </failure>
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_itemis/_flashSimplifiedTest.sctunit#_flashSimplifiedTest.test19" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="_ledSimplifiedTest" time="">
+    <testcase name="test01" classname="platform:/resource/Test/models/from_itemis/_ledSimplifiedTest.sctunit#_ledSimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_itemis/_ledSimplifiedTest.sctunit#_ledSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_itemis/_ledSimplifiedTest.sctunit#_ledSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_itemis/_ledSimplifiedTest.sctunit#_ledSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_itemis/_ledSimplifiedTest.sctunit#_ledSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/_ledSimplifiedTest.sctunit#_ledSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/_ledSimplifiedTest.sctunit#_ledSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/_ledSimplifiedTest.sctunit#_ledSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_itemis/_ledSimplifiedTest.sctunit#_ledSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_itemis/_ledSimplifiedTest.sctunit#_ledSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_itemis/_ledSimplifiedTest.sctunit#_ledSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/_ledSimplifiedTest.sctunit#_ledSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_itemis/_ledSimplifiedTest.sctunit#_ledSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_itemis/_ledSimplifiedTest.sctunit#_ledSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_itemis/_ledSimplifiedTest.sctunit#_ledSimplifiedTest.test15" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="_lightSimplifiedTest" time="">
+    <testcase name="test03" classname="platform:/resource/Test/models/from_itemis/_lightSimplifiedTest.sctunit#_lightSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_itemis/_lightSimplifiedTest.sctunit#_lightSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_itemis/_lightSimplifiedTest.sctunit#_lightSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/_lightSimplifiedTest.sctunit#_lightSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/_lightSimplifiedTest.sctunit#_lightSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/_lightSimplifiedTest.sctunit#_lightSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_itemis/_lightSimplifiedTest.sctunit#_lightSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_itemis/_lightSimplifiedTest.sctunit#_lightSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_itemis/_lightSimplifiedTest.sctunit#_lightSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/_lightSimplifiedTest.sctunit#_lightSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_itemis/_lightSimplifiedTest.sctunit#_lightSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_itemis/_lightSimplifiedTest.sctunit#_lightSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_itemis/_lightSimplifiedTest.sctunit#_lightSimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_itemis/_lightSimplifiedTest.sctunit#_lightSimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_itemis/_lightSimplifiedTest.sctunit#_lightSimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_itemis/_lightSimplifiedTest.sctunit#_lightSimplifiedTest.test20" time="">
+    </testcase>
+    <testcase name="test23" classname="platform:/resource/Test/models/from_itemis/_lightSimplifiedTest.sctunit#_lightSimplifiedTest.test23" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="_01_LightSwitchSimplifiedTest" time="">
+    <testcase name="test01" classname="platform:/resource/Test/models/from_itemis/_01_LightSwitchSimplifiedTest.sctunit#_01_LightSwitchSimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_itemis/_01_LightSwitchSimplifiedTest.sctunit#_01_LightSwitchSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_itemis/_01_LightSwitchSimplifiedTest.sctunit#_01_LightSwitchSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_itemis/_01_LightSwitchSimplifiedTest.sctunit#_01_LightSwitchSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_itemis/_01_LightSwitchSimplifiedTest.sctunit#_01_LightSwitchSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/_01_LightSwitchSimplifiedTest.sctunit#_01_LightSwitchSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/_01_LightSwitchSimplifiedTest.sctunit#_01_LightSwitchSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/_01_LightSwitchSimplifiedTest.sctunit#_01_LightSwitchSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_itemis/_01_LightSwitchSimplifiedTest.sctunit#_01_LightSwitchSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_itemis/_01_LightSwitchSimplifiedTest.sctunit#_01_LightSwitchSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_itemis/_01_LightSwitchSimplifiedTest.sctunit#_01_LightSwitchSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/_01_LightSwitchSimplifiedTest.sctunit#_01_LightSwitchSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_itemis/_01_LightSwitchSimplifiedTest.sctunit#_01_LightSwitchSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_itemis/_01_LightSwitchSimplifiedTest.sctunit#_01_LightSwitchSimplifiedTest.test14" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="_01_no_hierarchySimplifiedTest" time="">
+    <testcase name="test00" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test00" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test20" time="">
+    </testcase>
+    <testcase name="test21" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test21" time="">
+    </testcase>
+    <testcase name="test22" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test22" time="">
+    </testcase>
+    <testcase name="test23" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test23" time="">
+    </testcase>
+    <testcase name="test24" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test24" time="">
+    </testcase>
+    <testcase name="test25" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test25" time="">
+    </testcase>
+    <testcase name="test28" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test28" time="">
+    </testcase>
+    <testcase name="test29" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test29" time="">
+    </testcase>
+    <testcase name="test31" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test31" time="">
+    </testcase>
+    <testcase name="test32" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test32" time="">
+    </testcase>
+    <testcase name="test33" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test33" time="">
+    </testcase>
+    <testcase name="test34" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test34" time="">
+    </testcase>
+    <testcase name="test35" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test35" time="">
+    </testcase>
+    <testcase name="test36" classname="platform:/resource/Test/models/from_itemis/_01_no_hierarchySimplifiedTest.sctunit#_01_no_hierarchySimplifiedTest.test36" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="_02_DimmableLightSwitchSimplifiedTest" time="">
+    <testcase name="test01" classname="platform:/resource/Test/models/from_itemis/_02_DimmableLightSwitchSimplifiedTest.sctunit#_02_DimmableLightSwitchSimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_itemis/_02_DimmableLightSwitchSimplifiedTest.sctunit#_02_DimmableLightSwitchSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_itemis/_02_DimmableLightSwitchSimplifiedTest.sctunit#_02_DimmableLightSwitchSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_itemis/_02_DimmableLightSwitchSimplifiedTest.sctunit#_02_DimmableLightSwitchSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_itemis/_02_DimmableLightSwitchSimplifiedTest.sctunit#_02_DimmableLightSwitchSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/_02_DimmableLightSwitchSimplifiedTest.sctunit#_02_DimmableLightSwitchSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/_02_DimmableLightSwitchSimplifiedTest.sctunit#_02_DimmableLightSwitchSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/_02_DimmableLightSwitchSimplifiedTest.sctunit#_02_DimmableLightSwitchSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_itemis/_02_DimmableLightSwitchSimplifiedTest.sctunit#_02_DimmableLightSwitchSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_itemis/_02_DimmableLightSwitchSimplifiedTest.sctunit#_02_DimmableLightSwitchSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_itemis/_02_DimmableLightSwitchSimplifiedTest.sctunit#_02_DimmableLightSwitchSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/_02_DimmableLightSwitchSimplifiedTest.sctunit#_02_DimmableLightSwitchSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_itemis/_02_DimmableLightSwitchSimplifiedTest.sctunit#_02_DimmableLightSwitchSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_itemis/_02_DimmableLightSwitchSimplifiedTest.sctunit#_02_DimmableLightSwitchSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_itemis/_02_DimmableLightSwitchSimplifiedTest.sctunit#_02_DimmableLightSwitchSimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_itemis/_02_DimmableLightSwitchSimplifiedTest.sctunit#_02_DimmableLightSwitchSimplifiedTest.test16" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="blinkyStateMachineSimplifiedTest" time="">
+    <testcase name="test00" classname="platform:/resource/Test/models/from_itemis/BlinkyStateMachineSimplifiedTest.sctunit#blinkyStateMachineSimplifiedTest.test00" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_itemis/BlinkyStateMachineSimplifiedTest.sctunit#blinkyStateMachineSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_itemis/BlinkyStateMachineSimplifiedTest.sctunit#blinkyStateMachineSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_itemis/BlinkyStateMachineSimplifiedTest.sctunit#blinkyStateMachineSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_itemis/BlinkyStateMachineSimplifiedTest.sctunit#blinkyStateMachineSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/BlinkyStateMachineSimplifiedTest.sctunit#blinkyStateMachineSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/BlinkyStateMachineSimplifiedTest.sctunit#blinkyStateMachineSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/BlinkyStateMachineSimplifiedTest.sctunit#blinkyStateMachineSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_itemis/BlinkyStateMachineSimplifiedTest.sctunit#blinkyStateMachineSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_itemis/BlinkyStateMachineSimplifiedTest.sctunit#blinkyStateMachineSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_itemis/BlinkyStateMachineSimplifiedTest.sctunit#blinkyStateMachineSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/BlinkyStateMachineSimplifiedTest.sctunit#blinkyStateMachineSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_itemis/BlinkyStateMachineSimplifiedTest.sctunit#blinkyStateMachineSimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_itemis/BlinkyStateMachineSimplifiedTest.sctunit#blinkyStateMachineSimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_itemis/BlinkyStateMachineSimplifiedTest.sctunit#blinkyStateMachineSimplifiedTest.test20" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="BouncingBallSimplifiedTest" time="">
+    <testcase name="test01" classname="platform:/resource/Test/models/from_itemis/BouncingBallSimplifiedTest.sctunit#BouncingBallSimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_itemis/BouncingBallSimplifiedTest.sctunit#BouncingBallSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_itemis/BouncingBallSimplifiedTest.sctunit#BouncingBallSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_itemis/BouncingBallSimplifiedTest.sctunit#BouncingBallSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_itemis/BouncingBallSimplifiedTest.sctunit#BouncingBallSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/BouncingBallSimplifiedTest.sctunit#BouncingBallSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/BouncingBallSimplifiedTest.sctunit#BouncingBallSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/BouncingBallSimplifiedTest.sctunit#BouncingBallSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_itemis/BouncingBallSimplifiedTest.sctunit#BouncingBallSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_itemis/BouncingBallSimplifiedTest.sctunit#BouncingBallSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_itemis/BouncingBallSimplifiedTest.sctunit#BouncingBallSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/BouncingBallSimplifiedTest.sctunit#BouncingBallSimplifiedTest.test12" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="controllerSimplifiedTest" time="">
+    <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/ControllerSimplifiedTest.sctunit#controllerSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/ControllerSimplifiedTest.sctunit#controllerSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/ControllerSimplifiedTest.sctunit#controllerSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_itemis/ControllerSimplifiedTest.sctunit#controllerSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_itemis/ControllerSimplifiedTest.sctunit#controllerSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_itemis/ControllerSimplifiedTest.sctunit#controllerSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/ControllerSimplifiedTest.sctunit#controllerSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_itemis/ControllerSimplifiedTest.sctunit#controllerSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_itemis/ControllerSimplifiedTest.sctunit#controllerSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_itemis/ControllerSimplifiedTest.sctunit#controllerSimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_itemis/ControllerSimplifiedTest.sctunit#controllerSimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_itemis/ControllerSimplifiedTest.sctunit#controllerSimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_itemis/ControllerSimplifiedTest.sctunit#controllerSimplifiedTest.test20" time="">
+    </testcase>
+    <testcase name="test21" classname="platform:/resource/Test/models/from_itemis/ControllerSimplifiedTest.sctunit#controllerSimplifiedTest.test21" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="cyclebasedSimplifiedTest" time="">
+    <testcase name="test00" classname="platform:/resource/Test/models/from_itemis/CyclebasedSimplifiedTest.sctunit#cyclebasedSimplifiedTest.test00" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_itemis/CyclebasedSimplifiedTest.sctunit#cyclebasedSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_itemis/CyclebasedSimplifiedTest.sctunit#cyclebasedSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_itemis/CyclebasedSimplifiedTest.sctunit#cyclebasedSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_itemis/CyclebasedSimplifiedTest.sctunit#cyclebasedSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/CyclebasedSimplifiedTest.sctunit#cyclebasedSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/CyclebasedSimplifiedTest.sctunit#cyclebasedSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/CyclebasedSimplifiedTest.sctunit#cyclebasedSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_itemis/CyclebasedSimplifiedTest.sctunit#cyclebasedSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_itemis/CyclebasedSimplifiedTest.sctunit#cyclebasedSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_itemis/CyclebasedSimplifiedTest.sctunit#cyclebasedSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/CyclebasedSimplifiedTest.sctunit#cyclebasedSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_itemis/CyclebasedSimplifiedTest.sctunit#cyclebasedSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_itemis/CyclebasedSimplifiedTest.sctunit#cyclebasedSimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_itemis/CyclebasedSimplifiedTest.sctunit#cyclebasedSimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_itemis/CyclebasedSimplifiedTest.sctunit#cyclebasedSimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_itemis/CyclebasedSimplifiedTest.sctunit#cyclebasedSimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test21" classname="platform:/resource/Test/models/from_itemis/CyclebasedSimplifiedTest.sctunit#cyclebasedSimplifiedTest.test21" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="EventBuffersDisabledSimplifiedTest" time="">
+    <testcase name="test01" classname="platform:/resource/Test/models/from_itemis/EventBuffersDisabledSimplifiedTest.sctunit#EventBuffersDisabledSimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_itemis/EventBuffersDisabledSimplifiedTest.sctunit#EventBuffersDisabledSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_itemis/EventBuffersDisabledSimplifiedTest.sctunit#EventBuffersDisabledSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_itemis/EventBuffersDisabledSimplifiedTest.sctunit#EventBuffersDisabledSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_itemis/EventBuffersDisabledSimplifiedTest.sctunit#EventBuffersDisabledSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/EventBuffersDisabledSimplifiedTest.sctunit#EventBuffersDisabledSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/EventBuffersDisabledSimplifiedTest.sctunit#EventBuffersDisabledSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/EventBuffersDisabledSimplifiedTest.sctunit#EventBuffersDisabledSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_itemis/EventBuffersDisabledSimplifiedTest.sctunit#EventBuffersDisabledSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_itemis/EventBuffersDisabledSimplifiedTest.sctunit#EventBuffersDisabledSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_itemis/EventBuffersDisabledSimplifiedTest.sctunit#EventBuffersDisabledSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/EventBuffersDisabledSimplifiedTest.sctunit#EventBuffersDisabledSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_itemis/EventBuffersDisabledSimplifiedTest.sctunit#EventBuffersDisabledSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_itemis/EventBuffersDisabledSimplifiedTest.sctunit#EventBuffersDisabledSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_itemis/EventBuffersDisabledSimplifiedTest.sctunit#EventBuffersDisabledSimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_itemis/EventBuffersDisabledSimplifiedTest.sctunit#EventBuffersDisabledSimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_itemis/EventBuffersDisabledSimplifiedTest.sctunit#EventBuffersDisabledSimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_itemis/EventBuffersDisabledSimplifiedTest.sctunit#EventBuffersDisabledSimplifiedTest.test18" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="EventBuffersEnabledSimplifiedTest" time="">
+    <testcase name="test01" classname="platform:/resource/Test/models/from_itemis/EventBuffersEnabledSimplifiedTest.sctunit#EventBuffersEnabledSimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_itemis/EventBuffersEnabledSimplifiedTest.sctunit#EventBuffersEnabledSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_itemis/EventBuffersEnabledSimplifiedTest.sctunit#EventBuffersEnabledSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_itemis/EventBuffersEnabledSimplifiedTest.sctunit#EventBuffersEnabledSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_itemis/EventBuffersEnabledSimplifiedTest.sctunit#EventBuffersEnabledSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/EventBuffersEnabledSimplifiedTest.sctunit#EventBuffersEnabledSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/EventBuffersEnabledSimplifiedTest.sctunit#EventBuffersEnabledSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/EventBuffersEnabledSimplifiedTest.sctunit#EventBuffersEnabledSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_itemis/EventBuffersEnabledSimplifiedTest.sctunit#EventBuffersEnabledSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_itemis/EventBuffersEnabledSimplifiedTest.sctunit#EventBuffersEnabledSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_itemis/EventBuffersEnabledSimplifiedTest.sctunit#EventBuffersEnabledSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/EventBuffersEnabledSimplifiedTest.sctunit#EventBuffersEnabledSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_itemis/EventBuffersEnabledSimplifiedTest.sctunit#EventBuffersEnabledSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_itemis/EventBuffersEnabledSimplifiedTest.sctunit#EventBuffersEnabledSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_itemis/EventBuffersEnabledSimplifiedTest.sctunit#EventBuffersEnabledSimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_itemis/EventBuffersEnabledSimplifiedTest.sctunit#EventBuffersEnabledSimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_itemis/EventBuffersEnabledSimplifiedTest.sctunit#EventBuffersEnabledSimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_itemis/EventBuffersEnabledSimplifiedTest.sctunit#EventBuffersEnabledSimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_itemis/EventBuffersEnabledSimplifiedTest.sctunit#EventBuffersEnabledSimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_itemis/EventBuffersEnabledSimplifiedTest.sctunit#EventBuffersEnabledSimplifiedTest.test20" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="eventdrivenSimplifiedTest" time="">
+    <testcase name="test05" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test13" time="">
+      <failure>Assertion failed: "assert active (eventdriven.main_region.StateE)" (Line 75)
+      	Expected: StateE, actual: [StateD]
+      </failure>
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test20" time="">
+    </testcase>
+    <testcase name="test21" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test21" time="">
+    </testcase>
+    <testcase name="test22" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test22" time="">
+    </testcase>
+    <testcase name="test23" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test23" time="">
+    </testcase>
+    <testcase name="test24" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test24" time="">
+    </testcase>
+    <testcase name="test25" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test25" time="">
+    </testcase>
+    <testcase name="test27" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test27" time="">
+    </testcase>
+    <testcase name="test29" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test29" time="">
+    </testcase>
+    <testcase name="test30" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test30" time="">
+    </testcase>
+    <testcase name="test31" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test31" time="">
+    </testcase>
+    <testcase name="test32" classname="platform:/resource/Test/models/from_itemis/EventdrivenSimplifiedTest.sctunit#eventdrivenSimplifiedTest.test32" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="keyboardSimplifiedTest" time="">
+    <testcase name="test01" classname="platform:/resource/Test/models/from_itemis/KeyboardSimplifiedTest.sctunit#keyboardSimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_itemis/KeyboardSimplifiedTest.sctunit#keyboardSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_itemis/KeyboardSimplifiedTest.sctunit#keyboardSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_itemis/KeyboardSimplifiedTest.sctunit#keyboardSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_itemis/KeyboardSimplifiedTest.sctunit#keyboardSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/KeyboardSimplifiedTest.sctunit#keyboardSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/KeyboardSimplifiedTest.sctunit#keyboardSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/KeyboardSimplifiedTest.sctunit#keyboardSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_itemis/KeyboardSimplifiedTest.sctunit#keyboardSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_itemis/KeyboardSimplifiedTest.sctunit#keyboardSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_itemis/KeyboardSimplifiedTest.sctunit#keyboardSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/KeyboardSimplifiedTest.sctunit#keyboardSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_itemis/KeyboardSimplifiedTest.sctunit#keyboardSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_itemis/KeyboardSimplifiedTest.sctunit#keyboardSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_itemis/KeyboardSimplifiedTest.sctunit#keyboardSimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_itemis/KeyboardSimplifiedTest.sctunit#keyboardSimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_itemis/KeyboardSimplifiedTest.sctunit#keyboardSimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_itemis/KeyboardSimplifiedTest.sctunit#keyboardSimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_itemis/KeyboardSimplifiedTest.sctunit#keyboardSimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_itemis/KeyboardSimplifiedTest.sctunit#keyboardSimplifiedTest.test20" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="light_switchSimplifiedTest" time="">
+    <testcase name="test00" classname="platform:/resource/Test/models/from_itemis/Light_switchSimplifiedTest.sctunit#light_switchSimplifiedTest.test00" time="">
+    </testcase>
+    <testcase name="test01" classname="platform:/resource/Test/models/from_itemis/Light_switchSimplifiedTest.sctunit#light_switchSimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_itemis/Light_switchSimplifiedTest.sctunit#light_switchSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_itemis/Light_switchSimplifiedTest.sctunit#light_switchSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/Light_switchSimplifiedTest.sctunit#light_switchSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/Light_switchSimplifiedTest.sctunit#light_switchSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/Light_switchSimplifiedTest.sctunit#light_switchSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_itemis/Light_switchSimplifiedTest.sctunit#light_switchSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_itemis/Light_switchSimplifiedTest.sctunit#light_switchSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_itemis/Light_switchSimplifiedTest.sctunit#light_switchSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/Light_switchSimplifiedTest.sctunit#light_switchSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_itemis/Light_switchSimplifiedTest.sctunit#light_switchSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_itemis/Light_switchSimplifiedTest.sctunit#light_switchSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_itemis/Light_switchSimplifiedTest.sctunit#light_switchSimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_itemis/Light_switchSimplifiedTest.sctunit#light_switchSimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_itemis/Light_switchSimplifiedTest.sctunit#light_switchSimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test21" classname="platform:/resource/Test/models/from_itemis/Light_switchSimplifiedTest.sctunit#light_switchSimplifiedTest.test21" time="">
+    </testcase>
+    <testcase name="test22" classname="platform:/resource/Test/models/from_itemis/Light_switchSimplifiedTest.sctunit#light_switchSimplifiedTest.test22" time="">
+    </testcase>
+    <testcase name="test25" classname="platform:/resource/Test/models/from_itemis/Light_switchSimplifiedTest.sctunit#light_switchSimplifiedTest.test25" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="LightCtrlSimplifiedTest" time="">
+    <testcase name="test03" classname="platform:/resource/Test/models/from_itemis/LightCtrlSimplifiedTest.sctunit#LightCtrlSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_itemis/LightCtrlSimplifiedTest.sctunit#LightCtrlSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_itemis/LightCtrlSimplifiedTest.sctunit#LightCtrlSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/LightCtrlSimplifiedTest.sctunit#LightCtrlSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/LightCtrlSimplifiedTest.sctunit#LightCtrlSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/LightCtrlSimplifiedTest.sctunit#LightCtrlSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_itemis/LightCtrlSimplifiedTest.sctunit#LightCtrlSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_itemis/LightCtrlSimplifiedTest.sctunit#LightCtrlSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_itemis/LightCtrlSimplifiedTest.sctunit#LightCtrlSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/LightCtrlSimplifiedTest.sctunit#LightCtrlSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_itemis/LightCtrlSimplifiedTest.sctunit#LightCtrlSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_itemis/LightCtrlSimplifiedTest.sctunit#LightCtrlSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_itemis/LightCtrlSimplifiedTest.sctunit#LightCtrlSimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_itemis/LightCtrlSimplifiedTest.sctunit#LightCtrlSimplifiedTest.test20" time="">
+    </testcase>
+    <testcase name="test21" classname="platform:/resource/Test/models/from_itemis/LightCtrlSimplifiedTest.sctunit#LightCtrlSimplifiedTest.test21" time="">
+    </testcase>
+    <testcase name="test22" classname="platform:/resource/Test/models/from_itemis/LightCtrlSimplifiedTest.sctunit#LightCtrlSimplifiedTest.test22" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="rgbSimplifiedTest" time="">
+    <testcase name="test00" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test00" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test09" time="">
+      <failure>Assertion failed: "assert active (rgb.main_region._final_)" (Line 77)
+      	Expected: , actual: [idle]
+      </failure>
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test20" time="">
+    </testcase>
+    <testcase name="test21" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test21" time="">
+    </testcase>
+    <testcase name="test22" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test22" time="">
+      <failure>Assertion failed: "assert is_final" (Line 168)
+      </failure>
+    </testcase>
+    <testcase name="test23" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test23" time="">
+    </testcase>
+    <testcase name="test24" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test24" time="">
+    </testcase>
+    <testcase name="test25" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test25" time="">
+    </testcase>
+    <testcase name="test28" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test28" time="">
+    </testcase>
+    <testcase name="test29" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test29" time="">
+    </testcase>
+    <testcase name="test30" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test30" time="">
+    </testcase>
+    <testcase name="test31" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test31" time="">
+    </testcase>
+    <testcase name="test32" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test32" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="StatechartSimplifiedTest" time="">
+    <testcase name="test01" classname="platform:/resource/Test/models/from_itemis/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_itemis/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_itemis/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_itemis/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_itemis/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_itemis/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_itemis/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_itemis/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_itemis/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_itemis/StatechartSimplifiedTest.sctunit#StatechartSimplifiedTest.test14" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="StateMachineSimplifiedTest" time="">
+    <testcase name="test04" classname="platform:/resource/Test/models/from_itemis/StateMachineSimplifiedTest.sctunit#StateMachineSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_itemis/StateMachineSimplifiedTest.sctunit#StateMachineSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/StateMachineSimplifiedTest.sctunit#StateMachineSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/StateMachineSimplifiedTest.sctunit#StateMachineSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/StateMachineSimplifiedTest.sctunit#StateMachineSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_itemis/StateMachineSimplifiedTest.sctunit#StateMachineSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_itemis/StateMachineSimplifiedTest.sctunit#StateMachineSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_itemis/StateMachineSimplifiedTest.sctunit#StateMachineSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/StateMachineSimplifiedTest.sctunit#StateMachineSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_itemis/StateMachineSimplifiedTest.sctunit#StateMachineSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_itemis/StateMachineSimplifiedTest.sctunit#StateMachineSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_itemis/StateMachineSimplifiedTest.sctunit#StateMachineSimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_itemis/StateMachineSimplifiedTest.sctunit#StateMachineSimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_itemis/StateMachineSimplifiedTest.sctunit#StateMachineSimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_itemis/StateMachineSimplifiedTest.sctunit#StateMachineSimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_itemis/StateMachineSimplifiedTest.sctunit#StateMachineSimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_itemis/StateMachineSimplifiedTest.sctunit#StateMachineSimplifiedTest.test20" time="">
+    </testcase>
+    <testcase name="test24" classname="platform:/resource/Test/models/from_itemis/StateMachineSimplifiedTest.sctunit#StateMachineSimplifiedTest.test24" time="">
+    </testcase>
+    <testcase name="test25" classname="platform:/resource/Test/models/from_itemis/StateMachineSimplifiedTest.sctunit#StateMachineSimplifiedTest.test25" time="">
+    </testcase>
+    <testcase name="test26" classname="platform:/resource/Test/models/from_itemis/StateMachineSimplifiedTest.sctunit#StateMachineSimplifiedTest.test26" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="StreetCrossingSystemSimplifiedTest" time="">
+    <testcase name="test00" classname="platform:/resource/Test/models/from_itemis/StreetCrossingSystemSimplifiedTest.sctunit#StreetCrossingSystemSimplifiedTest.test00" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_itemis/StreetCrossingSystemSimplifiedTest.sctunit#StreetCrossingSystemSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_itemis/StreetCrossingSystemSimplifiedTest.sctunit#StreetCrossingSystemSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_itemis/StreetCrossingSystemSimplifiedTest.sctunit#StreetCrossingSystemSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_itemis/StreetCrossingSystemSimplifiedTest.sctunit#StreetCrossingSystemSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/StreetCrossingSystemSimplifiedTest.sctunit#StreetCrossingSystemSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/StreetCrossingSystemSimplifiedTest.sctunit#StreetCrossingSystemSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/StreetCrossingSystemSimplifiedTest.sctunit#StreetCrossingSystemSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/StreetCrossingSystemSimplifiedTest.sctunit#StreetCrossingSystemSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_itemis/StreetCrossingSystemSimplifiedTest.sctunit#StreetCrossingSystemSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_itemis/StreetCrossingSystemSimplifiedTest.sctunit#StreetCrossingSystemSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_itemis/StreetCrossingSystemSimplifiedTest.sctunit#StreetCrossingSystemSimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_itemis/StreetCrossingSystemSimplifiedTest.sctunit#StreetCrossingSystemSimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_itemis/StreetCrossingSystemSimplifiedTest.sctunit#StreetCrossingSystemSimplifiedTest.test17" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="SuperStepsDisabledSimplifiedTest" time="">
+    <testcase name="test01" classname="platform:/resource/Test/models/from_itemis/SuperStepsDisabledSimplifiedTest.sctunit#SuperStepsDisabledSimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_itemis/SuperStepsDisabledSimplifiedTest.sctunit#SuperStepsDisabledSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_itemis/SuperStepsDisabledSimplifiedTest.sctunit#SuperStepsDisabledSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_itemis/SuperStepsDisabledSimplifiedTest.sctunit#SuperStepsDisabledSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_itemis/SuperStepsDisabledSimplifiedTest.sctunit#SuperStepsDisabledSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/SuperStepsDisabledSimplifiedTest.sctunit#SuperStepsDisabledSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/SuperStepsDisabledSimplifiedTest.sctunit#SuperStepsDisabledSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/SuperStepsDisabledSimplifiedTest.sctunit#SuperStepsDisabledSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_itemis/SuperStepsDisabledSimplifiedTest.sctunit#SuperStepsDisabledSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_itemis/SuperStepsDisabledSimplifiedTest.sctunit#SuperStepsDisabledSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_itemis/SuperStepsDisabledSimplifiedTest.sctunit#SuperStepsDisabledSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/SuperStepsDisabledSimplifiedTest.sctunit#SuperStepsDisabledSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_itemis/SuperStepsDisabledSimplifiedTest.sctunit#SuperStepsDisabledSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_itemis/SuperStepsDisabledSimplifiedTest.sctunit#SuperStepsDisabledSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_itemis/SuperStepsDisabledSimplifiedTest.sctunit#SuperStepsDisabledSimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_itemis/SuperStepsDisabledSimplifiedTest.sctunit#SuperStepsDisabledSimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_itemis/SuperStepsDisabledSimplifiedTest.sctunit#SuperStepsDisabledSimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_itemis/SuperStepsDisabledSimplifiedTest.sctunit#SuperStepsDisabledSimplifiedTest.test18" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="SuperStepsEnabledSimplifiedTest" time="">
+    <testcase name="test01" classname="platform:/resource/Test/models/from_itemis/SuperStepsEnabledSimplifiedTest.sctunit#SuperStepsEnabledSimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_itemis/SuperStepsEnabledSimplifiedTest.sctunit#SuperStepsEnabledSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_itemis/SuperStepsEnabledSimplifiedTest.sctunit#SuperStepsEnabledSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_itemis/SuperStepsEnabledSimplifiedTest.sctunit#SuperStepsEnabledSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_itemis/SuperStepsEnabledSimplifiedTest.sctunit#SuperStepsEnabledSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/SuperStepsEnabledSimplifiedTest.sctunit#SuperStepsEnabledSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/SuperStepsEnabledSimplifiedTest.sctunit#SuperStepsEnabledSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/SuperStepsEnabledSimplifiedTest.sctunit#SuperStepsEnabledSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_itemis/SuperStepsEnabledSimplifiedTest.sctunit#SuperStepsEnabledSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_itemis/SuperStepsEnabledSimplifiedTest.sctunit#SuperStepsEnabledSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_itemis/SuperStepsEnabledSimplifiedTest.sctunit#SuperStepsEnabledSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/SuperStepsEnabledSimplifiedTest.sctunit#SuperStepsEnabledSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_itemis/SuperStepsEnabledSimplifiedTest.sctunit#SuperStepsEnabledSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_itemis/SuperStepsEnabledSimplifiedTest.sctunit#SuperStepsEnabledSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_itemis/SuperStepsEnabledSimplifiedTest.sctunit#SuperStepsEnabledSimplifiedTest.test15" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="ASimplifiedTest" time="">
+    <testcase name="test04" classname="platform:/resource/Test/models/from_other_repos/ASimplifiedTest.sctunit#ASimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_other_repos/ASimplifiedTest.sctunit#ASimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_other_repos/ASimplifiedTest.sctunit#ASimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_other_repos/ASimplifiedTest.sctunit#ASimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/ASimplifiedTest.sctunit#ASimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_other_repos/ASimplifiedTest.sctunit#ASimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/ASimplifiedTest.sctunit#ASimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/ASimplifiedTest.sctunit#ASimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_other_repos/ASimplifiedTest.sctunit#ASimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_other_repos/ASimplifiedTest.sctunit#ASimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_other_repos/ASimplifiedTest.sctunit#ASimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_other_repos/ASimplifiedTest.sctunit#ASimplifiedTest.test17" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="alarm2SimplifiedTest" time="">
+    <testcase name="test03" classname="platform:/resource/Test/models/from_other_repos/Alarm2SimplifiedTest.sctunit#alarm2SimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_other_repos/Alarm2SimplifiedTest.sctunit#alarm2SimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_other_repos/Alarm2SimplifiedTest.sctunit#alarm2SimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_other_repos/Alarm2SimplifiedTest.sctunit#alarm2SimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_other_repos/Alarm2SimplifiedTest.sctunit#alarm2SimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/Alarm2SimplifiedTest.sctunit#alarm2SimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_other_repos/Alarm2SimplifiedTest.sctunit#alarm2SimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/Alarm2SimplifiedTest.sctunit#alarm2SimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/Alarm2SimplifiedTest.sctunit#alarm2SimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_other_repos/Alarm2SimplifiedTest.sctunit#alarm2SimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_other_repos/Alarm2SimplifiedTest.sctunit#alarm2SimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_other_repos/Alarm2SimplifiedTest.sctunit#alarm2SimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_other_repos/Alarm2SimplifiedTest.sctunit#alarm2SimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_other_repos/Alarm2SimplifiedTest.sctunit#alarm2SimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_other_repos/Alarm2SimplifiedTest.sctunit#alarm2SimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_other_repos/Alarm2SimplifiedTest.sctunit#alarm2SimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_other_repos/Alarm2SimplifiedTest.sctunit#alarm2SimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_other_repos/Alarm2SimplifiedTest.sctunit#alarm2SimplifiedTest.test20" time="">
+    </testcase>
+    <testcase name="test21" classname="platform:/resource/Test/models/from_other_repos/Alarm2SimplifiedTest.sctunit#alarm2SimplifiedTest.test21" time="">
+    </testcase>
+    <testcase name="test22" classname="platform:/resource/Test/models/from_other_repos/Alarm2SimplifiedTest.sctunit#alarm2SimplifiedTest.test22" time="">
+    </testcase>
+    <testcase name="test23" classname="platform:/resource/Test/models/from_other_repos/Alarm2SimplifiedTest.sctunit#alarm2SimplifiedTest.test23" time="">
+    </testcase>
+    <testcase name="test24" classname="platform:/resource/Test/models/from_other_repos/Alarm2SimplifiedTest.sctunit#alarm2SimplifiedTest.test24" time="">
+    </testcase>
+    <testcase name="test29" classname="platform:/resource/Test/models/from_other_repos/Alarm2SimplifiedTest.sctunit#alarm2SimplifiedTest.test29" time="">
+    </testcase>
+    <testcase name="test32" classname="platform:/resource/Test/models/from_other_repos/Alarm2SimplifiedTest.sctunit#alarm2SimplifiedTest.test32" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="bareMetalPollingSimplifiedTest" time="">
+    <testcase name="test00" classname="platform:/resource/Test/models/from_other_repos/BareMetalPollingSimplifiedTest.sctunit#bareMetalPollingSimplifiedTest.test00" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_other_repos/BareMetalPollingSimplifiedTest.sctunit#bareMetalPollingSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_other_repos/BareMetalPollingSimplifiedTest.sctunit#bareMetalPollingSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_other_repos/BareMetalPollingSimplifiedTest.sctunit#bareMetalPollingSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/BareMetalPollingSimplifiedTest.sctunit#bareMetalPollingSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_other_repos/BareMetalPollingSimplifiedTest.sctunit#bareMetalPollingSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/BareMetalPollingSimplifiedTest.sctunit#bareMetalPollingSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/BareMetalPollingSimplifiedTest.sctunit#bareMetalPollingSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_other_repos/BareMetalPollingSimplifiedTest.sctunit#bareMetalPollingSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_other_repos/BareMetalPollingSimplifiedTest.sctunit#bareMetalPollingSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_other_repos/BareMetalPollingSimplifiedTest.sctunit#bareMetalPollingSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_other_repos/BareMetalPollingSimplifiedTest.sctunit#bareMetalPollingSimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_other_repos/BareMetalPollingSimplifiedTest.sctunit#bareMetalPollingSimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_other_repos/BareMetalPollingSimplifiedTest.sctunit#bareMetalPollingSimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_other_repos/BareMetalPollingSimplifiedTest.sctunit#bareMetalPollingSimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_other_repos/BareMetalPollingSimplifiedTest.sctunit#bareMetalPollingSimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test21" classname="platform:/resource/Test/models/from_other_repos/BareMetalPollingSimplifiedTest.sctunit#bareMetalPollingSimplifiedTest.test21" time="">
+    </testcase>
+    <testcase name="test25" classname="platform:/resource/Test/models/from_other_repos/BareMetalPollingSimplifiedTest.sctunit#bareMetalPollingSimplifiedTest.test25" time="">
+    </testcase>
+    <testcase name="test26" classname="platform:/resource/Test/models/from_other_repos/BareMetalPollingSimplifiedTest.sctunit#bareMetalPollingSimplifiedTest.test26" time="">
+    </testcase>
+    <testcase name="test27" classname="platform:/resource/Test/models/from_other_repos/BareMetalPollingSimplifiedTest.sctunit#bareMetalPollingSimplifiedTest.test27" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="baseSimplifiedTest" time="">
+    <testcase name="test00" classname="platform:/resource/Test/models/from_other_repos/BaseSimplifiedTest.sctunit#baseSimplifiedTest.test00" time="">
+    </testcase>
+    <testcase name="test01" classname="platform:/resource/Test/models/from_other_repos/BaseSimplifiedTest.sctunit#baseSimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_other_repos/BaseSimplifiedTest.sctunit#baseSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_other_repos/BaseSimplifiedTest.sctunit#baseSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_other_repos/BaseSimplifiedTest.sctunit#baseSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/BaseSimplifiedTest.sctunit#baseSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/BaseSimplifiedTest.sctunit#baseSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/BaseSimplifiedTest.sctunit#baseSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_other_repos/BaseSimplifiedTest.sctunit#baseSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_other_repos/BaseSimplifiedTest.sctunit#baseSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_other_repos/BaseSimplifiedTest.sctunit#baseSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_other_repos/BaseSimplifiedTest.sctunit#baseSimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_other_repos/BaseSimplifiedTest.sctunit#baseSimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_other_repos/BaseSimplifiedTest.sctunit#baseSimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_other_repos/BaseSimplifiedTest.sctunit#baseSimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_other_repos/BaseSimplifiedTest.sctunit#baseSimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test23" classname="platform:/resource/Test/models/from_other_repos/BaseSimplifiedTest.sctunit#baseSimplifiedTest.test23" time="">
+    </testcase>
+    <testcase name="test25" classname="platform:/resource/Test/models/from_other_repos/BaseSimplifiedTest.sctunit#baseSimplifiedTest.test25" time="">
+    </testcase>
+    <testcase name="test26" classname="platform:/resource/Test/models/from_other_repos/BaseSimplifiedTest.sctunit#baseSimplifiedTest.test26" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="CSimplifiedTest" time="">
+    <testcase name="test04" classname="platform:/resource/Test/models/from_other_repos/CSimplifiedTest.sctunit#CSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_other_repos/CSimplifiedTest.sctunit#CSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_other_repos/CSimplifiedTest.sctunit#CSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_other_repos/CSimplifiedTest.sctunit#CSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/CSimplifiedTest.sctunit#CSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_other_repos/CSimplifiedTest.sctunit#CSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/CSimplifiedTest.sctunit#CSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/CSimplifiedTest.sctunit#CSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_other_repos/CSimplifiedTest.sctunit#CSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_other_repos/CSimplifiedTest.sctunit#CSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_other_repos/CSimplifiedTest.sctunit#CSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_other_repos/CSimplifiedTest.sctunit#CSimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_other_repos/CSimplifiedTest.sctunit#CSimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_other_repos/CSimplifiedTest.sctunit#CSimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_other_repos/CSimplifiedTest.sctunit#CSimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_other_repos/CSimplifiedTest.sctunit#CSimplifiedTest.test20" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="C2SimplifiedTest" time="">
+    <testcase name="test04" classname="platform:/resource/Test/models/from_other_repos/C2SimplifiedTest.sctunit#C2SimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_other_repos/C2SimplifiedTest.sctunit#C2SimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_other_repos/C2SimplifiedTest.sctunit#C2SimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_other_repos/C2SimplifiedTest.sctunit#C2SimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/C2SimplifiedTest.sctunit#C2SimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_other_repos/C2SimplifiedTest.sctunit#C2SimplifiedTest.test09" time="">
+      <failure>Assertion failed: "assert active (C2.main_region.One)" (Line 48)
+      	Expected: One, actual: [Temp]
+      </failure>
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/C2SimplifiedTest.sctunit#C2SimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/C2SimplifiedTest.sctunit#C2SimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_other_repos/C2SimplifiedTest.sctunit#C2SimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_other_repos/C2SimplifiedTest.sctunit#C2SimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_other_repos/C2SimplifiedTest.sctunit#C2SimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_other_repos/C2SimplifiedTest.sctunit#C2SimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_other_repos/C2SimplifiedTest.sctunit#C2SimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_other_repos/C2SimplifiedTest.sctunit#C2SimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_other_repos/C2SimplifiedTest.sctunit#C2SimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_other_repos/C2SimplifiedTest.sctunit#C2SimplifiedTest.test20" time="">
+    </testcase>
+    <testcase name="test21" classname="platform:/resource/Test/models/from_other_repos/C2SimplifiedTest.sctunit#C2SimplifiedTest.test21" time="">
+    </testcase>
+    <testcase name="test22" classname="platform:/resource/Test/models/from_other_repos/C2SimplifiedTest.sctunit#C2SimplifiedTest.test22" time="">
+    </testcase>
+    <testcase name="test23" classname="platform:/resource/Test/models/from_other_repos/C2SimplifiedTest.sctunit#C2SimplifiedTest.test23" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="coffeeMachineSimplifiedTest" time="">
+    <testcase name="test00" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test00" time="">
+    </testcase>
+    <testcase name="test01" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test20" time="">
+    </testcase>
+    <testcase name="test21" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test21" time="">
+    </testcase>
+    <testcase name="test22" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test22" time="">
+    </testcase>
+    <testcase name="test23" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test23" time="">
+    </testcase>
+    <testcase name="test24" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test24" time="">
+    </testcase>
+    <testcase name="test28" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test28" time="">
+    </testcase>
+    <testcase name="test30" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test30" time="">
+    </testcase>
+    <testcase name="test35" classname="platform:/resource/Test/models/from_other_repos/CoffeeMachineSimplifiedTest.sctunit#coffeeMachineSimplifiedTest.test35" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="ConfigureSimplifiedTest" time="">
+    <testcase name="test00" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test00" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test15" time="">
+      <failure>Assertion failed: "assert active (Configure.main_region.Failed)" (Line 82)
+      	Expected: Failed, actual: [Wait for Connect]
+      </failure>
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test16" time="">
+      <failure>Assertion failed: "assert active (Configure.main_region.Configure)" (Line 90)
+      	Expected: Configure, actual: [Wait for Boot]
+      </failure>
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test20" time="">
+    </testcase>
+    <testcase name="test21" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test21" time="">
+    </testcase>
+    <testcase name="test22" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test22" time="">
+    </testcase>
+    <testcase name="test23" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test23" time="">
+    </testcase>
+    <testcase name="test25" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test25" time="">
+    </testcase>
+    <testcase name="test26" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test26" time="">
+    </testcase>
+    <testcase name="test27" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test27" time="">
+    </testcase>
+    <testcase name="test30" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test30" time="">
+    </testcase>
+    <testcase name="test31" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test31" time="">
+    </testcase>
+    <testcase name="test32" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test32" time="">
+    </testcase>
+    <testcase name="test33" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test33" time="">
+    </testcase>
+    <testcase name="test34" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test34" time="">
+    </testcase>
+    <testcase name="test35" classname="platform:/resource/Test/models/from_other_repos/ConfigureSimplifiedTest.sctunit#ConfigureSimplifiedTest.test35" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="heatingSysSimplifiedTest" time="">
+    <testcase name="test00" classname="platform:/resource/Test/models/from_other_repos/HeatingSysSimplifiedTest.sctunit#heatingSysSimplifiedTest.test00" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_other_repos/HeatingSysSimplifiedTest.sctunit#heatingSysSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_other_repos/HeatingSysSimplifiedTest.sctunit#heatingSysSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_other_repos/HeatingSysSimplifiedTest.sctunit#heatingSysSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/HeatingSysSimplifiedTest.sctunit#heatingSysSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_other_repos/HeatingSysSimplifiedTest.sctunit#heatingSysSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/HeatingSysSimplifiedTest.sctunit#heatingSysSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/HeatingSysSimplifiedTest.sctunit#heatingSysSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_other_repos/HeatingSysSimplifiedTest.sctunit#heatingSysSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_other_repos/HeatingSysSimplifiedTest.sctunit#heatingSysSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_other_repos/HeatingSysSimplifiedTest.sctunit#heatingSysSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_other_repos/HeatingSysSimplifiedTest.sctunit#heatingSysSimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_other_repos/HeatingSysSimplifiedTest.sctunit#heatingSysSimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_other_repos/HeatingSysSimplifiedTest.sctunit#heatingSysSimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_other_repos/HeatingSysSimplifiedTest.sctunit#heatingSysSimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_other_repos/HeatingSysSimplifiedTest.sctunit#heatingSysSimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_other_repos/HeatingSysSimplifiedTest.sctunit#heatingSysSimplifiedTest.test20" time="">
+    </testcase>
+    <testcase name="test21" classname="platform:/resource/Test/models/from_other_repos/HeatingSysSimplifiedTest.sctunit#heatingSysSimplifiedTest.test21" time="">
+    </testcase>
+    <testcase name="test24" classname="platform:/resource/Test/models/from_other_repos/HeatingSysSimplifiedTest.sctunit#heatingSysSimplifiedTest.test24" time="">
+    </testcase>
+    <testcase name="test28" classname="platform:/resource/Test/models/from_other_repos/HeatingSysSimplifiedTest.sctunit#heatingSysSimplifiedTest.test28" time="">
+    </testcase>
+    <testcase name="test30" classname="platform:/resource/Test/models/from_other_repos/HeatingSysSimplifiedTest.sctunit#heatingSysSimplifiedTest.test30" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="LampadaSimplifiedTest" time="">
+    <testcase name="test01" classname="platform:/resource/Test/models/from_other_repos/LampadaSimplifiedTest.sctunit#LampadaSimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_other_repos/LampadaSimplifiedTest.sctunit#LampadaSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_other_repos/LampadaSimplifiedTest.sctunit#LampadaSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_other_repos/LampadaSimplifiedTest.sctunit#LampadaSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_other_repos/LampadaSimplifiedTest.sctunit#LampadaSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_other_repos/LampadaSimplifiedTest.sctunit#LampadaSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_other_repos/LampadaSimplifiedTest.sctunit#LampadaSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/LampadaSimplifiedTest.sctunit#LampadaSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_other_repos/LampadaSimplifiedTest.sctunit#LampadaSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/LampadaSimplifiedTest.sctunit#LampadaSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/LampadaSimplifiedTest.sctunit#LampadaSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_other_repos/LampadaSimplifiedTest.sctunit#LampadaSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_other_repos/LampadaSimplifiedTest.sctunit#LampadaSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_other_repos/LampadaSimplifiedTest.sctunit#LampadaSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_other_repos/LampadaSimplifiedTest.sctunit#LampadaSimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_other_repos/LampadaSimplifiedTest.sctunit#LampadaSimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_other_repos/LampadaSimplifiedTest.sctunit#LampadaSimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_other_repos/LampadaSimplifiedTest.sctunit#LampadaSimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_other_repos/LampadaSimplifiedTest.sctunit#LampadaSimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_other_repos/LampadaSimplifiedTest.sctunit#LampadaSimplifiedTest.test20" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="LineFollowerSimplifiedTest" time="">
+    <testcase name="test03" classname="platform:/resource/Test/models/from_other_repos/LineFollowerSimplifiedTest.sctunit#LineFollowerSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_other_repos/LineFollowerSimplifiedTest.sctunit#LineFollowerSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_other_repos/LineFollowerSimplifiedTest.sctunit#LineFollowerSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_other_repos/LineFollowerSimplifiedTest.sctunit#LineFollowerSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_other_repos/LineFollowerSimplifiedTest.sctunit#LineFollowerSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/LineFollowerSimplifiedTest.sctunit#LineFollowerSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_other_repos/LineFollowerSimplifiedTest.sctunit#LineFollowerSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/LineFollowerSimplifiedTest.sctunit#LineFollowerSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/LineFollowerSimplifiedTest.sctunit#LineFollowerSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_other_repos/LineFollowerSimplifiedTest.sctunit#LineFollowerSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_other_repos/LineFollowerSimplifiedTest.sctunit#LineFollowerSimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_other_repos/LineFollowerSimplifiedTest.sctunit#LineFollowerSimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_other_repos/LineFollowerSimplifiedTest.sctunit#LineFollowerSimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_other_repos/LineFollowerSimplifiedTest.sctunit#LineFollowerSimplifiedTest.test18" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="OperatingModeSimplifiedTest" time="">
+    <testcase name="test00" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test00" time="">
+    </testcase>
+    <testcase name="test01" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test20" time="">
+    </testcase>
+    <testcase name="test21" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test21" time="">
+    </testcase>
+    <testcase name="test22" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test22" time="">
+    </testcase>
+    <testcase name="test23" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test23" time="">
+    </testcase>
+    <testcase name="test26" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test26" time="">
+    </testcase>
+    <testcase name="test27" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test27" time="">
+    </testcase>
+    <testcase name="test28" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test28" time="">
+    </testcase>
+    <testcase name="test36" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test36" time="">
+    </testcase>
+    <testcase name="test38" classname="platform:/resource/Test/models/from_other_repos/OperatingModeSimplifiedTest.sctunit#OperatingModeSimplifiedTest.test38" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="Statechart3SimplifiedTest" time="">
+    <testcase name="test03" classname="platform:/resource/Test/models/from_other_repos/Statechart3SimplifiedTest.sctunit#Statechart3SimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_other_repos/Statechart3SimplifiedTest.sctunit#Statechart3SimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_other_repos/Statechart3SimplifiedTest.sctunit#Statechart3SimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_other_repos/Statechart3SimplifiedTest.sctunit#Statechart3SimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_other_repos/Statechart3SimplifiedTest.sctunit#Statechart3SimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/Statechart3SimplifiedTest.sctunit#Statechart3SimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_other_repos/Statechart3SimplifiedTest.sctunit#Statechart3SimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/Statechart3SimplifiedTest.sctunit#Statechart3SimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/Statechart3SimplifiedTest.sctunit#Statechart3SimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_other_repos/Statechart3SimplifiedTest.sctunit#Statechart3SimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_other_repos/Statechart3SimplifiedTest.sctunit#Statechart3SimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_other_repos/Statechart3SimplifiedTest.sctunit#Statechart3SimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_other_repos/Statechart3SimplifiedTest.sctunit#Statechart3SimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_other_repos/Statechart3SimplifiedTest.sctunit#Statechart3SimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_other_repos/Statechart3SimplifiedTest.sctunit#Statechart3SimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_other_repos/Statechart3SimplifiedTest.sctunit#Statechart3SimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_other_repos/Statechart3SimplifiedTest.sctunit#Statechart3SimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_other_repos/Statechart3SimplifiedTest.sctunit#Statechart3SimplifiedTest.test20" time="">
+    </testcase>
+    <testcase name="test22" classname="platform:/resource/Test/models/from_other_repos/Statechart3SimplifiedTest.sctunit#Statechart3SimplifiedTest.test22" time="">
+    </testcase>
+    <testcase name="test24" classname="platform:/resource/Test/models/from_other_repos/Statechart3SimplifiedTest.sctunit#Statechart3SimplifiedTest.test24" time="">
+    </testcase>
+    <testcase name="test25" classname="platform:/resource/Test/models/from_other_repos/Statechart3SimplifiedTest.sctunit#Statechart3SimplifiedTest.test25" time="">
+    </testcase>
+    <testcase name="test26" classname="platform:/resource/Test/models/from_other_repos/Statechart3SimplifiedTest.sctunit#Statechart3SimplifiedTest.test26" time="">
+    </testcase>
+    <testcase name="test28" classname="platform:/resource/Test/models/from_other_repos/Statechart3SimplifiedTest.sctunit#Statechart3SimplifiedTest.test28" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="Statechart5SimplifiedTest" time="">
+    <testcase name="test00" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test00" time="">
+    </testcase>
+    <testcase name="test01" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test20" time="">
+    </testcase>
+    <testcase name="test21" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test21" time="">
+    </testcase>
+    <testcase name="test22" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test22" time="">
+    </testcase>
+    <testcase name="test23" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test23" time="">
+    </testcase>
+    <testcase name="test27" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test27" time="">
+    </testcase>
+    <testcase name="test28" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test28" time="">
+    </testcase>
+    <testcase name="test29" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test29" time="">
+    </testcase>
+    <testcase name="test30" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test30" time="">
+    </testcase>
+    <testcase name="test31" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test31" time="">
+    </testcase>
+    <testcase name="test32" classname="platform:/resource/Test/models/from_other_repos/Statechart5SimplifiedTest.sctunit#Statechart5SimplifiedTest.test32" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="Statechart6SimplifiedTest" time="">
+    <testcase name="test04" classname="platform:/resource/Test/models/from_other_repos/Statechart6SimplifiedTest.sctunit#Statechart6SimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_other_repos/Statechart6SimplifiedTest.sctunit#Statechart6SimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_other_repos/Statechart6SimplifiedTest.sctunit#Statechart6SimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_other_repos/Statechart6SimplifiedTest.sctunit#Statechart6SimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/Statechart6SimplifiedTest.sctunit#Statechart6SimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_other_repos/Statechart6SimplifiedTest.sctunit#Statechart6SimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/Statechart6SimplifiedTest.sctunit#Statechart6SimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/Statechart6SimplifiedTest.sctunit#Statechart6SimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_other_repos/Statechart6SimplifiedTest.sctunit#Statechart6SimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_other_repos/Statechart6SimplifiedTest.sctunit#Statechart6SimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_other_repos/Statechart6SimplifiedTest.sctunit#Statechart6SimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_other_repos/Statechart6SimplifiedTest.sctunit#Statechart6SimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_other_repos/Statechart6SimplifiedTest.sctunit#Statechart6SimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_other_repos/Statechart6SimplifiedTest.sctunit#Statechart6SimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_other_repos/Statechart6SimplifiedTest.sctunit#Statechart6SimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_other_repos/Statechart6SimplifiedTest.sctunit#Statechart6SimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_other_repos/Statechart6SimplifiedTest.sctunit#Statechart6SimplifiedTest.test20" time="">
+    </testcase>
+    <testcase name="test21" classname="platform:/resource/Test/models/from_other_repos/Statechart6SimplifiedTest.sctunit#Statechart6SimplifiedTest.test21" time="">
+    </testcase>
+    <testcase name="test23" classname="platform:/resource/Test/models/from_other_repos/Statechart6SimplifiedTest.sctunit#Statechart6SimplifiedTest.test23" time="">
+    </testcase>
+    <testcase name="test25" classname="platform:/resource/Test/models/from_other_repos/Statechart6SimplifiedTest.sctunit#Statechart6SimplifiedTest.test25" time="">
+    </testcase>
+    <testcase name="test26" classname="platform:/resource/Test/models/from_other_repos/Statechart6SimplifiedTest.sctunit#Statechart6SimplifiedTest.test26" time="">
+    </testcase>
+    <testcase name="test27" classname="platform:/resource/Test/models/from_other_repos/Statechart6SimplifiedTest.sctunit#Statechart6SimplifiedTest.test27" time="">
+    </testcase>
+    <testcase name="test28" classname="platform:/resource/Test/models/from_other_repos/Statechart6SimplifiedTest.sctunit#Statechart6SimplifiedTest.test28" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="Statechart7SimplifiedTest" time="">
+    <testcase name="test00" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test00" time="">
+    </testcase>
+    <testcase name="test01" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test20" time="">
+    </testcase>
+    <testcase name="test21" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test21" time="">
+    </testcase>
+    <testcase name="test22" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test22" time="">
+    </testcase>
+    <testcase name="test23" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test23" time="">
+    </testcase>
+    <testcase name="test24" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test24" time="">
+    </testcase>
+    <testcase name="test28" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test28" time="">
+    </testcase>
+    <testcase name="test30" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test30" time="">
+    </testcase>
+    <testcase name="test31" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test31" time="">
+    </testcase>
+    <testcase name="test32" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test32" time="">
+    </testcase>
+    <testcase name="test33" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test33" time="">
+    </testcase>
+    <testcase name="test34" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test34" time="">
+    </testcase>
+    <testcase name="test35" classname="platform:/resource/Test/models/from_other_repos/Statechart7SimplifiedTest.sctunit#Statechart7SimplifiedTest.test35" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="test_get_statechart_mappings31SimplifiedTest" time="">
+    <testcase name="test01" classname="platform:/resource/Test/models/from_other_repos/Test_get_statechart_mappings31SimplifiedTest.sctunit#test_get_statechart_mappings31SimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_other_repos/Test_get_statechart_mappings31SimplifiedTest.sctunit#test_get_statechart_mappings31SimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_other_repos/Test_get_statechart_mappings31SimplifiedTest.sctunit#test_get_statechart_mappings31SimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_other_repos/Test_get_statechart_mappings31SimplifiedTest.sctunit#test_get_statechart_mappings31SimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_other_repos/Test_get_statechart_mappings31SimplifiedTest.sctunit#test_get_statechart_mappings31SimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_other_repos/Test_get_statechart_mappings31SimplifiedTest.sctunit#test_get_statechart_mappings31SimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_other_repos/Test_get_statechart_mappings31SimplifiedTest.sctunit#test_get_statechart_mappings31SimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/Test_get_statechart_mappings31SimplifiedTest.sctunit#test_get_statechart_mappings31SimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_other_repos/Test_get_statechart_mappings31SimplifiedTest.sctunit#test_get_statechart_mappings31SimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/Test_get_statechart_mappings31SimplifiedTest.sctunit#test_get_statechart_mappings31SimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/Test_get_statechart_mappings31SimplifiedTest.sctunit#test_get_statechart_mappings31SimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_other_repos/Test_get_statechart_mappings31SimplifiedTest.sctunit#test_get_statechart_mappings31SimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_other_repos/Test_get_statechart_mappings31SimplifiedTest.sctunit#test_get_statechart_mappings31SimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_other_repos/Test_get_statechart_mappings31SimplifiedTest.sctunit#test_get_statechart_mappings31SimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_other_repos/Test_get_statechart_mappings31SimplifiedTest.sctunit#test_get_statechart_mappings31SimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_other_repos/Test_get_statechart_mappings31SimplifiedTest.sctunit#test_get_statechart_mappings31SimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_other_repos/Test_get_statechart_mappings31SimplifiedTest.sctunit#test_get_statechart_mappings31SimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_other_repos/Test_get_statechart_mappings31SimplifiedTest.sctunit#test_get_statechart_mappings31SimplifiedTest.test18" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="test_remove_duplicate_transitionsSimplifiedTest" time="">
+    <testcase name="test01" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitionsSimplifiedTest.sctunit#test_remove_duplicate_transitionsSimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitionsSimplifiedTest.sctunit#test_remove_duplicate_transitionsSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitionsSimplifiedTest.sctunit#test_remove_duplicate_transitionsSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitionsSimplifiedTest.sctunit#test_remove_duplicate_transitionsSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitionsSimplifiedTest.sctunit#test_remove_duplicate_transitionsSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitionsSimplifiedTest.sctunit#test_remove_duplicate_transitionsSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitionsSimplifiedTest.sctunit#test_remove_duplicate_transitionsSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitionsSimplifiedTest.sctunit#test_remove_duplicate_transitionsSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitionsSimplifiedTest.sctunit#test_remove_duplicate_transitionsSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitionsSimplifiedTest.sctunit#test_remove_duplicate_transitionsSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitionsSimplifiedTest.sctunit#test_remove_duplicate_transitionsSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitionsSimplifiedTest.sctunit#test_remove_duplicate_transitionsSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitionsSimplifiedTest.sctunit#test_remove_duplicate_transitionsSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitionsSimplifiedTest.sctunit#test_remove_duplicate_transitionsSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitionsSimplifiedTest.sctunit#test_remove_duplicate_transitionsSimplifiedTest.test15" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="test_remove_duplicate_transitions_expectedSimplifiedTest" time="">
+    <testcase name="test01" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitions_expectedSimplifiedTest.sctunit#test_remove_duplicate_transitions_expectedSimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitions_expectedSimplifiedTest.sctunit#test_remove_duplicate_transitions_expectedSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitions_expectedSimplifiedTest.sctunit#test_remove_duplicate_transitions_expectedSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitions_expectedSimplifiedTest.sctunit#test_remove_duplicate_transitions_expectedSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitions_expectedSimplifiedTest.sctunit#test_remove_duplicate_transitions_expectedSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitions_expectedSimplifiedTest.sctunit#test_remove_duplicate_transitions_expectedSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitions_expectedSimplifiedTest.sctunit#test_remove_duplicate_transitions_expectedSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitions_expectedSimplifiedTest.sctunit#test_remove_duplicate_transitions_expectedSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitions_expectedSimplifiedTest.sctunit#test_remove_duplicate_transitions_expectedSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitions_expectedSimplifiedTest.sctunit#test_remove_duplicate_transitions_expectedSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitions_expectedSimplifiedTest.sctunit#test_remove_duplicate_transitions_expectedSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitions_expectedSimplifiedTest.sctunit#test_remove_duplicate_transitions_expectedSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitions_expectedSimplifiedTest.sctunit#test_remove_duplicate_transitions_expectedSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitions_expectedSimplifiedTest.sctunit#test_remove_duplicate_transitions_expectedSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitions_expectedSimplifiedTest.sctunit#test_remove_duplicate_transitions_expectedSimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_other_repos/Test_remove_duplicate_transitions_expectedSimplifiedTest.sctunit#test_remove_duplicate_transitions_expectedSimplifiedTest.test16" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="test32SimplifiedTest" time="">
+    <testcase name="test02" classname="platform:/resource/Test/models/from_other_repos/Test32SimplifiedTest.sctunit#test32SimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_other_repos/Test32SimplifiedTest.sctunit#test32SimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_other_repos/Test32SimplifiedTest.sctunit#test32SimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_other_repos/Test32SimplifiedTest.sctunit#test32SimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_other_repos/Test32SimplifiedTest.sctunit#test32SimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_other_repos/Test32SimplifiedTest.sctunit#test32SimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/Test32SimplifiedTest.sctunit#test32SimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_other_repos/Test32SimplifiedTest.sctunit#test32SimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/Test32SimplifiedTest.sctunit#test32SimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/Test32SimplifiedTest.sctunit#test32SimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_other_repos/Test32SimplifiedTest.sctunit#test32SimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_other_repos/Test32SimplifiedTest.sctunit#test32SimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_other_repos/Test32SimplifiedTest.sctunit#test32SimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_other_repos/Test32SimplifiedTest.sctunit#test32SimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_other_repos/Test32SimplifiedTest.sctunit#test32SimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_other_repos/Test32SimplifiedTest.sctunit#test32SimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test21" classname="platform:/resource/Test/models/from_other_repos/Test32SimplifiedTest.sctunit#test32SimplifiedTest.test21" time="">
+    </testcase>
+    <testcase name="test22" classname="platform:/resource/Test/models/from_other_repos/Test32SimplifiedTest.sctunit#test32SimplifiedTest.test22" time="">
+    </testcase>
+    <testcase name="test23" classname="platform:/resource/Test/models/from_other_repos/Test32SimplifiedTest.sctunit#test32SimplifiedTest.test23" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="UpdateSimplifiedTest" time="">
+    <testcase name="test00" classname="platform:/resource/Test/models/from_other_repos/UpdateSimplifiedTest.sctunit#UpdateSimplifiedTest.test00" time="">
+    </testcase>
+    <testcase name="test01" classname="platform:/resource/Test/models/from_other_repos/UpdateSimplifiedTest.sctunit#UpdateSimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_other_repos/UpdateSimplifiedTest.sctunit#UpdateSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_other_repos/UpdateSimplifiedTest.sctunit#UpdateSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_other_repos/UpdateSimplifiedTest.sctunit#UpdateSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/UpdateSimplifiedTest.sctunit#UpdateSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_other_repos/UpdateSimplifiedTest.sctunit#UpdateSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/UpdateSimplifiedTest.sctunit#UpdateSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/UpdateSimplifiedTest.sctunit#UpdateSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_other_repos/UpdateSimplifiedTest.sctunit#UpdateSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_other_repos/UpdateSimplifiedTest.sctunit#UpdateSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_other_repos/UpdateSimplifiedTest.sctunit#UpdateSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_other_repos/UpdateSimplifiedTest.sctunit#UpdateSimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_other_repos/UpdateSimplifiedTest.sctunit#UpdateSimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_other_repos/UpdateSimplifiedTest.sctunit#UpdateSimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_other_repos/UpdateSimplifiedTest.sctunit#UpdateSimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_other_repos/UpdateSimplifiedTest.sctunit#UpdateSimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_other_repos/UpdateSimplifiedTest.sctunit#UpdateSimplifiedTest.test20" time="">
+    </testcase>
+    <testcase name="test22" classname="platform:/resource/Test/models/from_other_repos/UpdateSimplifiedTest.sctunit#UpdateSimplifiedTest.test22" time="">
+    </testcase>
+    <testcase name="test23" classname="platform:/resource/Test/models/from_other_repos/UpdateSimplifiedTest.sctunit#UpdateSimplifiedTest.test23" time="">
+    </testcase>
+    <testcase name="test28" classname="platform:/resource/Test/models/from_other_repos/UpdateSimplifiedTest.sctunit#UpdateSimplifiedTest.test28" time="">
+    </testcase>
+    <testcase name="test29" classname="platform:/resource/Test/models/from_other_repos/UpdateSimplifiedTest.sctunit#UpdateSimplifiedTest.test29" time="">
+    </testcase>
+    <testcase name="test31" classname="platform:/resource/Test/models/from_other_repos/UpdateSimplifiedTest.sctunit#UpdateSimplifiedTest.test31" time="">
+    </testcase>
+  </testsuite>
+</testsuite>

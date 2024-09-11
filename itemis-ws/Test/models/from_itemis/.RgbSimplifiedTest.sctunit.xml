@@ -1,0 +1,67 @@
+<testsuite name="rgbSimplifiedTest" time="">
+  <testcase name="test00" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test00" time="">
+  </testcase>
+  <testcase name="test02" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test02" time="">
+  </testcase>
+  <testcase name="test03" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test03" time="">
+  </testcase>
+  <testcase name="test04" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test04" time="">
+  </testcase>
+  <testcase name="test05" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test05" time="">
+  </testcase>
+  <testcase name="test06" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test06" time="">
+  </testcase>
+  <testcase name="test07" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test07" time="">
+  </testcase>
+  <testcase name="test08" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test08" time="">
+  </testcase>
+  <testcase name="test09" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test09" time="">
+    <failure>Assertion failed: "assert active (rgb.main_region._final_)" (Line 77)
+    	Expected: , actual: [idle]
+    </failure>
+  </testcase>
+  <testcase name="test10" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test10" time="">
+  </testcase>
+  <testcase name="test11" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test11" time="">
+  </testcase>
+  <testcase name="test12" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test12" time="">
+  </testcase>
+  <testcase name="test13" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test13" time="">
+  </testcase>
+  <testcase name="test14" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test14" time="">
+  </testcase>
+  <testcase name="test15" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test15" time="">
+  </testcase>
+  <testcase name="test16" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test16" time="">
+  </testcase>
+  <testcase name="test17" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test17" time="">
+  </testcase>
+  <testcase name="test18" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test18" time="">
+  </testcase>
+  <testcase name="test19" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test19" time="">
+  </testcase>
+  <testcase name="test20" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test20" time="">
+  </testcase>
+  <testcase name="test21" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test21" time="">
+  </testcase>
+  <testcase name="test22" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test22" time="">
+    <failure>Assertion failed: "assert is_final" (Line 168)
+    </failure>
+  </testcase>
+  <testcase name="test23" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test23" time="">
+  </testcase>
+  <testcase name="test24" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test24" time="">
+  </testcase>
+  <testcase name="test25" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test25" time="">
+  </testcase>
+  <testcase name="test28" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test28" time="">
+  </testcase>
+  <testcase name="test29" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test29" time="">
+  </testcase>
+  <testcase name="test30" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test30" time="">
+  </testcase>
+  <testcase name="test31" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test31" time="">
+  </testcase>
+  <testcase name="test32" classname="platform:/resource/Test/models/from_itemis/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test32" time="">
+  </testcase>
+</testsuite>

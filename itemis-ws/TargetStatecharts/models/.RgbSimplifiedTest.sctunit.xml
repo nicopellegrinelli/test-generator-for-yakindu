@@ -16,9 +16,6 @@
   <testcase name="test08" classname="platform:/resource/TargetStatecharts/models/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test08" time="">
   </testcase>
   <testcase name="test09" classname="platform:/resource/TargetStatecharts/models/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test09" time="">
-    <failure>Assertion failed: "assert active (rgb.main_region._final_)" (Line 77)
-    	Expected: , actual: [idle]
-    </failure>
   </testcase>
   <testcase name="test10" classname="platform:/resource/TargetStatecharts/models/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test10" time="">
   </testcase>
@@ -45,8 +42,6 @@
   <testcase name="test21" classname="platform:/resource/TargetStatecharts/models/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test21" time="">
   </testcase>
   <testcase name="test22" classname="platform:/resource/TargetStatecharts/models/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test22" time="">
-    <failure>Assertion failed: "assert is_final" (Line 168)
-    </failure>
   </testcase>
   <testcase name="test23" classname="platform:/resource/TargetStatecharts/models/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test23" time="">
   </testcase>
@@ -63,5 +58,7 @@
   <testcase name="test31" classname="platform:/resource/TargetStatecharts/models/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test31" time="">
   </testcase>
   <testcase name="test32" classname="platform:/resource/TargetStatecharts/models/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test32" time="">
+  </testcase>
+  <testcase name="test33" classname="platform:/resource/TargetStatecharts/models/RgbSimplifiedTest.sctunit#rgbSimplifiedTest.test33" time="">
   </testcase>
 </testsuite>

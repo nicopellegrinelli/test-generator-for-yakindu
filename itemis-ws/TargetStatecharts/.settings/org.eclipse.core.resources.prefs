@@ -1,7 +1,7 @@
 eclipse.preferences.version=1
-encoding//models/SimpleTrafficLight.ysc=UTF-8
+encoding//models/LabRecruits.ysc=UTF-8
 encoding//models/Statechart.ysc=UTF-8
-encoding//models/Statechart2.ysc=UTF-8
+encoding//models/TrafficLight.ysc=UTF-8
 encoding//models/sct/EasyChoice.ysc=UTF-8
 encoding//models/sct/EntryExit.ysc=UTF-8
 encoding//models/sct/Events.ysc=UTF-8
@@ -14,3 +14,4 @@ encoding//models/sct/sub-machines/Controller.ysc=UTF-8
 encoding//models/sct/sub-machines/Controller2.ysc=UTF-8
 encoding//models/sct/sub-machines/SimpleLight.ysc=UTF-8
 encoding/<project>=UTF-8
+encoding/Statechart.ysc=UTF-8

@@ -10,8 +10,8 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.xml.sax.SAXException;
 
-import ysc2sctunit.ysc.reading.IYscReader;
-import ysc2sctunit.ysc.reading.YscReader;
+import createst.ysc.reading.IYscReader;
+import createst.ysc.reading.YscReader;
 
 public class StateCounter {
 

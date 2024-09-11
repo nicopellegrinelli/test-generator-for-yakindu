@@ -52,7 +52,6 @@ from_itemis,__ReleaseProcess,3,1.0,1
 from_itemis,___TrafficLight,6,1.6666666666666667,2
 from_other_repos,A,1,1.0,1
 from_other_repos,alarm2,4,1.0,1
-from_other_repos,ArduinoHMI,19,2.3684210526315788,3
 from_other_repos,aufgage_3_pvr,14,1.0,1
 from_other_repos,B,2,1.5,2
 from_other_repos,bareMetalPolling,2,1.0,1

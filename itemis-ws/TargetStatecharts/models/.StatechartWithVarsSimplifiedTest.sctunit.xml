@@ -1,0 +1,38 @@
+<testsuite name="StatechartWithVarsSimplifiedTest" time="">
+  <testcase name="test01" classname="platform:/resource/TargetStatecharts/models/StatechartWithVarsSimplifiedTest.sctunit#StatechartWithVarsSimplifiedTest.test01" time="">
+  </testcase>
+  <testcase name="test02" classname="platform:/resource/TargetStatecharts/models/StatechartWithVarsSimplifiedTest.sctunit#StatechartWithVarsSimplifiedTest.test02" time="">
+  </testcase>
+  <testcase name="test03" classname="platform:/resource/TargetStatecharts/models/StatechartWithVarsSimplifiedTest.sctunit#StatechartWithVarsSimplifiedTest.test03" time="">
+  </testcase>
+  <testcase name="test04" classname="platform:/resource/TargetStatecharts/models/StatechartWithVarsSimplifiedTest.sctunit#StatechartWithVarsSimplifiedTest.test04" time="">
+  </testcase>
+  <testcase name="test05" classname="platform:/resource/TargetStatecharts/models/StatechartWithVarsSimplifiedTest.sctunit#StatechartWithVarsSimplifiedTest.test05" time="">
+  </testcase>
+  <testcase name="test06" classname="platform:/resource/TargetStatecharts/models/StatechartWithVarsSimplifiedTest.sctunit#StatechartWithVarsSimplifiedTest.test06" time="">
+  </testcase>
+  <testcase name="test07" classname="platform:/resource/TargetStatecharts/models/StatechartWithVarsSimplifiedTest.sctunit#StatechartWithVarsSimplifiedTest.test07" time="">
+  </testcase>
+  <testcase name="test08" classname="platform:/resource/TargetStatecharts/models/StatechartWithVarsSimplifiedTest.sctunit#StatechartWithVarsSimplifiedTest.test08" time="">
+  </testcase>
+  <testcase name="test09" classname="platform:/resource/TargetStatecharts/models/StatechartWithVarsSimplifiedTest.sctunit#StatechartWithVarsSimplifiedTest.test09" time="">
+  </testcase>
+  <testcase name="test10" classname="platform:/resource/TargetStatecharts/models/StatechartWithVarsSimplifiedTest.sctunit#StatechartWithVarsSimplifiedTest.test10" time="">
+  </testcase>
+  <testcase name="test11" classname="platform:/resource/TargetStatecharts/models/StatechartWithVarsSimplifiedTest.sctunit#StatechartWithVarsSimplifiedTest.test11" time="">
+  </testcase>
+  <testcase name="test12" classname="platform:/resource/TargetStatecharts/models/StatechartWithVarsSimplifiedTest.sctunit#StatechartWithVarsSimplifiedTest.test12" time="">
+  </testcase>
+  <testcase name="test13" classname="platform:/resource/TargetStatecharts/models/StatechartWithVarsSimplifiedTest.sctunit#StatechartWithVarsSimplifiedTest.test13" time="">
+  </testcase>
+  <testcase name="test14" classname="platform:/resource/TargetStatecharts/models/StatechartWithVarsSimplifiedTest.sctunit#StatechartWithVarsSimplifiedTest.test14" time="">
+  </testcase>
+  <testcase name="test15" classname="platform:/resource/TargetStatecharts/models/StatechartWithVarsSimplifiedTest.sctunit#StatechartWithVarsSimplifiedTest.test15" time="">
+  </testcase>
+  <testcase name="test16" classname="platform:/resource/TargetStatecharts/models/StatechartWithVarsSimplifiedTest.sctunit#StatechartWithVarsSimplifiedTest.test16" time="">
+  </testcase>
+  <testcase name="test17" classname="platform:/resource/TargetStatecharts/models/StatechartWithVarsSimplifiedTest.sctunit#StatechartWithVarsSimplifiedTest.test17" time="">
+  </testcase>
+  <testcase name="test18" classname="platform:/resource/TargetStatecharts/models/StatechartWithVarsSimplifiedTest.sctunit#StatechartWithVarsSimplifiedTest.test18" time="">
+  </testcase>
+</testsuite>

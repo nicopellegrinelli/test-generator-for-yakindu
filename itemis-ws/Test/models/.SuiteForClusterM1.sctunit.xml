@@ -1,0 +1,442 @@
+<testsuite name="SuiteForClusterM1" time="">
+  <testsuite name="SmartHubSystemSimplifiedTest" time="">
+    <testcase name="test00" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test00" time="">
+    </testcase>
+    <testcase name="test01" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test20" time="">
+    </testcase>
+    <testcase name="test21" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test21" time="">
+    </testcase>
+    <testcase name="test22" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test22" time="">
+    </testcase>
+    <testcase name="test23" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test23" time="">
+    </testcase>
+    <testcase name="test24" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test24" time="">
+    </testcase>
+    <testcase name="test25" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test25" time="">
+    </testcase>
+    <testcase name="test26" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test26" time="">
+    </testcase>
+    <testcase name="test27" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test27" time="">
+    </testcase>
+    <testcase name="test28" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test28" time="">
+    </testcase>
+    <testcase name="test29" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test29" time="">
+    </testcase>
+    <testcase name="test36" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test36" time="">
+    </testcase>
+    <testcase name="test38" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test38" time="">
+    </testcase>
+    <testcase name="test39" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test39" time="">
+    </testcase>
+    <testcase name="test44" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test44" time="">
+    </testcase>
+    <testcase name="test47" classname="platform:/resource/Test/models/from_stl4iot/SmartHubSystemSimplifiedTest.sctunit#SmartHubSystemSimplifiedTest.test47" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="musicPlayerSimplifiedTest" time="">
+    <testcase name="test00" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test00" time="">
+    </testcase>
+    <testcase name="test01" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test20" time="">
+    </testcase>
+    <testcase name="test21" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test21" time="">
+    </testcase>
+    <testcase name="test22" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test22" time="">
+    </testcase>
+    <testcase name="test23" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test23" time="">
+    </testcase>
+    <testcase name="test24" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test24" time="">
+    </testcase>
+    <testcase name="test25" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test25" time="">
+    </testcase>
+    <testcase name="test26" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test26" time="">
+    </testcase>
+    <testcase name="test27" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test27" time="">
+    </testcase>
+    <testcase name="test28" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test28" time="">
+    </testcase>
+    <testcase name="test29" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test29" time="">
+    </testcase>
+    <testcase name="test30" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test30" time="">
+    </testcase>
+    <testcase name="test31" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test31" time="">
+    </testcase>
+    <testcase name="test32" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test32" time="">
+    </testcase>
+    <testcase name="test33" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test33" time="">
+    </testcase>
+    <testcase name="test34" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test34" time="">
+    </testcase>
+    <testcase name="test35" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test35" time="">
+    </testcase>
+    <testcase name="test36" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test36" time="">
+    </testcase>
+    <testcase name="test37" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test37" time="">
+    </testcase>
+    <testcase name="test38" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test38" time="">
+    </testcase>
+    <testcase name="test39" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test39" time="">
+    </testcase>
+    <testcase name="test40" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test40" time="">
+    </testcase>
+    <testcase name="test41" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test41" time="">
+    </testcase>
+    <testcase name="test42" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test42" time="">
+    </testcase>
+    <testcase name="test43" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test43" time="">
+    </testcase>
+    <testcase name="test44" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test44" time="">
+    </testcase>
+    <testcase name="test45" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test45" time="">
+    </testcase>
+    <testcase name="test46" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test46" time="">
+    </testcase>
+    <testcase name="test47" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test47" time="">
+    </testcase>
+    <testcase name="test48" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test48" time="">
+    </testcase>
+    <testcase name="test49" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test49" time="">
+    </testcase>
+    <testcase name="test50" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test50" time="">
+    </testcase>
+    <testcase name="test51" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test51" time="">
+    </testcase>
+    <testcase name="test52" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test52" time="">
+    </testcase>
+    <testcase name="test53" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test53" time="">
+    </testcase>
+    <testcase name="test54" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test54" time="">
+    </testcase>
+    <testcase name="test55" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test55" time="">
+    </testcase>
+    <testcase name="test56" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test56" time="">
+    </testcase>
+    <testcase name="test57" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test57" time="">
+    </testcase>
+    <testcase name="test58" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test58" time="">
+    </testcase>
+    <testcase name="test59" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test59" time="">
+    </testcase>
+    <testcase name="test60" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test60" time="">
+    </testcase>
+    <testcase name="test61" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test61" time="">
+    </testcase>
+    <testcase name="test62" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test62" time="">
+    </testcase>
+    <testcase name="test63" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test63" time="">
+    </testcase>
+    <testcase name="test64" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test64" time="">
+    </testcase>
+    <testcase name="test65" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test65" time="">
+    </testcase>
+    <testcase name="test66" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test66" time="">
+    </testcase>
+    <testcase name="test67" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test67" time="">
+    </testcase>
+    <testcase name="test71" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test71" time="">
+    </testcase>
+    <testcase name="test74" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test74" time="">
+    </testcase>
+    <testcase name="test75" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test75" time="">
+    </testcase>
+    <testcase name="test76" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test76" time="">
+    </testcase>
+    <testcase name="test78" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test78" time="">
+    </testcase>
+    <testcase name="test79" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test79" time="">
+    </testcase>
+    <testcase name="test80" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test80" time="">
+    </testcase>
+    <testcase name="test81" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test81" time="">
+    </testcase>
+    <testcase name="test82" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test82" time="">
+    </testcase>
+    <testcase name="test84" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test84" time="">
+    </testcase>
+    <testcase name="test85" classname="platform:/resource/Test/models/from_other_repos/MusicPlayerSimplifiedTest.sctunit#musicPlayerSimplifiedTest.test85" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="SignalControllerSimplifiedTest" time="">
+    <testcase name="test00" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test00" time="">
+    </testcase>
+    <testcase name="test01" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test20" time="">
+    </testcase>
+    <testcase name="test21" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test21" time="">
+    </testcase>
+    <testcase name="test22" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test22" time="">
+    </testcase>
+    <testcase name="test23" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test23" time="">
+    </testcase>
+    <testcase name="test24" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test24" time="">
+    </testcase>
+    <testcase name="test25" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test25" time="">
+    </testcase>
+    <testcase name="test26" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test26" time="">
+    </testcase>
+    <testcase name="test27" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test27" time="">
+    </testcase>
+    <testcase name="test28" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test28" time="">
+    </testcase>
+    <testcase name="test29" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test29" time="">
+    </testcase>
+    <testcase name="test30" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test30" time="">
+    </testcase>
+    <testcase name="test31" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test31" time="">
+    </testcase>
+    <testcase name="test32" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test32" time="">
+    </testcase>
+    <testcase name="test34" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test34" time="">
+    </testcase>
+    <testcase name="test35" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test35" time="">
+    </testcase>
+    <testcase name="test36" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test36" time="">
+    </testcase>
+    <testcase name="test40" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test40" time="">
+    </testcase>
+    <testcase name="test50" classname="platform:/resource/Test/models/from_other_repos/SignalControllerSimplifiedTest.sctunit#SignalControllerSimplifiedTest.test50" time="">
+    </testcase>
+  </testsuite>
+  <testsuite name="Statechart2SimplifiedTest" time="">
+    <testcase name="test00" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test00" time="">
+    </testcase>
+    <testcase name="test01" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test01" time="">
+    </testcase>
+    <testcase name="test02" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test02" time="">
+    </testcase>
+    <testcase name="test03" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test03" time="">
+    </testcase>
+    <testcase name="test04" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test04" time="">
+    </testcase>
+    <testcase name="test05" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test05" time="">
+    </testcase>
+    <testcase name="test06" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test06" time="">
+    </testcase>
+    <testcase name="test07" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test07" time="">
+    </testcase>
+    <testcase name="test08" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test08" time="">
+    </testcase>
+    <testcase name="test09" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test09" time="">
+    </testcase>
+    <testcase name="test10" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test10" time="">
+    </testcase>
+    <testcase name="test11" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test11" time="">
+    </testcase>
+    <testcase name="test12" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test12" time="">
+    </testcase>
+    <testcase name="test13" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test13" time="">
+    </testcase>
+    <testcase name="test14" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test14" time="">
+    </testcase>
+    <testcase name="test15" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test15" time="">
+    </testcase>
+    <testcase name="test16" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test16" time="">
+    </testcase>
+    <testcase name="test17" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test17" time="">
+    </testcase>
+    <testcase name="test18" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test18" time="">
+    </testcase>
+    <testcase name="test19" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test19" time="">
+    </testcase>
+    <testcase name="test20" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test20" time="">
+    </testcase>
+    <testcase name="test21" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test21" time="">
+    </testcase>
+    <testcase name="test22" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test22" time="">
+    </testcase>
+    <testcase name="test23" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test23" time="">
+    </testcase>
+    <testcase name="test24" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test24" time="">
+    </testcase>
+    <testcase name="test25" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test25" time="">
+    </testcase>
+    <testcase name="test26" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test26" time="">
+    </testcase>
+    <testcase name="test27" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test27" time="">
+    </testcase>
+    <testcase name="test28" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test28" time="">
+    </testcase>
+    <testcase name="test29" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test29" time="">
+    </testcase>
+    <testcase name="test30" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test30" time="">
+    </testcase>
+    <testcase name="test31" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test31" time="">
+    </testcase>
+    <testcase name="test32" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test32" time="">
+    </testcase>
+    <testcase name="test33" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test33" time="">
+    </testcase>
+    <testcase name="test34" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test34" time="">
+    </testcase>
+    <testcase name="test35" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test35" time="">
+    </testcase>
+    <testcase name="test36" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test36" time="">
+    </testcase>
+    <testcase name="test37" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test37" time="">
+    </testcase>
+    <testcase name="test38" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test38" time="">
+    </testcase>
+    <testcase name="test39" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test39" time="">
+    </testcase>
+    <testcase name="test40" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test40" time="">
+    </testcase>
+    <testcase name="test41" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test41" time="">
+    </testcase>
+    <testcase name="test42" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test42" time="">
+    </testcase>
+    <testcase name="test43" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test43" time="">
+    </testcase>
+    <testcase name="test44" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test44" time="">
+    </testcase>
+    <testcase name="test45" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test45" time="">
+    </testcase>
+    <testcase name="test46" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test46" time="">
+    </testcase>
+    <testcase name="test47" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test47" time="">
+    </testcase>
+    <testcase name="test48" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test48" time="">
+    </testcase>
+    <testcase name="test49" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test49" time="">
+    </testcase>
+    <testcase name="test50" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test50" time="">
+    </testcase>
+    <testcase name="test51" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test51" time="">
+    </testcase>
+    <testcase name="test52" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test52" time="">
+    </testcase>
+    <testcase name="test55" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test55" time="">
+    </testcase>
+    <testcase name="test56" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test56" time="">
+    </testcase>
+    <testcase name="test60" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test60" time="">
+    </testcase>
+    <testcase name="test62" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test62" time="">
+    </testcase>
+    <testcase name="test63" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test63" time="">
+    </testcase>
+    <testcase name="test64" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test64" time="">
+    </testcase>
+    <testcase name="test65" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test65" time="">
+    </testcase>
+    <testcase name="test66" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test66" time="">
+    </testcase>
+    <testcase name="test67" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test67" time="">
+    </testcase>
+    <testcase name="test68" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test68" time="">
+    </testcase>
+    <testcase name="test69" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test69" time="">
+    </testcase>
+    <testcase name="test70" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test70" time="">
+    </testcase>
+    <testcase name="test71" classname="platform:/resource/Test/models/from_other_repos/Statechart2SimplifiedTest.sctunit#Statechart2SimplifiedTest.test71" time="">
+    </testcase>
+  </testsuite>
+</testsuite>

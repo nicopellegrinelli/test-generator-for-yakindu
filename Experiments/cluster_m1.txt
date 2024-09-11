@@ -1,0 +1,4 @@
+SmartHubSystemSimplifiedTest,
+musicPlayerSimplifiedTest,
+SignalControllerSimplifiedTest,
+Statechart2SimplifiedTest,

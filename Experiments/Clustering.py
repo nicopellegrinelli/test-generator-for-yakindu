@@ -155,6 +155,9 @@ print(f"Max number of states: {max(cluster_0['NumStates'])}")
 print(f"Number of statecharts with 100% coverage: {len(cluster_0[(cluster_0['SimplifiedSCTUnitCoverage'] ==  1.00)])}")
 print(f"Number of statecharts with 0% coverage: {len(cluster_0[(cluster_0['SimplifiedSCTUnitCoverage'] ==  0.00)])}")
 print(cluster_0)
+with open("cluster_0.txt", "w") as f:
+  for stc in cluster_0['Statechart']:
+    print(stc+"SimplifiedTest,", file=f)
 
 print("CLUSTER 1")
 cluster_1 = X[(X['dbscan_label'] ==  1)]
@@ -167,6 +170,9 @@ print(f"Max number of states: {max(cluster_1['NumStates'])}")
 print(f"Number of statecharts with 100% coverage: {len(cluster_1[(cluster_1['SimplifiedSCTUnitCoverage'] ==  1.00)])}")
 print(f"Number of statecharts with 0% coverage: {len(cluster_1[(cluster_1['SimplifiedSCTUnitCoverage'] ==  0.00)])}")
 print(cluster_1)
+with open("cluster_1.txt", "w") as f:
+  for stc in cluster_1['Statechart']:
+    print(stc+"SimplifiedTest,", file=f)
 
 print("CLUSTER 2")
 cluster_2 = X[(X['dbscan_label'] ==  2)]
@@ -178,6 +184,9 @@ print(f"Number of statecharts: {len(cluster_2)}")
 print(f"Max number of states: {max(cluster_2['NumStates'])}")
 print(f"Number of statecharts with 0% coverage: {len(cluster_2[(cluster_2['SimplifiedSCTUnitCoverage'] ==  0.00)])}")
 print(cluster_2)
+with open("cluster_2.txt", "w") as f:
+  for stc in cluster_2['Statechart']:
+    print(stc+"SimplifiedTest,", file=f)
 
 print("CLUSTER 3")
 cluster_3 = X[(X['dbscan_label'] ==  3)]
@@ -189,6 +198,9 @@ print(f"Number of statecharts: {len(cluster_3)}")
 print(f"Max number of states: {max(cluster_3['NumStates'])}")
 print(f"Number of statecharts with 0% coverage: {len(cluster_3[(cluster_3['SimplifiedSCTUnitCoverage'] ==  0.00)])}")
 print(cluster_3)
+with open("cluster_3.txt", "w") as f:
+  for stc in cluster_3['Statechart']:
+    print(stc+"SimplifiedTest,", file=f)
 
 print("CLUSTER 4")
 cluster_4 = X[(X['dbscan_label'] ==  4)]
@@ -200,6 +212,9 @@ print(f"Number of statecharts: {len(cluster_4)}")
 print(f"Max number of states: {max(cluster_4['NumStates'])}")
 print(f"Number of statecharts with 0% coverage: {len(cluster_4[(cluster_4['SimplifiedSCTUnitCoverage'] ==  0.00)])}")
 print(cluster_4)
+with open("cluster_4.txt", "w") as f:
+  for stc in cluster_4['Statechart']:
+    print(stc+"SimplifiedTest,", file=f)
 
 print("CLUSTER -1")
 cluster_m1 = X[(X['dbscan_label'] ==  -1)]
@@ -211,8 +226,9 @@ print(f"Number of statecharts: {len(cluster_m1)}")
 print(f"Max number of states: {max(cluster_m1['NumStates'])}")
 print(f"Number of statecharts with 0% coverage: {len(cluster_m1[(cluster_m1['SimplifiedSCTUnitCoverage'] ==  0.00)])}")
 print(cluster_m1)
-
-sys.exit()
+with open("cluster_m1.txt", "w") as f:
+  for stc in cluster_m1['Statechart']:
+    print(stc+"SimplifiedTest,", file=f)
 
 # Generate colors for each DBSCAN cluster
 unique_labels = np.unique(dbscan_model.labels_)

@@ -1,0 +1,10 @@
+testclass StatechartTest for statechart TrafficLight_CB {
+	
+	@Test
+	operation test() {
+		enter
+		proceed 60 cycle
+		assert active (main_region.green)
+		exit
+	}
+}
