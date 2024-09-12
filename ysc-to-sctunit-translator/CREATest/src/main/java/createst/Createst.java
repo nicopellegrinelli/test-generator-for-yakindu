@@ -56,7 +56,7 @@ public class Createst {
 	 */
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 		System.out.println("--------------------------------------------------------------");
-		System.out.println("\t\t\tYsc2SCTUnit");
+		System.out.println("\t\t\tCREATest");
 		System.out.println("--------------------------------------------------------------");
 
 		// Parse the arguments

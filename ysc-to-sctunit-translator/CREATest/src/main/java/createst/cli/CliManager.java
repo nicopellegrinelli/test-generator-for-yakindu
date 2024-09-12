@@ -40,7 +40,7 @@ public class CliManager implements ICliManager {
 			cmd = parser.parse(options, args);
 		} catch (Exception e) {
 			System.out.println(e.getMessage() + "\n");
-			formatter.printHelp("ysc2sctunit", options);
+			formatter.printHelp(" ", options);
 			return null;
 		}
 
@@ -117,12 +117,12 @@ public class CliManager implements ICliManager {
 	private static InputValues manageOptions(CommandLine cmd, HelpFormatter formatter, Options options)
 			throws IOException {
 		if (cmd.hasOption("h")) {
-			formatter.printHelp("ysc2sctunit", options);
+			formatter.printHelp(" ", options);
 			return null;
 		} else if (!(cmd.hasOption("projectPath") && cmd.hasOption("sourceDir") && cmd.hasOption("sourceFile")
 				&& cmd.hasOption("targetPackage") && cmd.hasOption("scc"))) {
 			System.out.println("Missing required options\n");
-			formatter.printHelp("ysc2sctunit", options);
+			formatter.printHelp(" ", options);
 			return null;
 		} else {
 			return getInputValues(cmd);

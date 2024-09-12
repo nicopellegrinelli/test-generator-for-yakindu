@@ -15,19 +15,13 @@
   <classpath>
     <classpathentry kind="lib" path="CREATest/target/classes" module="CREATest" displaymodule="CREATest" />
     <classpathentry kind="lib" path="CREATest/target/test-classes" module="CREATest" displaymodule="CREATest" />
-    <classpathentry kind="lib" path="StateCounter/target/classes" module="StateCounter" displaymodule="StateCounter" />
-    <classpathentry kind="lib" path="StateCounter/target/test-classes" module="StateCounter" displaymodule="StateCounter" />
   </classpath>
   <pom-root-files />
   <modules>
     <module name="CREATest" kind="ide-project" />
-    <module name="StateCounter" kind="ide-project">
-      <requires name="CREATest" kind="ide-project" />
-    </module>
   </modules>
   <modules-in-scope>
     <module name="CREATest" />
-    <module name="StateCounter" />
   </modules-in-scope>
   <excludes>
     <exclude expression="*.*&amp;amp;*" active="true" />
