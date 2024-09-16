@@ -13,8 +13,6 @@ import org.junit.ClassRule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
-import createst.ysc.writing.YscWriter;
-
 public class YscWriterTest {
 	private static final String RESOURCES_DIR = "src\\test\\resources";
 	private static final String STATECHART_NAME = "Yscwriting_statechart";

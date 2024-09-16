@@ -12,9 +12,6 @@ import org.junit.Test;
 
 import createst.java.reading.ProceedTime;
 import createst.java.reading.TimeUnit;
-import createst.junit.reading.IJunitReader;
-import createst.junit.reading.JunitReader;
-import createst.junit.reading.TestCase;
 
 public class JunitReaderTest {
 	private static final String RESOURCES_DIR = "src\\test\\resources";

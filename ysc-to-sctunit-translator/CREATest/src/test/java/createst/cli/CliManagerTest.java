@@ -9,10 +9,6 @@ import org.junit.ClassRule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
-import createst.cli.CliManager;
-import createst.cli.ICliManager;
-import createst.cli.InputValues;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class CliManagerTest {
